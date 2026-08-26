@@ -451,7 +451,7 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
 
             changed = bool(previous and result["fingerprint"] != previous.get("fingerprint"))
             newly_active = result["active"] and not (previous or {}).get("active")
-            if result["active"] and (newly_active or changed or force_alert):
+            if previous is not None and result["active"] and (changed or force_alert):
                 disc = max_discount_percent(result.get("discounts", []))
                 if disc >= 60:
                     alerts.insert(0, f"TOP DEAL: {name} — {disc:.0f}% off!\n{result['summary']}\n{final_url}")
