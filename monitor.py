@@ -131,7 +131,8 @@ def extract_page(page_html, base_url):
 
 def make_fingerprint(title, headings, products, discounts):
     relevant_headings = [item for item in headings if any(word in item.lower() for word in SALE_WORDS)]
-    cleaned_title = re.sub(r"icon-\w+", "", title).strip()
+    noise_words = r"(?:icon-\w+|Quick\s*view|instagram|hamburger|account|search|chevron|bag-minimal|email|American\s*Express|Mastercard|Visa|cardicon-\w+)"
+    cleaned_title = re.sub(noise_words, "", title, flags=re.I).strip()
     cleaned_title = re.sub(r"\s+", " ", cleaned_title)
     payload = json.dumps(
         {
