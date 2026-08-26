@@ -19,7 +19,6 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install ddgs
 
       - name: Set monitor script
         id: decide
