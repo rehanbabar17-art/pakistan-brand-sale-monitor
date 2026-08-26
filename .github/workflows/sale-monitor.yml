@@ -4,8 +4,6 @@ on:
   schedule:
     # Brand website monitor — 4x daily
     - cron: '0 8,12,16,20 * * *'
-    # DuckDuckGo search — 4x daily (30 min after brand monitor)
-    - cron: '30 8,12,16,20 * * *'
   workflow_dispatch: # allow manual trigger
 
 jobs:
@@ -23,17 +21,9 @@ jobs:
       - name: Install dependencies
         run: pip install ddgs
 
-      - name: Determine which monitor to run
+      - name: Set monitor script
         id: decide
-        run: |
-          MINUTE=$(date -u +\%M)
-          if [ "$MINUTE" = "00" ]; then
-            echo "script=run_monitor.sh" >> $GITHUB_OUTPUT
-            echo "Running brand website monitor"
-          else
-            echo "script=run_ddg_search.sh" >> $GITHUB_OUTPUT
-            echo "Running DuckDuckGo search"
-          fi
+        run: echo "script=run_monitor.sh" >> $GITHUB_OUTPUT
 
       - name: Run monitor
         env:
