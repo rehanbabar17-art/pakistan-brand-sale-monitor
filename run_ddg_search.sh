@@ -7,4 +7,4 @@ if [[ -f .env ]]; then
   source .env
   set +a
 fi
-python3 monitor.py >> logs/monitor.log 2>&1
+python3 monitor_ddg_sales.py >> logs/ddg_search.log 2>&1

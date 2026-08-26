@@ -1,0 +1,49 @@
+name: Shared Link Change Monitor
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shared-link-change-monitor
+  cancel-in-progress: false
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check shared pages and send alerts
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+          NTFY_SERVER: ${{ secrets.NTFY_SERVER || 'https://ntfy.sh' }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_USERNAME: ${{ secrets.DISCORD_USERNAME || 'Sale Monitor' }}
+          DISCORD_AVATAR_URL: ${{ secrets.DISCORD_AVATAR_URL }}
+        run: python monitor.py --config empty-brands.json --links-config links.json --state state/link_state.json
+
+      - name: Commit updated link state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/link_state.json state/link_history.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update shared link monitor"
+            git pull --rebase
+            git push
+          fi
