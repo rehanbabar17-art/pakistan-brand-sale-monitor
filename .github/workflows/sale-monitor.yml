@@ -2,9 +2,8 @@ name: Pakistan Brand Sale Monitor
 
 on:
   schedule:
-    # Brand website monitor — 4x daily
     - cron: '0 8,12,16,20 * * *'
-  workflow_dispatch: # allow manual trigger
+  workflow_dispatch:
 
 jobs:
   monitor:
@@ -18,8 +17,6 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
-
       - name: Set monitor script
         id: decide
         run: echo "script=run_monitor.sh" >> $GITHUB_OUTPUT
@@ -29,30 +26,15 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          PRICE_ALERT_EMAIL: ${{ secrets.PRICE_ALERT_EMAIL }}
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
         run: |
           chmod +x ${{ steps.decide.outputs.script }}
           bash ${{ steps.decide.outputs.script }} 2>&1 | tee monitor-output.txt
         continue-on-error: true
-
-      - name: Check for errors
-        if: failure() || contains(steps.*.outcome, 'failure')
-        run: |
-          echo "::error::Monitor failed — check logs above"
 
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: monitor-logs-${{ github.run_number }}
-          path: |
-            monitor-output.txt
-            logs/
+          path: monitor-output.txt
           retention-days: 7
