@@ -503,6 +503,10 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     if link_events:
         save_history(DEFAULT_LINK_HISTORY, link_events)
     print(f"Pakistan sale monitor — {checked_at}\n" + "\n".join(statuses))
+    # Daily summary: on the last run of the day (20:00 UTC), send a "no new sales" message if nothing changed
+    current_hour = datetime.now(timezone.utc).hour
+    if not alerts and current_hour == 20:
+        alerts.append("Daily summary: No new sales or changes detected today across all 32 brands.")
     if alerts:
         print(send_telegram("\n\n".join(alerts), telegram_config))
         print(send_android_notifications(alerts))
