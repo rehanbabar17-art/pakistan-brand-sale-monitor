@@ -20,6 +20,33 @@ DEFAULT_LINKS_CONFIG = BASE_DIR / "links.json"
 DEFAULT_STATE = BASE_DIR / "state" / "sale_state.json"
 DEFAULT_LINK_HISTORY = BASE_DIR / "state" / "link_history.json"
 SALE_WORDS = ("sale", "discount", "% off", "up to", "reduced price")
+SENT_ALERTS_PATH = BASE_DIR / "state" / "sent_alerts.json"
+
+
+def load_sent_alerts():
+    if SENT_ALERTS_PATH.exists():
+        with SENT_ALERTS_PATH.open(encoding="utf-8") as fh:
+            data = json.load(fh)
+            return data if isinstance(data, dict) else {}
+    return {}
+
+
+def save_sent_alerts(alerts_dict):
+    SENT_ALERTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    SENT_ALERTS_PATH.write_text(json.dumps(alerts_dict, indent=2) + "\n", encoding="utf-8")
+
+
+def is_duplicate(alert_text, sent_alerts):
+    alert_hash = hashlib.sha256(alert_text.encode("utf-8")).hexdigest()[:16]
+    if alert_hash in sent_alerts:
+        return True
+    sent_alerts[alert_hash] = datetime.now(timezone.utc).isoformat()
+    # Keep only last 500 entries
+    if len(sent_alerts) > 500:
+        oldest = sorted(sent_alerts.items(), key=lambda x: x[1])[:200]
+        for k, _ in oldest:
+            del sent_alerts[k]
+    return False
 DISCOUNT_RE = re.compile(r"\b(?:up\s*to\s*)?\d{1,3}(?:\.\d+)?\s*%\s*(?:off|discount)\b", re.I)
 
 
@@ -505,21 +532,26 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     if link_events:
         save_history(DEFAULT_LINK_HISTORY, link_events)
     print(f"Pakistan sale monitor — {checked_at}\n" + "\n".join(statuses))
+    # Deduplicate: only send alerts not seen before
+    sent = load_sent_alerts()
+    new_alerts = [a for a in alerts if not is_duplicate(a, sent)]
+    save_sent_alerts(sent)
     # Daily summary: on the last run of the day (20:00 UTC), send a "no new sales" message if nothing changed
     current_hour = datetime.now(timezone.utc).hour
-    if not alerts and current_hour == 20:
-        alerts.append("Daily summary: No new sales or changes detected today across all 32 brands.")
-    if alerts:
-        print(send_telegram("\n\n".join(alerts), telegram_config))
-        print(send_android_notifications(alerts))
+    if not new_alerts and current_hour == 20:
+        new_alerts.append("Daily summary: No new sales or changes detected today across all 32 brands.")
+    if new_alerts:
+        print(f"New alerts: {len(new_alerts)} (skipped {len(alerts) - len(new_alerts)} duplicates)")
+        print(send_telegram("\n\n".join(new_alerts), telegram_config))
+        print(send_android_notifications(new_alerts))
         try:
-            print(send_ntfy_alerts(alerts))
+            print(send_ntfy_alerts(new_alerts))
             ntfy_ok = True
         except Exception as error:
             print(f"ntfy delivery failed: {error}")
             ntfy_ok = False
         try:
-            print(send_discord_alerts(alerts))
+            print(send_discord_alerts(new_alerts))
             discord_ok = True
         except Exception as error:
             print(f"Discord delivery failed: {error}")
