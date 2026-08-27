@@ -75,6 +75,53 @@ def clean_discounts(discounts):
 MAX_DISCOUNT_RE = re.compile(r"(\d{1,3}(?:\.\d+)?)\s*%")
 
 
+TIJARA_BRAND_ALIASES = {
+    "khaadi": "khaadi",
+    "sapphire": "sapphire",
+    "gul ahmed": "gul ahmed",
+    "sana safinaz": "sana safinaz",
+    "limelight": "limelight",
+    "alkaram studio": "alkaram",
+    "nishat linen": "nishat linen",
+    "outfitters": "outfitters",
+    "bonanza satrangi": "bonanza satrangi",
+    "beechtree": "beechtree",
+    "bata pakistan": "bata",
+    "ndure": "ndure",
+    "servis shoes": "servis",
+    "breakout": "breakout",
+    "chenone": "chenone",
+    "monark clothing": None,
+    "j. junaid jamshed": "junaid jamshed",
+    "maria.b.": "maria.b.",
+    "asim jofa": None,
+    "edenrobe": "edenrobe",
+    "cougar": "cougar",
+    "stylo": "stylo",
+    "shoeplanet": "shoe planet",
+    "one degree shoes": None,
+    "one western wear": None,
+    "lama": None,
+    "salt by ideas": None,
+    "bacha party": None,
+    "mini minors": "minnie minors",
+    "hush puppies": "hush puppies",
+    "saeed ghani": "saeed ghani",
+    "urban sole": None,
+}
+
+
+def extract_tijara_tracked_brands(page_text, tracked_names):
+    """Return a list of tracked brands whose Tijara slug appears on the page."""
+    found = []
+    lower_text = page_text.lower()
+    for name in tracked_names:
+        slug = TIJARA_BRAND_ALIASES.get(name.lower())
+        if slug and re.search(r"\b" + re.escape(slug) + r"\b", lower_text):
+            found.append(name)
+    return found
+
+
 def max_discount_percent(discounts):
     best = 0
     for entry in discounts:
@@ -479,8 +526,14 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             statuses.append(f"{name}: {status} ({result['summary']})")
 
             changed = bool(previous and result["fingerprint"] != previous.get("fingerprint"))
-            newly_active = result["active"] and not (previous or {}).get("active")
-            if previous is not None and result["active"] and (changed or force_alert):
+            if "Tijara" in name:
+                # Brand Tijara aggregator: only alert for tracked brands found on its page
+                tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
+                found = extract_tijara_tracked_brands(result.get("text", ""), tracked_names)
+                if found and (changed or force_alert):
+                    for tb in found:
+                        alerts.append(f"{tb} sale update (via Brand Tijara)\n{result['summary']}\n{final_url}")
+            elif previous is not None and result["active"] and (changed or force_alert):
                 disc = max_discount_percent(result.get("discounts", []))
                 if disc >= 60:
                     alerts.insert(0, f"TOP DEAL: {name} — {disc:.0f}% off!\n{result['summary']}\n{final_url}")
