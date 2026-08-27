@@ -6,6 +6,8 @@ on:
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,6 +30,17 @@ jobs:
           chmod +x ${{ steps.decide.outputs.script }}
           bash ${{ steps.decide.outputs.script }} 2>&1 | tee monitor-output.txt
         continue-on-error: true
+
+      - name: Commit updated state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/ || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Update sale monitor state"
+            git pull --rebase origin main
+            git push
+          fi
 
       - name: Upload logs
         if: always()
