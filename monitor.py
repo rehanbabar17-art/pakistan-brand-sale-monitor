@@ -123,31 +123,30 @@ def extract_tijara_tracked_brands(page_text, tracked_names):
 
 
 TIJARA_MIN_DEAL_PCT = 50
+TIJARA_NOISE = ("bags", "unstitched", "suits", "pret", "wear", "khussas", "handbags", "shop", "featured", "collection", "catalog", "department", "women", "men")
 
 
 def scan_tijara_top_deals(tracked_names, min_pct=TIJARA_MIN_DEAL_PCT):
-    """Fetch Brand Tijara brands-on-sale page and return tracked brands with >= min_pct off."""
+    """Fetch Brand Tijara brands-on-sale page and return ALL brands with >= min_pct off."""
     page_html, _ = fetch_page("https://www.brandtijara.com/brands-on-sale")
     title, headings, products, discounts, lower_text, links = extract_page(page_html, "https://www.brandtijara.com/brands-on-sale")
     brand_pct = {}
+    brand_slug = {}
     for match in re.finditer(r"([a-zA-Z 0-9\.]+?)\s+sale[^\d]*?up\s*to\s*(\d+)%\s*off", lower_text, re.I):
         brand = match.group(1).strip().lower()
         pct = int(match.group(2))
-        brand_pct[brand] = max(brand_pct.get(brand, 0), pct)
+        if pct > brand_pct.get(brand, 0):
+            brand_pct[brand] = pct
+            brand_slug[brand] = brand
 
-    tracked_lower = {name.lower(): name for name in tracked_names}
     results = []
-    matched_names = set()
     for brand, pct in brand_pct.items():
-        if pct < min_pct:
-            continue
-        for tlower, orig in tracked_lower.items():
-            if tlower in matched_names:
+        if pct >= min_pct:
+            words = brand.split()
+            if len(words) > 4 or any(w in TIJARA_NOISE for w in words):
                 continue
-            if tlower == brand or tlower in brand or brand in tlower:
-                results.append((orig, pct, brand))
-                matched_names.add(tlower)
-                break
+            display_name = brand.strip().title()
+            results.append((display_name, pct, brand))
     results.sort(key=lambda item: -item[1])
     return results
 
