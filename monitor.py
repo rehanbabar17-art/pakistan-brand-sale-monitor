@@ -122,6 +122,36 @@ def extract_tijara_tracked_brands(page_text, tracked_names):
     return found
 
 
+TIJARA_MIN_DEAL_PCT = 50
+
+
+def scan_tijara_top_deals(tracked_names, min_pct=TIJARA_MIN_DEAL_PCT):
+    """Fetch Brand Tijara brands-on-sale page and return tracked brands with >= min_pct off."""
+    page_html, _ = fetch_page("https://www.brandtijara.com/brands-on-sale")
+    title, headings, products, discounts, lower_text, links = extract_page(page_html, "https://www.brandtijara.com/brands-on-sale")
+    brand_pct = {}
+    for match in re.finditer(r"([a-zA-Z 0-9\.]+?)\s+sale[^\d]*?up\s*to\s*(\d+)%\s*off", lower_text, re.I):
+        brand = match.group(1).strip().lower()
+        pct = int(match.group(2))
+        brand_pct[brand] = max(brand_pct.get(brand, 0), pct)
+
+    tracked_lower = {name.lower(): name for name in tracked_names}
+    results = []
+    matched_names = set()
+    for brand, pct in brand_pct.items():
+        if pct < min_pct:
+            continue
+        for tlower, orig in tracked_lower.items():
+            if tlower in matched_names:
+                continue
+            if tlower == brand or tlower in brand or brand in tlower:
+                results.append((orig, pct, brand))
+                matched_names.add(tlower)
+                break
+    results.sort(key=lambda item: -item[1])
+    return results
+
+
 def max_discount_percent(discounts):
     best = 0
     for entry in discounts:
@@ -515,6 +545,19 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     alerts = []
     statuses = []
     link_events = []
+
+    # Brand Tijara scan: tracked brands with >=50% off, always shown at top
+    try:
+        tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
+        top_deals = scan_tijara_top_deals(tracked_names)
+        if top_deals:
+            for orig, pct, _ in top_deals:
+                alerts.insert(0, f"TOP DEAL: {orig} — {pct}% off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
+            statuses.append(f"Brand Tijara: {len(top_deals)} tracked brand(s) with >=50% off")
+        else:
+            statuses.append("Brand Tijara: no tracked brand at >=50% off")
+    except Exception as error:
+        statuses.append(f"Brand Tijara scan: ERROR — {error}")
 
     for brand in config["brands"]:
         name = brand["name"]
