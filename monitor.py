@@ -545,16 +545,26 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     statuses = []
     link_events = []
 
-    # Brand Tijara scan: tracked brands with >=50% off, always shown at top
+    # Brand Tijara scan: ALL brands with >=50% off, shown on top; alert when a sale ends
     try:
         tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
         top_deals = scan_tijara_top_deals(tracked_names)
+        current_deals = {slug: (display, pct) for display, pct, slug in top_deals}
+        previous_deals = old_state.get("tijara_top_deals", {})
+        if not isinstance(previous_deals, dict):
+            previous_deals = {}
+        ended = [slug for slug in previous_deals if slug not in current_deals]
         if top_deals:
-            for orig, pct, _ in top_deals:
-                alerts.insert(0, f"TOP DEAL: {orig} — {pct}% off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
-            statuses.append(f"Brand Tijara: {len(top_deals)} tracked brand(s) with >=50% off")
+            for display, pct, _ in top_deals:
+                alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
+            statuses.append(f"Brand Tijara: {len(top_deals)} brand(s) with >=50% off")
         else:
-            statuses.append("Brand Tijara: no tracked brand at >=50% off")
+            statuses.append("Brand Tijara: no brand at >=50% off")
+        for slug in ended:
+            display, pct = previous_deals[slug]
+            alerts.append(f"Sale ended: {display} no longer at {pct}%+ off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
+            statuses.append(f"Brand Tijara sale ended: {display}")
+        new_state["tijara_top_deals"] = current_deals
     except Exception as error:
         statuses.append(f"Brand Tijara scan: ERROR — {error}")
 
