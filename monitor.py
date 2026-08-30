@@ -150,6 +150,27 @@ def scan_tijara_top_deals(tracked_names, min_pct=TIJARA_MIN_DEAL_PCT):
     results.sort(key=lambda item: -item[1])
     return results
 
+SALESIREN_MIN_DEAL_PCT = 50
+
+
+def scan_salesiren_top_deals(min_pct=SALESIREN_MIN_DEAL_PCT):
+    """Fetch salesiren.pk and return ALL brands with >= min_pct off."""
+    page_html, _ = fetch_page("https://salesiren.pk/")
+    cards = re.findall(r'data-discount="(\d+)"[^>]*data-name="([^"]*)"', page_html)
+    results = []
+    seen = set()
+    for disc, name in cards:
+        pct = int(disc)
+        if pct < min_pct:
+            continue
+        key = name.strip().lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        results.append((name.strip(), pct, key))
+    results.sort(key=lambda item: -item[1])
+    return results
+
 
 def max_discount_percent(discounts):
     best = 0
@@ -567,6 +588,28 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
         new_state["tijara_top_deals"] = current_deals
     except Exception as error:
         statuses.append(f"Brand Tijara scan: ERROR — {error}")
+
+    # Salesiren.pk scan: ALL brands with >=50% off, shown on top; alert when a sale ends
+    try:
+        salesiren_deals = scan_salesiren_top_deals()
+        current_salesiren = {slug: (display, pct) for display, pct, slug in salesiren_deals}
+        previous_salesiren = old_state.get("salesiren_top_deals", {})
+        if not isinstance(previous_salesiren, dict):
+            previous_salesiren = {}
+        ended_salesiren = [slug for slug in previous_salesiren if slug not in current_salesiren]
+        if salesiren_deals:
+            for display, pct, _ in salesiren_deals:
+                alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren)\nhttps://salesiren.pk/")
+            statuses.append(f"Sale Siren: {len(salesiren_deals)} brand(s) with >=50% off")
+        else:
+            statuses.append("Sale Siren: no brand at >=50% off")
+        for slug in ended_salesiren:
+            display, pct = previous_salesiren[slug]
+            alerts.append(f"Sale ended: {display} no longer at {pct}%+ off (via Sale Siren)\nhttps://salesiren.pk/")
+            statuses.append(f"Sale Siren sale ended: {display}")
+        new_state["salesiren_top_deals"] = current_salesiren
+    except Exception as error:
+        statuses.append(f"Sale Siren scan: ERROR — {error}")
 
     for brand in config["brands"]:
         name = brand["name"]
