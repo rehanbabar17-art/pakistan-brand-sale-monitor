@@ -156,10 +156,10 @@ SALESIREN_MIN_DEAL_PCT = 50
 def scan_salesiren_top_deals(min_pct=SALESIREN_MIN_DEAL_PCT):
     """Fetch salesiren.pk and return ALL brands with >= min_pct off."""
     page_html, _ = fetch_page("https://salesiren.pk/")
-    cards = re.findall(r'data-discount="(\d+)"[^>]*data-name="([^"]*)"', page_html)
+    cards = re.findall(r'data-discount="(\d+)"[^>]*data-name="([^"]*)"[^>]*data-upcoming="(\d+)"', page_html)
     results = []
     seen = set()
-    for disc, name in cards:
+    for disc, name, upcoming in cards:
         pct = int(disc)
         if pct < min_pct:
             continue
@@ -167,9 +167,24 @@ def scan_salesiren_top_deals(min_pct=SALESIREN_MIN_DEAL_PCT):
         if key in seen:
             continue
         seen.add(key)
-        results.append((name.strip(), pct, key))
+        results.append((name.strip(), pct, key, upcoming == '1'))
     results.sort(key=lambda item: -item[1])
     return results
+
+
+def scan_salesiren_upcoming(tracked_names):
+    """Check which tracked brands have upcoming sales on salesiren.pk."""
+    page_html, _ = fetch_page("https://salesiren.pk/")
+    cards = re.findall(r'data-discount="(\d+)"[^>]*data-name="([^"]*)"[^>]*data-upcoming="(\d+)"', page_html)
+    found = []
+    for disc, name, upcoming in cards:
+        if upcoming != '1':
+            continue
+        for tname in tracked_names:
+            if tname.lower() in name.lower() or name.lower() in tname.lower():
+                found.append(tname)
+                break
+    return found
 
 
 def extract_salesiren_tracked_brands(tracked_names):
@@ -611,8 +626,11 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             previous_salesiren = {}
         ended_salesiren = [slug for slug in previous_salesiren if slug not in current_salesiren]
         if salesiren_deals:
-            for display, pct, _ in salesiren_deals:
-                alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren)\nhttps://salesiren.pk/")
+            for display, pct, slug, upcoming in salesiren_deals:
+                if upcoming:
+                    alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren - COMING SOON)\nhttps://salesiren.pk/")
+                else:
+                    alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren)\nhttps://salesiren.pk/")
             statuses.append(f"Sale Siren: {len(salesiren_deals)} brand(s) with >=50% off")
         else:
             statuses.append("Sale Siren: no brand at >=50% off")
@@ -629,6 +647,16 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             statuses.append(f"Sale Siren tracked brands: {len(tracked_on_salesiren)} — {', '.join(tracked_on_salesiren)}")
         else:
             statuses.append("Sale Siren tracked brands: none matched")
+
+        # Check upcoming sales for tracked brands on salesiren.pk (priority alert)
+        tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
+        upcoming_brands = scan_salesiren_upcoming(tracked_names)
+        if upcoming_brands:
+            for ub in upcoming_brands:
+                alerts.insert(0, f"COMING SOON: {ub} upcoming sale detected (via Sale Siren)\nhttps://salesiren.pk/")
+            statuses.append(f"Sale Siren upcoming: {len(upcoming_brands)} brand(s) — {', '.join(upcoming_brands)}")
+        else:
+            statuses.append("Sale Siren upcoming: no tracked brands have upcoming sales")
     except Exception as error:
         statuses.append(f"Sale Siren scan: ERROR — {error}")
 
