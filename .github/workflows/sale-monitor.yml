@@ -38,8 +38,7 @@ jobs:
           git add state/ || true
           if ! git diff --cached --quiet; then
             git commit -m "Update sale monitor state"
-            git pull --rebase origin main
-            git push
+            git push origin HEAD:main --force-with-lease || true
           fi
 
       - name: Upload logs
