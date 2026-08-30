@@ -172,6 +172,19 @@ def scan_salesiren_top_deals(min_pct=SALESIREN_MIN_DEAL_PCT):
     return results
 
 
+def extract_salesiren_tracked_brands(tracked_names):
+    """Check which of the tracked brands appear on salesiren.pk."""
+    page_html, _ = fetch_page("https://salesiren.pk/")
+    all_cards = re.findall(r'data-name="([^"]*)"', page_html)
+    found = []
+    for name in tracked_names:
+        for card in all_cards:
+            if name.lower() in card.lower() or card.lower() in name.lower():
+                found.append(name)
+                break
+    return found
+
+
 def max_discount_percent(discounts):
     best = 0
     for entry in discounts:
@@ -608,6 +621,14 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             alerts.append(f"Sale ended: {display} no longer at {pct}%+ off (via Sale Siren)\nhttps://salesiren.pk/")
             statuses.append(f"Sale Siren sale ended: {display}")
         new_state["salesiren_top_deals"] = current_salesiren
+
+        # Also check: which of our tracked brands appear on salesiren.pk
+        tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
+        tracked_on_salesiren = extract_salesiren_tracked_brands(tracked_names)
+        if tracked_on_salesiren:
+            statuses.append(f"Sale Siren tracked brands: {len(tracked_on_salesiren)} — {', '.join(tracked_on_salesiren)}")
+        else:
+            statuses.append("Sale Siren tracked brands: none matched")
     except Exception as error:
         statuses.append(f"Sale Siren scan: ERROR — {error}")
 
