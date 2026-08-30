@@ -6,6 +6,7 @@ import os
 import re
 import shutil
 import subprocess
+import time
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -454,11 +455,26 @@ def send_ntfy_alerts(alerts):
         )
         if token:
             request.add_header("Authorization", f"Bearer {token}")
-        try:
-            with urlopen(request, timeout=30) as response:
-                delivered += int(200 <= response.status < 300)
-        except HTTPError as error:
-            raise RuntimeError(f"ntfy returned HTTP {error.code}") from error
+        attempts = 0
+        last_error = None
+        while attempts < 4:
+            attempts += 1
+            try:
+                with urlopen(request, timeout=30) as response:
+                    delivered += int(200 <= response.status < 300)
+                break
+            except HTTPError as error:
+                last_error = error
+                if error.code == 429:
+                    time.sleep(2 * attempts)
+                    continue
+                raise RuntimeError(f"ntfy returned HTTP {error.code}") from error
+            except Exception as error:
+                last_error = error
+                time.sleep(2 * attempts)
+        else:
+            raise RuntimeError(f"ntfy still failing after retries: {last_error}") from last_error
+        time.sleep(0.4)
     return f"ntfy delivery: {delivered}/{len(alerts)}."
 
 
@@ -620,7 +636,7 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     # Salesiren.pk scan: ALL brands with >=50% off, shown on top; alert when a sale ends
     try:
         salesiren_deals = scan_salesiren_top_deals()
-        current_salesiren = {slug: (display, pct) for display, pct, slug in salesiren_deals}
+        current_salesiren = {slug: (display, pct, upcoming) for display, pct, slug, upcoming in salesiren_deals}
         previous_salesiren = old_state.get("salesiren_top_deals", {})
         if not isinstance(previous_salesiren, dict):
             previous_salesiren = {}
@@ -635,7 +651,8 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
         else:
             statuses.append("Sale Siren: no brand at >=50% off")
         for slug in ended_salesiren:
-            display, pct = previous_salesiren[slug]
+            prev = previous_salesiren[slug]
+            display, pct = prev[0], prev[1]
             alerts.append(f"Sale ended: {display} no longer at {pct}%+ off (via Sale Siren)\nhttps://salesiren.pk/")
             statuses.append(f"Sale Siren sale ended: {display}")
         new_state["salesiren_top_deals"] = current_salesiren
@@ -677,7 +694,7 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
                 if found and (changed or force_alert):
                     for tb in found:
                         alerts.append(f"{tb} sale update (via Brand Tijara)\n{result['summary']}\n{final_url}")
-            elif previous is not None and result["active"] and (changed or force_alert):
+            elif result["active"] and (previous is None or changed or force_alert):
                 disc = max_discount_percent(result.get("discounts", []))
                 if disc >= 60:
                     alerts.insert(0, f"TOP DEAL: {name} — {disc:.0f}% off!\n{result['summary']}\n{final_url}")
@@ -732,7 +749,6 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     # Deduplicate: only send alerts not seen before
     sent = load_sent_alerts()
     new_alerts = [a for a in alerts if not is_duplicate(a, sent)]
-    save_sent_alerts(sent)
     # Daily summary: on the last run of the day (20:00 UTC), send a "no new sales" message if nothing changed
     current_hour = datetime.now(timezone.utc).hour
     if not new_alerts and current_hour == 20:
@@ -757,6 +773,9 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             raise SystemExit("ntfy delivery did not complete")
         if not discord_ok:
             raise SystemExit("Discord delivery did not complete")
+        # Only mark alerts as sent after delivery actually succeeded,
+        # otherwise a transient network failure would permanently suppress them.
+        save_sent_alerts(sent)
 
 
 def main():
