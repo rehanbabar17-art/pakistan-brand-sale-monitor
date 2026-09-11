@@ -2,3 +2,6 @@ __pycache__/
 *.py[cod]
 logs/
 .venv/
+
+# Local environment config
+.env
