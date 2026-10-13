@@ -5,3 +5,6 @@ logs/
 
 # Local environment config
 .env
+
+# Runtime monitoring state/history contains private activity and must stay out of Git.
+state/*.json

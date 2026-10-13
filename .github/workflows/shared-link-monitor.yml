@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: shared-link-change-monitor
@@ -36,14 +36,3 @@ jobs:
           DISCORD_USERNAME: ${{ secrets.DISCORD_USERNAME || 'Sale Monitor' }}
           DISCORD_AVATAR_URL: ${{ secrets.DISCORD_AVATAR_URL }}
         run: python monitor.py --config empty-brands.json --links-config links.json --state state/link_state.json
-
-      - name: Commit updated link state
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/link_state.json state/link_history.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update shared link monitor"
-            git pull --rebase
-            git push
-          fi

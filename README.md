@@ -50,7 +50,7 @@ Paste it into the app. The token stays in browser local storage and is never com
 5. Open the **Actions** tab, select **Pakistani Brand Sale Monitor**, then choose **Run workflow** once to initialize.
 6. It will then run automatically at **09:00 UTC / 14:00 PKT**.
 
-The workflow commits `state/sale_state.json` after checks, so it remembers previous fingerprints across runs.
+Monitoring state and history are runtime data, not repository content. Files under `state/` are ignored by Git and must remain in private storage. The GitHub-hosted workflows do not persist state between runs; configure a private state backend before relying on hosted workflows for cross-run deduplication or history. Local runs keep state in the ignored `state/` directory on that machine.
 
 ## Local Commands
 
