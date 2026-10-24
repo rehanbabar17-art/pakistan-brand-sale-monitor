@@ -15,9 +15,12 @@
 </head>
 <body>
   <header class="app-header">
-    <div>
-      <p class="eyebrow">SaleMonitor PK</p>
-      <h1>Brand Sale Dashboard</h1>
+    <div style="display:flex;align-items:center;gap:.65rem;">
+      <img src="./icon.svg" alt="" width="36" height="36" style="border-radius:.55rem;flex-shrink:0;">
+      <div>
+        <p class="eyebrow">SaleMonitor PK</p>
+        <h1>Brand Sale Dashboard</h1>
+      </div>
     </div>
     <div class="header-actions">
       <button id="refresh-button" class="icon-button" title="Refresh" aria-label="Refresh">↻</button>
@@ -43,6 +46,7 @@
         <div class="filter-bar">
           <button class="filter-btn active" data-filter="all" type="button">All Brands</button>
           <button class="filter-btn" data-filter="active" type="button">On Sale Now</button>
+          <button class="filter-btn" data-filter="top50" type="button">50%+ Off</button>
           <button class="filter-btn" data-filter="top60" type="button">60%+ Off</button>
           <button class="filter-btn" data-filter="inactive" type="button">No Active Sale</button>
           <button class="filter-btn" data-filter="aggregators" type="button">Aggregators (50%+)</button>

@@ -304,6 +304,7 @@ function renderBrandSales() {
         if (!hay.includes(q)) return false;
       }
       if (state.brandFilter === "active") return item.active;
+      if (state.brandFilter === "top50") return item.active && item.maxDiscount >= 50;
       if (state.brandFilter === "top60") return item.active && item.maxDiscount >= 60;
       if (state.brandFilter === "inactive") return !item.active;
       return true;
