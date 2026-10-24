@@ -710,7 +710,7 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     statuses = []
     link_events = []
 
-    # Brand Tijara scan: ALL brands with >=50% off, shown on top; alert when a sale ends
+    # Brand Tijara scan: ALL brands with >=50% off; alert only on new or changed deals
     try:
         tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
         top_deals = scan_tijara_top_deals(tracked_names)
@@ -718,43 +718,39 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
         previous_deals = old_state.get("tijara_top_deals", {})
         if not isinstance(previous_deals, dict):
             previous_deals = {}
-        ended = [slug for slug in previous_deals if slug not in current_deals]
         if top_deals:
-            for display, pct, _ in top_deals:
-                alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
+            for display, pct, slug in top_deals:
+                prev_entry = previous_deals.get(slug)
+                prev_pct = prev_entry[1] if isinstance(prev_entry, (list, tuple)) and len(prev_entry) >= 2 else None
+                if prev_pct != pct or force_alert:
+                    alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
             statuses.append(f"Brand Tijara: {len(top_deals)} brand(s) with >=50% off")
         else:
             statuses.append("Brand Tijara: no brand at >=50% off")
-        for slug in ended:
-            display, pct = previous_deals[slug]
-            alerts.append(f"Sale ended: {display} no longer at {pct}%+ off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
-            statuses.append(f"Brand Tijara sale ended: {display}")
         new_state["tijara_top_deals"] = current_deals
     except Exception as error:
         statuses.append(f"Brand Tijara scan: ERROR — {error}")
 
-    # Salesiren.pk scan: ALL brands with >=50% off, shown on top; alert when a sale ends
+    # Salesiren.pk scan: ALL brands with >=50% off; alert only on new or changed deals
     try:
         salesiren_deals = scan_salesiren_top_deals()
         current_salesiren = {slug: (display, pct, upcoming) for display, pct, slug, upcoming in salesiren_deals}
         previous_salesiren = old_state.get("salesiren_top_deals", {})
         if not isinstance(previous_salesiren, dict):
             previous_salesiren = {}
-        ended_salesiren = [slug for slug in previous_salesiren if slug not in current_salesiren]
         if salesiren_deals:
             for display, pct, slug, upcoming in salesiren_deals:
-                if upcoming:
-                    alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren - COMING SOON)\nhttps://salesiren.pk/")
-                else:
-                    alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren)\nhttps://salesiren.pk/")
+                prev_entry = previous_salesiren.get(slug)
+                prev_pct = prev_entry[1] if isinstance(prev_entry, (list, tuple)) and len(prev_entry) >= 2 else None
+                prev_upcoming = bool(prev_entry[2]) if isinstance(prev_entry, (list, tuple)) and len(prev_entry) >= 3 else None
+                if prev_pct != pct or prev_upcoming != upcoming or force_alert:
+                    if upcoming:
+                        alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren - COMING SOON)\nhttps://salesiren.pk/")
+                    else:
+                        alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren)\nhttps://salesiren.pk/")
             statuses.append(f"Sale Siren: {len(salesiren_deals)} brand(s) with >=50% off")
         else:
             statuses.append("Sale Siren: no brand at >=50% off")
-        for slug in ended_salesiren:
-            prev = previous_salesiren[slug]
-            display, pct = prev[0], prev[1]
-            alerts.append(f"Sale ended: {display} no longer at {pct}%+ off (via Sale Siren)\nhttps://salesiren.pk/")
-            statuses.append(f"Sale Siren sale ended: {display}")
         new_state["salesiren_top_deals"] = current_salesiren
 
         # Also check: which of our tracked brands appear on salesiren.pk
@@ -766,14 +762,16 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             statuses.append("Sale Siren tracked brands: none matched")
 
         # Check upcoming sales for tracked brands on salesiren.pk (priority alert)
-        tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
         upcoming_brands = scan_salesiren_upcoming(tracked_names)
+        prev_upcoming_brands = set(old_state.get("salesiren_upcoming_brands") or [])
         if upcoming_brands:
             for ub in upcoming_brands:
-                alerts.insert(0, f"COMING SOON: {ub} upcoming sale detected (via Sale Siren)\nhttps://salesiren.pk/")
+                if ub not in prev_upcoming_brands or force_alert:
+                    alerts.insert(0, f"COMING SOON: {ub} upcoming sale detected (via Sale Siren)\nhttps://salesiren.pk/")
             statuses.append(f"Sale Siren upcoming: {len(upcoming_brands)} brand(s) — {', '.join(upcoming_brands)}")
         else:
             statuses.append("Sale Siren upcoming: no tracked brands have upcoming sales")
+        new_state["salesiren_upcoming_brands"] = upcoming_brands
     except Exception as error:
         statuses.append(f"Sale Siren scan: ERROR — {error}")
 
@@ -848,13 +846,9 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     if link_events:
         save_history(DEFAULT_LINK_HISTORY, link_events)
     print(f"Pakistan sale monitor — {checked_at}\n" + "\n".join(statuses))
-    # Deduplicate: only send alerts not seen before
+    # Deduplicate: only send alerts not seen before; do not send anything if no new sale or change is detected
     sent = load_sent_alerts()
     new_alerts = [a for a in alerts if not is_duplicate(a, sent)]
-    # Daily summary: on the last run of the day (20:00 UTC), send a "no new sales" message if nothing changed
-    current_hour = datetime.now(timezone.utc).hour
-    if not new_alerts and current_hour == 20:
-        new_alerts.append("Daily summary: No new sales or changes detected today across all 32 brands.")
     if new_alerts:
         print(f"New alerts: {len(new_alerts)} (skipped {len(alerts) - len(new_alerts)} duplicates)")
         print(send_telegram("\n\n".join(new_alerts), telegram_config))
