@@ -3,62 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0f172a">
-  <meta name="description" content="Monitor page and price changes from your phone.">
-  <title>Link Monitor</title>
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Live sale status, discount percentages, and product counts across Pakistani brands.">
+  <title>Pakistan Brand Sale Monitor</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="app-header">
     <div>
-      <p class="eyebrow">Distill-lite</p>
-      <h1>Link Monitor</h1>
+      <p class="eyebrow">SaleMonitor PK</p>
+      <h1>Brand Sale Dashboard</h1>
     </div>
     <div class="header-actions">
       <button id="refresh-button" class="icon-button" title="Refresh" aria-label="Refresh">↻</button>
-      <button id="install-button" class="ghost-button hidden" type="button">Install</button>
+      <button id="install-button" class="primary-button hidden" type="button">Install App</button>
     </div>
   </header>
 
   <main>
-    <section id="connection-card" class="card setup-card">
-      <div class="section-heading">
-        <h2>GitHub connection</h2>
-        <span id="connection-status" class="status-pill pending">Not connected</span>
-      </div>
-      <form id="connection-form" class="grid-form">
-        <label>Owner<input id="owner" autocomplete="off" required></label>
-        <label>Repository<input id="repository" autocomplete="off" required></label>
-        <label>Branch<input id="branch" value="main" autocomplete="off" required></label>
-        <label>GitHub token<input id="token" type="password" inputmode="text" placeholder="Fine-grained PAT" autocomplete="off" required></label>
-        <button class="primary-button" type="submit">Connect &amp; save</button>
-      </form>
-      <p class="hint">Your token is stored only in this browser’s local storage. Use a short-expiry token with <strong>Contents: Read/Write</strong> and <strong>Actions: Read/Write</strong>.</p>
-    </section>
-
     <nav class="tabs" aria-label="Sections">
-      <button class="tab active" data-tab="monitors">Monitors</button>
+      <button class="tab active" data-tab="brands">Brand Sales</button>
+      <button class="tab" data-tab="monitors">Watches</button>
       <button class="tab" data-tab="activity">Activity</button>
-      <button class="tab" data-tab="settings">Settings</button>
+      <button class="tab" data-tab="settings">GitHub PAT</button>
     </nav>
 
-    <section id="monitors-panel" class="panel active">
+    <section id="brands-panel" class="panel active">
+      <div class="card search-card">
+        <div class="section-heading">
+          <h2>Search Brand Sale Status</h2>
+          <span id="sale-summary-badge" class="status-pill connected">Loading…</span>
+        </div>
+        <input id="brand-search" type="search" placeholder="Search brand name (e.g. Starlet, Gul Ahmed, Stylo, Khaadi, Baroque)..." autocomplete="off">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all" type="button">All Brands</button>
+          <button class="filter-btn" data-filter="active" type="button">On Sale Now</button>
+          <button class="filter-btn" data-filter="top60" type="button">60%+ Off</button>
+          <button class="filter-btn" data-filter="inactive" type="button">No Active Sale</button>
+          <button class="filter-btn" data-filter="aggregators" type="button">Aggregators (50%+)</button>
+        </div>
+      </div>
+
+      <div id="search-feedback" class="card hidden"></div>
+      <div id="brands-list" class="stack"></div>
+    </section>
+
+    <section id="monitors-panel" class="panel">
       <div class="toolbar">
-        <button id="check-prices" class="ghost-button">Check prices</button>
-        <button id="check-links" class="ghost-button">Check pages</button>
-        <button id="check-search" class="ghost-button">Search sales</button>
+        <button id="check-sales" class="ghost-button">Run Brand Scan</button>
+        <button id="check-prices" class="ghost-button">Check Prices</button>
+        <button id="check-links" class="ghost-button">Check Pages</button>
       </div>
       <form id="monitor-form" class="card add-form">
         <h2>Add watch</h2>
         <div class="grid-form">
-          <label>Name<input name="name" required placeholder="Product or page name"></label>
+          <label>Name<input name="name" required placeholder="Brand, product, or page name"></label>
           <label>URL<input name="url" type="url" required placeholder="https://example.com/page"></label>
           <label>Type
             <select name="type">
+              <option value="brand">Brand sale monitor (brands.json)</option>
               <option value="price">Daraz / product price</option>
               <option value="content">Page content changes</option>
             </select>
@@ -75,16 +83,25 @@
     </section>
 
     <section id="settings-panel" class="panel">
+      <section id="connection-card" class="card setup-card">
+        <div class="section-heading">
+          <h2>GitHub connection</h2>
+          <span id="connection-status" class="status-pill pending">Public read mode</span>
+        </div>
+        <form id="connection-form" class="grid-form">
+          <label>Owner<input id="owner" autocomplete="off" required></label>
+          <label>Repository<input id="repository" autocomplete="off" required></label>
+          <label>Branch<input id="branch" value="main" autocomplete="off" required></label>
+          <label>GitHub token<input id="token" type="password" inputmode="text" placeholder="Fine-grained PAT or ghp_..." autocomplete="off"></label>
+          <button class="primary-button" type="submit">Connect &amp; save</button>
+        </form>
+        <p class="hint">Works automatically in public read mode, or paste your PAT (stored only in browser localStorage) to trigger GitHub Actions and edit watches.</p>
+      </section>
+
       <div class="card">
         <h2>Connection details</h2>
         <dl id="settings-details" class="detail-list"></dl>
         <button id="disconnect-button" class="danger-button">Disconnect &amp; erase local token</button>
-      </div>
-      <div class="card">
-        <h2>How checks run</h2>
-        <p><strong>Prices:</strong> hourly via <code>price-monitor.yml</code>, with rendered Daraz sale-price extraction.</p>
-        <p><strong>Pages:</strong> hourly via <code>shared-link-monitor.yml</code>, checking visible content, headings, links, discounts, and redirects.</p>
-        <p>Alerts go through Telegram, email, and ntfy when their secrets are configured.</p>
       </div>
     </section>
   </main>

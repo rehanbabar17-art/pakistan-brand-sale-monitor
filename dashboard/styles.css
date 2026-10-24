@@ -152,7 +152,7 @@ button:disabled { opacity: .55; cursor: wait; }
 
 .tabs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: .35rem;
   margin-bottom: 1rem;
   padding: .3rem;
@@ -164,10 +164,39 @@ button:disabled { opacity: .55; cursor: wait; }
   min-height: 38px;
   color: var(--muted);
   background: transparent;
+  font-size: .82rem;
 }
 .tab.active {
   color: #062032;
   background: var(--primary);
+}
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .75rem;
+}
+.filter-btn {
+  min-height: 34px;
+  padding: .35rem .75rem;
+  font-size: .78rem;
+  color: var(--muted);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+}
+.filter-btn.active {
+  color: #062032;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.chip.sale-on {
+  color: #062f22;
+  background: var(--success);
+}
+.chip.sale-off {
+  color: var(--muted);
+  background: var(--surface-alt);
 }
 
 .panel { display: none; }
