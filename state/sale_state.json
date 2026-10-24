@@ -1,21 +1,26 @@
 {
   "Alkaram Studio": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "6f0edea2cb8b06de3e5dfde7708b7ff98d3818177cc83c3685c2c567c2be8156",
-    "discounts": [],
-    "fingerprint": "ee986cd706c923f71fc51e27938d3054f74ee3fd298a0ef43e495399a39f5aa4",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "18de31a1b0ab072c32bf10b66f8d435be130f7214d02ec90058516c7d6a1730d",
+    "discounts": [
+      "FLAT  30%",
+      "FLAT 20%",
+      "FLAT 40%",
+      "FLAT 50%"
+    ],
+    "fingerprint": "b100e7566d3def914d9f4764198c66690a6d1f9efe0c6e228e098b093b903334",
     "heading_count": 147,
     "link_count": 200,
     "product_count": 44,
-    "summary": "Alkaram: Online Store for Men's and Women's Clothing",
-    "text_length": 122428,
+    "summary": "Alkaram: Online Store for Men's and Women's Clothing \u2014 Flat 30%, Flat 20%, Flat 40%, Flat 50%",
+    "text_length": 122426,
     "title": "Alkaram: Online Store for Men's and Women's Clothing",
     "url": "https://www.alkaramstudio.com/"
   },
   "Asim Jofa": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "fd7cff226023455a5b00bc4ea42c64677a94e1bb4267bbbb52e64b41534fd4b4",
     "discounts": [],
     "fingerprint": "0d90aaeeba6872056c22d9f858cfb1765e3b723fbdeffa11629ff6249edb1676",
@@ -29,7 +34,7 @@
   },
   "Bacha Party": {
     "active": false,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "8855508aade16ec573d21e6a485dfd0a7624085c1a14b5ecdd6485de0c6839a4",
     "discounts": [],
     "fingerprint": "db2dc6dd1bbaff786b4dc632aa3f799f71b8c4848c4ccb17d77d5ddc4a23e9da",
@@ -43,8 +48,8 @@
   },
   "Bata Pakistan": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "7d6870e89635d7bf00ab02849247b107a8a736b50ad138fe9668dbe7dc722c90",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "f488e3861cc1e3f731a41b224d3cc5da892939932d5229722567969bbac61ba0",
     "discounts": [
       "10% OFF",
       "Up to 50% OFF"
@@ -60,24 +65,26 @@
   },
   "Beechtree": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "d92a6f87a6e2d2c4ad5d9718613fd85fdacdbd3f54aee81b91cd3f9c29195f05",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "02f465fa3222d3ead5c18908bc811966e1fc58a970d861fedfe117507e3cf327",
     "discounts": [
       "40% OFF",
-      "50% Off"
+      "50% Off",
+      "FLAT 40%",
+      "FLAT 50%"
     ],
-    "fingerprint": "290905d6070cf0abe1f2649a60f852bf9e8451e8d3c82626d533efd9f2d74fbc",
+    "fingerprint": "a49643b1e51761489acd63665180a43eba5d39d02b285a50cdccd941e4ac3769",
     "heading_count": 10,
     "link_count": 121,
     "product_count": 0,
-    "summary": "Buy Online Women's Ready to Wear and Unstitched Clothes \u2013 BEECHTREE \u2014 40% off, 50% off",
+    "summary": "Buy Online Women's Ready to Wear and Unstitched Clothes \u2013 BEECHTREE \u2014 40% off, 50% off, Flat 40%, Flat 50%",
     "text_length": 50101,
     "title": "Buy Online Women's Ready to Wear and Unstitched Clothes \u2013 BEECHTREE",
     "url": "https://beechtree.pk/"
   },
   "Bonanza Satrangi": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "d8018d1abe2d669c3a6a101952c9f3185223fbddedf4e1cf8277f6c3a922baaf",
     "discounts": [],
     "fingerprint": "f27d1d1e72142c05e766cea396adade3036caa5b8e61b97e9812daceed844382",
@@ -91,10 +98,10 @@
   },
   "Brand Tijara (Sales Aggregator)": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "a4c91f38c0dabbcb698af0fbaa8074ba8368abcff98879cf72267cb3e0c3179e",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "ce644e1ff4f879a6d6f23cfe604ac4abf1d4f0ef4ef490dd65b527d0a81b58b8",
     "discounts": [
-      "50% OFF",
+      "FLAT 50% OFF",
       "UP TO 70% OFF",
       "Up to 10% Off",
       "Up to 15% Off",
@@ -116,35 +123,35 @@
       "Up to 80% Off",
       "upto 40% discount"
     ],
-    "fingerprint": "9693e0f95166173e198a9d4659bbff278ca7fe109aeff23c64ed7e7085035e9b",
+    "fingerprint": "e78bb16c6f7704aa163825feb45cc7083c739da1ccdc1521ba97f93f0aa04471",
     "heading_count": 26,
     "link_count": 256,
     "product_count": 0,
-    "summary": "Brands on Sale \u00b7 Brand Tijara \u2014 50% off, Up to 70% off, Up to 10% off, Up to 15% off, Up to 20% off, Up to 23% off, Up to 25% off, Up to 27% off, Up to 30% off, Up to 35% off, Up to 40% off, Up to 50% off, Up to 52% off, Up to 53% off, Up to 55% off, Up to 59% off, Up to 60% off, Up to 63% off, Up to 80% off, Upto 40% discount",
+    "summary": "Brands on Sale \u00b7 Brand Tijara \u2014 Flat 50% off, Up to 70% off, Up to 10% off, Up to 15% off, Up to 20% off, Up to 23% off, Up to 25% off, Up to 27% off, Up to 30% off, Up to 35% off, Up to 40% off, Up to 50% off, Up to 52% off, Up to 53% off, Up to 55% off, Up to 59% off, Up to 60% off, Up to 63% off, Up to 80% off, Upto 40% discount",
     "text_length": 15227,
     "title": "Brands on Sale \u00b7 Brand Tijara",
     "url": "https://www.brandtijara.com/brands-on-sale"
   },
   "Breakout": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "78cf5a5c6e484dfbbb889108aa7aa67e27b02960e1de64945a0c769a3aa6612b",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "54b1b3a03316db7757680e1bbfb73a009691c83dd4e304607286617105b8d693",
     "discounts": [
-      "50% OFF"
+      "FLAT 50% OFF"
     ],
-    "fingerprint": "e1f4372f69ec2f8620ee02b09a0cc277375c5bf3526afbd344442f403d3c09b6",
+    "fingerprint": "3b88ce3877837b4040375f10559145d9567d2cfa1ea0a74b5e55b6522fd67c5d",
     "heading_count": 93,
     "link_count": 169,
     "product_count": 83,
-    "summary": "Breakout : Best Western Wear Clothing Store \u2014 50% off",
+    "summary": "Breakout : Best Western Wear Clothing Store \u2014 Flat 50% off",
     "text_length": 7971,
     "title": "Breakout : Best Western Wear Clothing Store",
     "url": "https://www.breakout.com.pk/"
   },
   "ChenOne": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "3b55a1705814bd24f885c2a79b5b227558327aea4d06fd504334f0bcfc70c6f3",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "fdea406720d92f71b93730ba132934c26f1d236a0d8d4e35af8a1103287a0ecd",
     "discounts": [],
     "fingerprint": "1f25a25b3432cbfd9aa88485e4939892ba116db2bae0d8af5778db7288f31238",
     "heading_count": 61,
@@ -157,7 +164,7 @@
   },
   "Cougar": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "cee4d624027ed4db3a31f7a88d0e973fdce2c953a72c77c869f05333bc733fb0",
     "discounts": [],
     "fingerprint": "b1702fef12a2ce3bd28c9564dbc9d42abc4d106109b6198840877bdfe6e67e75",
@@ -171,7 +178,7 @@
   },
   "Edenrobe": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "22cbe94564d8d9f890d0e0d169d49c74ceabeef812eb2e1f64ff52ca0d64816d",
     "discounts": [],
     "fingerprint": "55e8c213ac82e89f1a3d19cb9352423d58f2b92c008ec4a0f330f7a27f05e115",
@@ -185,36 +192,40 @@
   },
   "Gul Ahmed": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "5fcc3a95a70e90399fe656217c7a97f53a19788773391d0f46f68c5fc3a7025c",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "9e8d21fa23377b26748b3bba256ec8fa13ea767204dd48141405dac03665edca",
     "discounts": [],
     "fingerprint": "4f0bb7a6bac6d4b72e93f93d16140dd1f034e7651aac99cf517766ec5145fda3",
     "heading_count": 11,
     "link_count": 441,
     "product_count": 129,
     "summary": "Shop Women Clothing, Men, Kids & Bedding at Gul Ahmed Ideas",
-    "text_length": 167324,
+    "text_length": 167150,
     "title": "Shop Women Clothing, Men, Kids & Bedding at Gul Ahmed Ideas",
     "url": "https://www.gulahmedshop.com/"
   },
   "Hush Puppies": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "eeb8e72cacec181df3968919885f923a97e92dfc26b9c68cb3a0d4ec005a4a59",
-    "discounts": [],
-    "fingerprint": "91516239a2b86e67dd189eb4329c29842973ec8a2f89984c780c15d30b844700",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "d7997dfe0261bc8f86d7b5e091801ad661e5a2f7f88bbaa7f4c021c6f0babfbc",
+    "discounts": [
+      "Save 20%",
+      "Save 30%",
+      "Save 40%"
+    ],
+    "fingerprint": "991d64dfc66aac660482711aa0c499ac7a0c0d830ecb314126f369db0609ecf8",
     "heading_count": 135,
     "link_count": 115,
     "product_count": 35,
-    "summary": "Hush Puppies - Buy Shoes Online in Pakistan",
+    "summary": "Hush Puppies - Buy Shoes Online in Pakistan \u2014 Save 20%, Save 30%, Save 40%",
     "text_length": 84681,
     "title": "Hush Puppies - Buy Shoes Online in Pakistan",
     "url": "https://www.hushpuppies.com.pk/"
   },
   "J. Junaid Jamshed": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "9621913b9c856f06a1a059ac6023743190601bb9ee497d004c570359f9c36b95",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "dd24015cf775910877e6476f16542049a9ee7c6ecf2407737515e5e4dbb5c002",
     "discounts": [],
     "fingerprint": "5f3374e35fd629bbc870863e22d983500538269b25f7112d99af1fddbdfe883d",
     "heading_count": 19,
@@ -227,7 +238,7 @@
   },
   "Khaadi": {
     "active": false,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "43030a844b18f6d2898eb1acb61b7241d888de2d2550c45d4d571b79a60f2a1d",
     "discounts": [],
     "fingerprint": "270bcf3c2981007759fcaa54b4c669ab0c5b61840d604457c600567ea04825c4",
@@ -241,22 +252,22 @@
   },
   "LAMA": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "7f3ef9af3b90da74919b5223a1fe2a23927df514defcc5c455e67dd956a48c1f",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "ff870bedf7a8f6e6965b174748972bbfd88004c0d4cebdf1f79db54e2cbb0cbf",
     "discounts": [],
     "fingerprint": "c1a9439db33fc755f6a648935f611fc9bc9062c40828929fed15a1a9757bd218",
     "heading_count": 64,
-    "link_count": 189,
+    "link_count": 184,
     "product_count": 49,
     "summary": "LAMA RETAIL \u2013 Lama Retail icon-Xicon-searchaccounticon-bag-minimalicon-emailinstagramicon-Xicon-Xicon-chevronicon-X",
-    "text_length": 104947,
+    "text_length": 104849,
     "title": "LAMA RETAIL \u2013 Lama Retail icon-Xicon-searchaccounticon-bag-minimalicon-emailinstagramicon-Xicon-Xicon-chevronicon-X",
     "url": "https://pk.lamaretail.com/"
   },
   "Limelight": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "b45d96970bec53f3e5116d69cd39e124315624cdf2c3d9fbb2af7ff31178ebae",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "94a2359c1164bbffd985e346b338fab6740817f111833a20740ef006b89f0eca",
     "discounts": [],
     "fingerprint": "3e7f412ae3bd0886bac17c5552203472ca7ed8c9fc8d35a13a7b53189c247ffe",
     "heading_count": 68,
@@ -269,7 +280,7 @@
   },
   "Maria.B.": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "9f368a09a7fc87c0661b5c2ba1b23075294929312bc2080338e2e52f6e84817e",
     "discounts": [
       "10% OFF",
@@ -290,7 +301,7 @@
   },
   "Mini Minors": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "31142014a2b7216fc727d8bbf7d0b15213782b21c77b1ab2b54460e79655def1",
     "discounts": [],
     "fingerprint": "bdb1fedece64a725a5c9391672950c9c0576d5cad277ead1e3b261fda0505bb9",
@@ -304,7 +315,7 @@
   },
   "Monark Clothing": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "858afb6e43e02348519328f70322fb99cd6c73dcbebbbfa49c7fa74ec2f275e1",
     "discounts": [],
     "fingerprint": "cbade35e8bbd961f3577c29249c28d4b7fd94b232b64f1ec6271582c65a3de42",
@@ -318,7 +329,7 @@
   },
   "Ndure": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "c8d168c0dbe2582163005d4464def1a3483157845a318234ecd5940501a2109d",
     "discounts": [],
     "fingerprint": "ba8d380db09b6372d88a0c2f61571434dd11ab539c2f2430587c9364e2b2c342",
@@ -326,13 +337,13 @@
     "link_count": 90,
     "product_count": 0,
     "summary": "Best Shoes in Pakistan for Men, Women & Kids \u2013 NDURE.com",
-    "text_length": 51583,
+    "text_length": 51585,
     "title": "Best Shoes in Pakistan for Men, Women & Kids \u2013 NDURE.com",
     "url": "https://www.ndure.com/"
   },
   "Nishat Linen": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "c4b7473c693e044458f3e590d8f62db1b79720ad4dfa8edc9104217b08bbfd4d",
     "discounts": [],
     "fingerprint": "cec28c0e470043e576c1ced9b7ecf7cdab9f8d685ae634b976dede79c3771a58",
@@ -346,7 +357,7 @@
   },
   "ONE Western Wear": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "427615e134363ab6b68e1f00834cbe2e9b6eb98def703ea14e9a55bffe4bcf55",
     "discounts": [],
     "fingerprint": "65f189e7afab95bd972f8842b0e60d8161caebecd75d06fd2ea696e4df26226c",
@@ -360,44 +371,45 @@
   },
   "One Degree Shoes": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "5c469c92fdddac8f4bbc2d3a52fa9c9d297e36f30d0b9b11e73c927239d4946b",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "96b01be8434452014c37e435280ae1f788feda5523d28ac6e702ac9eae224310",
     "discounts": [
       "10% OFF",
-      "20% off",
-      "30% off"
+      "Flat 20% off",
+      "Flat 30% off"
     ],
-    "fingerprint": "611543ffd079b3b59970a7ff8827daafdca928ae219c0a864d83fb3af75942d6",
+    "fingerprint": "4215e34db6745ba57aa69053b80deecc55f1dbd9876890415fad237b2415ed03",
     "heading_count": 90,
     "link_count": 131,
     "product_count": 24,
-    "summary": "Best Sneaker Shoes Brand in Pakistan One Degree Official Store \u2014 10% off, 20% off, 30% off",
+    "summary": "Best Sneaker Shoes Brand in Pakistan One Degree Official Store \u2014 10% off, Flat 20% off, Flat 30% off",
     "text_length": 56573,
     "title": "Best Sneaker Shoes Brand in Pakistan One Degree Official Store",
     "url": "https://onedegree.com.pk/"
   },
   "Outfitters Women Sale": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "d1bc3a5b7e34004a08a809459436272f73f44a2fc4625cf5b1d27d5a1e686e7b",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "57910d455d669ad843be6b74842e1edb2bf8817441a1788328f53f0ef2514fa0",
     "discounts": [
       "30% \n         \n    \n   \n\n\n \r\n   \r\n     \r\n          off",
       "30% Off",
       "60% Off",
-      "60% off"
+      "60% off",
+      "Flat 50%"
     ],
-    "fingerprint": "18a7c570f37609a22749d367328b0789b44e890ff2848715cda9f9e10ae4b066",
+    "fingerprint": "974dc867853b530d6d5d0a8b734f9bb548a529beec5dcbaf7e632092c846fd65",
     "heading_count": 1235,
     "link_count": 482,
     "product_count": 221,
-    "summary": "Outfitters Official Online Store \u2014 30% off, 60% off",
-    "text_length": 821987,
+    "summary": "Outfitters Official Online Store \u2014 30% off, 60% off, Flat 50%",
+    "text_length": 821382,
     "title": "Outfitters Official Online Store",
     "url": "https://outfitters.com.pk/"
   },
   "Saeed Ghani": {
     "active": false,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "c395289de64f3dc1111bda7ee5462bc10a2c66f4aad892b91aeba7a2b101314e",
     "discounts": [],
     "fingerprint": "16780e37c942239d1e05b73ae0cfdb9f1d747745156d891e5dc0ac2e6bc43097",
@@ -411,7 +423,7 @@
   },
   "Salt by Ideas": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "ad887e9de97871a2f8e8e6d4d4fa34d70a083670ee4a11002e7e49d43b3d99a5",
     "discounts": [],
     "fingerprint": "11555c982f8b47569060362a604eb9f3165250c2ee457c1fae3807506a6e475b",
@@ -425,21 +437,21 @@
   },
   "Sana Safinaz": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "10552a5d367556356d248ad39902f920fcc20f89b1ee36fb316e2878f292914e",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "83f0363fdeb0146012c1153240d6bc296bc6f47d751596e8b427d6f8a75572c0",
     "discounts": [],
     "fingerprint": "02a3ce899700a88a9db0d180a44062a214de1f430bd47241c9d831cdccb5c047",
     "heading_count": 6,
-    "link_count": 175,
+    "link_count": 176,
     "product_count": 0,
     "summary": "Top Women's Fashion in Pakistan | Shop Latest Styles Online \u2013 Sana Safinaz",
-    "text_length": 51025,
+    "text_length": 51151,
     "title": "Top Women's Fashion in Pakistan | Shop Latest Styles Online \u2013 Sana Safinaz",
     "url": "https://sanasafinaz.com/"
   },
   "Sapphire": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "aa2dc573465d006be31c34c2a2970a07d6c283b7947a117d0c2b1b3e11631aee",
     "discounts": [],
     "fingerprint": "8b43a7a094ba251a5f07bf8cac609bdd5c8446fc83a476fd69377b3ba25c6f8f",
@@ -453,23 +465,23 @@
   },
   "Servis Shoes": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "a49459e8439dcd916ae9a843a553393657e0f05353374c38c18b680af5d9debe",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "6ac08821149a90f7f22b584ec37a32fd718dc3e269f62010292802b5cc390bb7",
     "discounts": [
-      "40% Off"
+      "Flat 40% Off"
     ],
-    "fingerprint": "2c51fb5ab8f63d02355ef48a3401c401a0faf7473ab710b156691381ce2527b2",
+    "fingerprint": "9bd95cb3624b01745c889324a099606e0c5014ad67c1dae87645279933b9b076",
     "heading_count": 51,
     "link_count": 106,
     "product_count": 0,
-    "summary": "Welcome to Servis Online Shoes Store! Men, Women & Kids \u2014 40% off",
+    "summary": "Welcome to Servis Online Shoes Store! Men, Women & Kids \u2014 Flat 40% off",
     "text_length": 15776,
     "title": "Welcome to Servis Online Shoes Store! Men, Women & Kids",
     "url": "https://servis.pk/"
   },
   "ShoePlanet": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
     "content_fingerprint": "2578c53e20709f630d070721729cc3462f30b698b3064323529089b8772886ab",
     "discounts": [
       "70% off"
@@ -483,41 +495,69 @@
     "title": "Premium Shoe Experience \u2013 ShoePlanet.pk",
     "url": "https://www.shoeplanet.pk/"
   },
+  "Starlet Shoes": {
+    "active": true,
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "cac065ea1ff6da7be803c4b8d42a6282dd7e76e0fae24fd6786e398df9a4785d",
+    "discounts": [
+      "Save 25%"
+    ],
+    "fingerprint": "102ea8711af68da575bb261e5aa5c2a8c11b3ac95c8b3752d9e459d72f3007b0",
+    "heading_count": 8,
+    "link_count": 75,
+    "product_count": 10,
+    "summary": "Starlet Shoes Pakistan \u2013 Premium Footwear Brand for Men & Women \u2014 Save 25%",
+    "text_length": 23605,
+    "title": "Starlet Shoes Pakistan \u2013 Premium Footwear Brand for Men & Women",
+    "url": "https://starlet.pk/"
+  },
   "Stylo": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "ff395e334bbe5eb82de45e5c5b7c197c08689b6e6726565ea2f6596b829269b4",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "7d6f04727b66b0c1675a4d9a2f18dfbc851cb4843a763bda852976dd168857a3",
     "discounts": [
-      "11% Off",
-      "21% Off",
-      "31% Off",
-      "51% Off",
-      "60% Off",
-      "71% Off"
+      "Flat 11% Off",
+      "Flat 21% Off",
+      "Flat 31% Off",
+      "Flat 51% Off",
+      "Flat 60% Off",
+      "Flat 71% Off",
+      "Save 17%",
+      "Save 20%",
+      "Save 21%",
+      "Save 31%",
+      "Save 33%",
+      "Save 40%",
+      "Save 48%",
+      "Save 50%",
+      "Save 51%",
+      "Save 52%",
+      "Save 60%",
+      "Save 63%"
     ],
-    "fingerprint": "7092fb9999f0c83de0084dfa440f26e6fea1a389f2b75bc2ab2ec973087b741f",
+    "fingerprint": "d02131cdc843933e6db3a84cfea1934ce5d639641c003fc32dd27b05f8ecd994",
     "heading_count": 18,
     "link_count": 530,
     "product_count": 236,
     "summary": "Stylo: Best Ladies Shoes Brand in Pakistanicon-Xinstagramicon-Xaccounticon-searchicon-hamburgericon-bag-minimalQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick vie",
     "text_length": 219831,
     "title": "Stylo: Best Ladies Shoes Brand in Pakistanicon-Xinstagramicon-Xaccounticon-searchicon-hamburgericon-bag-minimalQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-XQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewQuick viewicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-Xicon-emailinstagramicon-Xicon-Xicon-chevronicon-X",
-    "url": "https://int.stylo.pk/?shpxid=f05ebaa0-c070-4da8-af12-beadd61c9fef"
+    "url": "https://int.stylo.pk/?shpxid=d8740665-68ef-464c-9ad1-26c74d040f0d"
   },
   "Urban Sole": {
     "active": true,
-    "checked_at": "2026-10-24T19:00:28.622172+00:00",
-    "content_fingerprint": "ab764f4df31213053eb2bd5900a6f6dbdc8c0bed6dec50ef20d3b49c2dd24ff5",
+    "checked_at": "2026-10-24T19:46:42.110088+00:00",
+    "content_fingerprint": "c9522d6fcccbcc2798b3f6e52bcf6ac946af917f9663d389a2040c310a53f7b7",
     "discounts": [
-      "25% Off",
-      "30% Off",
-      "50% Off"
+      "Flat 25% Off",
+      "Flat 30% Off",
+      "Flat 50% Off"
     ],
-    "fingerprint": "2be21f593a110f3e9f9144312cdaae4ac241f0f6fc8963182b439dace6a62184",
+    "fingerprint": "d1d40e703830b8a7387b946c0432a3ac686b44fbdf9be330d02ac3c25444a76c",
     "heading_count": 20,
     "link_count": 157,
     "product_count": 4,
-    "summary": "Shop Shoes, Bags and Accessories for Men, Women and Kids \u2013 Urbansole \u2014 25% off, 30% off, 50% off",
+    "summary": "Shop Shoes, Bags and Accessories for Men, Women and Kids \u2013 Urbansole \u2014 Flat 25% off, Flat 30% off, Flat 50% off",
     "text_length": 16531,
     "title": "Shop Shoes, Bags and Accessories for Men, Women and Kids \u2013 Urbansole",
     "url": "https://www.urbansole.com.pk/"
