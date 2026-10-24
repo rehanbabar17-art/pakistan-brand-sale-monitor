@@ -48,7 +48,11 @@ def is_duplicate(alert_text, sent_alerts):
         for k, _ in oldest:
             del sent_alerts[k]
     return False
-DISCOUNT_RE = re.compile(r"\b(?:up\s*to\s*)?\d{1,3}(?:\.\d+)?\s*%\s*(?:off|discount)\b", re.I)
+DISCOUNT_RE = re.compile(
+    r"\b(?:(?:up\s*to|flat)\s*)?\d{1,3}(?:\.\d+)?\s*%\s*(?:off|discount)\b"
+    r"|\b(?:save|flat)\s+(?:up\s*to\s*)?\d{1,3}(?:\.\d+)?\s*%",
+    re.I,
+)
 
 
 def load_json(path):
@@ -109,6 +113,7 @@ TIJARA_BRAND_ALIASES = {
     "hush puppies": "hush puppies",
     "saeed ghani": "saeed ghani",
     "urban sole": None,
+    "starlet shoes": "starlet",
 }
 
 
