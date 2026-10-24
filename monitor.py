@@ -233,7 +233,7 @@ def extract_page(page_html, base_url):
 
         def handle_starttag(self, tag, attributes):
             attributes = dict(attributes)
-            if tag in {"script", "style", "noscript"}:
+            if tag in {"script", "style", "noscript", "svg"}:
                 self.skip_depth += 1
                 return
             if tag in {"h1", "h2", "h3"}:
@@ -246,11 +246,11 @@ def extract_page(page_html, base_url):
                 absolute_url = urljoin(base_url, href).split("#", 1)[0]
                 if absolute_url.startswith(("http://", "https://")):
                     self.links.add(absolute_url)
-            if tag == "title":
+            if tag == "title" and not self.title_parts:
                 self.in_title = True
 
         def handle_endtag(self, tag):
-            if tag in {"script", "style", "noscript"}:
+            if tag in {"script", "style", "noscript", "svg"}:
                 self.skip_depth = max(0, self.skip_depth - 1)
                 return
             if tag == "title":
@@ -330,23 +330,118 @@ def fetch_page(url):
         page_html = response.read().decode(charset, errors="replace")
         final_url = response.geturl()
     return page_html, final_url
+def fetch_json_url(url, timeout=12):
+    request = Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; PakistanSaleMonitor/1.0)",
+            "Accept": "application/json",
+        },
+    )
+    with urlopen(request, timeout=timeout) as response:
+        charset = response.headers.get_content_charset() or "utf-8"
+        return json.loads(response.read().decode(charset, errors="replace"))
+
+
+def check_shopify_sale(brand_url):
+    """Check Shopify JSON endpoints and return (sale_product_count, discount_labels, collection_title)."""
+    parts = urlsplit(brand_url)
+    if not parts.scheme or not parts.netloc or "brandtijara" in parts.netloc.lower():
+        return 0, [], ""
+    base_url = f"{parts.scheme}://{parts.netloc}"
+
+    collection_title = ""
+    collection_total = 0
+    try:
+        col_data = fetch_json_url(f"{base_url}/collections/sale.json", timeout=10)
+        col = col_data.get("collection") or {}
+        collection_title = (col.get("title") or "").strip()
+        collection_total = int(col.get("products_count") or 0)
+    except Exception:
+        pass
+
+    for endpoint in ("/collections/sale/products.json?limit=250", "/products.json?limit=250"):
+        try:
+            data = fetch_json_url(f"{base_url}{endpoint}", timeout=12)
+            products = data.get("products")
+            if not isinstance(products, list) or not products:
+                continue
+
+            sale_product_count = 0
+            product_discounts = []
+            for product in products:
+                max_prod_pct = 0
+                for variant in product.get("variants") or []:
+                    try:
+                        price = float(variant.get("price") or 0)
+                        compare_at = float(variant.get("compare_at_price") or 0)
+                        if compare_at > price > 0:
+                            pct = round((compare_at - price) / compare_at * 100)
+                            if 0 < pct <= 95 and pct > max_prod_pct:
+                                max_prod_pct = pct
+                    except (ValueError, TypeError):
+                        continue
+                if max_prod_pct > 0:
+                    sale_product_count += 1
+                    product_discounts.append(max_prod_pct)
+
+            if sale_product_count > 0:
+                total_sale_products = sale_product_count
+                if (
+                    endpoint.startswith("/collections/sale/")
+                    and collection_total > sale_product_count
+                    and sale_product_count >= len(products) * 0.5
+                ):
+                    total_sale_products = collection_total
+
+                max_pct = max(product_discounts)
+                min_pct = min(product_discounts)
+                if min_pct == max_pct:
+                    disc_label = f"Flat {max_pct}% off"
+                else:
+                    disc_label = f"Up to {max_pct}% off"
+                return total_sale_products, [disc_label], collection_title
+        except Exception:
+            continue
+
+    return 0, [], ""
+
+
 def check_brand(brand_url):
     page_html, final_url = fetch_page(brand_url)
 
     title, headings, products, discounts, lower_text, links = extract_page(page_html, brand_url)
-    active = "sale" in brand_url.lower() or any(word in lower_text for word in SALE_WORDS)
+    shopify_count, shopify_discounts, shopify_col_title = check_shopify_sale(final_url)
+
+    if shopify_discounts:
+        existing_max = max_discount_percent(discounts)
+        shopify_max = max_discount_percent(shopify_discounts)
+        if not discounts or shopify_max > existing_max:
+            discounts = sorted(set(discounts + shopify_discounts))
+    if shopify_col_title and shopify_col_title not in headings:
+        headings = [shopify_col_title] + headings
+
+    active = (
+        shopify_count > 0
+        or "sale" in brand_url.lower()
+        or any(word in lower_text for word in SALE_WORDS)
+    )
+    sale_product_count = shopify_count if shopify_count > 0 else (len(products) if active else 0)
     fingerprint = make_fingerprint(title, headings, products, discounts)
     content_fingerprint = make_content_fingerprint(title, headings, links, discounts, lower_text)
     summary = title.strip() or "Active sale page"
     if discounts:
         summary += f" — {', '.join(clean_discounts(discounts))}"
+    if sale_product_count > 0:
+        summary += f" ({sale_product_count} products on sale)"
     return {
         "active": active,
         "fingerprint": fingerprint,
         "content_fingerprint": content_fingerprint,
         "title": title,
         "summary": summary[:600],
-        "product_count": len(products),
+        "product_count": sale_product_count if shopify_count > 0 else len(products),
+        "sale_product_count": sale_product_count,
         "link_count": len(links),
         "heading_count": len(headings),
         "text_length": len(lower_text),
@@ -701,10 +796,12 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
                         alerts.append(f"{tb} sale update (via Brand Tijara)\n{result['summary']}\n{final_url}")
             elif result["active"] and (previous is None or changed or force_alert):
                 disc = max_discount_percent(result.get("discounts", []))
+                sale_count = result.get("sale_product_count") or result.get("product_count") or 0
+                count_info = f" ({sale_count} products on sale)" if sale_count > 0 else ""
                 if disc >= 60:
-                    alerts.insert(0, f"TOP DEAL: {name} — {disc:.0f}% off!\n{result['summary']}\n{final_url}")
+                    alerts.insert(0, f"TOP DEAL: {name} — {disc:.0f}% off{count_info}!\n{result['summary']}\n{final_url}")
                 else:
-                    alerts.append(f"{name} has a sale update\n{result['summary']}\n{final_url}")
+                    alerts.append(f"{name} has a sale update{count_info}\n{result['summary']}\n{final_url}")
         except Exception as error:
             statuses.append(f"{name}: ERROR — {error}")
     for link in watched_links.get("links", []):
