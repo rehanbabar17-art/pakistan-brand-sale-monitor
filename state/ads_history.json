@@ -1,177 +1,5 @@
 [
   {
-    "id": "3b369756172acf7d89f6ef6f",
-    "brand": "Burger Lab",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "Burger Lab — FLAT 20% OFF, UP TO 30% OFF Live Sale Campaign",
-    "discounts": [
-      "FLAT 20% OFF",
-      "UP TO 30% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Burger%20Lab&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "5e00cf353b05f02382de0e1e",
-    "brand": "Burger Lab",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Burger Lab Official Store — FLAT 20% OFF, UP TO 30% OFF Online Sale",
-    "discounts": [
-      "FLAT 20% OFF",
-      "UP TO 30% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=burgerlab.com.pk",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "95a99f18372d3cfb0930e8bc",
-    "brand": "Johnny & Jugnu",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "Johnny & Jugnu — UP TO 25% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 25% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Johnny%20%26%20Jugnu&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "36063fc4c5d03b150f8a52d6",
-    "brand": "Johnny & Jugnu",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Johnny & Jugnu Official Store — UP TO 25% OFF Online Sale",
-    "discounts": [
-      "UP TO 25% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=johnnyandjugnu.com",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "e0513887417c4c250e427506",
-    "brand": "Tim Hortons Pakistan",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "Tim Hortons Pakistan — UP TO 30% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 30% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Tim%20Hortons%20Pakistan&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "38a669e63d2ca978ceaa78fe",
-    "brand": "Tim Hortons Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Tim Hortons Pakistan Official Store — UP TO 30% OFF Online Sale",
-    "discounts": [
-      "UP TO 30% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=timhortons.com.pk",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "5795ec1df2bd0ea6fc946a0e",
-    "brand": "Gloria Jean's Coffees Pakistan",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "Gloria Jean's Coffees Pakistan — UP TO 40% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Gloria%20Jean%27s%20Coffees%20Pakistan&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "4eeb3f88a8fb8c3e207d7b7d",
-    "brand": "Gloria Jean's Coffees Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Gloria Jean's Coffees Pakistan Official Store — UP TO 40% OFF Online Sale",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=gloriajeanscoffees.com.pk",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "9ebdfc47339e7c0111f070f4",
-    "brand": "Second Cup Pakistan",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "Second Cup Pakistan — UP TO 35% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 35% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Second%20Cup%20Pakistan&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "fe696594b5fd66c5d835573a",
-    "brand": "Second Cup Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Second Cup Pakistan Official Store — UP TO 35% OFF Online Sale",
-    "discounts": [
-      "UP TO 35% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=secondcup.com.pk",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "45a9aa5a1c2c7000694b4cfa",
-    "brand": "Dunkin' Pakistan",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "Dunkin' Pakistan — FLAT 30% OFF, BUY 6 GET 6 FREE Live Sale Campaign",
-    "discounts": [
-      "FLAT 30% OFF",
-      "BUY 6 GET 6 FREE"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Dunkin%27%20Pakistan&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "607a80a17bd282c814da1f1b",
-    "brand": "Dunkin' Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Dunkin' Pakistan Official Store — FLAT 30% OFF, BUY 6 GET 6 FREE Online Sale",
-    "discounts": [
-      "FLAT 30% OFF",
-      "BUY 6 GET 6 FREE"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=dunkin.com.pk",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "ca4bcbdfb29711a72cf1246d",
-    "brand": "Salt'n Pepper",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "Salt'n Pepper — UP TO 40% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Salt%27n%20Pepper&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "01d87de9be0b8afcc92519e6",
-    "brand": "Salt'n Pepper",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Salt'n Pepper Official Store — UP TO 40% OFF Online Sale",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=saltnpepper.com.pk",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
     "id": "4f9e55a67604b1f4d0ee6c0b",
     "brand": "Bundu Khan",
     "category": "Food & Dining",
@@ -5619,5 +5447,167 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR18202107684331716609/creative/CR14420075696699211777?region=PK",
     "detected_at": "2026-10-25T21:01:34.250489+00:00"
+  },
+  {
+    "id": "gads_CR02076822476679020545",
+    "brand": "Cheezious",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Cheezious Official Sale — UP TO 25% OFF | I O Digital",
+    "discounts": [
+      "UP TO 25% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR04146464094456643585/creative/CR02076822476679020545?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR02737579486949146625",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR02737579486949146625?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR11354640680073822209",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Singapore) Limited",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR11354640680073822209?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR03162839798247325697",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Hong Kong) Ltd.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR12265884469424029697/creative/CR03162839798247325697?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR05489413128540127233",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (STANDARD CHARTERED BANK)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR18293530718971625473/creative/CR05489413128540127233?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR10377696011492524033",
+    "brand": "Khaadi",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Khaadi — Active Google Search & Display Ad (Weaves Corporation)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR14084291511365664769/creative/CR10377696011492524033?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR15150670661908692993",
+    "brand": "Sapphire",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Sapphire Pakistan Official — Up to 50% OFF Women's, Men's & Kids Wear",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR15150670661908692993?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR16757066221060358145",
+    "brand": "Gul Ahmed",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Gul Ahmed Official Sale — UP TO 70% OFF | Ideas (Private) Limited",
+    "discounts": [
+      "UP TO 70% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR16757066221060358145?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR01315742177199915009",
+    "brand": "Maria.B.",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Maria.B. Official Sale — 10% OFF, 20% OFF, 30% OFF | MARIA B DESIGNS (PVT) LTD.",
+    "discounts": [
+      "10% OFF",
+      "20% OFF",
+      "30% OFF",
+      "40% OFF",
+      "UP TO 40% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR01315742177199915009?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR05626956956523560961",
+    "brand": "Maria.B.",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Maria.B. — Active Google Search & Display Ad (MARIA B DESIGNS (PVT) LTD.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR05626956956523560961?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR07245131308865683457",
+    "brand": "Breakout",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Breakout Official Sale — FLAT 50% OFF | Retail Concepts",
+    "discounts": [
+      "FLAT 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR16622709190091079681/creative/CR07245131308865683457?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR16318467459327721473",
+    "brand": "Breakout",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Breakout — Active Google Search & Display Ad (Retail Concepts)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR16622709190091079681/creative/CR16318467459327721473?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR06189614061894762497",
+    "brand": "Cross Stitch",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Cross Stitch Official Sale — UP TO 50% OFF, FLAT 30% OFF | Sheikhupura Textile Mills Ltd (Cross Stitch)",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14272895267773612033/creative/CR06189614061894762497?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
+  },
+  {
+    "id": "gads_CR10451478979792601089",
+    "brand": "Servis Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Servis Shoes Official Sale — FLAT 40% OFF | Service Industries Limited",
+    "discounts": [
+      "FLAT 40% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR05353357017098485761/creative/CR10451478979792601089?region=PK",
+    "detected_at": "2026-10-25T21:15:32.830196+00:00"
   }
 ]
