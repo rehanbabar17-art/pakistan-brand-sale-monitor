@@ -226,7 +226,7 @@ function getBrandItems() {
     ? state.data.brand.items
     : Object.keys(brandStates)
         .filter(k => k !== "tijara_top_deals" && k !== "salesiren_top_deals" && !k.includes("::"))
-        .map(name => ({ name, url: brandStates[name]?.url || "" }));
+        .map(name => ({ name, url: brandStates[name]?.url || "", category: brandStates[name]?.category || "Fashion & Apparel" }));
 
   const tracked = configured
     .filter(b => !b.name.includes("Brand Tijara"))
@@ -235,16 +235,18 @@ function getBrandItems() {
       const discounts = Array.isArray(st.discounts) ? st.discounts : [];
       const maxDiscount = extractMaxDiscount(discounts, st.summary || "");
       const productCount = extractProductCount(st);
-      const active = Boolean(st.active || productCount > 0 || maxDiscount > 0);
+      const active = Boolean(st.active || productCount > 0 || maxDiscount > 0 || (st.ads && st.ads.active));
       const ads = st.ads || null;
+      const category = b.category || st.category || "Retail";
       return {
         name: b.name,
+        category,
         url: st.url || b.url,
         active,
         maxDiscount,
         discounts,
         productCount,
-        summary: st.summary || b.name,
+        summary: st.summary || (ads && ads.active ? `Active Ads: ${ads.discounts?.join(", ") || "Campaign running"}` : `${b.name} Official`),
         checked_at: st.checked_at || "",
         ads,
         isAggregator: false
@@ -257,6 +259,7 @@ function getBrandItems() {
     if (Array.isArray(val) && val.length >= 2) {
       agg.push({
         name: `${val[0]} (via Brand Tijara)`,
+        category: "Fashion & Apparel",
         url: "https://www.brandtijara.com/brands-on-sale",
         active: true,
         maxDiscount: Number(val[1]) || 0,
@@ -273,6 +276,7 @@ function getBrandItems() {
     if (Array.isArray(val) && val.length >= 2) {
       agg.push({
         name: `${val[0]} (via Sale Siren)`,
+        category: "Fashion & Apparel",
         url: "https://salesiren.pk/",
         active: !val[2],
         maxDiscount: Number(val[1]) || 0,
@@ -291,8 +295,8 @@ function getBrandItems() {
 function renderBrandSales() {
   const { tracked, agg } = getBrandItems();
   const activeCount = tracked.filter(b => b.active).length;
-  const totalProducts = tracked.reduce((sum, b) => sum + (b.active ? b.productCount : 0), 0);
-  elements.saleSummaryBadge.textContent = `${activeCount}/${tracked.length} On Sale · ${totalProducts.toLocaleString()} Products`;
+  const adsCount = tracked.filter(b => b.ads && b.ads.active).length;
+  elements.saleSummaryBadge.textContent = `${activeCount}/${tracked.length} On Sale · ${adsCount} with FB/Google Ads`;
 
   const q = state.searchQuery.trim().toLowerCase();
   let pool = state.brandFilter === "aggregators" ? agg : tracked;
@@ -303,10 +307,13 @@ function renderBrandSales() {
   const filtered = pool
     .filter(item => {
       if (q) {
-        const hay = `${item.name} ${item.summary} ${item.discounts.join(" ")}`.toLowerCase();
+        const hay = `${item.name} ${item.category || ""} ${item.summary} ${item.discounts.join(" ")}`.toLowerCase();
         if (!hay.includes(q)) return false;
       }
       if (state.brandFilter === "active") return item.active;
+      if (state.brandFilter === "ads") return item.ads && item.ads.active;
+      if (state.brandFilter === "food") return item.category === "Food & Dining";
+      if (state.brandFilter === "banks") return item.category === "Banks & Cards";
       if (state.brandFilter === "top50") return item.active && item.maxDiscount >= 50;
       if (state.brandFilter === "top60") return item.active && item.maxDiscount >= 60;
       if (state.brandFilter === "inactive") return !item.active;
@@ -322,7 +329,7 @@ function renderBrandSales() {
     elements.searchFeedback.classList.remove("hidden");
     const onSaleMatches = filtered.filter(i => i.active).length;
     elements.searchFeedback.innerHTML = filtered.length
-      ? `<strong>${filtered.length}</strong> match(es) for "${escapeHtml(state.searchQuery)}" — <strong>${onSaleMatches}</strong> currently on sale.`
+      ? `<strong>${filtered.length}</strong> match(es) for "${escapeHtml(state.searchQuery)}" — <strong>${onSaleMatches}</strong> currently on sale / running ads.`
       : `No brand matched "${escapeHtml(state.searchQuery)}".`;
   } else {
     elements.searchFeedback.classList.add("hidden");
@@ -336,9 +343,12 @@ function renderBrandSales() {
   elements.brandsList.innerHTML = filtered.map(brand => `
     <article class="monitor-card">
       <div>
-        <h3 class="monitor-name">${escapeHtml(brand.name)}</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+          <h3 class="monitor-name">${escapeHtml(brand.name)}</h3>
+          <span style="font-size:11px;color:#94a3b8;font-weight:500;">${escapeHtml(brand.category || "")}</span>
+        </div>
         <div class="monitor-meta">
-          <span class="chip ${brand.active ? "sale-on" : "sale-off"}">${brand.active ? "SALE ACTIVE" : "NO ACTIVE SALE"}</span>
+          <span class="chip ${brand.active ? "sale-on" : "sale-off"}">${brand.active ? "SALE / ADS ACTIVE" : "NO ACTIVE SALE"}</span>
           ${brand.maxDiscount > 0 ? `<span class="chip changed">Up to ${brand.maxDiscount}% OFF</span>` : ""}
           ${brand.productCount > 0 ? `<span class="chip">${brand.productCount.toLocaleString()} products on sale</span>` : ""}
           ${brand.ads && brand.ads.active ? `<span class="chip" style="background:rgba(59,130,246,0.15);color:#60a5fa;border-color:rgba(59,130,246,0.3);">📢 Ads Active (${brand.ads.meta_count || 0} Meta / ${brand.ads.google_count || 0} Google)</span>` : ""}
@@ -347,7 +357,7 @@ function renderBrandSales() {
         ${brand.checked_at ? `<div class="monitor-last">Checked ${formatDate(brand.checked_at)}</div>` : ""}
       </div>
       <div class="monitor-actions">
-        <a class="mini-button" style="display:flex;align-items:center;justify-content:center;text-decoration:none;" href="${escapeAttribute(brand.url)}" target="_blank" rel="noopener noreferrer">Visit Store</a>
+        <a class="mini-button" style="display:flex;align-items:center;justify-content:center;text-decoration:none;" href="${escapeAttribute(brand.url)}" target="_blank" rel="noopener noreferrer">Visit Store / Deals</a>
       </div>
     </article>
   `).join("");
@@ -436,18 +446,63 @@ async function loadSource(kind) {
       return { value: null };
     }
   };
-  const [configResult, stateResult, historyResult] = await Promise.all([
+  const [configResult, stateResult, historyResult, adsConfigResult, adsStateResult] = await Promise.all([
     optionalFile(source.configPath),
     optionalFile(source.statePath),
-    optionalFile(source.historyPath)
+    optionalFile(source.historyPath),
+    kind === "brand" ? optionalFile("brands_ads.json") : Promise.resolve({ value: null }),
+    kind === "brand" ? optionalFile("state/ads_state.json") : Promise.resolve({ value: null })
   ]);
   const rawConfig = configResult.value || {};
+  let items = Array.isArray(rawConfig.brands)
+    ? rawConfig.brands
+    : (Array.isArray(rawConfig.links) ? rawConfig.links : []);
+
+  let states = stateResult.value || {};
+
+  if (kind === "brand") {
+    const adsBrands = Array.isArray(adsConfigResult.value?.brands) ? adsConfigResult.value.brands : [];
+    const adsStates = adsStateResult.value || {};
+
+    const itemMap = new Map();
+    items.forEach(b => itemMap.set(b.name.toLowerCase(), { ...b, category: b.category || "Fashion & Apparel" }));
+    adsBrands.forEach(b => itemMap.set(b.name.toLowerCase(), { ...itemMap.get(b.name.toLowerCase()), ...b }));
+    items = Array.from(itemMap.values());
+
+    // Merge ads state into states
+    for (const [brandName, adInfo] of Object.entries(adsStates)) {
+      if (!states[brandName]) {
+        states[brandName] = {
+          url: adInfo.url || "",
+          category: adInfo.category || "",
+          active: Boolean(adInfo.has_sale_ads || adInfo.meta_ads_count > 0 || adInfo.google_ads_count > 0),
+          discounts: adInfo.discounts || [],
+          max_discount: adInfo.max_discount || 0,
+          checked_at: adInfo.checked_at || "",
+          ads: {
+            active: Boolean(adInfo.has_sale_ads || adInfo.meta_ads_count > 0 || adInfo.google_ads_count > 0),
+            meta_count: adInfo.meta_ads_count,
+            google_count: adInfo.google_ads_count,
+            discounts: adInfo.discounts,
+            checked_at: adInfo.checked_at
+          }
+        };
+      } else {
+        states[brandName].ads = {
+          active: Boolean(adInfo.has_sale_ads || adInfo.meta_ads_count > 0 || adInfo.google_ads_count > 0),
+          meta_count: adInfo.meta_ads_count,
+          google_count: adInfo.google_ads_count,
+          discounts: adInfo.discounts,
+          checked_at: adInfo.checked_at
+        };
+      }
+    }
+  }
+
   state.data[kind] = {
-    items: Array.isArray(rawConfig.brands)
-      ? rawConfig.brands
-      : (Array.isArray(rawConfig.links) ? rawConfig.links : []),
+    items,
     sha: configResult.sha,
-    states: stateResult.value || {},
+    states,
     history: Array.isArray(historyResult.value) ? historyResult.value : []
   };
 }

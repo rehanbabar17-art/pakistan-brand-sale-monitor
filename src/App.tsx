@@ -14,6 +14,16 @@ import {
   ShoppingBag,
   Sparkles,
   Globe,
+  Flame,
+  Radio,
+  Tag,
+  CreditCard,
+  Utensils,
+  Smartphone,
+  Store,
+  Shirt,
+  Footprints,
+  Wifi,
 } from 'lucide-react';
 import { usePWAInstall, useOnlineStatus } from './hooks/usePWAInstall';
 
@@ -34,6 +44,42 @@ interface BrandConfigItem {
   url: string;
 }
 
+interface BrandAdsItem {
+  name: string;
+  category: string;
+  url: string;
+  search_terms?: string;
+  keywords?: string[];
+}
+
+interface AdCampaignDetail {
+  id: string;
+  platform: string;
+  page_name?: string;
+  headline?: string;
+  body?: string;
+  url?: string;
+  publisher_platforms?: string[];
+  started_at?: string;
+  discounts?: string[];
+  max_discount?: number;
+  is_sale?: boolean;
+}
+
+interface BrandAdState {
+  brand: string;
+  category?: string;
+  url?: string;
+  meta_ads_count: number;
+  google_ads_count: number;
+  sale_ads_count: number;
+  has_sale_ads: boolean;
+  discounts: string[];
+  max_discount: number;
+  checked_at?: string;
+  top_ads?: AdCampaignDetail[];
+}
+
 interface BrandSaleState {
   active: boolean;
   checked_at?: string;
@@ -46,6 +92,7 @@ interface BrandSaleState {
   url?: string;
   ads?: {
     active: boolean;
+    category?: string;
     meta_count?: number;
     google_count?: number;
     sale_ads_count?: number;
@@ -57,6 +104,7 @@ interface BrandSaleState {
 
 interface EnrichedBrand {
   name: string;
+  category: string;
   url: string;
   active: boolean;
   maxDiscount: number;
@@ -64,19 +112,31 @@ interface EnrichedBrand {
   saleProductsCount: number;
   summary: string;
   checkedAt: string;
-  source: 'tracked' | 'aggregator';
+  source: 'tracked' | 'aggregator' | 'ad_only';
   aggregatorName?: string;
   upcoming?: boolean;
   ads?: {
     active: boolean;
+    category?: string;
     meta_count?: number;
     google_count?: number;
     sale_ads_count?: number;
     discounts?: string[];
     max_discount?: number;
     checked_at?: string;
+    top_ads?: AdCampaignDetail[];
   };
 }
+
+const CATEGORY_ICONS: Record<string, React.ReactNode> = {
+  'Food & Dining': <Utensils className="w-3.5 h-3.5 text-amber-400" />,
+  'Banks & Cards': <CreditCard className="w-3.5 h-3.5 text-emerald-400" />,
+  'Fintech & Wallets': <Smartphone className="w-3.5 h-3.5 text-purple-400" />,
+  'Marketplaces & Groceries': <Store className="w-3.5 h-3.5 text-rose-400" />,
+  'Fashion & Apparel': <Shirt className="w-3.5 h-3.5 text-sky-400" />,
+  'Footwear & Leather': <Footprints className="w-3.5 h-3.5 text-teal-400" />,
+  'Telecom & Internet': <Wifi className="w-3.5 h-3.5 text-cyan-400" />,
+};
 
 function decodeBase64Unicode(value: string): string {
   const bytes = Uint8Array.from(atob(value.replace(/\s/g, '')), c => c.charCodeAt(0));
@@ -131,10 +191,11 @@ export default function App() {
   const { isInstallable, isInstalled, isIOS, install } = usePWAInstall();
   const isOnline = useOnlineStatus();
 
-  const [activeSection, setActiveSection] = useState<'brands' | 'top-deals' | 'aggregators' | 'sync'>('brands');
+  const [activeSection, setActiveSection] = useState<'brands' | 'ads' | 'top-deals' | 'aggregators' | 'sync'>('brands');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [statusFilter, setStatusFilter] = useState<'all' | 'active' | 'top50' | 'top60' | 'inactive'>('all');
-  const [sortBy, setSortBy] = useState<'products' | 'discount' | 'name'>('products');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'active' | 'ads_only' | 'top50' | 'top60' | 'inactive'>('all');
+  const [sortBy, setSortBy] = useState<'products' | 'discount' | 'name'>('discount');
 
   const [config, setConfig] = useState<GitHubConfig>(() => {
     try {
@@ -159,7 +220,9 @@ export default function App() {
   const [tokenInput, setTokenInput] = useState(config.token);
 
   const [brandsList, setBrandsList] = useState<BrandConfigItem[]>([]);
+  const [brandsAdsList, setBrandsAdsList] = useState<BrandAdsItem[]>([]);
   const [rawState, setRawState] = useState<Record<string, any>>({});
+  const [adsState, setAdsState] = useState<Record<string, BrandAdState>>({});
   const [loading, setLoading] = useState(true);
   const [syncSource, setSyncSource] = useState<'github-pat' | 'github-public' | 'local-cache'>('local-cache');
   const [feedbackMessage, setFeedbackMessage] = useState<{ text: string; type: 'info' | 'error' } | null>(null);
@@ -168,8 +231,10 @@ export default function App() {
   // Add brand form state
   const [newBrandName, setNewBrandName] = useState('');
   const [newBrandUrl, setNewBrandUrl] = useState('');
+  const [newBrandCategory, setNewBrandCategory] = useState('Fashion & Apparel');
   const [addingBrand, setAddingBrand] = useState(false);
   const [triggeringScan, setTriggeringScan] = useState(false);
+  const [triggeringAdsScan, setTriggeringAdsScan] = useState(false);
 
   const showToast = useCallback((text: string, type: 'info' | 'error' = 'info') => {
     setFeedbackMessage({ text, type });
@@ -202,61 +267,94 @@ export default function App() {
     async (customConfig?: GitHubConfig, notify = false) => {
       const activeCfg = customConfig || config;
       setLoading(true);
+
+      // Helper to fetch either via GitHub contents or raw or local
+      let loadedBrands: BrandConfigItem[] = [];
+      let loadedBrandsAds: BrandAdsItem[] = [];
+      let loadedSaleState: Record<string, any> = {};
+      let loadedAdsState: Record<string, BrandAdState> = {};
+      let source: 'github-pat' | 'github-public' | 'local-cache' = 'local-cache';
+
       try {
-        // 1. Try GitHub REST API (uses PAT if provided, or unauthenticated public API)
-        const [brandsRes, stateRes] = await Promise.all([
+        // 1. Try authenticated or public GitHub REST API
+        const [brandsRes, adsConfigRes, stateRes, adsStateRes] = await Promise.allSettled([
           fetchFromGitHubContents('brands.json', activeCfg),
+          fetchFromGitHubContents('brands_ads.json', activeCfg),
           fetchFromGitHubContents('state/sale_state.json', activeCfg),
+          fetchFromGitHubContents('state/ads_state.json', activeCfg),
         ]);
-        setBrandsList(brandsRes.data?.brands || []);
-        setRawState(stateRes.data || {});
-        setSyncSource(activeCfg.token.trim() ? 'github-pat' : 'github-public');
-        if (notify) {
-          showToast(
-            activeCfg.token.trim()
-              ? 'Synced live sale_state.json via GitHub PAT'
-              : 'Synced live sale_state.json from GitHub'
-          );
+
+        if (brandsRes.status === 'fulfilled') loadedBrands = brandsRes.value.data?.brands || [];
+        if (adsConfigRes.status === 'fulfilled') loadedBrandsAds = adsConfigRes.value.data?.brands || [];
+        if (stateRes.status === 'fulfilled') loadedSaleState = stateRes.value.data || {};
+        if (adsStateRes.status === 'fulfilled') loadedAdsState = adsStateRes.value.data || {};
+
+        if (loadedBrands.length || loadedBrandsAds.length) {
+          source = activeCfg.token.trim() ? 'github-pat' : 'github-public';
         }
-        setLoading(false);
-        return;
       } catch {
-        // 2. Fallback to raw.githubusercontent.com
+        // Continue to raw fallback
+      }
+
+      // 2. Try raw fallback if needed
+      if (!loadedBrandsAds.length && !loadedBrands.length) {
         try {
           const baseRaw = `https://raw.githubusercontent.com/${activeCfg.owner}/${activeCfg.repo}/${activeCfg.branch}`;
-          const [bResp, sResp] = await Promise.all([
-            fetch(`${baseRaw}/brands.json?_=${Date.now()}`),
-            fetch(`${baseRaw}/state/sale_state.json?_=${Date.now()}`),
+          const [bResp, baResp, sResp, aResp] = await Promise.all([
+            fetch(`${baseRaw}/brands.json?_=${Date.now()}`).catch(() => null),
+            fetch(`${baseRaw}/brands_ads.json?_=${Date.now()}`).catch(() => null),
+            fetch(`${baseRaw}/state/sale_state.json?_=${Date.now()}`).catch(() => null),
+            fetch(`${baseRaw}/state/ads_state.json?_=${Date.now()}`).catch(() => null),
           ]);
-          if (bResp.ok && sResp.ok) {
-            const bJson = await bResp.json();
-            const sJson = await sResp.json();
-            setBrandsList(bJson?.brands || []);
-            setRawState(sJson || {});
-            setSyncSource('github-public');
-            if (notify) showToast('Synced sale_state.json from GitHub Raw');
-            setLoading(false);
-            return;
+
+          if (bResp?.ok) loadedBrands = (await bResp.json())?.brands || [];
+          if (baResp?.ok) loadedBrandsAds = (await baResp.json())?.brands || [];
+          if (sResp?.ok) loadedSaleState = await sResp.json();
+          if (aResp?.ok) loadedAdsState = await aResp.json();
+
+          if (loadedBrands.length || loadedBrandsAds.length) {
+            source = 'github-public';
           }
         } catch {
-          // 3. Fallback to bundled local snapshot in /sale_state.json
+          // Continue to local snapshot
         }
       }
 
-      try {
-        const [localBrands, localState] = await Promise.all([
-          fetch('/brands.json').then(r => r.json()),
-          fetch('/sale_state.json').then(r => r.json()),
-        ]);
-        setBrandsList(localBrands?.brands || []);
-        setRawState(localState || {});
-        setSyncSource('local-cache');
-        if (notify) showToast('Loaded cached sale_state.json snapshot');
-      } catch (err: any) {
-        showToast(err?.message || 'Could not load sale_state.json', 'error');
-      } finally {
-        setLoading(false);
+      // 3. Fallback to local snapshot
+      if (!loadedBrandsAds.length && !loadedBrands.length) {
+        try {
+          const [localBrands, localBrandsAds, localState, localAdsState] = await Promise.all([
+            fetch('/brands.json').then(r => r.json()).catch(() => ({ brands: [] })),
+            fetch('/brands_ads.json').then(r => r.json()).catch(() => ({ brands: [] })),
+            fetch('/sale_state.json').then(r => r.json()).catch(() => ({})),
+            fetch('/ads_state.json').then(r => r.json()).catch(() => ({})),
+          ]);
+          loadedBrands = localBrands?.brands || [];
+          loadedBrandsAds = localBrandsAds?.brands || [];
+          loadedSaleState = localState || {};
+          loadedAdsState = localAdsState || {};
+          source = 'local-cache';
+        } catch (err: any) {
+          showToast(err?.message || 'Could not load brands data', 'error');
+        }
       }
+
+      setBrandsList(loadedBrands);
+      setBrandsAdsList(loadedBrandsAds);
+      setRawState(loadedSaleState);
+      setAdsState(loadedAdsState);
+      setSyncSource(source);
+
+      if (notify) {
+        showToast(
+          source === 'github-pat'
+            ? 'Synced live brand sales & ads via GitHub PAT'
+            : source === 'github-public'
+              ? 'Synced live brand sales & ads from GitHub'
+              : 'Loaded cached sale & ads snapshot'
+        );
+      }
+      setLoading(false);
     },
     [config, showToast]
   );
@@ -323,9 +421,9 @@ export default function App() {
     }
   };
 
-  const [triggeringAdsScan, setTriggeringAdsScan] = useState(false);
   const handleTriggerAdsScan = async () => {
     if (!config.token.trim()) {
+      setActiveSection('sync');
       showToast('Enter your GitHub Personal Access Token in the GitHub Sync tab to trigger workflows', 'error');
       return;
     }
@@ -367,15 +465,24 @@ export default function App() {
 
     setAddingBrand(true);
     try {
-      const current = await fetchFromGitHubContents('brands.json', config);
-      const existingBrands: BrandConfigItem[] = current.data?.brands || [];
-      if (existingBrands.some(b => b.name.toLowerCase() === name.toLowerCase())) {
-        throw new Error(`${name} is already in brands.json`);
-      }
-      const updated = { brands: [...existingBrands, { name, url }] };
-      const putRes = await fetch(
-        `https://api.github.com/repos/${config.owner}/${config.repo}/contents/brands.json`,
-        {
+      // 1. Add to brands_ads.json
+      const currentAds = await fetchFromGitHubContents('brands_ads.json', config).catch(() => null);
+      const existingAdsBrands: BrandAdsItem[] = currentAds?.data?.brands || [];
+      if (!existingAdsBrands.some(b => b.name.toLowerCase() === name.toLowerCase())) {
+        const updatedAds = {
+          ...currentAds?.data,
+          brands: [
+            ...existingAdsBrands,
+            {
+              name,
+              category: newBrandCategory,
+              url,
+              search_terms: `"${name}" ("sale" OR "discount" OR "offer") Pakistan`,
+              keywords: ['sale', 'discount', 'deal', '% off'],
+            },
+          ],
+        };
+        await fetch(`https://api.github.com/repos/${config.owner}/${config.repo}/contents/brands_ads.json`, {
           method: 'PUT',
           headers: {
             Accept: 'application/vnd.github+json',
@@ -384,20 +491,18 @@ export default function App() {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            message: `Add brand: ${name}`,
-            content: encodeBase64Unicode(JSON.stringify(updated, null, 2) + '\n'),
+            message: `Add ${name} to brands_ads.json [${newBrandCategory}]`,
+            content: encodeBase64Unicode(JSON.stringify(updatedAds, null, 2) + '\n'),
             branch: config.branch,
-            sha: current.sha,
+            sha: currentAds?.sha,
           }),
-        }
-      );
-      if (!putRes.ok) {
-        throw new Error(`GitHub commit failed (${putRes.status})`);
+        });
       }
-      setBrandsList(updated.brands);
+
       setNewBrandName('');
       setNewBrandUrl('');
-      showToast(`Added ${name} to brands.json on GitHub`);
+      showToast(`Added ${name} to Pakistan Brand Monitor on GitHub!`);
+      await loadSaleState(config, false);
     } catch (err: any) {
       showToast(err?.message || 'Failed to add brand', 'error');
     } finally {
@@ -405,45 +510,108 @@ export default function App() {
     }
   };
 
-  // Transform rawState + brandsList into unified EnrichedBrand records
-  const { trackedBrands, aggregatorBrands, lastCheckedGlobal } = useMemo(() => {
-    const tracked: EnrichedBrand[] = [];
-    const seenNames = new Set<string>();
+  // Transform rawState + brandsAdsList + brandsList into unified EnrichedBrand records
+  const { allBrands, aggregatorBrands, lastCheckedGlobal, categoriesList } = useMemo(() => {
+    const list: EnrichedBrand[] = [];
+    const brandMap = new Map<string, EnrichedBrand>();
     let latestTimestamp = '';
 
-    const sourceBrands: BrandConfigItem[] =
-      brandsList.length > 0
-        ? brandsList
-        : Object.keys(rawState)
-            .filter(k => k !== 'tijara_top_deals' && k !== 'salesiren_top_deals' && !k.includes('::'))
-            .map(k => ({ name: k, url: rawState[k]?.url || '' }));
+    // First index from brands_ads.json (the full 96+ brands across all Pakistani sectors)
+    for (const item of brandsAdsList) {
+      const name = item.name;
+      const category = item.category || 'General';
+      const adData = adsState[name];
+      const websiteData = rawState[name];
 
-    for (const item of sourceBrands) {
-      if (item.name.includes('Brand Tijara')) continue;
-      seenNames.add(item.name.toLowerCase());
-      const st: BrandSaleState | undefined = rawState[item.name];
-      const discounts = Array.isArray(st?.discounts) ? st!.discounts! : [];
-      const maxDiscount = extractMaxDiscount(discounts, st?.summary || '');
-      const saleProductsCount = extractSaleProductCount(st);
-      const active = Boolean(st?.active || saleProductsCount > 0 || maxDiscount > 0);
-      if (st?.checked_at && st.checked_at > latestTimestamp) {
-        latestTimestamp = st.checked_at;
+      const discounts = Array.isArray(websiteData?.discounts)
+        ? websiteData.discounts
+        : Array.isArray(adData?.discounts)
+          ? adData.discounts
+          : [];
+      const maxDiscount = Math.max(
+        extractMaxDiscount(discounts, websiteData?.summary || ''),
+        adData?.max_discount || 0
+      );
+      const saleProductsCount = extractSaleProductCount(websiteData);
+      const hasActiveSale = Boolean(websiteData?.active || saleProductsCount > 0 || maxDiscount > 0);
+      const hasActiveAds = Boolean(adData?.has_sale_ads || (adData && (adData.meta_ads_count > 0 || adData.google_ads_count > 0)));
+
+      const brandChecked = websiteData?.checked_at || adData?.checked_at || '';
+      if (brandChecked && brandChecked > latestTimestamp) {
+        latestTimestamp = brandChecked;
       }
-      tracked.push({
-        name: item.name,
-        url: st?.url || item.url,
-        active,
+
+      brandMap.set(name.toLowerCase(), {
+        name,
+        category,
+        url: item.url || websiteData?.url || adData?.url || '',
+        active: hasActiveSale || hasActiveAds,
         maxDiscount,
         discounts,
         saleProductsCount,
-        summary: st?.summary || item.name,
-        checkedAt: st?.checked_at || '',
+        summary: websiteData?.summary || (hasActiveAds ? `Active Ads: ${adData?.discounts?.join(' · ') || 'Campaign live'}` : `${name} Official Store`),
+        checkedAt: brandChecked,
         source: 'tracked',
-        ads: st?.ads,
+        ads: adData
+          ? {
+              active: adData.has_sale_ads || adData.meta_ads_count > 0 || adData.google_ads_count > 0,
+              category: adData.category || category,
+              meta_count: adData.meta_ads_count,
+              google_count: adData.google_ads_count,
+              sale_ads_count: adData.sale_ads_count,
+              discounts: adData.discounts,
+              max_discount: adData.max_discount,
+              checked_at: adData.checked_at,
+              top_ads: adData.top_ads,
+            }
+          : websiteData?.ads,
       });
     }
 
-    // Also parse aggregator deals (Brand Tijara & Sale Siren) from sale_state.json
+    // Merge any brands from brands.json that might not be in brands_ads.json
+    for (const item of brandsList) {
+      if (item.name.includes('Brand Tijara')) continue;
+      const key = item.name.toLowerCase();
+      if (!brandMap.has(key)) {
+        const websiteData = rawState[item.name];
+        const adData = adsState[item.name];
+        const discounts = Array.isArray(websiteData?.discounts)
+          ? websiteData.discounts
+          : Array.isArray(adData?.discounts)
+            ? adData.discounts
+            : [];
+        const maxDiscount = Math.max(
+          extractMaxDiscount(discounts, websiteData?.summary || ''),
+          adData?.max_discount || 0
+        );
+        const saleProductsCount = extractSaleProductCount(websiteData);
+        const hasActiveSale = Boolean(websiteData?.active || saleProductsCount > 0 || maxDiscount > 0);
+        const hasActiveAds = Boolean(adData?.has_sale_ads || (adData && (adData.meta_ads_count > 0 || adData.google_ads_count > 0)));
+        const brandChecked = websiteData?.checked_at || adData?.checked_at || '';
+        if (brandChecked && brandChecked > latestTimestamp) latestTimestamp = brandChecked;
+
+        brandMap.set(key, {
+          name: item.name,
+          category: 'Fashion & Apparel',
+          url: websiteData?.url || item.url,
+          active: hasActiveSale || hasActiveAds,
+          maxDiscount,
+          discounts,
+          saleProductsCount,
+          summary: websiteData?.summary || item.name,
+          checkedAt: brandChecked,
+          source: 'tracked',
+          ads: websiteData?.ads,
+        });
+      }
+    }
+
+    // Convert map to list
+    for (const b of brandMap.values()) {
+      list.push(b);
+    }
+
+    // Also parse aggregator deals (Brand Tijara & Sale Siren)
     const aggMap = new Map<string, EnrichedBrand>();
     const tijaraDeals = rawState.tijara_top_deals || {};
     for (const [slug, val] of Object.entries(tijaraDeals)) {
@@ -452,6 +620,7 @@ export default function App() {
         const pct = Number(val[1]) || 0;
         aggMap.set(slug.toLowerCase(), {
           name: displayName,
+          category: 'Fashion & Apparel',
           url: 'https://www.brandtijara.com/brands-on-sale',
           active: true,
           maxDiscount: pct,
@@ -475,6 +644,7 @@ export default function App() {
         if (!existing || pct > existing.maxDiscount) {
           aggMap.set(slug.toLowerCase(), {
             name: displayName,
+            category: 'Fashion & Apparel',
             url: 'https://salesiren.pk/',
             active: !upcoming,
             maxDiscount: pct,
@@ -490,26 +660,42 @@ export default function App() {
       }
     }
 
+    const uniqueCategories = Array.from(new Set(list.map(b => b.category))).filter(Boolean);
+
     return {
-      trackedBrands: tracked,
+      allBrands: list,
       aggregatorBrands: Array.from(aggMap.values()).sort((a, b) => b.maxDiscount - a.maxDiscount),
       lastCheckedGlobal: latestTimestamp,
+      categoriesList: uniqueCategories,
     };
-  }, [brandsList, rawState]);
+  }, [brandsAdsList, brandsList, rawState, adsState]);
 
   // Filtered and sorted brands
-  const filteredTracked = useMemo(() => {
+  const filteredBrands = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    return trackedBrands
+    return allBrands
       .filter(b => {
+        // Sector / Category filter
+        if (selectedCategory !== 'all' && b.category !== selectedCategory) {
+          return false;
+        }
+
+        // Query filter
         if (q) {
-          const hay = `${b.name} ${b.summary} ${b.discounts.join(' ')}`.toLowerCase();
+          const hay = `${b.name} ${b.category} ${b.summary} ${b.discounts.join(' ')}`.toLowerCase();
           if (!hay.includes(q)) return false;
+        }
+
+        // Active tab filters
+        if (activeSection === 'ads') {
+          return b.ads && b.ads.active;
         }
         if (activeSection === 'top-deals') {
           return b.active && b.maxDiscount >= 50;
         }
+
         if (statusFilter === 'active') return b.active;
+        if (statusFilter === 'ads_only') return b.ads && b.ads.active;
         if (statusFilter === 'top50') return b.active && b.maxDiscount >= 50;
         if (statusFilter === 'top60') return b.active && b.maxDiscount >= 60;
         if (statusFilter === 'inactive') return !b.active;
@@ -531,27 +717,28 @@ export default function App() {
         }
         return a.name.localeCompare(b.name);
       });
-  }, [trackedBrands, searchQuery, statusFilter, sortBy, activeSection]);
+  }, [allBrands, selectedCategory, searchQuery, statusFilter, sortBy, activeSection]);
 
-  // Also match aggregator brands when searching a brand name that might not be in trackedBrands
+  // Matching aggregator deals when searching
   const matchingAggregatorDeals = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     if (!q && activeSection !== 'aggregators') return [];
     return aggregatorBrands.filter(b => !q || b.name.toLowerCase().includes(q));
   }, [aggregatorBrands, searchQuery, activeSection]);
 
-  const activeSaleCount = useMemo(() => trackedBrands.filter(b => b.active).length, [trackedBrands]);
+  const activeSaleCount = useMemo(() => allBrands.filter(b => b.active).length, [allBrands]);
+  const activeAdsCount = useMemo(() => allBrands.filter(b => b.ads && b.ads.active).length, [allBrands]);
   const totalProductsOnSale = useMemo(
-    () => trackedBrands.reduce((acc, b) => acc + (b.active ? b.saleProductsCount : 0), 0),
-    [trackedBrands]
+    () => allBrands.reduce((acc, b) => acc + (b.active ? b.saleProductsCount : 0), 0),
+    [allBrands]
   );
   const top50Count = useMemo(
-    () => trackedBrands.filter(b => b.active && b.maxDiscount >= 50).length,
-    [trackedBrands]
+    () => allBrands.filter(b => b.active && b.maxDiscount >= 50).length,
+    [allBrands]
   );
   const topDealCount = useMemo(
-    () => trackedBrands.filter(b => b.active && b.maxDiscount >= 60).length,
-    [trackedBrands]
+    () => allBrands.filter(b => b.active && b.maxDiscount >= 60).length,
+    [allBrands]
   );
 
   const handleInstallClick = async () => {
@@ -564,13 +751,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0b1220] text-[#edf2f9] pb-24 md:pb-12">
-      {/* Top Bar Contract: Zone 1 (Brand) — Zone 2 (Nav Links) — Zone 3 (1 Primary Action) */}
+      {/* Header Bar */}
       <header className="sticky top-0 z-30 flex items-center justify-between gap-8 px-4 md:px-8 h-14 bg-[#0b1220]/90 backdrop-blur-md border-b border-slate-800/80">
         <a
           href="#top"
           onClick={e => {
             e.preventDefault();
             setActiveSection('brands');
+            setSelectedCategory('all');
           }}
           className="flex items-center gap-2.5 text-base md:text-lg font-bold tracking-tight text-white whitespace-nowrap shrink-0 font-display"
         >
@@ -586,7 +774,22 @@ export default function App() {
               activeSection === 'brands' ? 'text-white underline underline-offset-8 decoration-sky-400 decoration-2' : ''
             }`}
           >
-            All Brands
+            All Brands &amp; Deals
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveSection('ads')}
+            className={`hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 flex items-center gap-1.5 ${
+              activeSection === 'ads' ? 'text-white underline underline-offset-8 decoration-sky-400 decoration-2' : ''
+            }`}
+          >
+            <Radio className="w-3.5 h-3.5 text-blue-400" />
+            <span>FB &amp; Google Ads</span>
+            {activeAdsCount > 0 && (
+              <span className="text-[10px] bg-blue-500/20 text-blue-300 px-1.5 py-0.5 rounded-full font-mono">
+                {activeAdsCount}
+              </span>
+            )}
           </button>
           <button
             type="button"
@@ -595,7 +798,7 @@ export default function App() {
               activeSection === 'top-deals' ? 'text-white underline underline-offset-8 decoration-sky-400 decoration-2' : ''
             }`}
           >
-            Top Deals
+            Top Deals (50%+)
           </button>
           <button
             type="button"
@@ -604,7 +807,7 @@ export default function App() {
               activeSection === 'aggregators' ? 'text-white underline underline-offset-8 decoration-sky-400 decoration-2' : ''
             }`}
           >
-            Aggregator Deals
+            Aggregators
           </button>
           <button
             type="button"
@@ -641,23 +844,26 @@ export default function App() {
         </div>
       </header>
 
-      {/* Main Content Container */}
+      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 md:px-8 pt-6 space-y-6">
         {/* Offline Banner */}
         {!isOnline && (
           <div className="rounded-xl bg-amber-500/15 border border-amber-500/30 px-4 py-3 text-xs text-amber-200 flex items-center justify-between">
-            <span>Offline mode — showing last cached sale_state.json snapshot.</span>
+            <span>Offline mode — showing last cached brand sales &amp; ad snapshot.</span>
           </div>
         )}
 
-        {/* Search & Instant Brand Sale Lookup */}
+        {/* Search & Overview Hero */}
         <section className="bg-[#111c31] border border-slate-800 rounded-2xl p-4 md:p-6 space-y-5">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div className="space-y-1">
-              <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight text-balance">
-                Pakistani Brand Sale Status
+              <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+                Pakistan Brand Sale &amp; Ad Campaign Monitor
               </h1>
-              <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
+              <p className="text-xs text-slate-400">
+                Tracking all major Pakistani brands: Food &amp; Dining, Banks &amp; Card Discounts, Fintech, Supermarkets, Fashion, Footwear, and Telecom on Facebook, Google, and Web.
+              </p>
+              <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400 pt-1">
                 <span>
                   Source:{' '}
                   <strong className="text-slate-200 font-medium">
@@ -665,7 +871,7 @@ export default function App() {
                       ? `${config.owner}/${config.repo} (Authenticated PAT)`
                       : syncSource === 'github-public'
                         ? `${config.owner}/${config.repo} (Live GitHub)`
-                        : 'Cached sale_state.json'}
+                        : 'Cached Snapshot'}
                   </strong>
                 </span>
                 <span aria-hidden="true">·</span>
@@ -686,22 +892,22 @@ export default function App() {
 
               <button
                 type="button"
+                onClick={handleTriggerAdsScan}
+                disabled={triggeringAdsScan}
+                className="min-h-[44px] px-4 py-2 text-xs font-semibold text-blue-200 bg-blue-950/60 hover:bg-blue-900/70 border border-blue-700/80 rounded-xl transition-colors flex items-center gap-2 whitespace-nowrap shrink-0"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+                <span>{triggeringAdsScan ? 'Triggering…' : 'Check FB/Google Ads'}</span>
+              </button>
+
+              <button
+                type="button"
                 onClick={handleTriggerGitHubScan}
                 disabled={triggeringScan}
                 className="min-h-[44px] px-4 py-2 text-xs font-medium text-slate-200 bg-[#17243c] hover:bg-slate-800 border border-slate-700/80 rounded-xl transition-colors flex items-center gap-2 whitespace-nowrap shrink-0"
               >
                 <Play className="w-3.5 h-3.5 text-sky-400" />
-                <span>{triggeringScan ? 'Requesting…' : 'Run Website Scan'}</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={handleTriggerAdsScan}
-                disabled={triggeringAdsScan}
-                className="min-h-[44px] px-4 py-2 text-xs font-medium text-slate-200 bg-[#17243c] hover:bg-slate-800 border border-slate-700/80 rounded-xl transition-colors flex items-center gap-2 whitespace-nowrap shrink-0"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-                <span>{triggeringAdsScan ? 'Requesting…' : 'Check FB/Google Ads'}</span>
+                <span>{triggeringScan ? 'Triggering…' : 'Run Website Scan'}</span>
               </button>
             </div>
           </div>
@@ -713,7 +919,7 @@ export default function App() {
               type="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search any brand name (e.g. Starlet, Gul Ahmed, Stylo, Khaadi, Baroque)..."
+              placeholder="Search any brand or deal (e.g. KFC, HBL, Bank Alfalah, Cheezious, Daraz, Sapphire, Bata)..."
               aria-label="Search brand name"
               className="w-full min-h-[48px] pl-12 pr-12 py-3 bg-[#0b1220] border border-slate-700/80 focus:border-sky-400 focus:outline-none rounded-xl text-sm md:text-base text-white placeholder:text-slate-500 transition-colors"
             />
@@ -729,44 +935,84 @@ export default function App() {
             )}
           </div>
 
+          {/* Sector / Category Filter Strip */}
+          <div className="space-y-2 pt-1">
+            <div className="text-xs text-slate-400 font-medium">Browse by Sector:</div>
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+              <button
+                type="button"
+                onClick={() => setSelectedCategory('all')}
+                className={`min-h-[36px] px-3.5 py-1.5 text-xs font-medium rounded-xl transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 border ${
+                  selectedCategory === 'all'
+                    ? 'bg-sky-400 text-slate-950 font-semibold border-sky-400'
+                    : 'bg-[#0b1220] border-slate-800 text-slate-300 hover:text-white hover:border-slate-700'
+                }`}
+              >
+                <span>All Sectors</span>
+                <span className="text-[10px] font-mono opacity-80">({allBrands.length})</span>
+              </button>
+
+              {categoriesList.map(cat => {
+                const count = allBrands.filter(b => b.category === cat).length;
+                const isSelected = selectedCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`min-h-[36px] px-3.5 py-1.5 text-xs font-medium rounded-xl transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 border ${
+                      isSelected
+                        ? 'bg-sky-400 text-slate-950 font-semibold border-sky-400'
+                        : 'bg-[#0b1220] border-slate-800 text-slate-300 hover:text-white hover:border-slate-700'
+                    }`}
+                  >
+                    {CATEGORY_ICONS[cat] || <Tag className="w-3.5 h-3.5" />}
+                    <span>{cat}</span>
+                    <span className="text-[10px] font-mono opacity-80">({count})</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           {/* KPI Summary Strip */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
             <div className="bg-[#0b1220]/70 border border-slate-800/90 rounded-xl p-3.5">
-              <div className="text-xs text-slate-400">Brands On Sale Now</div>
-              <div className="mt-1 text-xl md:text-2xl font-bold text-emerald-400 font-mono-tabular">
-                {activeSaleCount} <span className="text-sm font-normal text-slate-500">/ {trackedBrands.length}</span>
-              </div>
-            </div>
-            <div className="bg-[#0b1220]/70 border border-slate-800/90 rounded-xl p-3.5">
-              <div className="text-xs text-slate-400">Total Products On Sale</div>
-              <div className="mt-1 text-xl md:text-2xl font-bold text-sky-400 font-mono-tabular">
-                {totalProductsOnSale.toLocaleString()}
-              </div>
-            </div>
-            <div className="bg-[#0b1220]/70 border border-slate-800/90 rounded-xl p-3.5">
-              <div className="text-xs text-slate-400">60%+ Off Top Deals</div>
-              <div className="mt-1 text-xl md:text-2xl font-bold text-amber-400 font-mono-tabular">
-                {topDealCount}
-              </div>
-            </div>
-            <div className="bg-[#0b1220]/70 border border-slate-800/90 rounded-xl p-3.5">
-              <div className="text-xs text-slate-400">Aggregator Deals (50%+)</div>
+              <div className="text-xs text-slate-400">Total Tracked Brands</div>
               <div className="mt-1 text-xl md:text-2xl font-bold text-white font-mono-tabular">
-                {aggregatorBrands.length}
+                {allBrands.length} <span className="text-xs font-normal text-slate-500">across 7 sectors</span>
+              </div>
+            </div>
+            <div className="bg-[#0b1220]/70 border border-slate-800/90 rounded-xl p-3.5">
+              <div className="text-xs text-slate-400">Brands on Active Sale</div>
+              <div className="mt-1 text-xl md:text-2xl font-bold text-emerald-400 font-mono-tabular">
+                {activeSaleCount}
+              </div>
+            </div>
+            <div className="bg-[#0b1220]/70 border border-slate-800/90 rounded-xl p-3.5">
+              <div className="text-xs text-slate-400">50%+ Off Deals</div>
+              <div className="mt-1 text-xl md:text-2xl font-bold text-amber-400 font-mono-tabular">
+                {top50Count}
+              </div>
+            </div>
+            <div className="bg-[#0b1220]/70 border border-slate-800/90 rounded-xl p-3.5">
+              <div className="text-xs text-slate-400">Active FB / Google Ads</div>
+              <div className="mt-1 text-xl md:text-2xl font-bold text-blue-400 font-mono-tabular">
+                {activeAdsCount} <span className="text-xs font-normal text-slate-500">campaigns</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Instant Search Answer Banner when user types a brand query */}
+        {/* Instant Search Answer Banner */}
         {searchQuery.trim() !== '' && (
           <section className="bg-[#111c31] border border-sky-500/30 rounded-2xl p-4 md:p-5">
             <div className="text-xs text-sky-400 font-medium mb-1">
               Search Results for &ldquo;{searchQuery.trim()}&rdquo;
             </div>
-            {filteredTracked.length === 0 && matchingAggregatorDeals.length === 0 ? (
+            {filteredBrands.length === 0 && matchingAggregatorDeals.length === 0 ? (
               <p className="text-sm text-slate-300">
-                No tracked or aggregator brand matched &ldquo;{searchQuery.trim()}&rdquo;. You can add it in the{' '}
+                No tracked brand matched &ldquo;{searchQuery.trim()}&rdquo;. You can add it in the{' '}
                 <button
                   type="button"
                   onClick={() => setActiveSection('sync')}
@@ -774,53 +1020,47 @@ export default function App() {
                 >
                   GitHub Sync
                 </button>{' '}
-                tab.
+                tab to track its sales and ads!
               </p>
             ) : (
               <p className="text-sm text-slate-200">
                 Found{' '}
                 <strong className="font-mono-tabular text-white">
-                  {filteredTracked.length + matchingAggregatorDeals.length}
+                  {filteredBrands.length + matchingAggregatorDeals.length}
                 </strong>{' '}
                 matching brand(s) —{' '}
                 <strong className="text-emerald-400 font-mono-tabular">
-                  {filteredTracked.filter(b => b.active).length + matchingAggregatorDeals.filter(b => b.active).length}
+                  {filteredBrands.filter(b => b.active).length + matchingAggregatorDeals.filter(b => b.active).length}
                 </strong>{' '}
-                currently have an <strong className="text-emerald-400">Active Sale</strong>.
+                currently have an <strong className="text-emerald-400">Active Sale / Discount</strong>.
               </p>
             )}
           </section>
         )}
 
-        {/* Section 1 & 2: Tracked Brands & Top Deals */}
-        {(activeSection === 'brands' || activeSection === 'top-deals') && (
+        {/* Section: Brands & Ads Grid */}
+        {(activeSection === 'brands' || activeSection === 'ads' || activeSection === 'top-deals') && (
           <section className="space-y-4">
             {/* Filter & Sort Controls */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              {/* Interactive Filter Buttons */}
+              {/* Status Filter Buttons */}
               <div className="flex items-center gap-1 p-1 bg-[#111c31] border border-slate-800 rounded-xl overflow-x-auto">
                 <button
                   type="button"
-                  onClick={() => {
-                    setActiveSection('brands');
-                    setStatusFilter('all');
-                  }}
+                  onClick={() => setStatusFilter('all')}
                   className={`min-h-[38px] px-3.5 py-1.5 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 ${
-                    statusFilter === 'all' && activeSection === 'brands'
+                    statusFilter === 'all'
                       ? 'bg-sky-400 text-slate-950 font-semibold'
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
-                  All ({trackedBrands.length})
+                  All ({allBrands.length})
                 </button>
                 <button
                   type="button"
-                  onClick={() => {
-                    setActiveSection('brands');
-                    setStatusFilter('active');
-                  }}
+                  onClick={() => setStatusFilter('active')}
                   className={`min-h-[38px] px-3.5 py-1.5 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 ${
-                    statusFilter === 'active' && activeSection === 'brands'
+                    statusFilter === 'active'
                       ? 'bg-sky-400 text-slate-950 font-semibold'
                       : 'text-slate-300 hover:text-white'
                   }`}
@@ -829,12 +1069,9 @@ export default function App() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => {
-                    setActiveSection('brands');
-                    setStatusFilter('top50');
-                  }}
+                  onClick={() => setStatusFilter('top50')}
                   className={`min-h-[38px] px-3.5 py-1.5 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 ${
-                    statusFilter === 'top50' && activeSection === 'brands'
+                    statusFilter === 'top50'
                       ? 'bg-sky-400 text-slate-950 font-semibold'
                       : 'text-slate-300 hover:text-white'
                   }`}
@@ -843,48 +1080,33 @@ export default function App() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => {
-                    setActiveSection('brands');
-                    setStatusFilter('top60');
-                  }}
+                  onClick={() => setStatusFilter('ads_only')}
                   className={`min-h-[38px] px-3.5 py-1.5 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 ${
-                    statusFilter === 'top60' || activeSection === 'top-deals'
+                    statusFilter === 'ads_only'
                       ? 'bg-sky-400 text-slate-950 font-semibold'
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
-                  60%+ Off ({topDealCount})
+                  Active FB/Google Ads ({activeAdsCount})
                 </button>
                 <button
                   type="button"
-                  onClick={() => {
-                    setActiveSection('brands');
-                    setStatusFilter('inactive');
-                  }}
+                  onClick={() => setStatusFilter('inactive')}
                   className={`min-h-[38px] px-3.5 py-1.5 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 ${
-                    statusFilter === 'inactive' && activeSection === 'brands'
+                    statusFilter === 'inactive'
                       ? 'bg-sky-400 text-slate-950 font-semibold'
                       : 'text-slate-300 hover:text-white'
                   }`}
                 >
-                  No Active Sale ({trackedBrands.length - activeSaleCount})
+                  Regular ({allBrands.length - activeSaleCount})
                 </button>
               </div>
 
               {/* Sort Selector */}
               <div className="flex items-center gap-2 self-end sm:self-auto">
                 <SlidersHorizontal className="w-4 h-4 text-slate-400 shrink-0" />
-                <span className="text-xs text-slate-400 whitespace-nowrap">Sort by:</span>
+                <span className="text-xs text-slate-400 whitespace-nowrap">Sort:</span>
                 <div className="flex items-center gap-1 p-1 bg-[#111c31] border border-slate-800 rounded-xl">
-                  <button
-                    type="button"
-                    onClick={() => setSortBy('products')}
-                    className={`min-h-[34px] px-2.5 py-1 text-xs rounded-lg transition-colors whitespace-nowrap shrink-0 ${
-                      sortBy === 'products' ? 'bg-[#17243c] text-sky-400 font-semibold' : 'text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    Products Count
-                  </button>
                   <button
                     type="button"
                     onClick={() => setSortBy('discount')}
@@ -893,6 +1115,15 @@ export default function App() {
                     }`}
                   >
                     Max Discount
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSortBy('products')}
+                    className={`min-h-[34px] px-2.5 py-1 text-xs rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                      sortBy === 'products' ? 'bg-[#17243c] text-sky-400 font-semibold' : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Products Count
                   </button>
                   <button
                     type="button"
@@ -909,34 +1140,43 @@ export default function App() {
 
             {/* Brand Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filteredTracked.map(brand => (
+              {filteredBrands.map(brand => (
                 <article
                   key={brand.name}
                   className="bg-[#111c31] border border-slate-800/90 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between gap-4 transition-colors"
                 >
                   <div className="space-y-2.5">
-                    {/* Top Row: Brand Title + Explicit Icon/Text Status */}
-                    <div className="flex items-start justify-between gap-3">
-                      <h2 className="text-lg font-bold text-white leading-snug">{brand.name}</h2>
-                      {brand.active ? (
-                        <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 shrink-0">
-                          <CheckCircle2 className="w-4 h-4 shrink-0" />
-                          <span>SALE ACTIVE</span>
+                    {/* Top Row: Brand Title + Category + Explicit Status */}
+                    <div className="space-y-1.5">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="space-y-1">
+                          <h2 className="text-lg font-bold text-white leading-snug">{brand.name}</h2>
+                          <div className="flex items-center gap-1.5 text-[11px] text-slate-400">
+                            {CATEGORY_ICONS[brand.category] || <Tag className="w-3 h-3" />}
+                            <span>{brand.category}</span>
+                          </div>
                         </div>
-                      ) : (
-                        <div className="flex items-center gap-1.5 text-xs font-medium text-slate-400 shrink-0">
-                          <XCircle className="w-4 h-4 shrink-0" />
-                          <span>NO ACTIVE SALE</span>
-                        </div>
-                      )}
+
+                        {brand.active ? (
+                          <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 shrink-0">
+                            <CheckCircle2 className="w-4 h-4 shrink-0" />
+                            <span>SALE ACTIVE</span>
+                          </div>
+                        ) : (
+                          <div className="flex items-center gap-1.5 text-xs font-medium text-slate-500 shrink-0">
+                            <XCircle className="w-4 h-4 shrink-0" />
+                            <span>NO ACTIVE SALE</span>
+                          </div>
+                        )}
+                      </div>
                     </div>
 
-                    {/* Unboxed Metadata Line (Zero-Pill Discipline) */}
+                    {/* Metadata Line */}
                     <div className="flex flex-wrap items-center gap-2 text-xs text-slate-300 font-mono-tabular">
                       {brand.maxDiscount > 0 ? (
                         <span className="text-sky-400 font-semibold">Up to {brand.maxDiscount}% OFF</span>
                       ) : brand.active ? (
-                        <span className="text-emerald-300">Sale Page Live</span>
+                        <span className="text-emerald-300">Campaign Live</span>
                       ) : (
                         <span className="text-slate-500">Regular Pricing</span>
                       )}
@@ -962,25 +1202,37 @@ export default function App() {
                       )}
                     </div>
 
-                    {/* Detected Discount Tiers */}
+                    {/* Detected Discount Badges */}
                     {brand.discounts.length > 0 && (
                       <p className="text-xs text-slate-300 leading-relaxed">
-                        Discounts: <span className="text-white font-medium">{brand.discounts.join(' · ')}</span>
+                        Offers: <span className="text-white font-medium">{brand.discounts.join(' · ')}</span>
                       </p>
                     )}
 
-                    {/* Clean Summary */}
+                    {/* Summary / Notes */}
                     <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{brand.summary}</p>
 
-                    {/* Facebook & Google Ads Badge */}
-                    {brand.ads && brand.ads.active && (
-                      <div className="flex items-center gap-2 text-xs text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-1.5 rounded-lg">
-                        <span>📢 Active Ads:</span>
-                        <span className="font-semibold text-white">
-                          {brand.ads.meta_count || 0} Meta (FB/IG) · {brand.ads.google_count || 0} Google
-                        </span>
+                    {/* Facebook & Google Ads Status Block */}
+                    {brand.ads && (
+                      <div className="p-2.5 rounded-xl bg-[#0b1220]/70 border border-slate-800 space-y-1.5">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="text-blue-400 font-medium flex items-center gap-1">
+                            <Radio className="w-3 h-3" />
+                            FB &amp; Google Ads
+                          </span>
+                          <span className="font-mono text-slate-300">
+                            {brand.ads.meta_count || 0} Meta · {brand.ads.google_count || 0} Google
+                          </span>
+                        </div>
                         {brand.ads.discounts && brand.ads.discounts.length > 0 && (
-                          <span className="text-blue-300">({brand.ads.discounts.slice(0, 2).join(', ')})</span>
+                          <div className="text-[11px] text-blue-300 font-mono">
+                            Ad Deals: {brand.ads.discounts.join(', ')}
+                          </div>
+                        )}
+                        {brand.ads.top_ads && brand.ads.top_ads.length > 0 && (
+                          <div className="pt-1 text-[11px] text-slate-400 line-clamp-1 border-t border-slate-800">
+                            Latest: &ldquo;{brand.ads.top_ads[0].headline}&rdquo;
+                          </div>
                         )}
                       </div>
                     )}
@@ -997,7 +1249,7 @@ export default function App() {
                       rel="noopener noreferrer"
                       className="min-h-[40px] px-3.5 py-2 rounded-xl bg-[#17243c] hover:bg-sky-400 hover:text-slate-950 text-xs font-semibold text-slate-200 transition-colors flex items-center gap-1.5 whitespace-nowrap shrink-0"
                     >
-                      <span>Visit Store</span>
+                      <span>Visit Brand / Offer</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -1005,11 +1257,11 @@ export default function App() {
               ))}
             </div>
 
-            {/* If user searched a query that also matches Aggregator Deals, show them right below */}
+            {/* Additional Matches from Aggregators */}
             {searchQuery.trim() !== '' && matchingAggregatorDeals.length > 0 && (
               <div className="pt-4 space-y-3">
                 <h3 className="text-sm font-semibold text-slate-300">
-                  Additional Matches from Brand Tijara &amp; Sale Siren Aggregators ({matchingAggregatorDeals.length})
+                  Additional Matches from Aggregators ({matchingAggregatorDeals.length})
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {matchingAggregatorDeals.map(deal => (
@@ -1042,7 +1294,7 @@ export default function App() {
           </section>
         )}
 
-        {/* Section 3: Aggregator Deals (Brand Tijara & Sale Siren >= 50% off) */}
+        {/* Section: Aggregator Deals (Brand Tijara & Sale Siren >= 50% off) */}
         {activeSection === 'aggregators' && (
           <section className="space-y-4">
             <div className="bg-[#111c31] border border-slate-800 rounded-2xl p-4 md:p-5">
@@ -1087,14 +1339,14 @@ export default function App() {
           </section>
         )}
 
-        {/* Section 4: GitHub Sync & PAT Configuration + Add Brand */}
+        {/* Section: GitHub Sync & PAT Configuration + Add Brand */}
         {activeSection === 'sync' && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <section className="bg-[#111c31] border border-slate-800 rounded-2xl p-5 md:p-6 space-y-4">
               <div>
                 <h2 className="text-lg font-bold text-white">GitHub Repository &amp; PAT Connection</h2>
                 <p className="mt-1 text-xs text-slate-400 leading-relaxed">
-                  Link directly to <code>state/sale_state.json</code> in your repository. Your PAT is stored only in
+                  Link directly to <code>state/sale_state.json</code> and <code>state/ads_state.json</code> in your repository. Your PAT is stored only in
                   this browser&apos;s <code>localStorage</code> and lets you trigger live GitHub Action scans or add
                   brands from your phone.
                 </p>
@@ -1152,7 +1404,7 @@ export default function App() {
                     type="submit"
                     className="min-h-[44px] px-5 py-2.5 rounded-xl bg-sky-400 hover:bg-sky-300 text-slate-950 font-semibold text-xs transition-colors"
                   >
-                    Connect &amp; Sync sale_state.json
+                    Connect &amp; Sync State
                   </button>
                   {config.token && (
                     <button
@@ -1167,13 +1419,12 @@ export default function App() {
               </form>
             </section>
 
-            {/* Add New Brand to brands.json */}
+            {/* Add New Brand */}
             <section className="bg-[#111c31] border border-slate-800 rounded-2xl p-5 md:p-6 space-y-4">
               <div>
-                <h2 className="text-lg font-bold text-white">Add Brand to Monitor</h2>
+                <h2 className="text-lg font-bold text-white">Add Brand to Pakistan Monitor</h2>
                 <p className="mt-1 text-xs text-slate-400 leading-relaxed">
-                  Commits a new brand directly to <code>brands.json</code> in your GitHub repository (requires PAT with{' '}
-                  <strong>Contents: Read &amp; Write</strong>).
+                  Adds a brand into <code>brands_ads.json</code> in your GitHub repository for continuous Facebook &amp; Google Ads and website tracking.
                 </p>
               </div>
 
@@ -1184,18 +1435,34 @@ export default function App() {
                     type="text"
                     value={newBrandName}
                     onChange={e => setNewBrandName(e.target.value)}
-                    placeholder="e.g. Borjan Shoes"
+                    placeholder="e.g. Gloria Jean's Pakistan"
                     required
                     className="w-full min-h-[44px] px-3.5 py-2 bg-[#0b1220] border border-slate-700 rounded-xl text-sm text-white"
                   />
                 </label>
                 <label className="block text-xs text-slate-300 space-y-1">
-                  <span>Brand Website or Sale URL</span>
+                  <span>Sector / Category</span>
+                  <select
+                    value={newBrandCategory}
+                    onChange={e => setNewBrandCategory(e.target.value)}
+                    className="w-full min-h-[44px] px-3.5 py-2 bg-[#0b1220] border border-slate-700 rounded-xl text-sm text-white"
+                  >
+                    <option value="Food & Dining">Food &amp; Dining (QSR / Restaurants / Delivery)</option>
+                    <option value="Banks & Cards">Banks &amp; Cards (Card Deals / Dining Offers)</option>
+                    <option value="Fintech & Wallets">Fintech &amp; Digital Wallets</option>
+                    <option value="Marketplaces & Groceries">Marketplaces &amp; Supermarkets</option>
+                    <option value="Fashion & Apparel">Fashion &amp; Apparel</option>
+                    <option value="Footwear & Leather">Footwear &amp; Leather</option>
+                    <option value="Telecom & Internet">Telecom &amp; Internet</option>
+                  </select>
+                </label>
+                <label className="block text-xs text-slate-300 space-y-1">
+                  <span>Website URL</span>
                   <input
                     type="url"
                     value={newBrandUrl}
                     onChange={e => setNewBrandUrl(e.target.value)}
-                    placeholder="https://www.borjan.com.pk/"
+                    placeholder="https://example.com.pk/"
                     required
                     className="w-full min-h-[44px] px-3.5 py-2 bg-[#0b1220] border border-slate-700 rounded-xl text-sm text-white"
                   />
@@ -1206,7 +1473,7 @@ export default function App() {
                   className="min-h-[44px] px-5 py-2.5 rounded-xl bg-[#17243c] hover:bg-sky-400 hover:text-slate-950 border border-slate-700 text-white font-semibold text-xs transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
-                  <span>{addingBrand ? 'Committing to GitHub…' : 'Add Brand to brands.json'}</span>
+                  <span>{addingBrand ? 'Committing to GitHub…' : 'Add Brand to Monitor'}</span>
                 </button>
               </form>
             </section>
@@ -1214,20 +1481,33 @@ export default function App() {
         )}
       </main>
 
-      {/* Mobile Fixed Bottom Navigation Bar (44px+ touch targets, <= 15% viewport height) */}
+      {/* Mobile Fixed Bottom Navigation */}
       <nav
         aria-label="Mobile Navigation"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-30 h-16 bg-[#0b1220]/95 backdrop-blur-md border-t border-slate-800 grid grid-cols-4 items-center px-2"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-30 h-16 bg-[#0b1220]/95 backdrop-blur-md border-t border-slate-800 grid grid-cols-5 items-center px-1"
       >
         <button
           type="button"
-          onClick={() => setActiveSection('brands')}
+          onClick={() => {
+            setActiveSection('brands');
+            setSelectedCategory('all');
+          }}
           className={`min-h-[48px] flex flex-col items-center justify-center rounded-xl transition-colors ${
             activeSection === 'brands' ? 'text-sky-400 font-semibold' : 'text-slate-400'
           }`}
         >
           <ShoppingBag className="w-5 h-5" />
-          <span className="text-[11px] mt-0.5 whitespace-nowrap">Brands</span>
+          <span className="text-[10px] mt-0.5 whitespace-nowrap">Brands</span>
+        </button>
+        <button
+          type="button"
+          onClick={() => setActiveSection('ads')}
+          className={`min-h-[48px] flex flex-col items-center justify-center rounded-xl transition-colors ${
+            activeSection === 'ads' ? 'text-blue-400 font-semibold' : 'text-slate-400'
+          }`}
+        >
+          <Radio className="w-5 h-5" />
+          <span className="text-[10px] mt-0.5 whitespace-nowrap">Ads</span>
         </button>
         <button
           type="button"
@@ -1237,7 +1517,7 @@ export default function App() {
           }`}
         >
           <Sparkles className="w-5 h-5" />
-          <span className="text-[11px] mt-0.5 whitespace-nowrap">Top Deals</span>
+          <span className="text-[10px] mt-0.5 whitespace-nowrap">Deals</span>
         </button>
         <button
           type="button"
@@ -1247,7 +1527,7 @@ export default function App() {
           }`}
         >
           <Globe className="w-5 h-5" />
-          <span className="text-[11px] mt-0.5 whitespace-nowrap">Aggregators</span>
+          <span className="text-[10px] mt-0.5 whitespace-nowrap">Aggregator</span>
         </button>
         <button
           type="button"
@@ -1257,7 +1537,7 @@ export default function App() {
           }`}
         >
           <KeyRound className="w-5 h-5" />
-          <span className="text-[11px] mt-0.5 whitespace-nowrap">GitHub PAT</span>
+          <span className="text-[10px] mt-0.5 whitespace-nowrap">Sync</span>
         </button>
       </nav>
 
@@ -1287,8 +1567,7 @@ export default function App() {
             ) : (
               <ol className="text-sm text-slate-300 space-y-2 list-decimal list-inside">
                 <li>
-                  Open this URL directly in <strong>Google Chrome</strong> on your Android phone (e.g. your GitHub Pages
-                  link or App URL).
+                  Open this URL directly in <strong>Google Chrome</strong> on your Android phone.
                 </li>
                 <li>
                   Tap the <strong>⋮ (three-dot menu)</strong> in the top-right corner of Chrome.

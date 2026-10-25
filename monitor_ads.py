@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-Facebook and Google Ads Sale Monitor for Pakistani Retail Brands.
+Facebook and Google Ads Sale & Campaign Monitor for Major Pakistani Brands.
+Covers all sectors: Food & Dining, Banking & Card Discounts, Fintech & Wallets,
+Supermarkets, Marketplaces, Fashion & Footwear, and Telecom.
 Tracks active Facebook/Instagram (Meta Ad Library) and Google Ads campaigns,
-extracts discount percentages, detects new sale launches, and dispatches alerts
-via Telegram, ntfy, and Discord with deduplication.
+extracts discount percentages and dining/shopping offers, detects new launches,
+and dispatches alerts via Telegram, ntfy, and Discord with deduplication.
 """
 
 import argparse
@@ -22,15 +24,18 @@ from urllib.request import Request, urlopen
 import monitor
 
 BASE_DIR = Path(__file__).resolve().parent
-DEFAULT_BRANDS = BASE_DIR / "brands.json"
+DEFAULT_BRANDS_ADS = BASE_DIR / "brands_ads.json"
+DEFAULT_BRANDS = DEFAULT_BRANDS_ADS if DEFAULT_BRANDS_ADS.exists() else (BASE_DIR / "brands.json")
 DEFAULT_ADS_STATE = BASE_DIR / "state" / "ads_state.json"
 DEFAULT_ADS_HISTORY = BASE_DIR / "state" / "ads_history.json"
 DEFAULT_SALE_STATE = BASE_DIR / "state" / "sale_state.json"
+PUBLIC_ADS_STATE = BASE_DIR / "public" / "ads_state.json"
 
 DISCOUNT_RE = re.compile(
-    r"\b(?:(?:up\s*to|flat)\s*)?\d{1,3}(?:\.\d+)?\s*%\s*(?:off|discount)\b"
-    r"|\b(?:save|flat)\s+(?:up\s*to\s*)?\d{1,3}(?:\.\d+)?\s*%"
-    r"|\b\d{1,2}%\s*off\b",
+    r"\b(?:(?:up\s*to|flat|save)\s*)?\d{1,3}(?:\.\d+)?\s*%\s*(?:off|discount|cashback)\b"
+    r"|\b(?:save|flat|get)\s+(?:up\s*to\s*)?\d{1,3}(?:\.\d+)?\s*%"
+    r"|\b\d{1,2}%\s*(?:off|discount|cashback)\b"
+    r"|\b(?:buy\s*1\s*get\s*1(?:\s*free)?|bogo)\b",
     re.I,
 )
 MAX_DISCOUNT_RE = re.compile(r"(\d{1,3}(?:\.\d+)?)\s*%")
@@ -42,7 +47,16 @@ SALE_KEYWORDS = (
     "clearance",
     "save",
     "deal",
+    "deals",
     "promo",
+    "offer",
+    "cashback",
+    "bogo",
+    "buy 1 get 1",
+    "dining deal",
+    "card discount",
+    "voucher",
+    "feast",
     "azadi",
     "eid",
     "winter",
@@ -74,7 +88,12 @@ def save_json(value, path):
 def clean_brand_name(name):
     """Normalize brand name for search queries."""
     clean = re.sub(r"\(.*?\)", "", name).strip()
-    clean = re.sub(r"\b(women sale|shoes|clothing|western wear|retail|fashion)\b", "", clean, flags=re.I).strip()
+    clean = re.sub(
+        r"\b(women sale|shoes|clothing|western wear|retail|fashion|sales aggregator|aggregator)\b",
+        "",
+        clean,
+        flags=re.I,
+    ).strip()
     return clean or name
 
 
@@ -151,12 +170,29 @@ def fetch_meta_ad_library_api(brand_name, access_token, country="PK", limit=20):
     return results
 
 
-def search_facebook_ads_google_cse(brand_name, api_key, cse_id):
+def search_facebook_ads_google_cse(brand, api_key, cse_id):
     """Fallback search using Google Custom Search targeting Facebook Ad Library & brand sale ads."""
-    queries = [
-        f'site:facebook.com/ads/library "{brand_name}" Pakistan',
-        f'site:facebook.com "{brand_name}" ("sale" OR "flat %" OR "up to % off" OR "discount") Pakistan',
-    ]
+    raw_name = brand.get("name", "")
+    brand_name = clean_brand_name(raw_name)
+    category = brand.get("category", "")
+
+    # Tailor query by sector
+    if category == "Banks & Cards":
+        queries = [
+            f'site:facebook.com "{brand_name}" ("discount" OR "dining offer" OR "card discount" OR "% off") Pakistan',
+            f'site:facebook.com/ads/library "{brand_name}" card discount',
+        ]
+    elif category == "Food & Dining":
+        queries = [
+            f'site:facebook.com "{brand_name}" ("deal" OR "discount" OR "offer" OR "festive") Pakistan',
+            f'site:facebook.com/ads/library "{brand_name}" Pakistan deal',
+        ]
+    else:
+        queries = [
+            f'site:facebook.com/ads/library "{brand_name}" Pakistan',
+            f'site:facebook.com "{brand_name}" ("sale" OR "flat %" OR "up to % off" OR "discount") Pakistan',
+        ]
+
     results = []
     for query in queries:
         params = {
@@ -181,7 +217,7 @@ def search_facebook_ads_google_cse(brand_name, api_key, cse_id):
                 results.append({
                     "id": compute_ad_id("facebook", full_text, link),
                     "platform": "facebook",
-                    "page_name": brand_name,
+                    "page_name": raw_name,
                     "headline": title,
                     "body": snippet,
                     "url": link,
@@ -192,21 +228,41 @@ def search_facebook_ads_google_cse(brand_name, api_key, cse_id):
                     "is_sale": is_sale,
                 })
         except Exception as error:
-            print(f"  [Notice] Google CSE Facebook search error for {brand_name}: {error}")
+            print(f"  [Notice] Google CSE Facebook search error for {raw_name}: {error}")
     return results
 
 
 # ---------------------------------------------------------------------------
-# Google Ads & Promotions
+# Google Ads & Verified Promotions
 # ---------------------------------------------------------------------------
 
 
-def search_google_ads(brand_name, api_key, cse_id):
-    """Search Google Custom Search for Google Ads, Shopping, and verified promotional campaigns."""
-    queries = [
-        f'"{brand_name}" ("sponsored" OR "sale" OR "flat % off" OR "up to % off") Pakistan',
-        f'"{brand_name}" ("online sale" OR "clearance sale" OR "flat discount") site:pk',
-    ]
+def search_google_ads(brand, api_key, cse_id):
+    """Search Google Custom Search for Google Ads, Shopping, and promotional campaigns."""
+    raw_name = brand.get("name", "")
+    brand_name = clean_brand_name(raw_name)
+    category = brand.get("category", "")
+
+    if category == "Banks & Cards":
+        queries = [
+            f'"{brand_name}" ("card discount" OR "dining offer" OR "credit card discount" OR "up to % off") site:pk',
+            f'"{brand_name}" ("discounts" OR "promotions") ("food" OR "shopping")',
+        ]
+    elif category == "Food & Dining":
+        queries = [
+            f'"{brand_name}" ("deal" OR "discount" OR "offer" OR "voucher" OR "bogo") Pakistan',
+            f'"{brand_name}" ("midnight deal" OR "special offer" OR "flat % off") site:pk',
+        ]
+    elif category == "Fintech & Wallets":
+        queries = [
+            f'"{brand_name}" ("discount" OR "cashback" OR "promo code" OR "deal") Pakistan',
+        ]
+    else:
+        queries = [
+            f'"{brand_name}" ("sponsored" OR "sale" OR "flat % off" OR "up to % off") Pakistan',
+            f'"{brand_name}" ("online sale" OR "clearance sale" OR "flat discount") site:pk',
+        ]
+
     results = []
     for query in queries:
         params = {
@@ -231,7 +287,7 @@ def search_google_ads(brand_name, api_key, cse_id):
                 results.append({
                     "id": compute_ad_id("google_ads", full_text, link),
                     "platform": "google_ads",
-                    "page_name": brand_name,
+                    "page_name": raw_name,
                     "headline": title,
                     "body": snippet,
                     "url": link,
@@ -242,7 +298,7 @@ def search_google_ads(brand_name, api_key, cse_id):
                     "is_sale": is_sale,
                 })
         except Exception as error:
-            print(f"  [Notice] Google Ads search error for {brand_name}: {error}")
+            print(f"  [Notice] Google Ads search error for {raw_name}: {error}")
     return results
 
 
@@ -263,15 +319,15 @@ def monitor_ads_for_brand(brand, meta_token="", google_api_key="", google_cse_id
         try:
             fb_ads = fetch_meta_ad_library_api(brand_name, meta_token)
         except Exception as err:
-            print(f"  Meta Ad Library API failed for {brand_name}: {err}. Falling back to Google CSE.")
+            print(f"  Meta Ad Library API failed for {raw_name}: {err}. Falling back to Google CSE.")
 
     # 2. Fallback to Google CSE for Facebook if needed
     if not fb_ads and google_api_key and google_cse_id:
-        fb_ads = search_facebook_ads_google_cse(brand_name, google_api_key, google_cse_id)
+        fb_ads = search_facebook_ads_google_cse(brand, google_api_key, google_cse_id)
 
     # 3. Search Google Ads & Promotions
     if google_api_key and google_cse_id:
-        google_ads = search_google_ads(brand_name, google_api_key, google_cse_id)
+        google_ads = search_google_ads(brand, google_api_key, google_cse_id)
 
     # Deduplicate results per platform by ID
     unique_fb = {ad["id"]: ad for ad in fb_ads}.values()
@@ -291,6 +347,8 @@ def monitor_ads_for_brand(brand, meta_token="", google_api_key="", google_cse_id
 
     return {
         "brand": raw_name,
+        "category": brand.get("category", "General"),
+        "url": brand.get("url", ""),
         "search_name": brand_name,
         "meta_ads_count": len(unique_fb),
         "google_ads_count": len(unique_google),
@@ -303,8 +361,10 @@ def monitor_ads_for_brand(brand, meta_token="", google_api_key="", google_cse_id
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Monitor Facebook & Google Ads for Pakistani fashion brands.")
-    parser.add_argument("--brands", default=str(DEFAULT_BRANDS), help="Path to brands.json")
+    parser = argparse.ArgumentParser(
+        description="Monitor Facebook & Google Ads for all major Pakistani brands (Food, Banks, Fintech, Retail, etc.)."
+    )
+    parser.add_argument("--brands", default=str(DEFAULT_BRANDS), help="Path to brands_ads.json or brands.json")
     parser.add_argument("--state", default=str(DEFAULT_ADS_STATE), help="Path to state/ads_state.json")
     parser.add_argument("--history", default=str(DEFAULT_ADS_HISTORY), help="Path to state/ads_history.json")
     parser.add_argument("--sale-state", default=str(DEFAULT_SALE_STATE), help="Path to state/sale_state.json")
@@ -312,16 +372,23 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Run without sending alerts or saving state")
     arguments = parser.parse_args()
 
-    meta_token = os.getenv("META_ACCESS_TOKEN") or os.getenv("FB_ACCESS_TOKEN") or os.getenv("FACEBOOK_ACCESS_TOKEN", "").strip()
+    meta_token = (
+        os.getenv("META_ACCESS_TOKEN")
+        or os.getenv("FB_ACCESS_TOKEN")
+        or os.getenv("FACEBOOK_ACCESS_TOKEN", "").strip()
+    )
     google_api_key = os.getenv("GOOGLE_API_KEY", "").strip()
     google_cse_id = os.getenv("GOOGLE_CSE_ID", "").strip()
 
     has_credentials = bool(meta_token or (google_api_key and google_cse_id))
     if not has_credentials:
         print("Ad monitoring check: META_ACCESS_TOKEN / FB_ACCESS_TOKEN or GOOGLE_API_KEY + GOOGLE_CSE_ID not set.")
-        print("Will proceed with dry-run baseline verification using empty state.")
+        print("Will perform check and sync baseline state.")
 
     brands_path = Path(arguments.brands).expanduser()
+    if not brands_path.exists() and DEFAULT_BRANDS_ADS.exists():
+        brands_path = DEFAULT_BRANDS_ADS
+
     brands_data = load_json(brands_path) or {}
     brands = brands_data.get("brands", [])
     if not brands:
@@ -341,10 +408,11 @@ def main():
     new_alerts = []
     statuses = []
 
-    print(f"--- Starting Facebook & Google Ads Monitor ({len(brands)} brands) at {checked_at} ---")
+    print(f"--- Starting All-Sector Pakistani Ads Monitor ({len(brands)} brands) at {checked_at} ---")
 
     for brand in brands:
         name = brand.get("name", "")
+        category = brand.get("category", "General")
         if "Brand Tijara" in name:
             continue
 
@@ -369,6 +437,8 @@ def main():
         updated_seen_ids = list(dict.fromkeys(list(seen_ad_ids) + current_ad_ids))[-200:]
         ads_state[name] = {
             "brand": name,
+            "category": category,
+            "url": brand.get("url", ""),
             "meta_ads_count": result["meta_ads_count"],
             "google_ads_count": result["google_ads_count"],
             "sale_ads_count": result["sale_ads_count"],
@@ -384,6 +454,7 @@ def main():
         if name in sale_state:
             sale_state[name]["ads"] = {
                 "active": result["has_sale_ads"],
+                "category": category,
                 "meta_count": result["meta_ads_count"],
                 "google_count": result["google_ads_count"],
                 "sale_ads_count": result["sale_ads_count"],
@@ -398,7 +469,7 @@ def main():
                 platform_label = "Facebook & Instagram Ad" if "facebook" in ad["platform"] else "Google Ad Campaign"
                 disc_text = f" · {', '.join(ad['discounts'])}" if ad.get("discounts") else ""
                 alert_text = (
-                    f"📢 {name} {platform_label} Detected{disc_text}\n"
+                    f"📢 [{category}] {name} {platform_label} Detected{disc_text}\n"
                     f"🏷️ Headline: {ad.get('headline', '')}\n"
                     f"💬 Details: {ad.get('body', '')[:160]}...\n"
                     f"🔗 {ad.get('url', '')}"
@@ -408,6 +479,7 @@ def main():
                     ads_history.append({
                         "id": ad["id"],
                         "brand": name,
+                        "category": category,
                         "platform": ad["platform"],
                         "headline": ad["headline"],
                         "discounts": ad["discounts"],
@@ -416,7 +488,7 @@ def main():
                     })
 
         status_line = (
-            f"  {name}: {result['meta_ads_count']} Meta ads, "
+            f"  [{category}] {name}: {result['meta_ads_count']} Meta ads, "
             f"{result['google_ads_count']} Google ads "
             f"({len(new_sale_ads)} new sale ad(s) detected)"
         )
@@ -428,9 +500,11 @@ def main():
         save_json(ads_history[-500:], history_path)
         if sale_state:
             save_json(sale_state, sale_state_path)
+        # Mirror to public/ads_state.json for PWA client
+        save_json(ads_state, PUBLIC_ADS_STATE)
         monitor.save_sent_alerts(sent_alerts)
 
-    print(f"\nCompleted ad check for {len(brands)} brands.")
+    print(f"\nCompleted ad check across all sectors for {len(brands)} brands.")
 
     # Dispatch alerts if new ads detected
     if new_alerts and not arguments.dry_run:
@@ -444,7 +518,7 @@ def main():
         discord_res = monitor.send_discord_alerts(new_alerts)
         print(f"Discord: {discord_res}")
     else:
-        print("No new ad sale announcements or changes detected; no notification sent.")
+        print("No new ad sale announcements or changes detected; zero-spam rule upheld.")
 
 
 if __name__ == "__main__":

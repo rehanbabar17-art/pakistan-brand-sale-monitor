@@ -1,0 +1,687 @@
+{
+  "version": "2.0",
+  "description": "Comprehensive list of major Pakistani brands across all sectors tracked for Facebook, Instagram, and Google Ads campaigns & discounts.",
+  "categories": [
+    "Food & Dining",
+    "Banks & Cards",
+    "Fintech & Wallets",
+    "Marketplaces & Groceries",
+    "Fashion & Apparel",
+    "Footwear & Leather",
+    "Telecom & Internet"
+  ],
+  "brands": [
+    {
+      "name": "KFC Pakistan",
+      "category": "Food & Dining",
+      "url": "https://www.kfcpakistan.com/",
+      "search_terms": "\"KFC Pakistan\" OR \"KFC\" deal Pakistan",
+      "keywords": ["deal", "discount", "midnight", "feast", "festive", "zinger", "value", "flat", "% off"]
+    },
+    {
+      "name": "McDonald's Pakistan",
+      "category": "Food & Dining",
+      "url": "https://mcdonalds.com.pk/",
+      "search_terms": "\"McDonald's Pakistan\" OR \"McDonalds\" deal Pakistan",
+      "keywords": ["app deal", "discount", "offer", "value meal", "special offer", "% off"]
+    },
+    {
+      "name": "Cheezious",
+      "category": "Food & Dining",
+      "url": "https://cheezious.com/",
+      "search_terms": "\"Cheezious\" deal OR offer Pakistan",
+      "keywords": ["deal", "discount", "offer", "cheezious deal", "special offer", "% off"]
+    },
+    {
+      "name": "Domino's Pizza Pakistan",
+      "category": "Food & Dining",
+      "url": "https://www.dominos.com.pk/",
+      "search_terms": "\"Domino's Pizza Pakistan\" OR \"Dominos Pakistan\" deal",
+      "keywords": ["deal", "discount", "everyday value", "bogo", "buy 1 get 1", "% off"]
+    },
+    {
+      "name": "Pizza Hut Pakistan",
+      "category": "Food & Dining",
+      "url": "https://www.pizzahut.com.pk/",
+      "search_terms": "\"Pizza Hut Pakistan\" deal OR offer",
+      "keywords": ["deal", "discount", "wow meal", "midweek", "flat", "% off"]
+    },
+    {
+      "name": "Subway Pakistan",
+      "category": "Food & Dining",
+      "url": "https://subwaypakistan.com/",
+      "search_terms": "\"Subway Pakistan\" deal OR discount",
+      "keywords": ["deal", "discount", "sub of the day", "offer", "% off"]
+    },
+    {
+      "name": "Hardee's Pakistan",
+      "category": "Food & Dining",
+      "url": "https://hardees.com.pk/",
+      "search_terms": "\"Hardee's Pakistan\" OR \"Hardees Pakistan\" deal",
+      "keywords": ["deal", "discount", "combo", "offer", "% off"]
+    },
+    {
+      "name": "Ranchers Cafe",
+      "category": "Food & Dining",
+      "url": "https://rancherscafe.com/",
+      "search_terms": "\"Ranchers Cafe\" OR \"Ranchers\" deal Pakistan",
+      "keywords": ["deal", "discount", "rodeo", "offer", "% off"]
+    },
+    {
+      "name": "Howdy",
+      "category": "Food & Dining",
+      "url": "https://howdy.pk/",
+      "search_terms": "\"Howdy\" Pakistan deal OR discount",
+      "keywords": ["deal", "discount", "steak", "burger offer", "% off"]
+    },
+    {
+      "name": "OPTP",
+      "category": "Food & Dining",
+      "url": "https://optp.biz/",
+      "search_terms": "\"OPTP\" Pakistan deal OR offer",
+      "keywords": ["deal", "discount", "fries", "burger deal", "% off"]
+    },
+    {
+      "name": "Broadway Pizza",
+      "category": "Food & Dining",
+      "url": "https://broadwaypizza.com.pk/",
+      "search_terms": "\"Broadway Pizza Pakistan\" deal OR discount",
+      "keywords": ["deal", "discount", "slice", "promo code", "% off"]
+    },
+    {
+      "name": "California Pizza",
+      "category": "Food & Dining",
+      "url": "https://www.californiapizza.com.pk/",
+      "search_terms": "\"California Pizza Pakistan\" deal OR discount",
+      "keywords": ["deal", "discount", "ranch", "offer", "% off"]
+    },
+    {
+      "name": "14th Street Pizza",
+      "category": "Food & Dining",
+      "url": "https://14thstreetpizza.com/",
+      "search_terms": "\"14th Street Pizza\" Pakistan deal",
+      "keywords": ["deal", "discount", "slice", "offer", "% off"]
+    },
+    {
+      "name": "Burger Lab",
+      "category": "Food & Dining",
+      "url": "https://burgerlab.com.pk/",
+      "search_terms": "\"Burger Lab\" Pakistan deal OR discount",
+      "keywords": ["deal", "discount", "lab deal", "offer", "% off"]
+    },
+    {
+      "name": "Johnny & Jugnu",
+      "category": "Food & Dining",
+      "url": "https://johnnyandjugnu.com/",
+      "search_terms": "\"Johnny & Jugnu\" OR \"Johnny and Jugnu\" Pakistan",
+      "keywords": ["deal", "discount", "wrap offer", "% off"]
+    },
+    {
+      "name": "Tim Hortons Pakistan",
+      "category": "Food & Dining",
+      "url": "https://www.timhortons.com.pk/",
+      "search_terms": "\"Tim Hortons Pakistan\" deal OR offer",
+      "keywords": ["offer", "discount", "combo", "deal", "% off"]
+    },
+    {
+      "name": "Gloria Jean's Coffees Pakistan",
+      "category": "Food & Dining",
+      "url": "https://gloriajeanscoffees.com.pk/",
+      "search_terms": "\"Gloria Jean's Coffees Pakistan\" OR \"Gloria Jeans Pakistan\"",
+      "keywords": ["offer", "discount", "deal", "card discount", "% off"]
+    },
+    {
+      "name": "Second Cup Pakistan",
+      "category": "Food & Dining",
+      "url": "https://secondcup.com.pk/",
+      "search_terms": "\"Second Cup Pakistan\" deal OR discount",
+      "keywords": ["offer", "discount", "deal", "% off"]
+    },
+    {
+      "name": "Dunkin' Pakistan",
+      "category": "Food & Dining",
+      "url": "https://dunkin.com.pk/",
+      "search_terms": "\"Dunkin' Pakistan\" OR \"Dunkin Donuts Pakistan\" deal",
+      "keywords": ["deal", "discount", "donut box", "offer", "% off"]
+    },
+    {
+      "name": "Salt'n Pepper",
+      "category": "Food & Dining",
+      "url": "https://saltnpepper.com.pk/",
+      "search_terms": "\"Salt'n Pepper\" Pakistan deal OR buffet discount",
+      "keywords": ["buffet discount", "deal", "offer", "% off"]
+    },
+    {
+      "name": "Bundu Khan",
+      "category": "Food & Dining",
+      "url": "https://bundukhan.pk/",
+      "search_terms": "\"Bundu Khan\" Pakistan discount OR deal",
+      "keywords": ["bbq deal", "discount", "offer", "% off"]
+    },
+    {
+      "name": "Kababjees",
+      "category": "Food & Dining",
+      "url": "https://kababjees.com/",
+      "search_terms": "\"Kababjees\" discount OR deal Pakistan",
+      "keywords": ["buffet discount", "bakers discount", "offer", "deal", "% off"]
+    },
+    {
+      "name": "Foodpanda Pakistan",
+      "category": "Food & Dining",
+      "url": "https://www.foodpanda.pk/",
+      "search_terms": "\"Foodpanda Pakistan\" voucher OR discount OR deal",
+      "keywords": ["voucher", "pandapro", "flat", "discount", "code", "bank discount", "% off"]
+    },
+    {
+      "name": "Careem Food",
+      "category": "Food & Dining",
+      "url": "https://www.careem.com/en-pk/",
+      "search_terms": "\"Careem Pakistan\" food discount OR promo code",
+      "keywords": ["promo code", "discount", "careem plus", "deal", "% off"]
+    },
+    {
+      "name": "HBL (Habib Bank Limited)",
+      "category": "Banks & Cards",
+      "url": "https://www.hbl.com/",
+      "search_terms": "\"HBL\" (\"card discount\" OR \"credit card discount\" OR \"debit card\" OR \"dining discount\") Pakistan",
+      "keywords": ["card discount", "dining discount", "hbl card", "up to", "flat", "% off"]
+    },
+    {
+      "name": "Meezan Bank",
+      "category": "Banks & Cards",
+      "url": "https://www.meezanbank.com/",
+      "search_terms": "\"Meezan Bank\" (\"card discount\" OR \"debit card promotion\" OR \"dining discount\") Pakistan",
+      "keywords": ["card discount", "dining discount", "meezan card", "discount", "% off"]
+    },
+    {
+      "name": "Bank Alfalah",
+      "category": "Banks & Cards",
+      "url": "https://www.bankalfalah.com/",
+      "search_terms": "\"Bank Alfalah\" OR \"Alfa\" (\"card discount\" OR \"credit card offer\" OR \"dining discount\") Pakistan",
+      "keywords": ["card discount", "alfa discount", "dining deal", "credit card", "% off"]
+    },
+    {
+      "name": "MCB Bank",
+      "category": "Banks & Cards",
+      "url": "https://www.mcb.com.pk/",
+      "search_terms": "\"MCB Bank\" (\"card discount\" OR \"credit card offer\" OR \"MCB Live discount\") Pakistan",
+      "keywords": ["card discount", "mcb card", "dining offer", "lifestyle discount", "% off"]
+    },
+    {
+      "name": "UBL (United Bank Limited)",
+      "category": "Banks & Cards",
+      "url": "https://www.ubldigital.com/",
+      "search_terms": "\"UBL\" (\"card discount\" OR \"UBL credit card\" OR \"dining discount\") Pakistan",
+      "keywords": ["card discount", "ubl card", "dining discount", "lifestyle discount", "% off"]
+    },
+    {
+      "name": "Standard Chartered Pakistan",
+      "category": "Banks & Cards",
+      "url": "https://www.sc.com/pk/",
+      "search_terms": "\"Standard Chartered Pakistan\" (\"Good Life\" OR \"card discount\" OR \"dining offer\")",
+      "keywords": ["good life", "card discount", "dining discount", "scb card", "% off"]
+    },
+    {
+      "name": "Faysal Bank",
+      "category": "Banks & Cards",
+      "url": "https://www.faysalbank.com/",
+      "search_terms": "\"Faysal Bank\" (\"Flavours\" OR \"card discount\" OR \"dining discount\") Pakistan",
+      "keywords": ["flavours", "card discount", "faysal card", "dining deal", "% off"]
+    },
+    {
+      "name": "Allied Bank (ABL)",
+      "category": "Banks & Cards",
+      "url": "https://www.abl.com/",
+      "search_terms": "\"Allied Bank\" OR \"ABL\" (\"card discount\" OR \"myABL offer\") Pakistan",
+      "keywords": ["card discount", "myabl discount", "abl card", "dining discount", "% off"]
+    },
+    {
+      "name": "Bank of Punjab (BOP)",
+      "category": "Banks & Cards",
+      "url": "https://www.bop.com.pk/",
+      "search_terms": "\"Bank of Punjab\" OR \"BOP\" (\"card discount\" OR \"promotions\") Pakistan",
+      "keywords": ["card discount", "bop card", "discount offer", "% off"]
+    },
+    {
+      "name": "Askari Bank",
+      "category": "Banks & Cards",
+      "url": "https://askaribank.com/",
+      "search_terms": "\"Askari Bank\" (\"card discount\" OR \"promotions\") Pakistan",
+      "keywords": ["card discount", "askari card", "discount offer", "% off"]
+    },
+    {
+      "name": "JS Bank",
+      "category": "Banks & Cards",
+      "url": "https://jsbl.com/",
+      "search_terms": "\"JS Bank\" (\"card discount\" OR \"promotions\") Pakistan",
+      "keywords": ["card discount", "js bank card", "dining discount", "% off"]
+    },
+    {
+      "name": "BankIslami",
+      "category": "Banks & Cards",
+      "url": "https://bankislami.com.pk/",
+      "search_terms": "\"BankIslami\" (\"card discount\" OR \"promotions\") Pakistan",
+      "keywords": ["card discount", "bankislami card", "discount", "% off"]
+    },
+    {
+      "name": "Dubai Islamic Bank Pakistan",
+      "category": "Banks & Cards",
+      "url": "https://www.dibpak.com/",
+      "search_terms": "\"Dubai Islamic Bank Pakistan\" (\"card discount\" OR \"promotions\")",
+      "keywords": ["card discount", "dib card", "discount", "% off"]
+    },
+    {
+      "name": "Soneri Bank",
+      "category": "Banks & Cards",
+      "url": "https://www.soneribank.com/",
+      "search_terms": "\"Soneri Bank\" (\"card discount\" OR \"promotions\") Pakistan",
+      "keywords": ["card discount", "soneri card", "discount", "% off"]
+    },
+    {
+      "name": "NayaPay",
+      "category": "Fintech & Wallets",
+      "url": "https://www.nayapay.com/",
+      "search_terms": "\"NayaPay\" (\"discount\" OR \"visa card deal\" OR \"cashback\") Pakistan",
+      "keywords": ["visa deal", "discount", "cashback", "dining discount", "% off"]
+    },
+    {
+      "name": "SadaPay",
+      "category": "Fintech & Wallets",
+      "url": "https://sadapay.pk/",
+      "search_terms": "\"SadaPay\" (\"discount\" OR \"mastercard offer\" OR \"cashback\") Pakistan",
+      "keywords": ["mastercard offer", "discount", "cashback", "deal", "% off"]
+    },
+    {
+      "name": "Easypaisa",
+      "category": "Fintech & Wallets",
+      "url": "https://easypaisa.com.pk/",
+      "search_terms": "\"Easypaisa\" (\"discount\" OR \"voucher\" OR \"cashback\" OR \"promo\") Pakistan",
+      "keywords": ["cashback", "discount", "deal", "promo code", "voucher", "% off"]
+    },
+    {
+      "name": "JazzCash",
+      "category": "Fintech & Wallets",
+      "url": "https://jazzcash.com.pk/",
+      "search_terms": "\"JazzCash\" (\"discount\" OR \"cashback\" OR \"qr discount\") Pakistan",
+      "keywords": ["cashback", "qr discount", "deal", "discount offer", "% off"]
+    },
+    {
+      "name": "Daraz Pakistan",
+      "category": "Marketplaces & Groceries",
+      "url": "https://www.daraz.pk/",
+      "search_terms": "\"Daraz Pakistan\" OR \"Daraz.pk\" (\"sale\" OR \"mega sale\" OR \"voucher\" OR \"bank discount\")",
+      "keywords": ["mega sale", "11.11", "12.12", "bank discount", "voucher", "up to", "% off"]
+    },
+    {
+      "name": "Carrefour Pakistan",
+      "category": "Marketplaces & Groceries",
+      "url": "https://www.carrefour.pk/",
+      "search_terms": "\"Carrefour Pakistan\" (\"sale\" OR \"discount\" OR \"weekly deals\")",
+      "keywords": ["myclub discount", "weekly deals", "grocery discount", "flat", "% off"]
+    },
+    {
+      "name": "Imtiaz Super Market",
+      "category": "Marketplaces & Groceries",
+      "url": "https://www.imtiaz.com.pk/",
+      "search_terms": "\"Imtiaz Super Market\" OR \"Imtiaz Mega\" (\"sale\" OR \"discount\" OR \"bachao\") Pakistan",
+      "keywords": ["bachao deal", "super sale", "grocery discount", "flat", "% off"]
+    },
+    {
+      "name": "Metro Pakistan",
+      "category": "Marketplaces & Groceries",
+      "url": "https://www.metro.pk/",
+      "search_terms": "\"Metro Cash & Carry Pakistan\" OR \"Metro Pakistan\" (\"sale\" OR \"discount\")",
+      "keywords": ["post deals", "metro deals", "discount", "flat", "% off"]
+    },
+    {
+      "name": "Chase Up",
+      "category": "Marketplaces & Groceries",
+      "url": "https://chaseup.com.pk/",
+      "search_terms": "\"Chase Up\" Pakistan (\"sale\" OR \"discount\" OR \"grocery sale\")",
+      "keywords": ["chase up sale", "discount", "flat", "% off"]
+    },
+    {
+      "name": "Chase Value",
+      "category": "Marketplaces & Groceries",
+      "url": "https://chasevalue.pk/",
+      "search_terms": "\"Chase Value\" Pakistan (\"sale\" OR \"discount\" OR \"flat sale\")",
+      "keywords": ["chase value sale", "discount", "flat", "% off"]
+    },
+    {
+      "name": "Naheed Supermarket",
+      "category": "Marketplaces & Groceries",
+      "url": "https://naheed.pk/",
+      "search_terms": "\"Naheed Supermarket\" OR \"Naheed.pk\" (\"sale\" OR \"discount\")",
+      "keywords": ["naheed sale", "discount", "beauty discount", "grocery sale", "% off"]
+    },
+    {
+      "name": "Al-Fatah",
+      "category": "Marketplaces & Groceries",
+      "url": "https://alfatah.pk/",
+      "search_terms": "\"Al-Fatah\" Pakistan (\"sale\" OR \"discount\" OR \"promotions\")",
+      "keywords": ["al fatah sale", "discount", "promotions", "% off"]
+    },
+    {
+      "name": "PriceOye",
+      "category": "Marketplaces & Groceries",
+      "url": "https://priceoye.pk/",
+      "search_terms": "\"PriceOye\" Pakistan (\"sale\" OR \"discount\" OR \"price drop\")",
+      "keywords": ["mobile sale", "discount", "lowest price", "special offer", "% off"]
+    },
+    {
+      "name": "Telemart",
+      "category": "Marketplaces & Groceries",
+      "url": "https://telemart.pk/",
+      "search_terms": "\"Telemart Pakistan\" (\"sale\" OR \"discount\" OR \"voucher\")",
+      "keywords": ["telemart sale", "tech discount", "special deal", "% off"]
+    },
+    {
+      "name": "Khaadi",
+      "category": "Fashion & Apparel",
+      "url": "https://www.khaadi.com/",
+      "search_terms": "\"Khaadi\" (\"sale\" OR \"flat % off\" OR \"lawn sale\") Pakistan",
+      "keywords": ["flat", "up to", "end of season", "lawn sale", "% off"]
+    },
+    {
+      "name": "Sapphire",
+      "category": "Fashion & Apparel",
+      "url": "https://pk.sapphireonline.pk/",
+      "search_terms": "\"Sapphire\" (\"sale\" OR \"flat % off\" OR \"unstitched sale\") Pakistan",
+      "keywords": ["sapphire sale", "flat", "up to", "anniversary sale", "% off"]
+    },
+    {
+      "name": "Gul Ahmed",
+      "category": "Fashion & Apparel",
+      "url": "https://www.gulahmedshop.com/",
+      "search_terms": "\"Gul Ahmed\" (\"sale\" OR \"Ideas sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["the great summer sale", "ideas sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Sana Safinaz",
+      "category": "Fashion & Apparel",
+      "url": "https://www.sanasafinaz.com/pk/",
+      "search_terms": "\"Sana Safinaz\" (\"sale\" OR \"flat % off\" OR \"clearance\") Pakistan",
+      "keywords": ["sana safinaz sale", "flat", "up to", "clearance", "% off"]
+    },
+    {
+      "name": "Limelight",
+      "category": "Fashion & Apparel",
+      "url": "https://limelight.pk/",
+      "search_terms": "\"Limelight\" (\"sale\" OR \"flat % off\" OR \"pret sale\") Pakistan",
+      "keywords": ["limelight sale", "flat", "up to", "mid season sale", "% off"]
+    },
+    {
+      "name": "Alkaram Studio",
+      "category": "Fashion & Apparel",
+      "url": "https://alkaramstudio.com/",
+      "search_terms": "\"Alkaram Studio\" (\"sale\" OR \"flat % off\" OR \"discount\") Pakistan",
+      "keywords": ["alkaram sale", "flat", "up to", "festive sale", "% off"]
+    },
+    {
+      "name": "Nishat Linen",
+      "category": "Fashion & Apparel",
+      "url": "https://nishatlinen.com/",
+      "search_terms": "\"Nishat Linen\" (\"sale\" OR \"flat % off\" OR \"discount\") Pakistan",
+      "keywords": ["nishat sale", "flat", "up to", "season end", "% off"]
+    },
+    {
+      "name": "Outfitters",
+      "category": "Fashion & Apparel",
+      "url": "https://outfitters.com.pk/",
+      "search_terms": "\"Outfitters\" (\"sale\" OR \"flat % off\" OR \"up to % off\") Pakistan",
+      "keywords": ["outfitters sale", "flat", "up to", "half price", "% off"]
+    },
+    {
+      "name": "Bonanza Satrangi",
+      "category": "Fashion & Apparel",
+      "url": "https://bonanzasatrangi.com/",
+      "search_terms": "\"Bonanza Satrangi\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["bonanza sale", "flat", "up to", "satrangi sale", "% off"]
+    },
+    {
+      "name": "Beechtree",
+      "category": "Fashion & Apparel",
+      "url": "https://beechtree.pk/",
+      "search_terms": "\"Beechtree\" (\"sale\" OR \"flat % off\" OR \"discount\") Pakistan",
+      "keywords": ["beechtree sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "J. Junaid Jamshed",
+      "category": "Fashion & Apparel",
+      "url": "https://www.junaidjamshed.com/",
+      "search_terms": "\"J. Junaid Jamshed\" OR \"Junaid Jamshed\" (\"sale\" OR \"festive sale\") Pakistan",
+      "keywords": ["junaid jamshed sale", "flat", "up to", "festive sale", "% off"]
+    },
+    {
+      "name": "Maria.B.",
+      "category": "Fashion & Apparel",
+      "url": "https://www.mariab.pk/",
+      "search_terms": "\"Maria.B\" OR \"Maria B\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["maria b sale", "flat", "up to", "couture discount", "% off"]
+    },
+    {
+      "name": "Asim Jofa",
+      "category": "Fashion & Apparel",
+      "url": "https://asimjofa.com/",
+      "search_terms": "\"Asim Jofa\" (\"sale\" OR \"flat % off\" OR \"discount\") Pakistan",
+      "keywords": ["asim jofa sale", "flat", "up to", "lawn sale", "% off"]
+    },
+    {
+      "name": "Edenrobe",
+      "category": "Fashion & Apparel",
+      "url": "https://edenrobe.com/",
+      "search_terms": "\"Edenrobe\" (\"sale\" OR \"flat % off\" OR \"discount\") Pakistan",
+      "keywords": ["edenrobe sale", "flat", "up to", "clearance", "% off"]
+    },
+    {
+      "name": "Cougar",
+      "category": "Fashion & Apparel",
+      "url": "https://cougar.com.pk/",
+      "search_terms": "\"Cougar Clothing\" OR \"Cougar\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["cougar sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Breakout",
+      "category": "Fashion & Apparel",
+      "url": "https://www.breakout.com.pk/",
+      "search_terms": "\"Breakout\" (\"sale\" OR \"flat % off\" OR \"winter sale\") Pakistan",
+      "keywords": ["breakout sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "ChenOne",
+      "category": "Fashion & Apparel",
+      "url": "https://chenone.com/",
+      "search_terms": "\"ChenOne\" (\"sale\" OR \"flat % off\" OR \"home sale\") Pakistan",
+      "keywords": ["chenone sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Monark Clothing",
+      "category": "Fashion & Apparel",
+      "url": "https://monark.com.pk/",
+      "search_terms": "\"Monark\" (\"sale\" OR \"menswear sale\") Pakistan",
+      "keywords": ["monark sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "LAMA",
+      "category": "Fashion & Apparel",
+      "url": "https://pk.lamaretail.com/",
+      "search_terms": "\"LAMA Retail\" OR \"LAMA\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["lama sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "ONE (Be One Shop One)",
+      "category": "Fashion & Apparel",
+      "url": "https://beoneshopone.com/",
+      "search_terms": "\"Be One Shop One\" OR \"ONE\" clothing sale Pakistan",
+      "keywords": ["one sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Charcoal",
+      "category": "Fashion & Apparel",
+      "url": "https://charcoal.com.pk/",
+      "search_terms": "\"Charcoal\" menswear (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["charcoal sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Diners",
+      "category": "Fashion & Apparel",
+      "url": "https://diners.com.pk/",
+      "search_terms": "\"Diners\" clothing (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["diners sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Engine",
+      "category": "Fashion & Apparel",
+      "url": "https://engine.com.pk/",
+      "search_terms": "\"Engine Clothing\" OR \"Engine\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["engine sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Cross Stitch",
+      "category": "Fashion & Apparel",
+      "url": "https://crossstitch.pk/",
+      "search_terms": "\"Cross Stitch\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["cross stitch sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Zellbury",
+      "category": "Fashion & Apparel",
+      "url": "https://zellbury.com/",
+      "search_terms": "\"Zellbury\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["zellbury sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Bareeze",
+      "category": "Fashion & Apparel",
+      "url": "https://www.bareeze.com/",
+      "search_terms": "\"Bareeze\" (\"sale\" OR \"discount\") Pakistan",
+      "keywords": ["bareeze sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Generation",
+      "category": "Fashion & Apparel",
+      "url": "https://generation.com.pk/",
+      "search_terms": "\"Generation\" clothing (\"sale\" OR \"discount\") Pakistan",
+      "keywords": ["generation sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Agha Noor",
+      "category": "Fashion & Apparel",
+      "url": "https://aghanoorofficial.com/",
+      "search_terms": "\"Agha Noor\" (\"sale\" OR \"discount\") Pakistan",
+      "keywords": ["agha noor sale", "discount", "flat", "% off"]
+    },
+    {
+      "name": "Bata Pakistan",
+      "category": "Footwear & Leather",
+      "url": "https://www.bata.com.pk/",
+      "search_terms": "\"Bata Pakistan\" (\"sale\" OR \"flat % off\" OR \"shoes sale\")",
+      "keywords": ["bata sale", "flat", "up to", "shoes sale", "% off"]
+    },
+    {
+      "name": "Servis Shoes",
+      "category": "Footwear & Leather",
+      "url": "https://servis.pk/",
+      "search_terms": "\"Servis Shoes\" OR \"Servis\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["servis sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Ndure",
+      "category": "Footwear & Leather",
+      "url": "https://www.ndure.com/",
+      "search_terms": "\"Ndure\" (\"sale\" OR \"flat % off\" OR \"shoes discount\") Pakistan",
+      "keywords": ["ndure sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Stylo",
+      "category": "Footwear & Leather",
+      "url": "https://stylo.pk/",
+      "search_terms": "\"Stylo\" (\"sale\" OR \"flat % off\" OR \"shoes sale\") Pakistan",
+      "keywords": ["stylo sale", "flat", "up to", "season end sale", "% off"]
+    },
+    {
+      "name": "ShoePlanet",
+      "category": "Footwear & Leather",
+      "url": "https://www.shoeplanet.pk/",
+      "search_terms": "\"Shoe Planet\" OR \"ShoePlanet\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["shoe planet sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Hush Puppies",
+      "category": "Footwear & Leather",
+      "url": "https://www.hushpuppies.com.pk/",
+      "search_terms": "\"Hush Puppies Pakistan\" (\"sale\" OR \"flat % off\")",
+      "keywords": ["hush puppies sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Urban Sole",
+      "category": "Footwear & Leather",
+      "url": "https://www.urbansole.com.pk/",
+      "search_terms": "\"Urban Sole\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["urban sole sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Starlet Shoes",
+      "category": "Footwear & Leather",
+      "url": "https://starlet.pk/",
+      "search_terms": "\"Starlet Shoes\" OR \"Starlet\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["starlet sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Borjan",
+      "category": "Footwear & Leather",
+      "url": "https://borjan.com.pk/",
+      "search_terms": "\"Borjan\" (\"sale\" OR \"flat % off\" OR \"shoes sale\") Pakistan",
+      "keywords": ["borjan sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "1st Step Shoes",
+      "category": "Footwear & Leather",
+      "url": "https://1ststep.pk/",
+      "search_terms": "\"1st Step Shoes\" OR \"First Step\" (\"sale\" OR \"flat % off\") Pakistan",
+      "keywords": ["1st step sale", "flat", "up to", "% off"]
+    },
+    {
+      "name": "Jazz Pakistan",
+      "category": "Telecom & Internet",
+      "url": "https://jazz.com.pk/",
+      "search_terms": "\"Jazz\" (\"discount\" OR \"bundle offer\" OR \"tamasha promotion\") Pakistan",
+      "keywords": ["bundle offer", "discount", "super 4g offer", "% off"]
+    },
+    {
+      "name": "Telenor Pakistan",
+      "category": "Telecom & Internet",
+      "url": "https://www.telenor.com.pk/",
+      "search_terms": "\"Telenor Pakistan\" (\"discount\" OR \"bundle deal\" OR \"app offer\")",
+      "keywords": ["my telenor deal", "bundle discount", "offer", "% off"]
+    },
+    {
+      "name": "Zong 4G",
+      "category": "Telecom & Internet",
+      "url": "https://www.zong.com.pk/",
+      "search_terms": "\"Zong 4G\" OR \"Zong\" (\"discount\" OR \"package offer\") Pakistan",
+      "keywords": ["package offer", "data discount", "zong deal", "% off"]
+    },
+    {
+      "name": "Ufone 4G",
+      "category": "Telecom & Internet",
+      "url": "https://www.ufone.com/",
+      "search_terms": "\"Ufone 4G\" OR \"Ufone\" (\"discount\" OR \"super card offer\") Pakistan",
+      "keywords": ["super card offer", "discount", "app deal", "% off"]
+    },
+    {
+      "name": "Nayatel",
+      "category": "Telecom & Internet",
+      "url": "https://nayatel.com/",
+      "search_terms": "\"Nayatel\" (\"offer\" OR \"discount\" OR \"promotions\") Pakistan",
+      "keywords": ["internet discount", "speed deal", "promotion", "% off"]
+    },
+    {
+      "name": "StormFiber",
+      "category": "Telecom & Internet",
+      "url": "https://stormfiber.com/",
+      "search_terms": "\"StormFiber\" (\"offer\" OR \"discount\" OR \"promo\") Pakistan",
+      "keywords": ["promo offer", "fiber discount", "double speed", "% off"]
+    }
+  ]
+}
