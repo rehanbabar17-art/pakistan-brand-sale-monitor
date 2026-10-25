@@ -1425,6 +1425,26 @@ def monitor_ads_for_brand(brand, sale_state, meta_token="", google_api_key="", g
     }
 
 
+def compute_brand_campaign_fingerprint(brand_name, discounts, active_ads):
+    """
+    Compute a deterministic campaign fingerprint per brand so that:
+      1. Multiple creatives (Facebook + Instagram + Google) for the same brand sale
+         produce a single unified fingerprint.
+      2. Minor ad-ID or text rotations for the same discount campaign never
+         trigger duplicate alerts for the same brand.
+    """
+    norm_brand = clean_brand_name(brand_name).lower()
+    if discounts:
+        norm_discs = "|".join(sorted({re.sub(r"\s+", " ", str(d).strip().upper()) for d in discounts if d}))
+        seed = f"brand_ad_campaign::{norm_brand}::discounts::{norm_discs}"
+    elif active_ads:
+        top_hl = re.sub(r"\s+", " ", active_ads[0].get("headline", "").strip().lower())[:80]
+        seed = f"brand_ad_campaign::{norm_brand}::headline::{top_hl}"
+    else:
+        seed = f"brand_ad_campaign::{norm_brand}::none"
+    return hashlib.sha256(seed.encode("utf-8")).hexdigest()[:20]
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Monitor Facebook & Google Ads for all major Pakistani brands (Food, Banks, Fintech, Retail, etc.)."
@@ -1436,8 +1456,20 @@ def main():
     parser.add_argument("--telegram-config", default="~/.codex/telegram-bridge.json")
     parser.add_argument("--fast", action="store_true", help="Fast execution mode")
     parser.add_argument("--deep-search", action="store_true", help="Include DuckDuckGo HTML deep search")
+    parser.add_argument("--force-alert", action="store_true", help="Force alert dispatch for testing")
+    parser.add_argument("--test-ntfy", action="store_true", help="Send a single test ntfy notification and exit")
     parser.add_argument("--dry-run", action="store_true", help="Run without sending alerts or saving state")
     arguments = parser.parse_args()
+
+    if arguments.test_ntfy:
+        test_msg = (
+            "📢 [All Sectors] Pakistan Brand & Ad Monitor — ntfy Connected\n"
+            "🏷️ Headline: Facebook & Google Ads + Brand Sale Alerts Active\n"
+            "💬 Details: Single-alert-per-brand deduplication is enabled across all 96 Pakistani brands.\n"
+            "🔗 https://www.facebook.com/ads/library/"
+        )
+        print(monitor.send_ntfy_alerts([test_msg]))
+        return
 
     meta_token = (
         os.getenv("META_ACCESS_TOKEN")
@@ -1468,6 +1500,7 @@ def main():
 
     checked_at = datetime.now(timezone.utc).isoformat()
     new_alerts = []
+    alerted_brands_this_run = set()
     active_brand_count = 0
     total_meta_ads = 0
     total_google_ads = 0
@@ -1482,7 +1515,8 @@ def main():
 
         prev_brand_state = ads_state.get(name, {})
         seen_ad_ids = set(prev_brand_state.get("seen_ids", []))
-        is_baseline = (name not in ads_state) or (len(seen_ad_ids) == 0)
+        prev_campaign_fp = prev_brand_state.get("campaign_fingerprint", "")
+        is_baseline = (name not in ads_state) or (len(seen_ad_ids) == 0) or (not prev_campaign_fp)
 
         result = monitor_ads_for_brand(
             brand,
@@ -1505,6 +1539,9 @@ def main():
             if ad["is_sale"] and ad["id"] not in seen_ad_ids
         ]
 
+        campaign_fp = compute_brand_campaign_fingerprint(name, result["discounts"], result["active_ads"])
+        brand_dedup_key = f"brand_ad_campaign::{clean_brand_name(name).lower()}::{campaign_fp}"
+
         updated_seen_ids = list(dict.fromkeys(list(seen_ad_ids) + current_ad_ids))[-200:]
         ads_state[name] = {
             "brand": name,
@@ -1516,6 +1553,7 @@ def main():
             "has_sale_ads": result["has_sale_ads"],
             "discounts": result["discounts"],
             "max_discount": result["max_discount"],
+            "campaign_fingerprint": campaign_fp,
             "seen_ids": updated_seen_ids,
             "checked_at": checked_at,
             "top_ads": result["active_ads"][:5],
@@ -1531,6 +1569,7 @@ def main():
                 "sale_ads_count": result["sale_ads_count"],
                 "discounts": result["discounts"],
                 "max_discount": result["max_discount"],
+                "campaign_fingerprint": campaign_fp,
                 "checked_at": checked_at,
                 "top_ads": result["active_ads"][:3],
             }
@@ -1553,33 +1592,55 @@ def main():
                     "sale_ads_count": result["sale_ads_count"],
                     "discounts": result["discounts"],
                     "max_discount": result["max_discount"],
+                    "campaign_fingerprint": campaign_fp,
                     "checked_at": checked_at,
                     "top_ads": result["active_ads"][:3],
                 },
             }
 
-        if new_sale_ads:
-            for ad in new_sale_ads:
-                ads_history.append({
-                    "id": ad["id"],
-                    "brand": name,
-                    "category": category,
-                    "platform": ad["platform"],
-                    "headline": ad["headline"],
-                    "discounts": ad["discounts"],
-                    "url": ad["url"],
-                    "detected_at": checked_at,
-                })
-                if not is_baseline:
-                    platform_label = "Facebook & Instagram Ad" if "facebook" in ad["platform"] else "Google Ad Campaign"
-                    disc_text = f" · {', '.join(ad['discounts'])}" if ad.get("discounts") else ""
-                    alert_text = (
-                        f"📢 [{category}] {name} {platform_label} Detected{disc_text}\n"
-                        f"🏷️ Headline: {ad.get('headline', '')}\n"
-                        f"💬 Details: {ad.get('body', '')[:160]}...\n"
-                        f"🔗 {ad.get('url', '')}"
-                    )
-                    if not monitor.is_duplicate(alert_text, sent_alerts):
+        # Record any new ad creatives to history
+        for ad in new_sale_ads:
+            ads_history.append({
+                "id": ad["id"],
+                "brand": name,
+                "category": category,
+                "platform": ad["platform"],
+                "headline": ad["headline"],
+                "discounts": ad["discounts"],
+                "url": ad["url"],
+                "detected_at": checked_at,
+            })
+
+        # Per-brand deduplication:
+        # - On baseline run, register the brand's campaign_fingerprint in sent_alerts so existing campaigns never spam.
+        # - On subsequent runs, emit AT MOST ONE consolidated alert per brand only when its campaign_fingerprint changes.
+        brand_norm_key = clean_brand_name(name).lower()
+        if result["has_sale_ads"]:
+            if is_baseline and not arguments.force_alert:
+                monitor.is_duplicate(brand_dedup_key, sent_alerts)
+            else:
+                campaign_changed = (campaign_fp != prev_campaign_fp) or (not prev_brand_state.get("has_sale_ads")) or arguments.force_alert
+                if campaign_changed and brand_norm_key not in alerted_brands_this_run:
+                    if arguments.force_alert or not monitor.is_duplicate(brand_dedup_key, sent_alerts):
+                        alerted_brands_this_run.add(brand_norm_key)
+                        has_fb = result["meta_ads_count"] > 0
+                        has_gg = result["google_ads_count"] > 0
+                        if has_fb and has_gg:
+                            platform_label = f"Facebook ({result['meta_ads_count']}) & Google ({result['google_ads_count']}) Ads"
+                        elif has_fb:
+                            platform_label = f"Facebook & Instagram Ad ({result['meta_ads_count']} active)"
+                        else:
+                            platform_label = f"Google Ad Campaign ({result['google_ads_count']} active)"
+
+                        primary_ad = result["active_ads"][0] if result["active_ads"] else {}
+                        disc_text = f" — {', '.join(result['discounts'][:3])}" if result.get("discounts") else ""
+                        target_url = brand.get("url") or primary_ad.get("url", "")
+                        alert_text = (
+                            f"📢 [{category}] {name}{disc_text} ({platform_label})\n"
+                            f"🏷️ {primary_ad.get('headline', f'{name} New Campaign')}\n"
+                            f"💬 {primary_ad.get('body', '')[:180]}\n"
+                            f"🔗 {target_url}"
+                        )
                         new_alerts.append(alert_text)
 
         disc_str = f" -> {', '.join(result['discounts'][:3])}" if result["discounts"] else ""
@@ -1596,7 +1657,6 @@ def main():
             save_json(sale_state, sale_state_path)
             save_json(sale_state, PUBLIC_SALE_STATE)
         save_json(ads_state, PUBLIC_ADS_STATE)
-        monitor.save_sent_alerts(sent_alerts)
 
     print(
         f"\nCompleted ad check across all sectors: {active_brand_count}/{len(brands)} brands running active campaigns "
@@ -1604,18 +1664,38 @@ def main():
     )
 
     if new_alerts and not arguments.dry_run:
-        print(f"\nFound {len(new_alerts)} new ad sale alerts! Dispatching notifications...")
+        print(f"\nFound {len(new_alerts)} new brand campaign alert(s) (1 consolidated alert per brand)! Dispatching notifications...")
         telegram_res = monitor.send_telegram("\n\n".join(new_alerts), arguments.telegram_config)
         print(f"Telegram: {telegram_res}")
 
-        ntfy_res = monitor.send_ntfy_alerts(new_alerts)
-        print(f"ntfy: {ntfy_res}")
+        try:
+            ntfy_res = monitor.send_ntfy_alerts(new_alerts)
+            print(f"ntfy: {ntfy_res}")
+            ntfy_ok = True
+        except Exception as err:
+            print(f"ntfy delivery failed: {err}")
+            ntfy_ok = False
 
-        discord_res = monitor.send_discord_alerts(new_alerts)
-        print(f"Discord: {discord_res}")
+        try:
+            discord_res = monitor.send_discord_alerts(new_alerts)
+            print(f"Discord: {discord_res}")
+            discord_ok = True
+        except Exception as err:
+            print(f"Discord delivery failed: {err}")
+            discord_ok = False
+
+        if not ntfy_ok:
+            raise SystemExit("ntfy delivery did not complete")
+        if not discord_ok:
+            raise SystemExit("Discord delivery did not complete")
+
+        monitor.save_sent_alerts(sent_alerts)
     else:
-        print("State files updated and synced to public/ads_state.json and public/sale_state.json.")
+        if not arguments.dry_run:
+            monitor.save_sent_alerts(sent_alerts)
+        print("No new or changed brand campaigns detected; zero-duplicate per-brand rule upheld.")
 
 
 if __name__ == "__main__":
     main()
+

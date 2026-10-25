@@ -8,3 +8,4 @@ if [[ -f .env ]]; then
   set +a
 fi
 python3 monitor.py >> logs/monitor.log 2>&1
+python3 monitor_ads.py --brands brands_ads.json >> logs/monitor.log 2>&1

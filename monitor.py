@@ -524,34 +524,56 @@ def save_history(history_path, events):
         existing = []
     save_state(existing + events, history_path)
 def send_ntfy_alerts(alerts):
-    topic = os.getenv("NTFY_TOPIC", "").strip()
+    topic = (os.getenv("NTFY_TOPIC") or "").strip()
     if not topic:
         return "ntfy skipped: NTFY_TOPIC is missing."
-    server = os.getenv("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
-    token = os.getenv("NTFY_TOKEN", "").strip()
+    raw_server = (os.getenv("NTFY_SERVER") or "https://ntfy.sh").strip().rstrip("/")
+    if not raw_server:
+        raw_server = "https://ntfy.sh"
+    if not raw_server.startswith(("http://", "https://")):
+        raw_server = f"https://{raw_server}"
+    server = raw_server
+    token = (os.getenv("NTFY_TOKEN") or "").strip()
     delivered = 0
     for alert in alerts:
-        lines = alert.splitlines()
-        title = lines[0].strip()
+        lines = [line.strip() for line in alert.splitlines() if line.strip()]
+        title = lines[0] if lines else "Sale & Ad Monitor Alert"
         body = "\n".join(lines[1:]) or alert
+        lower_title = title.lower()
         tag = "bell"
-        if "top deal" in title.lower():
-            tag = "fire"
-        elif "sale update" in title.lower():
+        if "top deal" in lower_title or "50%" in lower_title or "60%" in lower_title or "70%" in lower_title:
+            tag = "fire,loudspeaker" if ("ad" in lower_title or "campaign" in lower_title) else "fire"
+        elif "ad" in lower_title or "campaign" in lower_title:
+            tag = "loudspeaker,shopping_bags"
+        elif "sale update" in lower_title:
             tag = "tada"
-        elif "price" in title.lower():
+        elif "price" in lower_title:
             tag = "money_with_wings"
-        elif "link changed" in title.lower():
+        elif "link changed" in lower_title:
             tag = "link"
-        safe_title = title.encode("latin-1", errors="replace").decode("latin-1")
+
+        # Clean non-ASCII emojis from HTTP Title header to avoid '??' in ntfy notifications
+        clean_title = re.sub(r"[^\x20-\x7e]+", " ", title)
+        clean_title = re.sub(r"\s+", " ", clean_title).strip()[:200] or "Brand Sale & Ad Alert"
+
+        # Extract click URL if present in alert body
+        click_url = ""
+        url_match = re.search(r"(https?://\S+)", alert)
+        if url_match:
+            click_url = url_match.group(1).rstrip(").,")
+
+        headers = {
+            "Title": clean_title,
+            "Tags": tag,
+            "Priority": "high",
+        }
+        if click_url:
+            headers["Click"] = click_url
+
         request = Request(
             f"{server}/{topic}",
             data=body.encode("utf-8"),
-            headers={
-                "Title": safe_title,
-                "Tags": tag,
-                "Priority": "high",
-            },
+            headers=headers,
         )
         if token:
             request.add_header("Authorization", f"Bearer {token}")
@@ -576,6 +598,7 @@ def send_ntfy_alerts(alerts):
             raise RuntimeError(f"ntfy still failing after retries: {last_error}") from last_error
         time.sleep(0.4)
     return f"ntfy delivery: {delivered}/{len(alerts)}."
+
 
 
 def send_discord_alerts(alerts):
