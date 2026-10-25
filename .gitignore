@@ -5,3 +5,7 @@ logs/
 
 # Local environment config
 .env
+node_modules/
+dist/
+dev-dist/
+

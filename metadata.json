@@ -1,0 +1,6 @@
+{
+  "name": "Pakistan Brand Sale Monitor",
+  "description": "Interactive monitor and dashboard for Pakistani fashion brands, Daraz prices, web deals, and multi-channel alerts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

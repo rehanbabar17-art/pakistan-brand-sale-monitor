@@ -61,6 +61,7 @@ const elements = {
   monitorForm: document.getElementById("monitor-form"),
   monitorList: document.getElementById("monitor-list"),
   checkSalesButton: document.getElementById("check-sales"),
+  checkAdsButton: document.getElementById("check-ads"),
   checkPricesButton: document.getElementById("check-prices"),
   checkLinksButton: document.getElementById("check-links"),
   activityList: document.getElementById("activity-list"),
@@ -235,6 +236,7 @@ function getBrandItems() {
       const maxDiscount = extractMaxDiscount(discounts, st.summary || "");
       const productCount = extractProductCount(st);
       const active = Boolean(st.active || productCount > 0 || maxDiscount > 0);
+      const ads = st.ads || null;
       return {
         name: b.name,
         url: st.url || b.url,
@@ -244,6 +246,7 @@ function getBrandItems() {
         productCount,
         summary: st.summary || b.name,
         checked_at: st.checked_at || "",
+        ads,
         isAggregator: false
       };
     });
@@ -338,6 +341,7 @@ function renderBrandSales() {
           <span class="chip ${brand.active ? "sale-on" : "sale-off"}">${brand.active ? "SALE ACTIVE" : "NO ACTIVE SALE"}</span>
           ${brand.maxDiscount > 0 ? `<span class="chip changed">Up to ${brand.maxDiscount}% OFF</span>` : ""}
           ${brand.productCount > 0 ? `<span class="chip">${brand.productCount.toLocaleString()} products on sale</span>` : ""}
+          ${brand.ads && brand.ads.active ? `<span class="chip" style="background:rgba(59,130,246,0.15);color:#60a5fa;border-color:rgba(59,130,246,0.3);">📢 Ads Active (${brand.ads.meta_count || 0} Meta / ${brand.ads.google_count || 0} Google)</span>` : ""}
         </div>
         <div class="monitor-current">${escapeHtml(brand.summary)}</div>
         ${brand.checked_at ? `<div class="monitor-last">Checked ${formatDate(brand.checked_at)}</div>` : ""}
@@ -519,6 +523,13 @@ elements.checkSalesButton?.addEventListener("click", async () => {
   try {
     await dispatchWorkflow(SOURCES.brand.workflow);
     toast("Brand sale monitor workflow triggered on GitHub!");
+  } catch (error) { toast(error.message, "error"); }
+});
+
+elements.checkAdsButton?.addEventListener("click", async () => {
+  try {
+    await dispatchWorkflow("ads-monitor.yml");
+    toast("Facebook & Google Ads monitor workflow triggered on GitHub!");
   } catch (error) { toast(error.message, "error"); }
 });
 

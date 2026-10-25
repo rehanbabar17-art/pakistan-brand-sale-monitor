@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="112" y1="120" x2="400" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="55%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="tagGrad" x1="280" y1="96" x2="424" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+  </defs>
+
+  <!-- App Icon Background -->
+  <rect width="512" height="512" rx="116" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="100" stroke="#1e293b" stroke-width="6" />
+
+  <!-- Shopping Bag Handle -->
+  <path d="M196 176V148C196 114.863 222.863 88 256 88C289.137 88 316 114.863 316 148V176" stroke="#38bdf8" stroke-width="24" stroke-linecap="round" />
+
+  <!-- Shopping Bag Body -->
+  <path d="M128 196C128 178.327 142.327 164 160 164H352C369.673 164 384 178.327 384 196L400 388C401.657 407.882 385.955 424 366 424H146C126.045 424 110.343 407.882 112 388L128 196Z" fill="url(#bagGrad)" />
+
+  <!-- Bold % Sale Symbol on Bag -->
+  <circle cx="212" cy="264" r="24" fill="#0b1220" />
+  <circle cx="300" cy="348" r="24" fill="#0b1220" />
+  <path d="M308 252L204 360" stroke="#0b1220" stroke-width="24" stroke-linecap="round" />
+
+  <!-- Corner Price Tag Accent -->
+  <circle cx="372" cy="148" r="46" fill="url(#tagGrad)" stroke="#0b1220" stroke-width="10" />
+  <path d="M354 148L366 160L392 134" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

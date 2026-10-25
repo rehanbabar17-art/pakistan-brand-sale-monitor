@@ -186,11 +186,31 @@ After deployment, open the GitHub Pages URL in a mobile browser and choose **Add
 https://rehanbabar17-art.github.io/pakistan-brand-sale-monitor/
 ```
 
+## Facebook & Google Ads Sale Tracking
+
+`monitor_ads.py` monitors active advertising campaigns across Facebook & Instagram (Meta Ad Library) and Google Ads / Shopping:
+
+- Queries Meta Ad Library API (`https://graph.facebook.com/v19.0/ads_archive`) when `META_ACCESS_TOKEN` / `FB_ACCESS_TOKEN` is provided.
+- Falls back to targeted Google Custom Search and web queries for active Facebook ad posts and Google promotional campaigns when tokens are not set.
+- Extracts discount percentages (`Flat 50% Off`, `Up to 40% Off`, `Save 30%`), headlines, ad copy, and direct ad snapshot links.
+- Persists state in `state/ads_state.json` and change history in `state/ads_history.json`.
+- Dispatches alerts via Telegram, ntfy, and Discord **only** when a new sale campaign or ad is detected.
+- Runs on a scheduled GitHub Actions workflow (`.github/workflows/ads-monitor.yml`) every 6 hours and on-demand via the mobile dashboard.
+
+Local execution:
+```bash
+python3 monitor_ads.py --brands brands.json
+# or
+./run_ads_monitor.sh
+```
+
 ## How Alerts Work
 
-A Telegram alert is sent when:
+A Telegram/ntfy/Discord alert is sent when:
 
 - a tracked sale becomes active, or
+- a new Facebook/Instagram ad or Google ad campaign is detected, or
 - the detected title/discounts/products change enough to produce a new fingerprint.
 
-No alert is repeated for an unchanged sale.
+No alert is sent when no changes or new sales are detected.
+
