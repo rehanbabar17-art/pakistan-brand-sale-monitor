@@ -14,32 +14,32 @@
     "max_discount": 50,
     "campaign_fingerprint": "f2ebb370c2e20db34a39",
     "seen_ids": [
+      "gads_CR04664382355161481217",
+      "gads_CR02960062881690812417",
+      "gads_CR13803819701576400897",
+      "67933a46fd9bf2ccf782441f",
+      "gads_CR18306802872290902017",
+      "gads_CR18306525048036392961",
+      "gads_CR10804289755517288449",
+      "gads_CR15529327966705156097",
+      "gads_CR10144679535874932737",
+      "gads_CR00929160211065733121",
+      "gads_CR11372353812397293569",
+      "gads_CR06912911027264815105",
+      "gads_CR05706332350200152065",
+      "gads_CR03813136604646604801",
       "gads_CR04802258355915587585",
+      "gads_CR16956494918551863297",
+      "gads_CR12817261075120521217",
       "gads_CR10847536769063190529",
       "gads_CR15522570402600583169",
-      "gads_CR01316312273978916865",
-      "gads_CR03813136604646604801",
-      "gads_CR12817261075120521217",
-      "gads_CR15710944979553615873",
-      "gads_CR10144679535874932737",
       "gads_CR12287163644373893121",
-      "gads_CR11372353812397293569",
-      "gads_CR00929160211065733121",
-      "gads_CR04664382355161481217",
-      "gads_CR06912911027264815105",
-      "gads_CR15529327966705156097",
-      "gads_CR13803819701576400897",
-      "gads_CR16956494918551863297",
-      "67933a46fd9bf2ccf782441f",
-      "gads_CR18306525048036392961",
+      "gads_CR15710944979553615873",
+      "gads_CR01316312273978916865",
       "gads_CR10377696011492524033",
-      "gads_CR10804289755517288449",
-      "gads_CR02960062881690812417",
-      "gads_CR00153644698303463425",
-      "gads_CR18306802872290902017",
-      "gads_CR05706332350200152065"
+      "gads_CR00153644698303463425"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "67933a46fd9bf2ccf782441f",
@@ -52,7 +52,7 @@
           "facebook",
           "instagram"
         ],
-        "started_at": "2026-10-26T05:01:43.529561+00:00",
+        "started_at": "2026-10-26T05:22:03.712209+00:00",
         "discounts": [
           "FLAT 40% OFF",
           "UP TO 50% OFF"
@@ -72,7 +72,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.529454+00:00",
+        "started_at": "2026-10-26T05:22:03.711985+00:00",
         "discounts": [
           "FLAT 40% OFF",
           "UP TO 50% OFF"
@@ -92,7 +92,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.529490+00:00",
+        "started_at": "2026-10-26T05:22:03.712049+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -109,7 +109,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.529516+00:00",
+        "started_at": "2026-10-26T05:22:03.712090+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -131,34 +131,36 @@
     "max_discount": 50,
     "campaign_fingerprint": "4e18046084707ad5244f",
     "seen_ids": [
-      "gads_CR15581001749035483137",
-      "gads_CR02535232513798832129",
-      "gads_CR05718239236495245313",
-      "gads_CR15150670661908692993",
-      "gads_CR00707912358156042241",
-      "gads_CR14563878451674087425",
-      "gads_CR04587731551298519041",
       "gads_CR18385402637823508481",
-      "gads_CR09382188288099483649",
-      "gads_CR08424047467376410625",
-      "gads_CR07956441355520049153",
-      "gads_CR01253288817230610433",
-      "gads_CR17804708765753147393",
-      "gads_CR14810119853150568449",
-      "gads_CR05307978737701093377",
-      "2c5eef0cc1988a8d6301bb83",
-      "gads_CR02352733374797316097",
-      "gads_CR06208291568995008513",
-      "gads_CR10634065564328263681",
       "gads_CR12624848189527162881",
-      "gads_CR14289031605933572097",
+      "gads_CR05718239236495245313",
+      "gads_CR07956441355520049153",
+      "gads_CR16951756023436148737",
+      "gads_CR17804708765753147393",
+      "gads_CR08424047467376410625",
       "gads_CR01056346493486628865",
       "gads_CR14261706268082176001",
-      "gads_CR16951756023436148737",
+      "gads_CR02352733374797316097",
+      "gads_CR04587731551298519041",
+      "gads_CR14289031605933572097",
+      "gads_CR15581001749035483137",
+      "gads_CR00707912358156042241",
+      "2c5eef0cc1988a8d6301bb83",
+      "gads_CR06208291568995008513",
       "gads_CR05516635258327400449",
-      "gads_CR13432129417849602049"
+      "gads_CR10634065564328263681",
+      "gads_CR02535232513798832129",
+      "gads_CR05307978737701093377",
+      "gads_CR14563878451674087425",
+      "gads_CR14810119853150568449",
+      "gads_CR01253288817230610433",
+      "gads_CR13432129417849602049",
+      "gads_CR15150670661908692993",
+      "gads_CR09382188288099483649",
+      "gads_CR13701710427526791169",
+      "gads_CR15648589828306501633"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "2c5eef0cc1988a8d6301bb83",
@@ -171,64 +173,64 @@
           "facebook",
           "instagram"
         ],
-        "started_at": "2026-10-26T05:01:43.668975+00:00",
+        "started_at": "2026-10-26T05:22:03.844630+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 30% OFF"
         ],
         "max_discount": 50,
+        "is_sale": true
+      },
+      {
+        "id": "gads_CR13701710427526791169",
+        "platform": "google_ads",
+        "page_name": "STARCREST PRIVATE LIMITED",
+        "headline": "Sapphire Pakistan Official — Up to 50% OFF Women's, Men's & Kids Wear",
+        "body": "Shop Unstitched, Pret, WEST, Modest Wear & Accessories at pk.sapphireonline.pk. (40 active creatives in Google Ads Transparency PK).",
+        "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR13701710427526791169?region=PK",
+        "publisher_platforms": [
+          "google_search",
+          "youtube",
+          "google_display"
+        ],
+        "started_at": "2026-10-26T05:22:03.844493+00:00",
+        "discounts": [
+          "UP TO 50% OFF",
+          "FLAT 30% OFF"
+        ],
+        "max_discount": 50,
+        "is_sale": true
+      },
+      {
+        "id": "gads_CR15648589828306501633",
+        "platform": "google_ads",
+        "page_name": "STARCREST PRIVATE LIMITED",
+        "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
+        "body": "Verified active Google Ad creative (CR15648589828306501633) running in Pakistan for sapphireonline.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR15648589828306501633?region=PK",
+        "publisher_platforms": [
+          "google_search",
+          "youtube",
+          "google_display"
+        ],
+        "started_at": "2026-10-26T05:22:03.844539+00:00",
+        "discounts": [],
+        "max_discount": 0,
         "is_sale": true
       },
       {
         "id": "gads_CR16951756023436148737",
         "platform": "google_ads",
         "page_name": "STARCREST PRIVATE LIMITED",
-        "headline": "Sapphire Pakistan Official — Up to 50% OFF Women's, Men's & Kids Wear",
-        "body": "Shop Unstitched, Pret, WEST, Modest Wear & Accessories at pk.sapphireonline.pk. (40 active creatives in Google Ads Transparency PK).",
+        "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
+        "body": "Verified active Google Ad creative (CR16951756023436148737) running in Pakistan for sapphireonline.pk.",
         "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR16951756023436148737?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.668838+00:00",
-        "discounts": [
-          "UP TO 50% OFF",
-          "FLAT 30% OFF"
-        ],
-        "max_discount": 50,
-        "is_sale": true
-      },
-      {
-        "id": "gads_CR05516635258327400449",
-        "platform": "google_ads",
-        "page_name": "STARCREST PRIVATE LIMITED",
-        "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-        "body": "Verified active Google Ad creative (CR05516635258327400449) running in Pakistan for sapphireonline.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR05516635258327400449?region=PK",
-        "publisher_platforms": [
-          "google_search",
-          "youtube",
-          "google_display"
-        ],
-        "started_at": "2026-10-26T05:01:43.668883+00:00",
-        "discounts": [],
-        "max_discount": 0,
-        "is_sale": true
-      },
-      {
-        "id": "gads_CR13432129417849602049",
-        "platform": "google_ads",
-        "page_name": "STARCREST PRIVATE LIMITED",
-        "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-        "body": "Verified active Google Ad creative (CR13432129417849602049) running in Pakistan for sapphireonline.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR13432129417849602049?region=PK",
-        "publisher_platforms": [
-          "google_search",
-          "youtube",
-          "google_display"
-        ],
-        "started_at": "2026-10-26T05:01:43.668916+00:00",
+        "started_at": "2026-10-26T05:22:03.844567+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -249,31 +251,32 @@
     "max_discount": 70,
     "campaign_fingerprint": "543d97c4c67a6e10d399",
     "seen_ids": [
-      "gads_CR08102228660263583745",
-      "gads_CR17147439569575084033",
-      "gads_CR07266155895334109185",
-      "gads_CR06126384713004220417",
-      "dbc6db913b88dcc42e6787f4",
-      "gads_CR04204307657437216769",
-      "gads_CR08811590020126212097",
-      "gads_CR05906183878632013825",
+      "gads_CR12471494251919704065",
       "gads_CR08472910384756192011",
       "gads_CR10184842771492241409",
-      "gads_CR11425401297067573249",
-      "gads_CR16757066221060358145",
-      "gads_CR00706984258673049601",
-      "gads_CR01025588205455409153",
-      "gads_CR10848056640494632961",
-      "gads_CR13025454598272319489",
+      "gads_CR04204307657437216769",
+      "gads_CR17147439569575084033",
+      "gads_CR05625126157994164225",
       "gads_CR14973368192817168385",
       "gads_CR06149186118853066753",
+      "gads_CR10848056640494632961",
+      "gads_CR16757066221060358145",
       "gads_CR06358913830092800001",
-      "gads_CR05625126157994164225",
-      "gads_CR17574957186835021825",
+      "dbc6db913b88dcc42e6787f4",
+      "gads_CR11425401297067573249",
+      "gads_CR00706984258673049601",
+      "gads_CR07266155895334109185",
       "gads_CR07311399321348341761",
-      "gads_CR12471494251919704065"
+      "gads_CR05906183878632013825",
+      "gads_CR01025588205455409153",
+      "gads_CR17574957186835021825",
+      "gads_CR08102228660263583745",
+      "gads_CR08811590020126212097",
+      "gads_CR13025454598272319489",
+      "gads_CR06126384713004220417",
+      "gads_CR10652027770395164673"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "dbc6db913b88dcc42e6787f4",
@@ -294,22 +297,39 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR07311399321348341761",
+        "id": "gads_CR10652027770395164673",
         "platform": "google_ads",
         "page_name": "Ideas (Private) Limited",
         "headline": "Gul Ahmed Official Sale — UP TO 70% OFF | Ideas (Private) Limited",
         "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF live on gulahmedshop.com (4066 items on sale).",
+        "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR10652027770395164673?region=PK",
+        "publisher_platforms": [
+          "google_search",
+          "youtube",
+          "google_display"
+        ],
+        "started_at": "2026-10-26T05:22:03.979089+00:00",
+        "discounts": [
+          "UP TO 70% OFF"
+        ],
+        "max_discount": 70,
+        "is_sale": true
+      },
+      {
+        "id": "gads_CR07311399321348341761",
+        "platform": "google_ads",
+        "page_name": "Ideas (Private) Limited",
+        "headline": "Gul Ahmed — Active Google Search & Display Ad (Ideas (Private) Limited)",
+        "body": "Verified active Google Ad creative (CR07311399321348341761) running in Pakistan for gulahmedshop.com.",
         "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR07311399321348341761?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.818777+00:00",
-        "discounts": [
-          "UP TO 70% OFF"
-        ],
-        "max_discount": 70,
+        "started_at": "2026-10-26T05:22:03.979134+00:00",
+        "discounts": [],
+        "max_discount": 0,
         "is_sale": true
       },
       {
@@ -324,24 +344,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.818821+00:00",
-        "discounts": [],
-        "max_discount": 0,
-        "is_sale": true
-      },
-      {
-        "id": "gads_CR00706984258673049601",
-        "platform": "google_ads",
-        "page_name": "Ideas (Private) Limited",
-        "headline": "Gul Ahmed — Active Google Search & Display Ad (Ideas (Private) Limited)",
-        "body": "Verified active Google Ad creative (CR00706984258673049601) running in Pakistan for gulahmedshop.com.",
-        "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR00706984258673049601?region=PK",
-        "publisher_platforms": [
-          "google_search",
-          "youtube",
-          "google_display"
-        ],
-        "started_at": "2026-10-26T05:01:43.818855+00:00",
+        "started_at": "2026-10-26T05:22:03.979162+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -362,13 +365,13 @@
     "max_discount": 70,
     "campaign_fingerprint": "1d042af0eece44b1ac57",
     "seen_ids": [
-      "4e02b03d82b336841f897db6",
-      "gads_CR06636104233328312321",
-      "gads_CR09182736451029384755",
+      "gads_CR01438241207191863297",
       "gads_CR07948592397275889665",
-      "gads_CR01438241207191863297"
+      "gads_CR06636104233328312321",
+      "4e02b03d82b336841f897db6",
+      "gads_CR09182736451029384755"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "4e02b03d82b336841f897db6",
@@ -400,7 +403,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.980722+00:00",
+        "started_at": "2026-10-26T05:22:04.108961+00:00",
         "discounts": [
           "UP TO 70% OFF"
         ],
@@ -419,7 +422,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.980766+00:00",
+        "started_at": "2026-10-26T05:22:04.109003+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -436,7 +439,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.980799+00:00",
+        "started_at": "2026-10-26T05:22:04.109030+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -458,12 +461,12 @@
     "campaign_fingerprint": "5989dc37ba4ae31c5334",
     "seen_ids": [
       "gads_CR17702877118389551105",
-      "gads_CR10590848881841405953",
-      "d3533b8128c4164ad34c4795",
       "gads_CR09029891740219211777",
-      "gads_CR05839201928374651029"
+      "gads_CR05839201928374651029",
+      "d3533b8128c4164ad34c4795",
+      "gads_CR10590848881841405953"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "d3533b8128c4164ad34c4795",
@@ -495,7 +498,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.225895+00:00",
+        "started_at": "2026-10-26T05:22:05.162781+00:00",
         "discounts": [
           "UP TO 67% OFF"
         ],
@@ -514,7 +517,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.225931+00:00",
+        "started_at": "2026-10-26T05:22:05.162835+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -531,7 +534,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.225956+00:00",
+        "started_at": "2026-10-26T05:22:05.162862+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -555,28 +558,28 @@
     "max_discount": 50,
     "campaign_fingerprint": "cc537eeac6d9ab775b6c",
     "seen_ids": [
-      "gads_CR05734892714487447553",
-      "gads_CR10310031516163375105",
-      "gads_CR08990799532006572033",
       "gads_CR13828284007093108737",
-      "gads_CR17517004231037419521",
-      "gads_CR11035904353809465345",
-      "gads_CR12672410863521497089",
       "2e10fa96f236124cde0d88ef",
-      "gads_CR03311674639985410049",
-      "gads_CR00046186678141845505",
-      "gads_CR07483920192837465102",
-      "gads_CR11186500063419432961",
-      "gads_CR13253888687382462465",
-      "gads_CR11058623012818386945",
-      "gads_CR00655255097034407937",
-      "gads_CR08608936944656711681",
-      "gads_CR14763106385214308353",
       "gads_CR11066451535608152065",
+      "gads_CR08608936944656711681",
+      "gads_CR08990799532006572033",
+      "gads_CR11186500063419432961",
+      "gads_CR07483920192837465102",
+      "gads_CR03311674639985410049",
+      "gads_CR00655255097034407937",
+      "gads_CR14763106385214308353",
+      "gads_CR11058623012818386945",
+      "gads_CR17517004231037419521",
+      "gads_CR10310031516163375105",
+      "gads_CR11035904353809465345",
+      "gads_CR13253888687382462465",
+      "gads_CR11239086406041075713",
       "gads_CR17510897543456751617",
-      "gads_CR11239086406041075713"
+      "gads_CR05734892714487447553",
+      "gads_CR00046186678141845505",
+      "gads_CR12672410863521497089"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "2e10fa96f236124cde0d88ef",
@@ -611,7 +614,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.390835+00:00",
+        "started_at": "2026-10-26T05:22:05.293778+00:00",
         "discounts": [
           "FLAT 30%",
           "FLAT 20%",
@@ -633,7 +636,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.390872+00:00",
+        "started_at": "2026-10-26T05:22:05.293827+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -650,7 +653,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.390901+00:00",
+        "started_at": "2026-10-26T05:22:05.293858+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -672,19 +675,19 @@
     "max_discount": 50,
     "campaign_fingerprint": "43efaa8a0699742797d8",
     "seen_ids": [
-      "gads_CR15890450500580016129",
+      "gads_CR05078102192414523393",
+      "gads_CR09634765900208930817",
       "6cbd07534228ae96933bab0e",
       "gads_CR03320290962856476673",
-      "gads_CR09634765900208930817",
-      "gads_CR05078102192414523393",
-      "gads_CR02938475610293847563",
       "gads_CR17005343196516974593",
       "gads_CR12727797662259085313",
+      "gads_CR02938475610293847563",
       "gads_CR06811561438440587265",
-      "gads_CR16219028555424595969",
-      "gads_CR02646489896390230017"
+      "gads_CR02646489896390230017",
+      "gads_CR15890450500580016129",
+      "gads_CR16219028555424595969"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "6cbd07534228ae96933bab0e",
@@ -717,7 +720,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.621087+00:00",
+        "started_at": "2026-10-26T05:22:06.040199+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 35% OFF"
@@ -737,7 +740,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.621160+00:00",
+        "started_at": "2026-10-26T05:22:06.040240+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -754,7 +757,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.621190+00:00",
+        "started_at": "2026-10-26T05:22:06.040270+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -787,20 +790,21 @@
     "max_discount": 60,
     "campaign_fingerprint": "0b145fc5e636002f49af",
     "seen_ids": [
+      "gads_CR05797406547596279809",
+      "gads_CR04839201928374651023",
       "gads_CR02439937841019486209",
+      "gads_CR03183207701396062209",
+      "gads_CR00049933813769306113",
+      "gads_CR10892244363547508737",
+      "gads_CR05705504967700250625",
+      "4c415b25011eb099efea0a4d",
+      "gads_CR16426244715818516481",
       "gads_CR12195922003382763521",
       "gads_CR00235848035886694401",
       "gads_CR17947846762869817345",
-      "gads_CR04839201928374651023",
-      "4c415b25011eb099efea0a4d",
-      "gads_CR00049933813769306113",
-      "gads_CR16426244715818516481",
-      "gads_CR05705504967700250625",
-      "gads_CR10892244363547508737",
-      "gads_CR05797406547596279809",
-      "gads_CR03183207701396062209"
+      "gads_CR04924746158863024129"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "4c415b25011eb099efea0a4d",
@@ -821,22 +825,39 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR10892244363547508737",
+        "id": "gads_CR04924746158863024129",
         "platform": "google_ads",
         "page_name": "M/S SIAR Digitial",
         "headline": "Bonanza Satrangi Official Sale — UP TO 60% OFF | M/S SIAR Digitial",
         "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 60% OFF live on bonanzasatrangi.com (70 items on sale).",
+        "url": "https://adstransparency.google.com/advertiser/AR02935261069054050305/creative/CR04924746158863024129?region=PK",
+        "publisher_platforms": [
+          "google_search",
+          "youtube",
+          "google_display"
+        ],
+        "started_at": "2026-10-26T05:22:06.300315+00:00",
+        "discounts": [
+          "UP TO 60% OFF"
+        ],
+        "max_discount": 60,
+        "is_sale": true
+      },
+      {
+        "id": "gads_CR10892244363547508737",
+        "platform": "google_ads",
+        "page_name": "M/S SIAR Digitial",
+        "headline": "Bonanza Satrangi — Active Google Search & Display Ad (M/S SIAR Digitial)",
+        "body": "Verified active Google Ad creative (CR10892244363547508737) running in Pakistan for bonanzasatrangi.com.",
         "url": "https://adstransparency.google.com/advertiser/AR02935261069054050305/creative/CR10892244363547508737?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.914743+00:00",
-        "discounts": [
-          "UP TO 60% OFF"
-        ],
-        "max_discount": 60,
+        "started_at": "2026-10-26T05:22:06.300379+00:00",
+        "discounts": [],
+        "max_discount": 0,
         "is_sale": true
       },
       {
@@ -851,24 +872,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.914778+00:00",
-        "discounts": [],
-        "max_discount": 0,
-        "is_sale": true
-      },
-      {
-        "id": "gads_CR03183207701396062209",
-        "platform": "google_ads",
-        "page_name": "M/S SIAR Digitial",
-        "headline": "Bonanza Satrangi — Active Google Search & Display Ad (M/S SIAR Digitial)",
-        "body": "Verified active Google Ad creative (CR03183207701396062209) running in Pakistan for bonanzasatrangi.com.",
-        "url": "https://adstransparency.google.com/advertiser/AR02935261069054050305/creative/CR03183207701396062209?region=PK",
-        "publisher_platforms": [
-          "google_search",
-          "youtube",
-          "google_display"
-        ],
-        "started_at": "2026-10-26T05:01:44.914804+00:00",
+        "started_at": "2026-10-26T05:22:06.300411+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -893,12 +897,12 @@
     "max_discount": 66,
     "campaign_fingerprint": "cba45a5d057ad12fd48f",
     "seen_ids": [
-      "gads_CR00424696854538616833",
-      "gads_CR03152870526318280705",
       "gads_CR02569513637085446145",
+      "gads_CR03152870526318280705",
+      "gads_CR00424696854538616833",
       "7e5a99a55380384650d6ddcf"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "7e5a99a55380384650d6ddcf",
@@ -934,7 +938,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.059187+00:00",
+        "started_at": "2026-10-26T05:22:06.432684+00:00",
         "discounts": [
           "40% OFF",
           "50% OFF",
@@ -957,7 +961,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.059222+00:00",
+        "started_at": "2026-10-26T05:22:06.432730+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -974,7 +978,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.059250+00:00",
+        "started_at": "2026-10-26T05:22:06.432760+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -997,14 +1001,14 @@
     "max_discount": 70,
     "campaign_fingerprint": "94194cd1e01217fe9e76",
     "seen_ids": [
-      "gads_CR18428845716626472961",
+      "gads_CR07382910293847561024",
       "gads_CR15403430621149659137",
       "gads_CR12538897166560657409",
+      "gads_CR18428845716626472961",
       "708c4258e8b0843898cbdb62",
-      "gads_CR07382910293847561024",
       "gads_CR11873573884500377601"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "708c4258e8b0843898cbdb62",
@@ -1038,7 +1042,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.293451+00:00",
+        "started_at": "2026-10-26T05:22:15.480068+00:00",
         "discounts": [
           "10% OFF",
           "UP TO 50% OFF",
@@ -1059,7 +1063,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.293499+00:00",
+        "started_at": "2026-10-26T05:22:15.480117+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1076,7 +1080,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.293534+00:00",
+        "started_at": "2026-10-26T05:22:15.480147+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1097,25 +1101,25 @@
     "max_discount": 50,
     "campaign_fingerprint": "9574d3b82ac120b27847",
     "seen_ids": [
-      "gads_CR05182736451029384757",
-      "gads_CR16827191526491684865",
-      "gads_CR14005312525990625281",
-      "gads_CR04340140533658681345",
-      "c584dfd3edae3a01baae8593",
       "gads_CR04581904448908951553",
+      "gads_CR17160741572917067777",
+      "gads_CR01983412813506281473",
       "gads_CR12135285448939405313",
       "gads_CR18194617476115857409",
       "gads_CR18061716035332997121",
-      "gads_CR10379147676078833665",
-      "gads_CR09175754602027417601",
-      "gads_CR17160741572917067777",
-      "gads_CR17550412788768178177",
-      "gads_CR01096745471268880385",
-      "gads_CR01983412813506281473",
+      "gads_CR04340140533658681345",
+      "gads_CR14005312525990625281",
       "gads_CR04271246921768632321",
-      "gads_CR08113176944217948161"
+      "gads_CR01096745471268880385",
+      "gads_CR08113176944217948161",
+      "gads_CR10379147676078833665",
+      "gads_CR16827191526491684865",
+      "c584dfd3edae3a01baae8593",
+      "gads_CR05182736451029384757",
+      "gads_CR17550412788768178177",
+      "gads_CR09175754602027417601"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "c584dfd3edae3a01baae8593",
@@ -1147,7 +1151,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.773442+00:00",
+        "started_at": "2026-10-26T05:22:16.384253+00:00",
         "discounts": [
           "UP TO 50% OFF"
         ],
@@ -1166,7 +1170,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.773489+00:00",
+        "started_at": "2026-10-26T05:22:16.384300+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1183,7 +1187,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.773524+00:00",
+        "started_at": "2026-10-26T05:22:16.384327+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1204,34 +1208,34 @@
     "max_discount": 40,
     "campaign_fingerprint": "7af33090a796a0c5f651",
     "seen_ids": [
-      "gads_CR00601123605568290817",
-      "gads_CR14249250734074757121",
-      "gads_CR08079162220572835841",
-      "gads_CR03531514808773902337",
-      "gads_CR03730208972368510977",
-      "gads_CR10115461603504685057",
-      "gads_CR17623959396428021761",
-      "gads_CR10675217707575541761",
-      "gads_CR03275510268028780545",
-      "gads_CR09672956964153327617",
-      "gads_CR14329328054256533505",
       "gads_CR12526823231807553537",
-      "gads_CR06273829102938475615",
-      "gads_CR05966060644770775041",
+      "gads_CR10115461603504685057",
       "gads_CR06060754700733513729",
       "gads_CR08937393400387207169",
-      "gads_CR15185816044284411905",
-      "gads_CR10451478979792601089",
       "gads_CR02009500444862185473",
-      "bde357bdfa599db154e39060",
-      "gads_CR13250850908553609217",
-      "gads_CR10690636751837331457",
-      "gads_CR17901680683391123457",
-      "gads_CR02980524492436013057",
       "gads_CR08651229324411666433",
-      "gads_CR00030996383838240769"
+      "gads_CR10451478979792601089",
+      "gads_CR09672956964153327617",
+      "gads_CR00601123605568290817",
+      "gads_CR02980524492436013057",
+      "gads_CR10690636751837331457",
+      "gads_CR03275510268028780545",
+      "gads_CR15185816044284411905",
+      "gads_CR10675217707575541761",
+      "gads_CR05966060644770775041",
+      "gads_CR14249250734074757121",
+      "gads_CR00030996383838240769",
+      "gads_CR08079162220572835841",
+      "gads_CR17623959396428021761",
+      "gads_CR17901680683391123457",
+      "gads_CR03730208972368510977",
+      "gads_CR14329328054256533505",
+      "bde357bdfa599db154e39060",
+      "gads_CR03531514808773902337",
+      "gads_CR13250850908553609217",
+      "gads_CR06273829102938475615"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "bde357bdfa599db154e39060",
@@ -1263,7 +1267,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.534371+00:00",
+        "started_at": "2026-10-26T05:22:15.967417+00:00",
         "discounts": [
           "FLAT 40% OFF"
         ],
@@ -1282,7 +1286,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.534415+00:00",
+        "started_at": "2026-10-26T05:22:15.967463+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1299,7 +1303,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.534448+00:00",
+        "started_at": "2026-10-26T05:22:15.967530+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1320,37 +1324,38 @@
     "max_discount": 50,
     "campaign_fingerprint": "2860e78bb35f24435bfc",
     "seen_ids": [
-      "gads_CR13841789583294988289",
-      "gads_CR01884946049680801793",
       "gads_CR04754746268046065665",
-      "gads_CR16318467459327721473",
-      "gads_CR00994015488545652737",
-      "gads_CR15350460274092015617",
-      "gads_CR11825221658078085121",
-      "gads_CR08301135570768232449",
-      "gads_CR08513307092629585921",
-      "gads_CR03615320727504289793",
-      "gads_CR04105479326084890625",
-      "gads_CR07245131308865683457",
-      "gads_CR07308189572028956673",
-      "gads_CR01783301010056282113",
-      "gads_CR15357335966977097729",
-      "gads_CR06386413285918375937",
-      "gads_CR03439734656193265665",
-      "gads_CR13641905249902919681",
-      "gads_CR13314022077817159681",
-      "eb1c5bef91b9fa77ab41efc0",
       "gads_CR12346705042286313473",
+      "gads_CR08513307092629585921",
+      "gads_CR07245131308865683457",
+      "gads_CR03615320727504289793",
+      "gads_CR01884946049680801793",
+      "gads_CR03819285108028866561",
+      "gads_CR00994015488545652737",
+      "gads_CR06386413285918375937",
+      "gads_CR13314022077817159681",
+      "gads_CR10341982052756226049",
+      "gads_CR15350460274092015617",
+      "gads_CR04105479326084890625",
+      "gads_CR13841789583294988289",
+      "gads_CR07308189572028956673",
+      "gads_CR14677767412267352065",
       "gads_CR10381446754892513281",
       "gads_CR09861167610794606593",
-      "gads_CR09278857456631414785",
-      "gads_CR14926116302656372737",
-      "gads_CR14677767412267352065",
+      "gads_CR08301135570768232449",
+      "gads_CR13641905249902919681",
+      "gads_CR16318467459327721473",
+      "gads_CR01783301010056282113",
+      "gads_CR15357335966977097729",
+      "gads_CR11825221658078085121",
       "gads_CR06019179314229018625",
-      "gads_CR03819285108028866561",
-      "gads_CR10341982052756226049"
+      "eb1c5bef91b9fa77ab41efc0",
+      "gads_CR09278857456631414785",
+      "gads_CR03439734656193265665",
+      "gads_CR14926116302656372737",
+      "gads_CR02947453819782430721"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "eb1c5bef91b9fa77ab41efc0",
@@ -1371,22 +1376,39 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR03819285108028866561",
+        "id": "gads_CR02947453819782430721",
         "platform": "google_ads",
         "page_name": "Retail Concepts",
         "headline": "Breakout Official Sale — FLAT 50% OFF | Retail Concepts",
         "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 50% OFF live on breakout.com.pk (84 items on sale).",
+        "url": "https://adstransparency.google.com/advertiser/AR16622709190091079681/creative/CR02947453819782430721?region=PK",
+        "publisher_platforms": [
+          "google_search",
+          "youtube",
+          "google_display"
+        ],
+        "started_at": "2026-10-26T05:22:07.516743+00:00",
+        "discounts": [
+          "FLAT 50% OFF"
+        ],
+        "max_discount": 50,
+        "is_sale": true
+      },
+      {
+        "id": "gads_CR03819285108028866561",
+        "platform": "google_ads",
+        "page_name": "Retail Concepts",
+        "headline": "Breakout — Active Google Search & Display Ad (Retail Concepts)",
+        "body": "Verified active Google Ad creative (CR03819285108028866561) running in Pakistan for breakout.com.pk.",
         "url": "https://adstransparency.google.com/advertiser/AR16622709190091079681/creative/CR03819285108028866561?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.318686+00:00",
-        "discounts": [
-          "FLAT 50% OFF"
-        ],
-        "max_discount": 50,
+        "started_at": "2026-10-26T05:22:07.516787+00:00",
+        "discounts": [],
+        "max_discount": 0,
         "is_sale": true
       },
       {
@@ -1401,24 +1423,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.318727+00:00",
-        "discounts": [],
-        "max_discount": 0,
-        "is_sale": true
-      },
-      {
-        "id": "gads_CR14926116302656372737",
-        "platform": "google_ads",
-        "page_name": "Retail Concepts",
-        "headline": "Breakout — Active Google Search & Display Ad (Retail Concepts)",
-        "body": "Verified active Google Ad creative (CR14926116302656372737) running in Pakistan for breakout.com.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR16622709190091079681/creative/CR14926116302656372737?region=PK",
-        "publisher_platforms": [
-          "google_search",
-          "youtube",
-          "google_display"
-        ],
-        "started_at": "2026-10-26T05:01:46.318757+00:00",
+        "started_at": "2026-10-26T05:22:07.516815+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1439,20 +1444,20 @@
     "max_discount": 70,
     "campaign_fingerprint": "37358d3d14442a46d589",
     "seen_ids": [
-      "gads_CR14427214379021762561",
-      "gads_CR17793793260989186049",
-      "gads_CR12559890142069784577",
-      "gads_CR14559755729746526209",
-      "gads_CR05944197672096235521",
-      "gads_CR15971554876291284993",
       "gads_CR01791206361221038081",
-      "gads_CR09255603885215580161",
-      "gads_CR13156592353684750337",
       "feceb2a6f49a5847ca4068b0",
+      "gads_CR17793793260989186049",
+      "gads_CR15971554876291284993",
+      "gads_CR13156592353684750337",
+      "gads_CR05944197672096235521",
+      "gads_CR14559755729746526209",
+      "gads_CR14427214379021762561",
       "e2dda62c3479d1c8e42578c3",
-      "gads_CR14821565769195716609"
+      "gads_CR14821565769195716609",
+      "gads_CR12559890142069784577",
+      "gads_CR09255603885215580161"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "feceb2a6f49a5847ca4068b0",
@@ -1484,7 +1489,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.907499+00:00",
+        "started_at": "2026-10-26T05:22:07.969894+00:00",
         "discounts": [
           "UP TO 70% OFF"
         ],
@@ -1503,7 +1508,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.907534+00:00",
+        "started_at": "2026-10-26T05:22:07.969942+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1520,7 +1525,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.907559+00:00",
+        "started_at": "2026-10-26T05:22:07.969970+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1541,20 +1546,20 @@
     "max_discount": 70,
     "campaign_fingerprint": "9527f8ed59c6cf496666",
     "seen_ids": [
-      "gads_CR10568193822708203521",
-      "gads_CR00269481821702455297",
-      "gads_CR08057267705658474497",
-      "gads_CR06813269529754337281",
-      "gads_CR12587692771046850561",
       "gads_CR13854470903733157889",
+      "gads_CR10568193822708203521",
+      "gads_CR08057267705658474497",
       "gads_CR17103160973604159489",
+      "d915205cf25cdb12f1470c8a",
+      "gads_CR07382411211108777985",
+      "gads_CR12587692771046850561",
       "gads_CR09982884475702345729",
       "4efa6b7be59689fd79187998",
+      "gads_CR06813269529754337281",
       "gads_CR10012140006216302593",
-      "d915205cf25cdb12f1470c8a",
-      "gads_CR07382411211108777985"
+      "gads_CR00269481821702455297"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "d915205cf25cdb12f1470c8a",
@@ -1586,7 +1591,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:47.701411+00:00",
+        "started_at": "2026-10-26T05:22:08.588409+00:00",
         "discounts": [
           "UP TO 70% OFF"
         ],
@@ -1605,7 +1610,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:47.701446+00:00",
+        "started_at": "2026-10-26T05:22:08.588455+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1622,7 +1627,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:47.701472+00:00",
+        "started_at": "2026-10-26T05:22:08.588482+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1643,20 +1648,20 @@
     "max_discount": 70,
     "campaign_fingerprint": "e853871423a3866c5c04",
     "seen_ids": [
-      "gads_CR13605702893255524353",
-      "gads_CR01786533685911093249",
-      "aae865b63076e26fd58dab87",
-      "gads_CR01528653129220882433",
       "gads_CR12258119701128806401",
-      "gads_CR03486367796185530369",
-      "gads_CR14692103643734212609",
+      "gads_CR03948576120394857112",
+      "aae865b63076e26fd58dab87",
       "gads_CR10199820739792601089",
-      "gads_CR14155936925982130177",
+      "gads_CR14692103643734212609",
+      "gads_CR13605702893255524353",
       "gads_CR13241646802228215809",
+      "gads_CR01786533685911093249",
+      "gads_CR03486367796185530369",
+      "gads_CR01528653129220882433",
       "gads_CR14724301742242004993",
-      "gads_CR03948576120394857112"
+      "gads_CR14155936925982130177"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "aae865b63076e26fd58dab87",
@@ -1688,7 +1693,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.208045+00:00",
+        "started_at": "2026-10-26T05:22:06.577530+00:00",
         "discounts": [
           "UP TO 70% OFF"
         ],
@@ -1707,7 +1712,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.208091+00:00",
+        "started_at": "2026-10-26T05:22:06.577573+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1724,7 +1729,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.208163+00:00",
+        "started_at": "2026-10-26T05:22:06.577602+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1749,35 +1754,37 @@
     "max_discount": 40,
     "campaign_fingerprint": "fac8454e74d56b781b6c",
     "seen_ids": [
-      "gads_CR17995258150936117249",
-      "gads_CR05626956956523560961",
-      "gads_CR07467234478742568961",
-      "gads_CR00215115094877536257",
-      "gads_CR17688623702482092033",
-      "gads_CR13063307485081763841",
-      "gads_CR03970226201728909313",
-      "gads_CR10072371528063778817",
-      "gads_CR12473013880068505601",
-      "gads_CR05711267817379069953",
-      "gads_CR12334435592031961089",
-      "gads_CR00107624810921590785",
-      "0d5f297f7d5ed2bd66310e25",
-      "gads_CR13168738933514698753",
-      "gads_CR11838124530109251585",
       "gads_CR06473829102938475618",
+      "gads_CR00250174397518708737",
+      "gads_CR03970226201728909313",
+      "gads_CR12334435592031961089",
+      "gads_CR11838124530109251585",
+      "gads_CR13063307485081763841",
       "gads_CR15684889414423543809",
       "gads_CR05486045195575230465",
-      "gads_CR01526581778163171329",
-      "gads_CR18115144363343347713",
-      "gads_CR02364959944098185217",
+      "0d5f297f7d5ed2bd66310e25",
+      "gads_CR00107624810921590785",
       "gads_CR03386727028819492865",
+      "gads_CR02364959944098185217",
       "gads_CR12955502672080797697",
-      "gads_CR00250174397518708737",
-      "gads_CR01315742177199915009",
+      "gads_CR00215115094877536257",
+      "gads_CR01526581778163171329",
+      "gads_CR17995258150936117249",
+      "gads_CR05626956956523560961",
       "gads_CR09212462897232347137",
-      "gads_CR16246814313770123265"
+      "gads_CR13168738933514698753",
+      "gads_CR07467234478742568961",
+      "gads_CR01315742177199915009",
+      "gads_CR18115144363343347713",
+      "gads_CR16246814313770123265",
+      "gads_CR17688623702482092033",
+      "gads_CR12473013880068505601",
+      "gads_CR05711267817379069953",
+      "gads_CR10072371528063778817",
+      "gads_CR14707837509098799105",
+      "gads_CR07178697158458081281"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "0d5f297f7d5ed2bd66310e25",
@@ -1802,18 +1809,18 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR09212462897232347137",
+        "id": "gads_CR14707837509098799105",
         "platform": "google_ads",
         "page_name": "MARIA B DESIGNS (PVT) LTD.",
         "headline": "Maria.B. Official Sale — 10% OFF, 20% OFF, 30% OFF | MARIA B DESIGNS (PVT) LTD.",
         "body": "Active Google Search & Shopping Ad (40 creatives in PK): 10% OFF, 20% OFF, 30% OFF live on mariab.pk (5 items on sale).",
-        "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR09212462897232347137?region=PK",
+        "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR14707837509098799105?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.338261+00:00",
+        "started_at": "2026-10-26T05:22:06.712062+00:00",
         "discounts": [
           "10% OFF",
           "20% OFF",
@@ -1825,35 +1832,35 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR16246814313770123265",
+        "id": "gads_CR07178697158458081281",
         "platform": "google_ads",
         "page_name": "MARIA B DESIGNS (PVT) LTD.",
         "headline": "Maria.B. — Active Google Search & Display Ad (MARIA B DESIGNS (PVT) LTD.)",
-        "body": "Verified active Google Ad creative (CR16246814313770123265) running in Pakistan for mariab.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR16246814313770123265?region=PK",
+        "body": "Verified active Google Ad creative (CR07178697158458081281) running in Pakistan for mariab.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR07178697158458081281?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.338318+00:00",
+        "started_at": "2026-10-26T05:22:06.712109+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
       },
       {
-        "id": "gads_CR05486045195575230465",
+        "id": "gads_CR09212462897232347137",
         "platform": "google_ads",
         "page_name": "MARIA B DESIGNS (PVT) LTD.",
         "headline": "Maria.B. — Active Google Search & Display Ad (MARIA B DESIGNS (PVT) LTD.)",
-        "body": "Verified active Google Ad creative (CR05486045195575230465) running in Pakistan for mariab.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR05486045195575230465?region=PK",
+        "body": "Verified active Google Ad creative (CR09212462897232347137) running in Pakistan for mariab.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR09212462897232347137?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.338353+00:00",
+        "started_at": "2026-10-26T05:22:06.712139+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1874,24 +1881,24 @@
     "max_discount": 60,
     "campaign_fingerprint": "9ddb448e4c729dd6b87d",
     "seen_ids": [
-      "gads_CR10832117570182578177",
-      "gads_CR09308028152951341057",
       "gads_CR07754998765043318785",
       "gads_CR00651893340232482817",
-      "gads_CR14748232939238064129",
-      "e236da9b83e9d410a6ff3014",
-      "gads_CR11491705799592378369",
-      "gads_CR06413398866086854657",
-      "gads_CR13165259176781283329",
-      "gads_CR10759732519248068609",
       "0fdbb993994be526406e5b82",
+      "gads_CR09516391378850938881",
+      "gads_CR13165259176781283329",
+      "gads_CR09308028152951341057",
+      "gads_CR10832117570182578177",
+      "gads_CR10759732519248068609",
       "gads_CR00125373230696366081",
-      "gads_CR06720753322858381313",
       "gads_CR06976708832256851969",
       "gads_CR05677659835726823425",
-      "gads_CR09516391378850938881"
+      "gads_CR11491705799592378369",
+      "gads_CR06720753322858381313",
+      "gads_CR06413398866086854657",
+      "e236da9b83e9d410a6ff3014",
+      "gads_CR14748232939238064129"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "0fdbb993994be526406e5b82",
@@ -1923,7 +1930,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.885838+00:00",
+        "started_at": "2026-10-26T05:22:07.121879+00:00",
         "discounts": [
           "UP TO 60% OFF"
         ],
@@ -1942,7 +1949,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.885873+00:00",
+        "started_at": "2026-10-26T05:22:07.121939+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1959,7 +1966,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:45.885900+00:00",
+        "started_at": "2026-10-26T05:22:07.121976+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -1980,27 +1987,27 @@
     "max_discount": 69,
     "campaign_fingerprint": "01e65dbf2bf6ba77049c",
     "seen_ids": [
-      "gads_CR17348622211451191297",
-      "gads_CR05156305996322177025",
-      "gads_CR11817245354053599233",
-      "gads_CR08014789937935155201",
-      "gads_CR15734553804894371841",
-      "gads_CR18231752519271317505",
-      "gads_CR06722027046949617665",
-      "gads_CR08585352145363009537",
-      "gads_CR12477264592021487617",
-      "d81507c15f09573413bfeb78",
-      "gads_CR16464538996416970753",
-      "32e52ff4dc1f209d486186c4",
-      "gads_CR15699913656701550593",
-      "gads_CR13048590247066075137",
       "gads_CR03158818334468734977",
-      "gads_CR17133522552686116865",
-      "gads_CR10445223007738658817",
+      "gads_CR06722027046949617665",
       "gads_CR05319104695862558721",
-      "gads_CR10428608313301139457"
+      "gads_CR10445223007738658817",
+      "gads_CR16464538996416970753",
+      "gads_CR18231752519271317505",
+      "gads_CR05156305996322177025",
+      "gads_CR08585352145363009537",
+      "gads_CR15699913656701550593",
+      "32e52ff4dc1f209d486186c4",
+      "d81507c15f09573413bfeb78",
+      "gads_CR10428608313301139457",
+      "gads_CR12477264592021487617",
+      "gads_CR15734553804894371841",
+      "gads_CR17133522552686116865",
+      "gads_CR11817245354053599233",
+      "gads_CR13048590247066075137",
+      "gads_CR08014789937935155201",
+      "gads_CR17348622211451191297"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "32e52ff4dc1f209d486186c4",
@@ -2032,7 +2039,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.029654+00:00",
+        "started_at": "2026-10-26T05:22:07.251214+00:00",
         "discounts": [
           "UP TO 69% OFF"
         ],
@@ -2051,7 +2058,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.029699+00:00",
+        "started_at": "2026-10-26T05:22:07.251259+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2068,7 +2075,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.029739+00:00",
+        "started_at": "2026-10-26T05:22:07.251290+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2090,27 +2097,27 @@
     "max_discount": 50,
     "campaign_fingerprint": "92065728defe0735ab45",
     "seen_ids": [
-      "gads_CR06196156843274797057",
-      "gads_CR17573592418027044865",
-      "gads_CR07639213078172663809",
-      "gads_CR02331942606348484609",
-      "3698d6dfe8490680dedde42c",
-      "d5301a8c482d40a9e2c98bdc",
-      "gads_CR02780114953263120385",
       "gads_CR14688193909234860033",
-      "gads_CR06826177005990445057",
-      "gads_CR14331082737375510529",
-      "gads_CR00867457302142124033",
-      "gads_CR06939099461503156225",
+      "3698d6dfe8490680dedde42c",
       "gads_CR11693272428724617217",
-      "gads_CR08166420107598233601",
-      "gads_CR11301734688806141953",
-      "gads_CR15735574014245994497",
       "gads_CR00512790035393675265",
+      "gads_CR06826177005990445057",
+      "gads_CR11301734688806141953",
       "gads_CR11270276252386197505",
-      "gads_CR05215596568144510977"
+      "gads_CR06939099461503156225",
+      "gads_CR02780114953263120385",
+      "gads_CR07639213078172663809",
+      "gads_CR06196156843274797057",
+      "gads_CR02331942606348484609",
+      "gads_CR08166420107598233601",
+      "gads_CR17573592418027044865",
+      "gads_CR00867457302142124033",
+      "gads_CR05215596568144510977",
+      "gads_CR14331082737375510529",
+      "d5301a8c482d40a9e2c98bdc",
+      "gads_CR15735574014245994497"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "d5301a8c482d40a9e2c98bdc",
@@ -2143,7 +2150,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.179543+00:00",
+        "started_at": "2026-10-26T05:22:07.375594+00:00",
         "discounts": [
           "FLAT 50% OFF",
           "FLAT 30% OFF"
@@ -2163,7 +2170,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.179583+00:00",
+        "started_at": "2026-10-26T05:22:07.375640+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2180,7 +2187,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:46.179613+00:00",
+        "started_at": "2026-10-26T05:22:07.375668+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2205,26 +2212,26 @@
     "max_discount": 60,
     "campaign_fingerprint": "97572349b1599089f89f",
     "seen_ids": [
-      "gads_CR13365729635770302465",
-      "gads_CR16704739912938684417",
-      "gads_CR13250931301751455745",
-      "gads_CR09921851684756127745",
-      "gads_CR11856201540651974657",
-      "ef1c6d1899cd278d21846a53",
-      "gads_CR06035706253894746113",
-      "gads_CR00583919332380114945",
-      "gads_CR09283746510293847568",
-      "gads_CR15069616417055703041",
-      "gads_CR01351805883713060865",
-      "gads_CR01107173514424614913",
-      "gads_CR02848852709379932161",
-      "gads_CR12540970596382539777",
       "gads_CR01384426366484611073",
+      "gads_CR13250931301751455745",
+      "gads_CR06035706253894746113",
       "gads_CR14254880671695634433",
+      "gads_CR13365729635770302465",
       "gads_CR16153778286982332417",
-      "gads_CR11330942802881150977"
+      "gads_CR01351805883713060865",
+      "gads_CR15069616417055703041",
+      "gads_CR09921851684756127745",
+      "ef1c6d1899cd278d21846a53",
+      "gads_CR09283746510293847568",
+      "gads_CR16704739912938684417",
+      "gads_CR00583919332380114945",
+      "gads_CR11856201540651974657",
+      "gads_CR12540970596382539777",
+      "gads_CR11330942802881150977",
+      "gads_CR02848852709379932161",
+      "gads_CR01107173514424614913"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "ef1c6d1899cd278d21846a53",
@@ -2260,7 +2267,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.922462+00:00",
+        "started_at": "2026-10-26T05:22:16.523310+00:00",
         "discounts": [
           "FLAT 11% OFF",
           "FLAT 21% OFF",
@@ -2283,7 +2290,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.922494+00:00",
+        "started_at": "2026-10-26T05:22:16.523382+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2300,7 +2307,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:54.922519+00:00",
+        "started_at": "2026-10-26T05:22:16.523424+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2324,7 +2331,7 @@
       "ad6570018c301d4e5de4eb5d",
       "57bee7e64d83673c478b367d"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "ad6570018c301d4e5de4eb5d",
@@ -2403,17 +2410,17 @@
     "max_discount": 60,
     "campaign_fingerprint": "e57034c823362595c7f1",
     "seen_ids": [
-      "gads_CR14551761258010378241",
-      "gads_CR17941509177847316481",
-      "gads_CR11609850325451669505",
-      "gads_CR05109883378446893057",
-      "gads_CR17628173764367745025",
-      "gads_CR16077526708919468033",
-      "e6fda4db878aa771d1537f7d",
       "84461237785c10f1019933f3",
+      "gads_CR11609850325451669505",
+      "gads_CR17628173764367745025",
+      "e6fda4db878aa771d1537f7d",
+      "gads_CR05109883378446893057",
+      "gads_CR17941509177847316481",
+      "gads_CR16077526708919468033",
+      "gads_CR14551761258010378241",
       "gads_CR00494270626039595009"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "e6fda4db878aa771d1537f7d",
@@ -2445,7 +2452,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:50.097477+00:00",
+        "started_at": "2026-10-26T05:22:11.278455+00:00",
         "discounts": [
           "UP TO 60% OFF"
         ],
@@ -2464,7 +2471,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:50.097513+00:00",
+        "started_at": "2026-10-26T05:22:11.278498+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2481,7 +2488,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:50.097537+00:00",
+        "started_at": "2026-10-26T05:22:11.278523+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2541,13 +2548,13 @@
     "max_discount": 50,
     "campaign_fingerprint": "23ec192b042960d1e5d9",
     "seen_ids": [
-      "8d633b98322454262b11e4af",
-      "gads_CR08086200770027847681",
-      "gads_CR05354706023376486401",
+      "gads_CR00721324931136094209",
       "24a69edf2a7845a2e7d4b44b",
-      "gads_CR00721324931136094209"
+      "gads_CR08086200770027847681",
+      "8d633b98322454262b11e4af",
+      "gads_CR05354706023376486401"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "24a69edf2a7845a2e7d4b44b",
@@ -2582,7 +2589,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.143941+00:00",
+        "started_at": "2026-10-26T05:22:16.790315+00:00",
         "discounts": [
           "SAVE 20%",
           "SAVE 30%",
@@ -2604,7 +2611,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.143975+00:00",
+        "started_at": "2026-10-26T05:22:16.790401+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2621,7 +2628,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.144001+00:00",
+        "started_at": "2026-10-26T05:22:16.790433+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2656,15 +2663,15 @@
     "max_discount": 50,
     "campaign_fingerprint": "387e49b4e76a6a35b0be",
     "seen_ids": [
-      "683ede43b5e24d629158e2c7",
-      "70387cd0aa8d9c45c4cd8317",
       "d4c63e9aa872add5107b626d",
-      "gads_CR15805068028204285953",
       "gads_CR13084323550335074305",
+      "683ede43b5e24d629158e2c7",
+      "gads_CR15805068028204285953",
+      "gads_CR09974790326365192193",
       "gads_CR09178968852472528897",
-      "gads_CR09974790326365192193"
+      "70387cd0aa8d9c45c4cd8317"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "70387cd0aa8d9c45c4cd8317",
@@ -2698,7 +2705,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.277080+00:00",
+        "started_at": "2026-10-26T05:22:16.916722+00:00",
         "discounts": [
           "FLAT 20% OFF",
           "FLAT 30% OFF",
@@ -2719,7 +2726,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.277113+00:00",
+        "started_at": "2026-10-26T05:22:16.916767+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2736,7 +2743,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.277190+00:00",
+        "started_at": "2026-10-26T05:22:16.916794+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2757,19 +2764,19 @@
     "max_discount": 25,
     "campaign_fingerprint": "e6baaa39cbd445f161be",
     "seen_ids": [
-      "gads_CR17546071092227997697",
-      "gads_CR16506204671723962369",
-      "gads_CR05311851741640130561",
-      "gads_CR09004431448966430721",
-      "965350d84b85b505e66890b4",
-      "gads_CR17918025808501276673",
       "gads_CR18210928181358100481",
       "gads_CR05946636835563241473",
-      "gads_CR07685026566606159873",
+      "5feb273436784f72ea7d63aa",
       "gads_CR12461845762508062721",
-      "5feb273436784f72ea7d63aa"
+      "gads_CR07685026566606159873",
+      "gads_CR17918025808501276673",
+      "965350d84b85b505e66890b4",
+      "gads_CR16506204671723962369",
+      "gads_CR17546071092227997697",
+      "gads_CR05311851741640130561",
+      "gads_CR09004431448966430721"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "965350d84b85b505e66890b4",
@@ -2801,7 +2808,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.422748+00:00",
+        "started_at": "2026-10-26T05:22:16.989444+00:00",
         "discounts": [
           "SAVE 25%"
         ],
@@ -2820,7 +2827,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.422791+00:00",
+        "started_at": "2026-10-26T05:22:16.989492+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2837,7 +2844,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.422824+00:00",
+        "started_at": "2026-10-26T05:22:16.989519+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2859,14 +2866,14 @@
     "max_discount": 35,
     "campaign_fingerprint": "9f4b5073a77d7cdd3199",
     "seen_ids": [
-      "7e86524416b89f15cf0a1bd4",
-      "gads_CR05542297524712243201",
-      "6db6b956a129647325410a62",
       "gads_CR15097282268504260609",
       "gads_CR08374659102938475619",
+      "gads_CR05542297524712243201",
+      "6db6b956a129647325410a62",
+      "7e86524416b89f15cf0a1bd4",
       "gads_CR05869195525789581313"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "7e86524416b89f15cf0a1bd4",
@@ -2899,7 +2906,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:29.592798+00:00",
+        "started_at": "2026-10-26T05:21:48.006713+00:00",
         "discounts": [
           "UP TO 35% OFF",
           "BUY 1 GET 1"
@@ -2919,7 +2926,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:29.592832+00:00",
+        "started_at": "2026-10-26T05:21:48.006756+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2936,7 +2943,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:29.592861+00:00",
+        "started_at": "2026-10-26T05:21:48.006785+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -2957,11 +2964,11 @@
     "max_discount": 30,
     "campaign_fingerprint": "ea221224e61983e2c5e8",
     "seen_ids": [
+      "4c5d8ce4c6c7f14aa070395d",
       "gads_CR02621975674763608065",
-      "ed8d0bc4b7d584f5fa9b0dd1",
-      "4c5d8ce4c6c7f14aa070395d"
+      "ed8d0bc4b7d584f5fa9b0dd1"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "ed8d0bc4b7d584f5fa9b0dd1",
@@ -2993,7 +3000,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:29.719511+00:00",
+        "started_at": "2026-10-26T05:21:48.078812+00:00",
         "discounts": [
           "UP TO 30% OFF"
         ],
@@ -3017,14 +3024,14 @@
     "campaign_fingerprint": "42ae55ae0b36cac367af",
     "seen_ids": [
       "gads_CR07137892091517992961",
-      "gads_CR06596184702745313281",
-      "gads_CR02076822476679020545",
       "48b4fb6b0196ade4312a76a9",
-      "cfc5a840d31651044cf1c094",
+      "gads_CR02076822476679020545",
+      "gads_CR14913776036981243905",
       "gads_CR10830843785961799681",
-      "gads_CR14913776036981243905"
+      "gads_CR06596184702745313281",
+      "cfc5a840d31651044cf1c094"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "48b4fb6b0196ade4312a76a9",
@@ -3056,7 +3063,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:30.510996+00:00",
+        "started_at": "2026-10-26T05:21:48.684175+00:00",
         "discounts": [
           "UP TO 25% OFF"
         ],
@@ -3075,7 +3082,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:30.511029+00:00",
+        "started_at": "2026-10-26T05:21:48.684220+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3092,7 +3099,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:30.511053+00:00",
+        "started_at": "2026-10-26T05:21:48.684247+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3114,26 +3121,26 @@
     "max_discount": 40,
     "campaign_fingerprint": "fac9162a2bb383f07435",
     "seen_ids": [
-      "gads_CR04848421188399005697",
-      "gads_CR05506764770646163457",
-      "gads_CR11424729598542217217",
-      "gads_CR18345401408372604929",
-      "04a334b8d60beaee1e6d6790",
-      "gads_CR12588414222473363457",
-      "gads_CR01975274090998530049",
       "gads_CR18343442284810338305",
       "gads_CR06386834218483187713",
-      "7fec9ba02728a2f70eabdca9",
-      "gads_CR16017804630322839553",
       "gads_CR11907635758296465409",
+      "7fec9ba02728a2f70eabdca9",
+      "04a334b8d60beaee1e6d6790",
+      "gads_CR12588414222473363457",
+      "gads_CR05506764770646163457",
       "gads_CR03914059127692722177",
-      "gads_CR14965367605047590913",
       "gads_CR07288426606433927169",
-      "gads_CR09299192580589748225",
+      "gads_CR07550107075309731841",
+      "gads_CR11424729598542217217",
       "gads_CR00271169125374492673",
-      "gads_CR07550107075309731841"
+      "gads_CR14965367605047590913",
+      "gads_CR04848421188399005697",
+      "gads_CR09299192580589748225",
+      "gads_CR18345401408372604929",
+      "gads_CR16017804630322839553",
+      "gads_CR01975274090998530049"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "04a334b8d60beaee1e6d6790",
@@ -3166,7 +3173,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:30.959598+00:00",
+        "started_at": "2026-10-26T05:21:49.074586+00:00",
         "discounts": [
           "FLAT 40% OFF",
           "BUY 1 GET 1 FREE"
@@ -3186,7 +3193,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:30.959631+00:00",
+        "started_at": "2026-10-26T05:21:49.074631+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3203,7 +3210,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:30.959659+00:00",
+        "started_at": "2026-10-26T05:21:49.074660+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3226,11 +3233,11 @@
     "campaign_fingerprint": "4a09a7578325f9260f6c",
     "seen_ids": [
       "0edfca8cce79b14e912bee23",
-      "17b2e6c4728a4e7f3f6afc5e",
       "28eaa77719370914c648a0d4",
-      "744dbe242a6a3e066c06ee91"
+      "744dbe242a6a3e066c06ee91",
+      "17b2e6c4728a4e7f3f6afc5e"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "0edfca8cce79b14e912bee23",
@@ -3288,12 +3295,12 @@
     "max_discount": 30,
     "campaign_fingerprint": "bb772cebe757d99ce73e",
     "seen_ids": [
-      "718254165293a39567a99763",
       "75a35056e424d39f6667b178",
+      "5e1ac53027251f2526be459f",
       "70d0532a5ca28fdbdcf77dc5",
-      "5e1ac53027251f2526be459f"
+      "718254165293a39567a99763"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "70d0532a5ca28fdbdcf77dc5",
@@ -3350,15 +3357,15 @@
     "max_discount": 35,
     "campaign_fingerprint": "3a34bc60000d17eaea3c",
     "seen_ids": [
-      "bc9f90e6e581daea7203bb7a",
-      "gads_CR05792595393950777345",
-      "d03892eacb49ee34e7a98896",
-      "gads_CR02576912010310582273",
       "d7c294df520ca37d895565c9",
-      "gads_CR06542894432163725313",
-      "a81569e84058dd03ecd980af"
+      "d03892eacb49ee34e7a98896",
+      "bc9f90e6e581daea7203bb7a",
+      "gads_CR02576912010310582273",
+      "a81569e84058dd03ecd980af",
+      "gads_CR05792595393950777345",
+      "gads_CR06542894432163725313"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "d03892eacb49ee34e7a98896",
@@ -3390,7 +3397,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:31.676449+00:00",
+        "started_at": "2026-10-26T05:21:49.771673+00:00",
         "discounts": [
           "UP TO 35% OFF"
         ],
@@ -3409,7 +3416,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:31.676486+00:00",
+        "started_at": "2026-10-26T05:21:49.771724+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3426,7 +3433,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:31.676513+00:00",
+        "started_at": "2026-10-26T05:21:49.771756+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3448,11 +3455,11 @@
     "campaign_fingerprint": "cbb00d81bf3a2d592136",
     "seen_ids": [
       "a39313090ea517e71dfab1b7",
+      "dbe3e32bef447acc89fb6c54",
       "425cc3dfaa174794476175bc",
-      "fd00c627c51e9d45f790bc45",
-      "dbe3e32bef447acc89fb6c54"
+      "fd00c627c51e9d45f790bc45"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "425cc3dfaa174794476175bc",
@@ -3507,15 +3514,15 @@
     "max_discount": 30,
     "campaign_fingerprint": "79762d02c8bf3ccda2e9",
     "seen_ids": [
-      "gads_CR07140720207223324673",
-      "50371a29d99ed55206e35184",
-      "b5f84235e2040677f91a2c13",
       "ac52bf6fb3f03f16907cb861",
-      "gads_CR04029444798489296897",
+      "50371a29d99ed55206e35184",
       "gads_CR02822616437795848193",
-      "b2eb323dd9400d8988a696c5"
+      "b5f84235e2040677f91a2c13",
+      "gads_CR04029444798489296897",
+      "b2eb323dd9400d8988a696c5",
+      "gads_CR07140720207223324673"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "50371a29d99ed55206e35184",
@@ -3547,7 +3554,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:31.951993+00:00",
+        "started_at": "2026-10-26T05:21:50.055828+00:00",
         "discounts": [
           "UP TO 30% OFF"
         ],
@@ -3566,7 +3573,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:31.952025+00:00",
+        "started_at": "2026-10-26T05:21:50.055873+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3583,7 +3590,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:31.952049+00:00",
+        "started_at": "2026-10-26T05:21:50.055900+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3604,12 +3611,12 @@
     "max_discount": 25,
     "campaign_fingerprint": "3b60b8bc6e85e78b26d4",
     "seen_ids": [
-      "124ca0c82eab88759f46a8ff",
       "6c87cc6121c7c99d74dfc377",
       "180e7fa0c0b34b149c260819",
+      "124ca0c82eab88759f46a8ff",
       "23774dc5a9ac2465cfd341c4"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "23774dc5a9ac2465cfd341c4",
@@ -3666,18 +3673,18 @@
     "campaign_fingerprint": "57de38588c9cf5e06f5c",
     "seen_ids": [
       "d6ee09d40fc4ba416e0a97fa",
-      "gads_CR16984173912600346625",
-      "gads_CR03106979659753979905",
-      "gads_CR04212700289821573121",
-      "gads_CR01382209467575173121",
       "253ba5f5b196a97b7c222e94",
       "gads_CR06841997183017811969",
+      "gads_CR01382209467575173121",
+      "gads_CR16984173912600346625",
       "gads_CR13257054241488371713",
       "294beebd81d9f3af7106e9b0",
+      "gads_CR04212700289821573121",
       "gads_CR07420410667972165633",
-      "e9353567b5ccf5e04c72c1ab"
+      "e9353567b5ccf5e04c72c1ab",
+      "gads_CR03106979659753979905"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "e9353567b5ccf5e04c72c1ab",
@@ -3710,7 +3717,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:32.346443+00:00",
+        "started_at": "2026-10-26T05:21:50.840941+00:00",
         "discounts": [
           "FLAT 50% OFF",
           "UP TO 40% OFF"
@@ -3730,7 +3737,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:32.346496+00:00",
+        "started_at": "2026-10-26T05:21:50.840990+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3747,7 +3754,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:32.346531+00:00",
+        "started_at": "2026-10-26T05:21:50.841018+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3768,15 +3775,15 @@
     "max_discount": 40,
     "campaign_fingerprint": "2859a8585ca33578604f",
     "seen_ids": [
-      "gads_CR17795661468683730945",
+      "0fd8ab2b9f34a36fef81e777",
+      "32ecefc9c049662621af8f5d",
       "080f73ccac69d80925924544",
       "gads_CR05007423875584098305",
       "gads_CR15117032684204851201",
-      "6dc30ef62b42404be3c0f36c",
-      "0fd8ab2b9f34a36fef81e777",
-      "32ecefc9c049662621af8f5d"
+      "gads_CR17795661468683730945",
+      "6dc30ef62b42404be3c0f36c"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "6dc30ef62b42404be3c0f36c",
@@ -3808,7 +3815,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:32.467072+00:00",
+        "started_at": "2026-10-26T05:21:50.956623+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -3827,7 +3834,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:32.467119+00:00",
+        "started_at": "2026-10-26T05:21:50.956686+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -3848,12 +3855,12 @@
     "max_discount": 35,
     "campaign_fingerprint": "802a4bca3f95d49a17c1",
     "seen_ids": [
-      "82a8b79f38ec6865600a2159",
       "585bd1255f64169c7569dedb",
       "2028cf00393858bb56ab8482",
+      "82a8b79f38ec6865600a2159",
       "b86c95351caca86ca5d0c09c"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "82a8b79f38ec6865600a2159",
@@ -3909,12 +3916,12 @@
     "max_discount": 30,
     "campaign_fingerprint": "8780990287b7fb23d84f",
     "seen_ids": [
-      "3b369756172acf7d89f6ef6f",
       "7c81a50561ff3c3393ad3aca",
-      "5e00cf353b05f02382de0e1e",
-      "115517b73d2d2c6576f7e705"
+      "3b369756172acf7d89f6ef6f",
+      "115517b73d2d2c6576f7e705",
+      "5e00cf353b05f02382de0e1e"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "3b369756172acf7d89f6ef6f",
@@ -3971,12 +3978,12 @@
     "max_discount": 25,
     "campaign_fingerprint": "2c1a09f492f4db35bf35",
     "seen_ids": [
-      "2c192049d854f7343d322d32",
-      "36063fc4c5d03b150f8a52d6",
       "a346ec2207f7d07e114f8f0b",
-      "95a99f18372d3cfb0930e8bc"
+      "2c192049d854f7343d322d32",
+      "95a99f18372d3cfb0930e8bc",
+      "36063fc4c5d03b150f8a52d6"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "95a99f18372d3cfb0930e8bc",
@@ -4031,12 +4038,12 @@
     "max_discount": 30,
     "campaign_fingerprint": "6a2b12c754931e203a05",
     "seen_ids": [
-      "38a669e63d2ca978ceaa78fe",
-      "abbd7b38dc6860caa78f0459",
       "41450b556f0fe318bf2f3dc9",
-      "e0513887417c4c250e427506"
+      "38a669e63d2ca978ceaa78fe",
+      "e0513887417c4c250e427506",
+      "abbd7b38dc6860caa78f0459"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "e0513887417c4c250e427506",
@@ -4091,12 +4098,12 @@
     "max_discount": 40,
     "campaign_fingerprint": "9b9b3b246abda88741f7",
     "seen_ids": [
-      "aaaf5c8eb3afd2317ce9fde4",
       "5795ec1df2bd0ea6fc946a0e",
-      "02ec2324f98f9f1df97d3319",
-      "4eeb3f88a8fb8c3e207d7b7d"
+      "4eeb3f88a8fb8c3e207d7b7d",
+      "aaaf5c8eb3afd2317ce9fde4",
+      "02ec2324f98f9f1df97d3319"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "5795ec1df2bd0ea6fc946a0e",
@@ -4151,12 +4158,12 @@
     "max_discount": 35,
     "campaign_fingerprint": "9e10aa1eb4cb904b79f8",
     "seen_ids": [
+      "fe696594b5fd66c5d835573a",
       "1500d1c10de5832f39e9d395",
       "9ebdfc47339e7c0111f070f4",
-      "94f1c027e70b097d49d2e697",
-      "fe696594b5fd66c5d835573a"
+      "94f1c027e70b097d49d2e697"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "9ebdfc47339e7c0111f070f4",
@@ -4212,12 +4219,12 @@
     "max_discount": 30,
     "campaign_fingerprint": "ea656ed946bf40287641",
     "seen_ids": [
-      "607a80a17bd282c814da1f1b",
       "580811cb4650ff78d260f7e4",
-      "9eb36aa16d12219b868dd8dd",
-      "45a9aa5a1c2c7000694b4cfa"
+      "607a80a17bd282c814da1f1b",
+      "45a9aa5a1c2c7000694b4cfa",
+      "9eb36aa16d12219b868dd8dd"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "45a9aa5a1c2c7000694b4cfa",
@@ -4274,12 +4281,12 @@
     "max_discount": 40,
     "campaign_fingerprint": "74890c3f984dd92cb06c",
     "seen_ids": [
-      "01d87de9be0b8afcc92519e6",
-      "ca4bcbdfb29711a72cf1246d",
+      "420184a2a6917acb5b20d74b",
       "88524888a056e913076fb6aa",
-      "420184a2a6917acb5b20d74b"
+      "01d87de9be0b8afcc92519e6",
+      "ca4bcbdfb29711a72cf1246d"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "ca4bcbdfb29711a72cf1246d",
@@ -4334,12 +4341,12 @@
     "max_discount": 35,
     "campaign_fingerprint": "4d33f4bdd8f16d2152ea",
     "seen_ids": [
-      "a70e792dc6adf5806354ed83",
-      "1b4c6ac6e2227acfa4185138",
       "4f9e55a67604b1f4d0ee6c0b",
-      "ff3b2bb54ff593f4f03c580c"
+      "ff3b2bb54ff593f4f03c580c",
+      "a70e792dc6adf5806354ed83",
+      "1b4c6ac6e2227acfa4185138"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "4f9e55a67604b1f4d0ee6c0b",
@@ -4395,11 +4402,11 @@
     "campaign_fingerprint": "9fc36cdf53ad0452ceb3",
     "seen_ids": [
       "4117bc373f66db24c99a7412",
+      "552eca923954e6760ce5822c",
       "1898e3111fcabab93b5d549d",
-      "94bcd2eb474989fdae30229b",
-      "552eca923954e6760ce5822c"
+      "94bcd2eb474989fdae30229b"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "94bcd2eb474989fdae30229b",
@@ -4455,37 +4462,40 @@
     "max_discount": 50,
     "campaign_fingerprint": "764ae9ae4a7240425b5b",
     "seen_ids": [
-      "gads_CR00912524600137482241",
-      "gads_CR10154061909112913921",
-      "gads_CR03754091180967591937",
-      "gads_CR11843806256445784065",
-      "gads_CR13594253506876801025",
-      "gads_CR00256877020401631233",
-      "gads_CR17709323658142416897",
-      "gads_CR15922026825262301185",
-      "gads_CR07826684724151058433",
-      "gads_CR11408380410393001985",
-      "gads_CR07337644766982569985",
-      "gads_CR03847561029384756108",
-      "gads_CR12754079812683825153",
-      "gads_CR06693851571861585921",
-      "gads_CR01066150838671507457",
-      "gads_CR06616300542853382145",
-      "gads_CR14711978544766910465",
       "gads_CR08130981439085740033",
-      "gads_CR07386778917970903041",
-      "f7b0f55fde7a93d41fc53ece",
-      "gads_CR15273822939246493697",
+      "gads_CR15922026825262301185",
+      "gads_CR06693851571861585921",
+      "gads_CR00912524600137482241",
+      "gads_CR17709323658142416897",
       "gads_CR02737579486949146625",
+      "gads_CR03754091180967591937",
+      "gads_CR06616300542853382145",
       "gads_CR18164579746157953025",
-      "gads_CR12825438417974198273",
+      "gads_CR00256877020401631233",
+      "f7b0f55fde7a93d41fc53ece",
+      "gads_CR10154061909112913921",
+      "gads_CR12754079812683825153",
+      "gads_CR02813283611300593665",
+      "gads_CR14711978544766910465",
       "gads_CR03881173284661755905",
-      "b816f0dc12c1b309181ec15e",
-      "gads_CR03548497349980454913",
       "gads_CR14611791045243961345",
-      "gads_CR02813283611300593665"
+      "gads_CR03847561029384756108",
+      "gads_CR13594253506876801025",
+      "gads_CR11843806256445784065",
+      "b816f0dc12c1b309181ec15e",
+      "gads_CR07337644766982569985",
+      "gads_CR11408380410393001985",
+      "gads_CR07826684724151058433",
+      "gads_CR03548497349980454913",
+      "gads_CR07386778917970903041",
+      "gads_CR15273822939246493697",
+      "gads_CR01066150838671507457",
+      "gads_CR12825438417974198273",
+      "gads_CR06479138941189488641",
+      "gads_CR18180409964818857985",
+      "gads_CR08195123090569560065"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "f7b0f55fde7a93d41fc53ece",
@@ -4507,18 +4517,18 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR03548497349980454913",
+        "id": "gads_CR06479138941189488641",
         "platform": "google_ads",
-        "page_name": "PEPSI-COLA INTERNATIONAL (PRIVATE) LIMITED",
-        "headline": "Foodpanda Pakistan Official Sale — FLAT 50% OFF, UP TO 40% OFF | PEPSI-COLA INTERNATIONAL (PRIVATE) LIMITED",
+        "page_name": "Mindshare Pakistan (Private) limited",
+        "headline": "Foodpanda Pakistan Official Sale — FLAT 50% OFF, UP TO 40% OFF | Mindshare Pakistan (Private) limited",
         "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 50% OFF, UP TO 40% OFF live on foodpanda.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR07960108115129532417/creative/CR03548497349980454913?region=PK",
+        "url": "https://adstransparency.google.com/advertiser/AR07640931262659559425/creative/CR06479138941189488641?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.244066+00:00",
+        "started_at": "2026-10-26T05:21:53.061840+00:00",
         "discounts": [
           "FLAT 50% OFF",
           "UP TO 40% OFF"
@@ -4527,35 +4537,35 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR14611791045243961345",
+        "id": "gads_CR18180409964818857985",
         "platform": "google_ads",
-        "page_name": "Pak Media Communications (Pvt) Ltd",
-        "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
-        "body": "Verified active Google Ad creative (CR14611791045243961345) running in Pakistan for foodpanda.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR14611791045243961345?region=PK",
+        "page_name": "Mindshare Pakistan (Private) limited",
+        "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Mindshare Pakistan (Private) limited)",
+        "body": "Verified active Google Ad creative (CR18180409964818857985) running in Pakistan for foodpanda.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR07640931262659559425/creative/CR18180409964818857985?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.244114+00:00",
+        "started_at": "2026-10-26T05:21:53.061888+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
       },
       {
-        "id": "gads_CR02813283611300593665",
+        "id": "gads_CR08195123090569560065",
         "platform": "google_ads",
-        "page_name": "Mindshare Pakistan (Private) limited",
-        "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Mindshare Pakistan (Private) limited)",
-        "body": "Verified active Google Ad creative (CR02813283611300593665) running in Pakistan for foodpanda.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR07640931262659559425/creative/CR02813283611300593665?region=PK",
+        "page_name": "Delivery Hero SE",
+        "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Delivery Hero SE)",
+        "body": "Verified active Google Ad creative (CR08195123090569560065) running in Pakistan for foodpanda.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR01506468094128685057/creative/CR08195123090569560065?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.244203+00:00",
+        "started_at": "2026-10-26T05:21:53.061917+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4577,14 +4587,14 @@
     "campaign_fingerprint": "60b99c64fe17a7bc1689",
     "seen_ids": [
       "gads_CR04246445650297749505",
-      "gads_CR13687116369173151745",
-      "gads_CR10679965261345325057",
       "429a59f3357af12543a90a26",
-      "e9f426ded5236a9cba98f570",
+      "gads_CR13687116369173151745",
+      "ea0aa296d578a6957d9636fa",
+      "gads_CR10679965261345325057",
       "d787c284ce7c440bb6bf466c",
-      "ea0aa296d578a6957d9636fa"
+      "e9f426ded5236a9cba98f570"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "ea0aa296d578a6957d9636fa",
@@ -4616,7 +4626,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.496554+00:00",
+        "started_at": "2026-10-26T05:21:53.534131+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -4635,7 +4645,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.496601+00:00",
+        "started_at": "2026-10-26T05:21:53.534172+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4652,7 +4662,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.496636+00:00",
+        "started_at": "2026-10-26T05:21:53.534200+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4675,12 +4685,12 @@
     "campaign_fingerprint": "0af35529895135becdee",
     "seen_ids": [
       "gads_CR14369573031691419649",
-      "gads_CR07877609429825224705",
       "fa8bd7f4a05a7e2116f39af1",
+      "gads_CR17760128688847847425",
       "29d06bed665cb6429a69fa17",
-      "gads_CR17760128688847847425"
+      "gads_CR07877609429825224705"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "29d06bed665cb6429a69fa17",
@@ -4713,7 +4723,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.633416+00:00",
+        "started_at": "2026-10-26T05:21:53.658164+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 40% OFF"
@@ -4733,7 +4743,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.633464+00:00",
+        "started_at": "2026-10-26T05:21:53.658212+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4750,7 +4760,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.633491+00:00",
+        "started_at": "2026-10-26T05:21:53.658244+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4771,24 +4781,24 @@
     "max_discount": 40,
     "campaign_fingerprint": "c285b8aac300997d25c7",
     "seen_ids": [
-      "gads_CR12773910080416382977",
-      "gads_CR03861519514315259905",
-      "gads_CR09919879160895897601",
-      "gads_CR01210918037142634497",
-      "3afd23e42d7efa97a1cee652",
-      "gads_CR07415652093316300801",
       "gads_CR02396198168954929153",
       "gads_CR09138649761081982977",
-      "gads_CR11833220708249370625",
-      "gads_CR01840859035021082625",
-      "gads_CR12487357559008657409",
-      "d87462f3c37d12dbe1c3cbe8",
-      "gads_CR16449309995868094465",
-      "gads_CR01600749884770615297",
+      "gads_CR07415652093316300801",
       "gads_CR05876122784052019201",
-      "gads_CR06919782519671881729"
+      "gads_CR12773910080416382977",
+      "gads_CR11833220708249370625",
+      "gads_CR16449309995868094465",
+      "gads_CR09919879160895897601",
+      "3afd23e42d7efa97a1cee652",
+      "gads_CR03861519514315259905",
+      "gads_CR01600749884770615297",
+      "gads_CR12487357559008657409",
+      "gads_CR06919782519671881729",
+      "d87462f3c37d12dbe1c3cbe8",
+      "gads_CR01840859035021082625",
+      "gads_CR01210918037142634497"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "3afd23e42d7efa97a1cee652",
@@ -4820,7 +4830,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.870968+00:00",
+        "started_at": "2026-10-26T05:21:54.337475+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -4839,7 +4849,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.871011+00:00",
+        "started_at": "2026-10-26T05:21:54.337521+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4856,7 +4866,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:34.871044+00:00",
+        "started_at": "2026-10-26T05:21:54.337548+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4878,16 +4888,16 @@
     "max_discount": 50,
     "campaign_fingerprint": "e62b801599135bd35a63",
     "seen_ids": [
-      "gads_CR10390028718025211905",
+      "gads_CR05216534039246143489",
       "gads_CR17934505185699168257",
       "bc0ce08364b9ee6d45b553a8",
-      "gads_CR08230031253311586305",
       "gads_CR00313501628713926657",
-      "e414b1b74851b5f206839ebb",
       "gads_CR07214387864241438721",
-      "gads_CR05216534039246143489"
+      "gads_CR10390028718025211905",
+      "e414b1b74851b5f206839ebb",
+      "gads_CR08230031253311586305"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "e414b1b74851b5f206839ebb",
@@ -4920,7 +4930,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.002651+00:00",
+        "started_at": "2026-10-26T05:21:54.461319+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 40% OFF"
@@ -4940,7 +4950,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.002686+00:00",
+        "started_at": "2026-10-26T05:21:54.461437+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4957,7 +4967,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.002712+00:00",
+        "started_at": "2026-10-26T05:21:54.461476+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -4978,13 +4988,13 @@
     "max_discount": 40,
     "campaign_fingerprint": "726f41bb97c6d1b1853e",
     "seen_ids": [
-      "db6b165a1828db962817554e",
-      "509ae26a0426c323fec71933",
-      "gads_CR05296022888778825729",
       "7846f167102bad09cd71487a",
-      "990d610d7e07e71aeea01275"
+      "509ae26a0426c323fec71933",
+      "990d610d7e07e71aeea01275",
+      "db6b165a1828db962817554e",
+      "gads_CR05296022888778825729"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "509ae26a0426c323fec71933",
@@ -5016,7 +5026,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.226007+00:00",
+        "started_at": "2026-10-26T05:21:55.087556+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -5041,11 +5051,11 @@
     "seen_ids": [
       "20dafbd861686453a3cc2a79",
       "gads_CR04663423581022060545",
-      "gads_CR08435946382212202497",
       "gads_CR06411057730953412609",
+      "gads_CR08435946382212202497",
       "5b481d04224478e126e249ad"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "20dafbd861686453a3cc2a79",
@@ -5077,7 +5087,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.355018+00:00",
+        "started_at": "2026-10-26T05:21:55.203648+00:00",
         "discounts": [
           "UP TO 50% OFF"
         ],
@@ -5096,7 +5106,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.355054+00:00",
+        "started_at": "2026-10-26T05:21:55.203697+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5113,7 +5123,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.355082+00:00",
+        "started_at": "2026-10-26T05:21:55.203728+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5134,41 +5144,41 @@
     "max_discount": 50,
     "campaign_fingerprint": "af50ff9eea6f16412866",
     "seen_ids": [
-      "gads_CR04612285123415506945",
-      "gads_CR14067250661683101697",
-      "gads_CR11615508712935915521",
-      "gads_CR01122322413833420801",
-      "gads_CR01651578108299444225",
-      "gads_CR06885966489803816961",
       "gads_CR02758857785725681665",
-      "gads_CR00698940652511035393",
-      "gads_CR00801890580509491201",
-      "333dd1a5c29dee12bf7f4669",
-      "gads_CR01901780775292895233",
-      "gads_CR17827146774419079169",
-      "gads_CR06443500298999693313",
-      "gads_CR07551079112308162561",
-      "gads_CR15401759363475439617",
-      "gads_CR07449565601762115585",
-      "gads_CR00565069305033523201",
-      "gads_CR00128495568841342977",
-      "gads_CR12261339749779767297",
-      "2714a6639991e6754f9eba2b",
-      "gads_CR16107007562007707649",
-      "gads_CR11214430098306367489",
-      "gads_CR10997238000194158593",
+      "gads_CR02375396233591128065",
       "9a8a165ec888217c304e0ad4",
+      "gads_CR08593374757724880897",
+      "gads_CR01901780775292895233",
+      "gads_CR03162839798247325697",
+      "gads_CR06443500298999693313",
+      "gads_CR07449565601762115585",
       "2b23ac3409c6ca14c29a8f33",
       "gads_CR10891933098677633025",
-      "gads_CR03162839798247325697",
       "gads_CR11354640680073822209",
-      "gads_CR05489413128540127233",
+      "gads_CR07551079112308162561",
       "gads_CR10845030784494993409",
-      "gads_CR02375396233591128065",
-      "gads_CR08593374757724880897",
-      "gads_CR00153473415007698945"
+      "gads_CR00801890580509491201",
+      "gads_CR11615508712935915521",
+      "gads_CR00565069305033523201",
+      "gads_CR00153473415007698945",
+      "333dd1a5c29dee12bf7f4669",
+      "gads_CR17827146774419079169",
+      "gads_CR16107007562007707649",
+      "gads_CR01651578108299444225",
+      "gads_CR05489413128540127233",
+      "gads_CR01122322413833420801",
+      "gads_CR10997238000194158593",
+      "gads_CR14067250661683101697",
+      "gads_CR11214430098306367489",
+      "gads_CR04612285123415506945",
+      "gads_CR00698940652511035393",
+      "2714a6639991e6754f9eba2b",
+      "gads_CR06885966489803816961",
+      "gads_CR12261339749779767297",
+      "gads_CR15401759363475439617",
+      "gads_CR00128495568841342977"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "9a8a165ec888217c304e0ad4",
@@ -5200,7 +5210,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.508975+00:00",
+        "started_at": "2026-10-26T05:21:55.359266+00:00",
         "discounts": [
           "UP TO 50% OFF"
         ],
@@ -5219,7 +5229,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.509021+00:00",
+        "started_at": "2026-10-26T05:21:55.359315+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5236,7 +5246,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.509058+00:00",
+        "started_at": "2026-10-26T05:21:55.359346+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5257,15 +5267,15 @@
     "max_discount": 50,
     "campaign_fingerprint": "59ca9864f89078fae4c7",
     "seen_ids": [
-      "65e807c1983a455bbb5b0724",
       "gads_CR00561515923970719745",
-      "2c84dc0df4626fb2a9c9c464",
-      "gads_CR12303156616525512705",
-      "gads_CR10127381434831208449",
+      "13e110e21197c77d5b63fa81",
+      "65e807c1983a455bbb5b0724",
       "0614f70b7bcc99d7c45b3ca7",
-      "13e110e21197c77d5b63fa81"
+      "gads_CR10127381434831208449",
+      "2c84dc0df4626fb2a9c9c464",
+      "gads_CR12303156616525512705"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "13e110e21197c77d5b63fa81",
@@ -5297,7 +5307,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.638896+00:00",
+        "started_at": "2026-10-26T05:21:55.482475+00:00",
         "discounts": [
           "UP TO 50% OFF"
         ],
@@ -5316,7 +5326,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.638943+00:00",
+        "started_at": "2026-10-26T05:21:55.482530+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5333,7 +5343,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:35.638978+00:00",
+        "started_at": "2026-10-26T05:21:55.482559+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5354,12 +5364,12 @@
     "max_discount": 40,
     "campaign_fingerprint": "312749546cf83a9fa3e5",
     "seen_ids": [
-      "bfea32028ef602cb497a5b8d",
       "70fdd1910206b2c83f11d970",
       "0f05905e5a4e09317a1834ca",
+      "bfea32028ef602cb497a5b8d",
       "34ad1044bbbd99cffc00d0bd"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "bfea32028ef602cb497a5b8d",
@@ -5415,11 +5425,11 @@
     "campaign_fingerprint": "5c1fbcbb03d3ac284ed2",
     "seen_ids": [
       "2fb28f0015e8f378b999bc90",
-      "e9407012f944a77cae0c2dfd",
       "058766569f9ca10da804b859",
-      "fa0f3385ef6057c358f7c850"
+      "fa0f3385ef6057c358f7c850",
+      "e9407012f944a77cae0c2dfd"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "fa0f3385ef6057c358f7c850",
@@ -5474,15 +5484,15 @@
     "max_discount": 40,
     "campaign_fingerprint": "1e261d268a1e3ec4eb08",
     "seen_ids": [
-      "gads_CR17630336151552262145",
-      "cf37a1cf4c127a9dd2732d1d",
-      "d13680c1318d4ce7ac70a3d7",
       "gads_CR04473069840189358081",
       "92e30c71d3d88ecb5577f391",
-      "4c58b8983aae2aa17f9ce6af",
-      "gads_CR00997064984045289473"
+      "d13680c1318d4ce7ac70a3d7",
+      "gads_CR17630336151552262145",
+      "gads_CR00997064984045289473",
+      "cf37a1cf4c127a9dd2732d1d",
+      "4c58b8983aae2aa17f9ce6af"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "d13680c1318d4ce7ac70a3d7",
@@ -5514,7 +5524,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:36.778740+00:00",
+        "started_at": "2026-10-26T05:21:56.479854+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -5533,7 +5543,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:36.778776+00:00",
+        "started_at": "2026-10-26T05:21:56.479901+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5550,7 +5560,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:36.778802+00:00",
+        "started_at": "2026-10-26T05:21:56.479928+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5571,15 +5581,15 @@
     "max_discount": 40,
     "campaign_fingerprint": "1553129192c6e9f3f9e9",
     "seen_ids": [
-      "1571f0fdfe79a3dd0c678135",
       "dce943f2405d71dd16fcf0ac",
-      "gads_CR17041186347869536257",
-      "1545fcd3019003f7f1e60e44",
-      "f023517503befa3487331426",
       "gads_CR01770505580926992385",
-      "gads_CR05354244984407064577"
+      "gads_CR17041186347869536257",
+      "f023517503befa3487331426",
+      "gads_CR05354244984407064577",
+      "1571f0fdfe79a3dd0c678135",
+      "1545fcd3019003f7f1e60e44"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "1571f0fdfe79a3dd0c678135",
@@ -5611,7 +5621,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:37.567343+00:00",
+        "started_at": "2026-10-26T05:21:57.071896+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -5630,7 +5640,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:37.567374+00:00",
+        "started_at": "2026-10-26T05:21:57.071938+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5647,7 +5657,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:37.567402+00:00",
+        "started_at": "2026-10-26T05:21:57.071966+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5668,15 +5678,15 @@
     "max_discount": 35,
     "campaign_fingerprint": "c9b9c234ecdeeb582b05",
     "seen_ids": [
-      "gads_CR06064875395436511233",
-      "gads_CR09689672762120994817",
       "58d9d6548400a699520e3515",
-      "9911c2375160ac32a1462be4",
-      "gads_CR06542052446775017473",
+      "18d9513fbf76f978bd1a5164",
       "61f1168e4666b396f7f76976",
-      "18d9513fbf76f978bd1a5164"
+      "gads_CR06542052446775017473",
+      "gads_CR09689672762120994817",
+      "gads_CR06064875395436511233",
+      "9911c2375160ac32a1462be4"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "18d9513fbf76f978bd1a5164",
@@ -5708,7 +5718,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:37.687591+00:00",
+        "started_at": "2026-10-26T05:21:57.182463+00:00",
         "discounts": [
           "UP TO 35% OFF"
         ],
@@ -5727,7 +5737,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:37.687637+00:00",
+        "started_at": "2026-10-26T05:21:57.182518+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5744,7 +5754,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:37.687672+00:00",
+        "started_at": "2026-10-26T05:21:57.182553+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5765,15 +5775,15 @@
     "max_discount": 40,
     "campaign_fingerprint": "77b9d3e91bf66c2e6ff4",
     "seen_ids": [
-      "104046bff273cc10ab38e0b4",
+      "705ba2b7a7dfca71fc60afaf",
+      "gads_CR11501072298631233537",
       "gads_CR07979530068911194113",
       "b7fe3a8bcc4f3735fb8f746d",
-      "gads_CR13813443108379033601",
-      "gads_CR11501072298631233537",
-      "705ba2b7a7dfca71fc60afaf",
-      "23a78b53016cb960e3bfb577"
+      "23a78b53016cb960e3bfb577",
+      "104046bff273cc10ab38e0b4",
+      "gads_CR13813443108379033601"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "705ba2b7a7dfca71fc60afaf",
@@ -5805,7 +5815,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:38.932667+00:00",
+        "started_at": "2026-10-26T05:21:57.876639+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -5824,7 +5834,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:38.932704+00:00",
+        "started_at": "2026-10-26T05:21:57.876685+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5841,7 +5851,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:38.932732+00:00",
+        "started_at": "2026-10-26T05:21:57.876715+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5862,12 +5872,12 @@
     "max_discount": 35,
     "campaign_fingerprint": "3e1f524222e3529f2551",
     "seen_ids": [
-      "74cd52acf7577ad672192b7d",
-      "84cf3b5670195a96a7ca1866",
+      "1621e59092ea71a03a11cdff",
       "87b108c4192dd7066626dc18",
-      "1621e59092ea71a03a11cdff"
+      "74cd52acf7577ad672192b7d",
+      "84cf3b5670195a96a7ca1866"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "84cf3b5670195a96a7ca1866",
@@ -5923,14 +5933,14 @@
     "campaign_fingerprint": "e19fdefa1b925028ddc2",
     "seen_ids": [
       "gads_CR01248887506544361473",
-      "ee5698df0bfaa286fcfe779f",
-      "gads_CR03808057994797645825",
-      "3fed3fb3892619034582c7de",
-      "5cd891290cf52bc401ddc9f3",
       "gads_CR18394188044967084033",
+      "ee5698df0bfaa286fcfe779f",
+      "5cd891290cf52bc401ddc9f3",
+      "3fed3fb3892619034582c7de",
+      "gads_CR03808057994797645825",
       "9b54a18724299b127ecf35bc"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "3fed3fb3892619034582c7de",
@@ -5962,7 +5972,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.211462+00:00",
+        "started_at": "2026-10-26T05:21:58.150757+00:00",
         "discounts": [
           "UP TO 30% OFF"
         ],
@@ -5981,7 +5991,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.211495+00:00",
+        "started_at": "2026-10-26T05:21:58.150804+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -5998,7 +6008,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.211519+00:00",
+        "started_at": "2026-10-26T05:21:58.150830+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6019,12 +6029,12 @@
     "max_discount": 25,
     "campaign_fingerprint": "3736fed0d0c05bf2d529",
     "seen_ids": [
-      "e2e5c209630f3d0ce7f8e058",
-      "a47d00709b84e3accd05dffd",
       "90c40634b5b0ac27a27f8414",
-      "c8e65a718da989de1f17a1d3"
+      "a47d00709b84e3accd05dffd",
+      "c8e65a718da989de1f17a1d3",
+      "e2e5c209630f3d0ce7f8e058"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "e2e5c209630f3d0ce7f8e058",
@@ -6080,18 +6090,18 @@
     "max_discount": 50,
     "campaign_fingerprint": "e44d71bbc0e4aabd6950",
     "seen_ids": [
-      "1630c264a55d0744ec244d56",
-      "gads_CR05093084687610413057",
-      "8605bb82fd5c499bfe511336",
-      "gads_CR16429893445155291137",
-      "gads_CR12694498299776860161",
       "gads_CR11743383358355275777",
-      "gads_CR07352325446236635137",
-      "gads_CR08283468798321754113",
+      "gads_CR16429893445155291137",
+      "1630c264a55d0744ec244d56",
+      "gads_CR01327725788790784001",
       "gads_CR12564487689811787777",
-      "gads_CR01327725788790784001"
+      "gads_CR05093084687610413057",
+      "gads_CR07352325446236635137",
+      "gads_CR12694498299776860161",
+      "8605bb82fd5c499bfe511336",
+      "gads_CR08283468798321754113"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "8605bb82fd5c499bfe511336",
@@ -6124,7 +6134,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.496760+00:00",
+        "started_at": "2026-10-26T05:21:58.442890+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 25% CASHBACK"
@@ -6144,7 +6154,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.496795+00:00",
+        "started_at": "2026-10-26T05:21:58.442936+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6161,7 +6171,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.496823+00:00",
+        "started_at": "2026-10-26T05:21:58.442964+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6183,13 +6193,13 @@
     "max_discount": 40,
     "campaign_fingerprint": "bc9202ddfdace7f6827f",
     "seen_ids": [
-      "77b3c1f14dfbcbaaf1193597",
-      "gads_CR07527672811855282177",
-      "423470ccce0f94a556d73f37",
       "gads_CR14193064032038027265",
-      "gads_CR02692840908570755073"
+      "gads_CR02692840908570755073",
+      "gads_CR07527672811855282177",
+      "77b3c1f14dfbcbaaf1193597",
+      "423470ccce0f94a556d73f37"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "423470ccce0f94a556d73f37",
@@ -6222,7 +6232,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.630727+00:00",
+        "started_at": "2026-10-26T05:21:58.578784+00:00",
         "discounts": [
           "UP TO 40% OFF",
           "FLAT 20% CASHBACK"
@@ -6242,7 +6252,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.630773+00:00",
+        "started_at": "2026-10-26T05:21:58.578829+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6259,7 +6269,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:39.630809+00:00",
+        "started_at": "2026-10-26T05:21:58.578856+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6281,35 +6291,37 @@
     "max_discount": 70,
     "campaign_fingerprint": "1c1c6921fe12c0bd5eec",
     "seen_ids": [
-      "gads_CR02563110631121092609",
-      "gads_CR03907153644914475009",
+      "gads_CR09108058220861063169",
       "gads_CR18258802841776816129",
-      "gads_CR11321698865029054465",
-      "gads_CR03349310278759088129",
-      "gads_CR13423030409373941761",
-      "gads_CR03427520284599517185",
-      "gads_CR01651018293672148993",
-      "gads_CR15904452231403929601",
+      "gads_CR11089481528206426113",
       "gads_CR08822592497977917441",
       "gads_CR04928374651029384752",
-      "gads_CR09567546810168246273",
-      "gads_CR11089481528206426113",
-      "gads_CR10109314019245424641",
-      "f25562b5f82b9e1846772f6d",
-      "bfef1a405c95e400ee58b8a6",
-      "gads_CR17196540297127919617",
       "gads_CR11087652868570742785",
       "gads_CR03939945479701266433",
-      "gads_CR09108058220861063169",
-      "gads_CR02003065072024289281",
-      "gads_CR01727614834918293505",
+      "gads_CR02563110631121092609",
       "gads_CR07941517718555983873",
-      "gads_CR08963324385695891457",
-      "gads_CR10060340671832653825",
+      "gads_CR13423030409373941761",
+      "gads_CR02003065072024289281",
       "gads_CR03720176195053027329",
-      "gads_CR13621127220327088129"
+      "gads_CR01651018293672148993",
+      "gads_CR17196540297127919617",
+      "gads_CR15904452231403929601",
+      "gads_CR01727614834918293505",
+      "gads_CR08963324385695891457",
+      "gads_CR09567546810168246273",
+      "bfef1a405c95e400ee58b8a6",
+      "gads_CR13621127220327088129",
+      "gads_CR03349310278759088129",
+      "gads_CR10060340671832653825",
+      "gads_CR11321698865029054465",
+      "f25562b5f82b9e1846772f6d",
+      "gads_CR03907153644914475009",
+      "gads_CR03427520284599517185",
+      "gads_CR10109314019245424641",
+      "gads_CR13046381706162995201",
+      "gads_CR17708633070350893057"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "f25562b5f82b9e1846772f6d",
@@ -6331,18 +6343,18 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR10060340671832653825",
+        "id": "gads_CR13046381706162995201",
         "platform": "google_ads",
-        "page_name": "Pak Media Communications (Pvt) Ltd",
-        "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | Pak Media Communications (Pvt) Ltd",
+        "page_name": "Peridot Products (Pvt) Ltd",
+        "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | Peridot Products (Pvt) Ltd",
         "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF, FLAT 15% OFF live on daraz.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR10060340671832653825?region=PK",
+        "url": "https://adstransparency.google.com/advertiser/AR01463565390931034113/creative/CR13046381706162995201?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:40.436148+00:00",
+        "started_at": "2026-10-26T05:21:59.143604+00:00",
         "discounts": [
           "UP TO 70% OFF",
           "FLAT 15% OFF"
@@ -6351,35 +6363,35 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR03720176195053027329",
+        "id": "gads_CR17708633070350893057",
         "platform": "google_ads",
-        "page_name": "Pak Media Communications (Pvt) Ltd",
-        "headline": "Daraz Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
-        "body": "Verified active Google Ad creative (CR03720176195053027329) running in Pakistan for daraz.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR03720176195053027329?region=PK",
+        "page_name": "JADE E-SERVICES PAKISTAN PRIVATE LIMITED",
+        "headline": "Daraz Pakistan — Active Google Search & Display Ad (JADE E-SERVICES PAKISTAN PRIVATE LIMITED)",
+        "body": "Verified active Google Ad creative (CR17708633070350893057) running in Pakistan for daraz.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR03772973403389034497/creative/CR17708633070350893057?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:40.436185+00:00",
+        "started_at": "2026-10-26T05:21:59.143651+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
       },
       {
-        "id": "gads_CR13621127220327088129",
+        "id": "gads_CR10060340671832653825",
         "platform": "google_ads",
-        "page_name": "Peridot Products (Pvt) Ltd",
-        "headline": "Daraz Pakistan — Active Google Search & Display Ad (Peridot Products (Pvt) Ltd)",
-        "body": "Verified active Google Ad creative (CR13621127220327088129) running in Pakistan for daraz.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR01463565390931034113/creative/CR13621127220327088129?region=PK",
+        "page_name": "Pak Media Communications (Pvt) Ltd",
+        "headline": "Daraz Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
+        "body": "Verified active Google Ad creative (CR10060340671832653825) running in Pakistan for daraz.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR10060340671832653825?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:40.436211+00:00",
+        "started_at": "2026-10-26T05:21:59.143680+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6402,10 +6414,10 @@
     "seen_ids": [
       "b9bf59734b99f69dd12458a7",
       "98e696f5be788c8c6259b631",
-      "f98a35cce73094749af60df1",
-      "a68d66767142a7f57477d73b"
+      "a68d66767142a7f57477d73b",
+      "f98a35cce73094749af60df1"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "b9bf59734b99f69dd12458a7",
@@ -6460,15 +6472,15 @@
     "max_discount": 35,
     "campaign_fingerprint": "ee799e68e9df752d8176",
     "seen_ids": [
-      "ede6fedd6f693cac35276ef7",
-      "6252d4fbd29376fcb89f7c98",
-      "925e5c8c0a340e930b8fa52d",
       "gads_CR13799522947574005761",
-      "gads_CR08036016585434988545",
       "gads_CR05866432203960877057",
-      "640690917fb6e90d8ed0bc03"
+      "gads_CR08036016585434988545",
+      "925e5c8c0a340e930b8fa52d",
+      "640690917fb6e90d8ed0bc03",
+      "ede6fedd6f693cac35276ef7",
+      "6252d4fbd29376fcb89f7c98"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "6252d4fbd29376fcb89f7c98",
@@ -6500,7 +6512,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:40.703155+00:00",
+        "started_at": "2026-10-26T05:21:59.416487+00:00",
         "discounts": [
           "UP TO 35% OFF"
         ],
@@ -6519,7 +6531,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:40.703192+00:00",
+        "started_at": "2026-10-26T05:21:59.416540+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6536,7 +6548,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:40.703219+00:00",
+        "started_at": "2026-10-26T05:21:59.416574+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6557,11 +6569,11 @@
     "max_discount": 40,
     "campaign_fingerprint": "724a57b1f54de6584856",
     "seen_ids": [
+      "893cfea282f78ad8bbb2914d",
       "1ca37addd0e5ea31c635be7a",
-      "gads_CR10698369290697965569",
-      "893cfea282f78ad8bbb2914d"
+      "gads_CR10698369290697965569"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "893cfea282f78ad8bbb2914d",
@@ -6593,7 +6605,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:40.855799+00:00",
+        "started_at": "2026-10-26T05:21:59.574136+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -6617,11 +6629,11 @@
     "campaign_fingerprint": "064480b56b498cebb178",
     "seen_ids": [
       "112b42d0ab88337a4c7f87c6",
-      "93193a11ffb97dd5996ce1f0",
+      "b45b303b8115d53179a323f8",
       "a21cb492033c12c60c44eaf5",
-      "b45b303b8115d53179a323f8"
+      "93193a11ffb97dd5996ce1f0"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "a21cb492033c12c60c44eaf5",
@@ -6676,35 +6688,35 @@
     "max_discount": 60,
     "campaign_fingerprint": "e259f1c8388fb91aa7d1",
     "seen_ids": [
-      "gads_CR04799595347343048705",
-      "gads_CR09941241297434050561",
-      "gads_CR10260296756948369409",
-      "522de7dfb3beaf479641a019",
-      "gads_CR00091751539508510721",
-      "gads_CR02700918470744211457",
-      "gads_CR02004715954373656577",
-      "e99161502c2d508741a81ccb",
-      "gads_CR11395961976313085953",
-      "gads_CR06448139035478065153",
+      "gads_CR04023428648819228673",
       "gads_CR08152124772809965569",
+      "gads_CR02184755485863837697",
       "gads_CR03285708573383852033",
-      "gads_CR10095499205398233089",
-      "gads_CR02770971105328889857",
-      "gads_CR00501612090948059137",
-      "gads_CR14935650545937940481",
-      "gads_CR09443839004580511745",
-      "gads_CR09031599934612176897",
-      "gads_CR09491950334877106177",
+      "gads_CR02700918470744211457",
       "gads_CR14965627630957625345",
       "gads_CR10177570601586130945",
-      "9a15b3cec8309b23b77ce717",
-      "gads_CR04023428648819228673",
+      "gads_CR09941241297434050561",
+      "522de7dfb3beaf479641a019",
+      "gads_CR08916511028875886593",
+      "gads_CR00501612090948059137",
+      "gads_CR06448139035478065153",
+      "gads_CR10260296756948369409",
+      "gads_CR02004715954373656577",
+      "gads_CR09031599934612176897",
       "97ae31937f93f5e267686d4c",
+      "e99161502c2d508741a81ccb",
       "gads_CR01233298596326014977",
-      "gads_CR02184755485863837697",
-      "gads_CR08916511028875886593"
+      "gads_CR10095499205398233089",
+      "gads_CR00091751539508510721",
+      "gads_CR14935650545937940481",
+      "gads_CR04799595347343048705",
+      "gads_CR09491950334877106177",
+      "gads_CR11395961976313085953",
+      "gads_CR09443839004580511745",
+      "gads_CR02770971105328889857",
+      "9a15b3cec8309b23b77ce717"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "9a15b3cec8309b23b77ce717",
@@ -6736,7 +6748,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:41.514435+00:00",
+        "started_at": "2026-10-26T05:22:01.736908+00:00",
         "discounts": [
           "UP TO 60% OFF"
         ],
@@ -6755,7 +6767,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:41.514471+00:00",
+        "started_at": "2026-10-26T05:22:01.736955+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6772,7 +6784,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:41.514496+00:00",
+        "started_at": "2026-10-26T05:22:01.736980+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6794,16 +6806,16 @@
     "campaign_fingerprint": "4cfa1f91c46503798ab8",
     "seen_ids": [
       "d124995f6d98a43376b65adf",
-      "gads_CR13929083934592729089",
       "gads_CR06780463401316384769",
+      "gads_CR12944202991082143745",
+      "gads_CR06918164588311609345",
+      "gads_CR12653439340140036097",
       "gads_CR13454798598835273729",
       "gads_CR05982455454062608385",
-      "gads_CR06918164588311609345",
-      "d5e529f555f7d89912adaf2e",
-      "gads_CR12944202991082143745",
-      "gads_CR12653439340140036097"
+      "gads_CR13929083934592729089",
+      "d5e529f555f7d89912adaf2e"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "d5e529f555f7d89912adaf2e",
@@ -6835,7 +6847,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:42.148784+00:00",
+        "started_at": "2026-10-26T05:22:02.379872+00:00",
         "discounts": [
           "UP TO 45% OFF"
         ],
@@ -6854,7 +6866,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:42.148820+00:00",
+        "started_at": "2026-10-26T05:22:02.379941+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6871,7 +6883,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:42.148846+00:00",
+        "started_at": "2026-10-26T05:22:02.379986+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6892,13 +6904,13 @@
     "max_discount": 35,
     "campaign_fingerprint": "54c9d18ad266fd7a1024",
     "seen_ids": [
-      "gads_CR17477012759752212481",
       "e645f2c65867121df77dd843",
       "852b09ba6fe1ef018a50c0c5",
       "gads_CR17718290415985098753",
-      "gads_CR10401697491333414913"
+      "gads_CR10401697491333414913",
+      "gads_CR17477012759752212481"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "852b09ba6fe1ef018a50c0c5",
@@ -6930,7 +6942,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.092550+00:00",
+        "started_at": "2026-10-26T05:22:03.032394+00:00",
         "discounts": [
           "UP TO 35% OFF"
         ],
@@ -6949,7 +6961,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.092586+00:00",
+        "started_at": "2026-10-26T05:22:03.032464+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6966,7 +6978,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.092612+00:00",
+        "started_at": "2026-10-26T05:22:03.032493+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -6987,13 +6999,13 @@
     "max_discount": 45,
     "campaign_fingerprint": "73fffea6701b965182be",
     "seen_ids": [
-      "b31b81ed892f5ac134a1cea8",
-      "gads_CR02286469554202738689",
-      "gads_CR05964764071453523969",
       "85abe3546599f7bdcf4ac852",
-      "gads_CR00725442593592180737"
+      "gads_CR00725442593592180737",
+      "gads_CR05964764071453523969",
+      "gads_CR02286469554202738689",
+      "b31b81ed892f5ac134a1cea8"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "b31b81ed892f5ac134a1cea8",
@@ -7025,7 +7037,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.227041+00:00",
+        "started_at": "2026-10-26T05:22:03.162281+00:00",
         "discounts": [
           "UP TO 45% OFF"
         ],
@@ -7044,7 +7056,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.227074+00:00",
+        "started_at": "2026-10-26T05:22:03.162325+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7061,7 +7073,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.227098+00:00",
+        "started_at": "2026-10-26T05:22:03.162394+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7082,11 +7094,11 @@
     "max_discount": 50,
     "campaign_fingerprint": "9f77f8206fc12c247513",
     "seen_ids": [
+      "01d2c3f32b741d21c427ed60",
       "gads_CR13031990920021540865",
-      "ea8b6155b7e2eb6877a6b032",
-      "01d2c3f32b741d21c427ed60"
+      "ea8b6155b7e2eb6877a6b032"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "01d2c3f32b741d21c427ed60",
@@ -7118,7 +7130,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:43.348507+00:00",
+        "started_at": "2026-10-26T05:22:03.286829+00:00",
         "discounts": [
           "UP TO 50% OFF"
         ],
@@ -7145,22 +7157,22 @@
     "campaign_fingerprint": "ab8a0eef4ae1e8f23b17",
     "seen_ids": [
       "gads_CR01113619504421666817",
-      "gads_CR01243751103615467521",
-      "gads_CR03988531799021060097",
-      "gads_CR01253288817230610433",
-      "gads_CR09044829258517577729",
-      "gads_CR18269588604168699905",
-      "gads_CR01049943487522275329",
-      "gads_CR18011509345111506945",
       "gads_CR14584022879084478465",
-      "gads_CR00971874073141313537",
-      "gads_CR15846339193585270785",
+      "gads_CR01049943487522275329",
+      "gads_CR03988531799021060097",
+      "gads_CR18011509345111506945",
       "gads_CR08707918279923990529",
+      "gads_CR01253288817230610433",
+      "gads_CR01243751103615467521",
+      "gads_CR18269588604168699905",
+      "gads_CR15846339193585270785",
+      "gads_CR04642404526471512065",
+      "gads_CR09044829258517577729",
       "1ba0f8d93e6219fba95e7ca9",
       "gads_CR14267827524191911937",
-      "gads_CR04642404526471512065"
+      "gads_CR00971874073141313537"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "1ba0f8d93e6219fba95e7ca9",
@@ -7195,7 +7207,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.775228+00:00",
+        "started_at": "2026-10-26T05:22:06.180208+00:00",
         "discounts": [
           "30% OFF",
           "60% OFF",
@@ -7217,7 +7229,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.775282+00:00",
+        "started_at": "2026-10-26T05:22:06.180254+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7234,7 +7246,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:44.775317+00:00",
+        "started_at": "2026-10-26T05:22:06.180283+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7255,21 +7267,21 @@
     "max_discount": 60,
     "campaign_fingerprint": "33de63403b23c492e51f",
     "seen_ids": [
-      "gads_CR04182511385604784129",
       "gads_CR07835920346946469889",
-      "gads_CR11345205117960847361",
-      "gads_CR10903452132246028289",
-      "gads_CR01323358940922118145",
       "3060ceb1da5b6d8e3d4289eb",
-      "gads_CR14670576434423005185",
-      "gads_CR16376020948807057409",
-      "e2b2c389e7e3118d5a32bd4d",
-      "gads_CR12589673713042980865",
       "gads_CR07016557684858028033",
+      "gads_CR10903452132246028289",
+      "gads_CR14670576434423005185",
+      "gads_CR11416686567905820673",
+      "e2b2c389e7e3118d5a32bd4d",
+      "gads_CR11345205117960847361",
+      "gads_CR12589673713042980865",
+      "gads_CR16376020948807057409",
       "gads_CR01736920551579975681",
-      "gads_CR11416686567905820673"
+      "gads_CR01323358940922118145",
+      "gads_CR04182511385604784129"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "3060ceb1da5b6d8e3d4289eb",
@@ -7301,7 +7313,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.083425+00:00",
+        "started_at": "2026-10-26T05:22:11.909385+00:00",
         "discounts": [
           "FLAT 60% OFF"
         ],
@@ -7320,7 +7332,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.083462+00:00",
+        "started_at": "2026-10-26T05:22:11.909431+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7337,7 +7349,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.083489+00:00",
+        "started_at": "2026-10-26T05:22:11.909459+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7359,16 +7371,16 @@
     "max_discount": 50,
     "campaign_fingerprint": "241e1dff6b6fa096f29a",
     "seen_ids": [
-      "gads_CR14902486526465146881",
-      "gads_CR06538871009880047617",
-      "gads_CR13869983535332327425",
-      "a173f3d0d3e8702044d0a817",
-      "gads_CR16679256635020935169",
-      "dcccdedbb87caacc52a0331a",
       "745fc1b407411d2dd8239f9d",
-      "aa5c20a6c7802448a4e19169"
+      "gads_CR16679256635020935169",
+      "a173f3d0d3e8702044d0a817",
+      "gads_CR06538871009880047617",
+      "dcccdedbb87caacc52a0331a",
+      "gads_CR13869983535332327425",
+      "aa5c20a6c7802448a4e19169",
+      "gads_CR14902486526465146881"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "aa5c20a6c7802448a4e19169",
@@ -7401,7 +7413,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.209579+00:00",
+        "started_at": "2026-10-26T05:22:12.031904+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 30% OFF"
@@ -7421,7 +7433,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.209625+00:00",
+        "started_at": "2026-10-26T05:22:12.031947+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7438,7 +7450,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.209657+00:00",
+        "started_at": "2026-10-26T05:22:12.031976+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7460,15 +7472,15 @@
     "max_discount": 50,
     "campaign_fingerprint": "a9d609bc75d5489f5e19",
     "seen_ids": [
+      "ed094a0a93cb21204185d7d3",
+      "gads_CR09901798619890057217",
+      "3f74918e3486710a201cbf8b",
       "gads_CR11069040163937058817",
       "gads_CR04017402328666603521",
-      "3f74918e3486710a201cbf8b",
       "4c8279722b627d219ba3064a",
-      "ed094a0a93cb21204185d7d3",
-      "f4739d05d01d02f799537b93",
-      "gads_CR09901798619890057217"
+      "f4739d05d01d02f799537b93"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "ed094a0a93cb21204185d7d3",
@@ -7501,7 +7513,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.346606+00:00",
+        "started_at": "2026-10-26T05:22:12.150719+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 30% OFF"
@@ -7521,7 +7533,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.346649+00:00",
+        "started_at": "2026-10-26T05:22:12.150767+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7538,7 +7550,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.346683+00:00",
+        "started_at": "2026-10-26T05:22:12.150797+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7561,12 +7573,12 @@
     "campaign_fingerprint": "6efa79b60048acede464",
     "seen_ids": [
       "fc4ac1ab20b35d3e5b3b45ff",
-      "gads_CR16546897871945859073",
       "5e941c207e3ad7c273469e24",
+      "gads_CR07997835425685176321",
       "gads_CR14841353439442632705",
-      "gads_CR07997835425685176321"
+      "gads_CR16546897871945859073"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "5e941c207e3ad7c273469e24",
@@ -7599,7 +7611,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.487768+00:00",
+        "started_at": "2026-10-26T05:22:12.265729+00:00",
         "discounts": [
           "FLAT 50% OFF",
           "FLAT 30% OFF"
@@ -7619,7 +7631,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.487812+00:00",
+        "started_at": "2026-10-26T05:22:12.265767+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7636,7 +7648,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.487845+00:00",
+        "started_at": "2026-10-26T05:22:12.265795+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7658,35 +7670,35 @@
     "max_discount": 50,
     "campaign_fingerprint": "09803009aa6241819461",
     "seen_ids": [
-      "gads_CR02689061887106088961",
-      "gads_CR13147284987755626497",
-      "gads_CR10827495669976006657",
-      "gads_CR15393120122658881537",
-      "gads_CR14599089212041986049",
-      "gads_CR00448752794564820993",
-      "gads_CR07891231279381741569",
-      "gads_CR01864340652020465665",
+      "3d4dea6e62c6021b4b38e0e2",
       "gads_CR08716611465529786369",
-      "gads_CR16157356398466826241",
-      "gads_CR14773316999945650177",
-      "gads_CR04074213441638760449",
       "gads_CR08393968127775342593",
-      "gads_CR08676463451276574721",
+      "gads_CR10827495669976006657",
+      "gads_CR00448752794564820993",
+      "gads_CR04074213441638760449",
+      "gads_CR03185997987029450753",
+      "gads_CR13147284987755626497",
+      "gads_CR07299494462277812225",
       "ab18cac023315b72bc21009a",
-      "gads_CR03528587840101285889",
       "gads_CR17178540089190383617",
-      "gads_CR10528916793462882305",
       "gads_CR06189614061894762497",
+      "gads_CR03528587840101285889",
+      "gads_CR01864340652020465665",
+      "gads_CR14773316999945650177",
+      "gads_CR11634517791511412737",
+      "gads_CR02689061887106088961",
+      "gads_CR16157356398466826241",
+      "gads_CR08676463451276574721",
       "gads_CR00683131015333412865",
       "gads_CR18027066575651078145",
-      "gads_CR11634517791511412737",
-      "gads_CR03185997987029450753",
-      "3d4dea6e62c6021b4b38e0e2",
-      "gads_CR05874943557831229441",
+      "gads_CR10528916793462882305",
+      "gads_CR07891231279381741569",
+      "gads_CR14599089212041986049",
       "gads_CR05591982213198512129",
-      "gads_CR07299494462277812225"
+      "gads_CR05874943557831229441",
+      "gads_CR15393120122658881537"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "ab18cac023315b72bc21009a",
@@ -7719,7 +7731,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.628611+00:00",
+        "started_at": "2026-10-26T05:22:12.394954+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 30% OFF"
@@ -7739,7 +7751,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.628646+00:00",
+        "started_at": "2026-10-26T05:22:12.395002+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7756,7 +7768,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.628674+00:00",
+        "started_at": "2026-10-26T05:22:12.395031+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7778,12 +7790,12 @@
     "campaign_fingerprint": "f32cbbc2f15b3c072e9b",
     "seen_ids": [
       "5621f80773aefb104f441f98",
-      "gads_CR07712177399936319489",
       "fc5d45540206b984e0066a67",
+      "gads_CR07712177399936319489",
       "gads_CR11678721285684199425",
       "gads_CR01422567368290205697"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "5621f80773aefb104f441f98",
@@ -7815,7 +7827,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.761922+00:00",
+        "started_at": "2026-10-26T05:22:12.465716+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -7834,7 +7846,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.761955+00:00",
+        "started_at": "2026-10-26T05:22:12.465753+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7851,7 +7863,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:51.761980+00:00",
+        "started_at": "2026-10-26T05:22:12.465782+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7872,15 +7884,15 @@
     "max_discount": 30,
     "campaign_fingerprint": "7eba0f80073cba7b3acf",
     "seen_ids": [
-      "gads_CR06836900233658499073",
-      "a99aa017657f51265feb23c8",
-      "gads_CR12743322491565375489",
+      "gads_CR17141747509547237377",
       "3dc81c6d0e7d67d757346664",
       "e313746639d168d5d73aa350",
       "5d5d5ba64fd16e9b71f5ad08",
-      "gads_CR17141747509547237377"
+      "a99aa017657f51265feb23c8",
+      "gads_CR12743322491565375489",
+      "gads_CR06836900233658499073"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "e313746639d168d5d73aa350",
@@ -7912,7 +7924,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:53.825203+00:00",
+        "started_at": "2026-10-26T05:22:14.398469+00:00",
         "discounts": [
           "UP TO 30% OFF"
         ],
@@ -7931,7 +7943,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:53.825241+00:00",
+        "started_at": "2026-10-26T05:22:14.398514+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7948,7 +7960,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:53.825266+00:00",
+        "started_at": "2026-10-26T05:22:14.398541+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -7969,25 +7981,25 @@
     "max_discount": 50,
     "campaign_fingerprint": "8e587f21ee0e14ec9e99",
     "seen_ids": [
-      "gads_CR11361689820918185985",
-      "gads_CR15972584190973575169",
-      "gads_CR17799156678709477377",
-      "gads_CR05365793429911502849",
       "gads_CR11172953152452296705",
-      "gads_CR14769882950254198785",
-      "gads_CR17249183161519177729",
-      "gads_CR03236071120947904513",
-      "gads_CR06836750871875813377",
       "gads_CR08242265381754896385",
-      "gads_CR10229540289983283201",
-      "gads_CR09504438759744077825",
+      "gads_CR14769882950254198785",
       "b231eaa6b8e9b471b7bfa9f0",
-      "gads_CR11847436465883578369",
+      "gads_CR05365793429911502849",
+      "gads_CR03236071120947904513",
+      "gads_CR02345358022596886529",
       "3beacf810f44733031c2aee9",
+      "gads_CR09504438759744077825",
       "gads_CR08309002439026016257",
-      "gads_CR02345358022596886529"
+      "gads_CR17799156678709477377",
+      "gads_CR11361689820918185985",
+      "gads_CR17249183161519177729",
+      "gads_CR10229540289983283201",
+      "gads_CR11847436465883578369",
+      "gads_CR15972584190973575169",
+      "gads_CR06836750871875813377"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "3beacf810f44733031c2aee9",
@@ -8019,7 +8031,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:53.971941+00:00",
+        "started_at": "2026-10-26T05:22:14.524421+00:00",
         "discounts": [
           "UP TO 50% OFF"
         ],
@@ -8038,7 +8050,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:53.971975+00:00",
+        "started_at": "2026-10-26T05:22:14.524462+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8055,7 +8067,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:53.972001+00:00",
+        "started_at": "2026-10-26T05:22:14.524489+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8077,11 +8089,11 @@
     "campaign_fingerprint": "1f1b880a8c763aa63f42",
     "seen_ids": [
       "2bce01c835ce5a1385a3d951",
-      "0af0fe4826625b93e0b8d0aa",
       "8c9906e0dec424b7a0965987",
+      "0af0fe4826625b93e0b8d0aa",
       "cf498040737fb23999f228e6"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "cf498040737fb23999f228e6",
@@ -8137,16 +8149,16 @@
     "max_discount": 50,
     "campaign_fingerprint": "53bcf2cf898be720fceb",
     "seen_ids": [
+      "5527acc4a890f05205cb404d",
+      "ee14d282dba4f50be084d2c9",
       "gads_CR02559103460993662977",
+      "gads_CR12169693952366084097",
+      "gads_CR06938009673681338369",
       "gads_CR00781668697658884097",
       "53a092b44eb2e6bfae52e0b6",
-      "ee14d282dba4f50be084d2c9",
-      "8666cb28a688cd4882eb1956",
-      "gads_CR06938009673681338369",
-      "5527acc4a890f05205cb404d",
-      "gads_CR12169693952366084097"
+      "8666cb28a688cd4882eb1956"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "ee14d282dba4f50be084d2c9",
@@ -8179,7 +8191,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.610106+00:00",
+        "started_at": "2026-10-26T05:22:18.532930+00:00",
         "discounts": [
           "UP TO 50% OFF",
           "FLAT 30% OFF"
@@ -8199,7 +8211,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.610219+00:00",
+        "started_at": "2026-10-26T05:22:18.532974+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8216,7 +8228,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.610259+00:00",
+        "started_at": "2026-10-26T05:22:18.533000+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8239,32 +8251,33 @@
     "campaign_fingerprint": "2a678292e97dd60c35e7",
     "seen_ids": [
       "7af1b7224d90b5cf1e8031e3",
-      "gads_CR05270895509031092225",
-      "a669f13f69e9bd88ba509e33",
-      "gads_CR16450655798100492289",
-      "gads_CR05717038191840591873",
-      "gads_CR18162911237262802945",
-      "gads_CR00125968341364899841",
-      "f293a372791768432d732f4a",
-      "gads_CR14470314143908888577",
+      "gads_CR08865608863190089729",
+      "gads_CR15074541404514418689",
+      "gads_CR01223514042350436353",
       "gads_CR01211551355840233473",
-      "gads_CR09328933442408153089",
+      "gads_CR00125968341364899841",
+      "gads_CR04878888286237491201",
+      "gads_CR05270895509031092225",
+      "gads_CR16450655798100492289",
+      "gads_CR15770916415361515521",
+      "gads_CR18162911237262802945",
+      "gads_CR05717038191840591873",
+      "gads_CR02764725879283122177",
+      "gads_CR14470314143908888577",
       "gads_CR02604022367868944385",
       "gads_CR08280377272272158721",
-      "0ca31651c9f0f87d97911020",
-      "gads_CR10469478844132753409",
-      "gads_CR00309349288691892225",
-      "gads_CR08045767647255592961",
-      "gads_CR15074541404514418689",
       "gads_CR06288728137421291521",
-      "gads_CR08865608863190089729",
-      "gads_CR15770916415361515521",
-      "gads_CR04878888286237491201",
-      "gads_CR02764725879283122177",
-      "gads_CR01223514042350436353",
-      "gads_CR08645864042675568641"
+      "0ca31651c9f0f87d97911020",
+      "f293a372791768432d732f4a",
+      "gads_CR09328933442408153089",
+      "gads_CR00309349288691892225",
+      "a669f13f69e9bd88ba509e33",
+      "gads_CR10469478844132753409",
+      "gads_CR08045767647255592961",
+      "gads_CR08645864042675568641",
+      "gads_CR07272293369240354817"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "0ca31651c9f0f87d97911020",
@@ -8286,23 +8299,40 @@
         "is_sale": true
       },
       {
-        "id": "gads_CR02764725879283122177",
+        "id": "gads_CR07272293369240354817",
         "platform": "google_ads",
         "page_name": "1st Step Shoes & Bags",
         "headline": "1st Step Shoes Official Sale — UP TO 50% OFF, FLAT 25% OFF | 1st Step Shoes & Bags",
         "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 50% OFF, FLAT 25% OFF live on 1ststep.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR07272293369240354817?region=PK",
+        "publisher_platforms": [
+          "google_search",
+          "youtube",
+          "google_display"
+        ],
+        "started_at": "2026-10-26T05:22:18.660197+00:00",
+        "discounts": [
+          "UP TO 50% OFF",
+          "FLAT 25% OFF"
+        ],
+        "max_discount": 50,
+        "is_sale": true
+      },
+      {
+        "id": "gads_CR02764725879283122177",
+        "platform": "google_ads",
+        "page_name": "1st Step Shoes & Bags",
+        "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
+        "body": "Verified active Google Ad creative (CR02764725879283122177) running in Pakistan for 1ststep.pk.",
         "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR02764725879283122177?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.843995+00:00",
-        "discounts": [
-          "UP TO 50% OFF",
-          "FLAT 25% OFF"
-        ],
-        "max_discount": 50,
+        "started_at": "2026-10-26T05:22:18.660245+00:00",
+        "discounts": [],
+        "max_discount": 0,
         "is_sale": true
       },
       {
@@ -8317,24 +8347,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:55.844044+00:00",
-        "discounts": [],
-        "max_discount": 0,
-        "is_sale": true
-      },
-      {
-        "id": "gads_CR08645864042675568641",
-        "platform": "google_ads",
-        "page_name": "1st Step Shoes & Bags",
-        "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
-        "body": "Verified active Google Ad creative (CR08645864042675568641) running in Pakistan for 1ststep.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR08645864042675568641?region=PK",
-        "publisher_platforms": [
-          "google_search",
-          "youtube",
-          "google_display"
-        ],
-        "started_at": "2026-10-26T05:01:55.844080+00:00",
+        "started_at": "2026-10-26T05:22:18.660276+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8355,32 +8368,33 @@
     "max_discount": 30,
     "campaign_fingerprint": "ab95180100390cd43821",
     "seen_ids": [
-      "gads_CR18348371257998704641",
-      "gads_CR08874693474935373825",
-      "gads_CR07930510782528225281",
-      "gads_CR00251079570466275329",
-      "gads_CR18225049862028656641",
-      "gads_CR12447527200536657921",
-      "gads_CR12671131581742579713",
+      "gads_CR07080716284282798081",
       "gads_CR14893452664053432321",
-      "gads_CR07680438854339264513",
+      "gads_CR17019713813492006913",
+      "gads_CR12447527200536657921",
+      "gads_CR00251079570466275329",
+      "gads_CR08874693474935373825",
       "8fcaa85ef9f6b9fc79752992",
-      "gads_CR14420075696699211777",
-      "gads_CR17747528388672749569",
-      "gads_CR04374182650605207553",
+      "0257a7db0528cd212f02d18d",
+      "gads_CR18146138015582388225",
       "gads_CR01285222929868521473",
       "gads_CR10415140979488063489",
-      "gads_CR06935849683088572417",
-      "gads_CR15647760796539158529",
       "gads_CR00656790461943382017",
-      "0257a7db0528cd212f02d18d",
-      "gads_CR07080716284282798081",
+      "gads_CR15647760796539158529",
+      "gads_CR07680438854339264513",
+      "gads_CR18348371257998704641",
+      "gads_CR04374182650605207553",
+      "gads_CR14420075696699211777",
       "gads_CR11112680776875900929",
-      "gads_CR17019713813492006913",
       "gads_CR09698027229425958913",
-      "gads_CR18146138015582388225"
+      "gads_CR12671131581742579713",
+      "gads_CR06935849683088572417",
+      "gads_CR18225049862028656641",
+      "gads_CR17747528388672749569",
+      "gads_CR07930510782528225281",
+      "gads_CR15826282142989549569"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "0257a7db0528cd212f02d18d",
@@ -8412,7 +8426,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:57.802879+00:00",
+        "started_at": "2026-10-26T05:22:19.455483+00:00",
         "discounts": [
           "UP TO 30% OFF"
         ],
@@ -8431,24 +8445,24 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:57.802912+00:00",
+        "started_at": "2026-10-26T05:22:19.455527+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
       },
       {
-        "id": "gads_CR18146138015582388225",
+        "id": "gads_CR15826282142989549569",
         "platform": "google_ads",
-        "page_name": "Finz",
-        "headline": "Jazz Pakistan — Active Google Search & Display Ad (Finz)",
-        "body": "Verified active Google Ad creative (CR18146138015582388225) running in Pakistan for jazz.com.pk.",
-        "url": "https://adstransparency.google.com/advertiser/AR11287412647911227393/creative/CR18146138015582388225?region=PK",
+        "page_name": "Avaroz Software House",
+        "headline": "Jazz Pakistan — Active Google Search & Display Ad (Avaroz Software House)",
+        "body": "Verified active Google Ad creative (CR15826282142989549569) running in Pakistan for jazz.com.pk.",
+        "url": "https://adstransparency.google.com/advertiser/AR09754355476404895745/creative/CR15826282142989549569?region=PK",
         "publisher_platforms": [
           "google_search",
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:57.802938+00:00",
+        "started_at": "2026-10-26T05:22:19.455554+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8469,12 +8483,12 @@
     "max_discount": 30,
     "campaign_fingerprint": "25d51bfb14391ab66fc0",
     "seen_ids": [
-      "9848d861bb69d73c399881d3",
-      "gads_CR09419033962128343041",
       "bab7d8ec13a31941fe056d47",
-      "gads_CR00227750072618582017"
+      "gads_CR00227750072618582017",
+      "gads_CR09419033962128343041",
+      "9848d861bb69d73c399881d3"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "bab7d8ec13a31941fe056d47",
@@ -8506,7 +8520,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:58.673592+00:00",
+        "started_at": "2026-10-26T05:22:20.077586+00:00",
         "discounts": [
           "UP TO 30% OFF"
         ],
@@ -8525,7 +8539,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:58.673629+00:00",
+        "started_at": "2026-10-26T05:22:20.077632+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8546,13 +8560,13 @@
     "max_discount": 25,
     "campaign_fingerprint": "5504f1ebd4df2674e7af",
     "seen_ids": [
-      "dd8bacd2bb634e413d5dabb7",
+      "gads_CR07625309066444668929",
       "gads_CR05488139937024835585",
       "cd579a6642406aa16d90ff99",
-      "gads_CR07625309066444668929",
-      "gads_CR14976136247699832833"
+      "gads_CR14976136247699832833",
+      "dd8bacd2bb634e413d5dabb7"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "cd579a6642406aa16d90ff99",
@@ -8584,7 +8598,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:58.805551+00:00",
+        "started_at": "2026-10-26T05:22:20.201606+00:00",
         "discounts": [
           "UP TO 25% OFF"
         ],
@@ -8603,7 +8617,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:58.805587+00:00",
+        "started_at": "2026-10-26T05:22:20.201655+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8620,7 +8634,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:58.805614+00:00",
+        "started_at": "2026-10-26T05:22:20.201686+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8642,14 +8656,14 @@
     "max_discount": 25,
     "campaign_fingerprint": "325a5431033162e15c97",
     "seen_ids": [
-      "1fc2a25d3a7b5498f786eff2",
+      "gads_CR15526444609130463233",
       "gads_CR11418102919271022593",
-      "gads_CR17459527887760654337",
       "96d543e0597c873271bfe820",
       "gads_CR08473781204389199873",
-      "gads_CR15526444609130463233"
+      "gads_CR17459527887760654337",
+      "1fc2a25d3a7b5498f786eff2"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "1fc2a25d3a7b5498f786eff2",
@@ -8682,7 +8696,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:58.948056+00:00",
+        "started_at": "2026-10-26T05:22:20.327620+00:00",
         "discounts": [
           "FLAT 20% CASHBACK",
           "UP TO 25% OFF"
@@ -8702,7 +8716,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:58.948091+00:00",
+        "started_at": "2026-10-26T05:22:20.327686+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8719,7 +8733,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:58.948118+00:00",
+        "started_at": "2026-10-26T05:22:20.327731+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8740,15 +8754,15 @@
     "max_discount": 50,
     "campaign_fingerprint": "8b24e2386b473b7a1f99",
     "seen_ids": [
-      "70c91a8e229579aa4295ae81",
+      "caa172eea7fe371f07234e59",
       "gads_CR13163186064786980865",
       "419424e68b955da28746e3d6",
-      "caa172eea7fe371f07234e59",
-      "gads_CR10348266972889743361",
+      "70c91a8e229579aa4295ae81",
       "gads_CR16853496758070673409",
+      "gads_CR10348266972889743361",
       "25e23e5dbabafd0b16c7590a"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "70c91a8e229579aa4295ae81",
@@ -8780,7 +8794,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:59.073910+00:00",
+        "started_at": "2026-10-26T05:22:20.444224+00:00",
         "discounts": [
           "UP TO 50% OFF"
         ],
@@ -8799,7 +8813,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:59.073951+00:00",
+        "started_at": "2026-10-26T05:22:20.444271+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8816,7 +8830,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:59.073984+00:00",
+        "started_at": "2026-10-26T05:22:20.444296+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8837,15 +8851,15 @@
     "max_discount": 40,
     "campaign_fingerprint": "e3f2713b0fdd27a432a4",
     "seen_ids": [
-      "1eda2a271f018eeced2bc24b",
-      "gads_CR03034527650279325697",
-      "ba8f1e1b2995a1923276331c",
+      "gads_CR01601036067031482369",
       "gads_CR02310855485156229121",
       "017e4ae8935be514d7a22164",
+      "1eda2a271f018eeced2bc24b",
       "437ee147e5f9fb4870c70a70",
-      "gads_CR01601036067031482369"
+      "ba8f1e1b2995a1923276331c",
+      "gads_CR03034527650279325697"
     ],
-    "checked_at": "2026-10-26T05:01:28.660065+00:00",
+    "checked_at": "2026-10-26T05:21:47.258390+00:00",
     "top_ads": [
       {
         "id": "017e4ae8935be514d7a22164",
@@ -8877,7 +8891,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:59.645195+00:00",
+        "started_at": "2026-10-26T05:22:21.120698+00:00",
         "discounts": [
           "UP TO 40% OFF"
         ],
@@ -8896,7 +8910,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:59.645231+00:00",
+        "started_at": "2026-10-26T05:22:21.120745+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
@@ -8913,7 +8927,7 @@
           "youtube",
           "google_display"
         ],
-        "started_at": "2026-10-26T05:01:59.645258+00:00",
+        "started_at": "2026-10-26T05:22:21.120773+00:00",
         "discounts": [],
         "max_discount": 0,
         "is_sale": true
