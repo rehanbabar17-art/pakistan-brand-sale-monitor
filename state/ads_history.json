@@ -1,61 +1,5 @@
 [
   {
-    "id": "gads_CR15108930554818461697",
-    "brand": "Chase Value",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Chase Value — Active Google Search & Display Ad (Chase Value)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR15108930554818461697?region=PK",
-    "detected_at": "2026-10-26T11:01:30.312581+00:00"
-  },
-  {
-    "id": "gads_CR08345206951746994177",
-    "brand": "Khaadi",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Khaadi Official Online Sale — Up to 50% OFF Fabrics & Ready to Wear",
-    "discounts": [
-      "FLAT 40% OFF",
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR17919966815891488769/creative/CR08345206951746994177?region=PK",
-    "detected_at": "2026-10-26T11:01:30.312581+00:00"
-  },
-  {
-    "id": "gads_CR17235811828815101953",
-    "brand": "Khaadi",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Khaadi — Active Google Search & Display Ad (Weaves Pakistan (SMC-Private) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR17919966815891488769/creative/CR17235811828815101953?region=PK",
-    "detected_at": "2026-10-26T11:01:30.312581+00:00"
-  },
-  {
-    "id": "gads_CR12619505112771985409",
-    "brand": "Sapphire",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Sapphire Pakistan Official — Up to 50% OFF Women's, Men's & Kids Wear",
-    "discounts": [
-      "UP TO 50% OFF",
-      "FLAT 30% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR12619505112771985409?region=PK",
-    "detected_at": "2026-10-26T11:01:30.312581+00:00"
-  },
-  {
-    "id": "gads_CR16660524702095114241",
-    "brand": "Sapphire",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR16660524702095114241?region=PK",
-    "detected_at": "2026-10-26T11:01:30.312581+00:00"
-  },
-  {
     "id": "gads_CR17269903286345924609",
     "brand": "Sapphire",
     "category": "Fashion & Apparel",
@@ -5530,5 +5474,62 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR16084165654617260033?region=PK",
     "detected_at": "2026-10-27T17:01:38.533724+00:00"
+  },
+  {
+    "id": "gads_CR09432252247967793153",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Dentsu Solutions Pte. Ltd.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR02518803224509546497/creative/CR09432252247967793153?region=PK",
+    "detected_at": "2026-10-27T18:20:44.618954+00:00"
+  },
+  {
+    "id": "gads_CR10984292625166630913",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Singapore) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR10984292625166630913?region=PK",
+    "detected_at": "2026-10-27T18:20:44.618954+00:00"
+  },
+  {
+    "id": "gads_CR06969301774607843329",
+    "brand": "Alkaram Studio",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Alkaram Studio Official Sale — FLAT 30%, FLAT 20%, FLAT 40% | AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED",
+    "discounts": [
+      "FLAT 30%",
+      "FLAT 20%",
+      "FLAT 40%",
+      "FLAT 50%"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR04513419159559733249/creative/CR06969301774607843329?region=PK",
+    "detected_at": "2026-10-27T18:20:44.618954+00:00"
+  },
+  {
+    "id": "gads_CR13357173236282949633",
+    "brand": "Asim Jofa",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Asim Jofa Official Sale — UP TO 60% OFF | Asim Jofa (Private) Limited",
+    "discounts": [
+      "UP TO 60% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR08681884241170006017/creative/CR13357173236282949633?region=PK",
+    "detected_at": "2026-10-27T18:20:44.618954+00:00"
+  },
+  {
+    "id": "gads_CR08782078964827947009",
+    "brand": "Generation",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Generation — Active Google Search & Display Ad (Generation (PVT) LTD)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR03134623297631682561/creative/CR08782078964827947009?region=PK",
+    "detected_at": "2026-10-27T18:20:44.618954+00:00"
   }
 ]
