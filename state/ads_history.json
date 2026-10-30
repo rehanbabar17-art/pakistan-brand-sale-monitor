@@ -1,37 +1,5 @@
 [
   {
-    "id": "gads_CR07091804412372320257",
-    "brand": "Foodpanda Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR07091804412372320257?region=PK",
-    "detected_at": "2026-10-27T13:01:41.150441+00:00"
-  },
-  {
-    "id": "gads_CR04009731379636994049",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Hong Kong) Limited",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR06679233693619322881/creative/CR04009731379636994049?region=PK",
-    "detected_at": "2026-10-27T13:01:41.150441+00:00"
-  },
-  {
-    "id": "gads_CR11501232792969150465",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (STANDARD CHARTERED BANK (SINGAPORE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR08920677739858493441/creative/CR11501232792969150465?region=PK",
-    "detected_at": "2026-10-27T13:01:41.150441+00:00"
-  },
-  {
     "id": "gads_CR00385003935020089345",
     "brand": "Daraz Pakistan",
     "category": "Marketplaces & Groceries",
@@ -5444,5 +5412,40 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR10544519971562586113?region=PK",
     "detected_at": "2026-10-30T06:29:53.953288+00:00"
+  },
+  {
+    "id": "gads_CR00585017091661234177",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | 英商渣打銀行股份有限公司",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14707680339065569281/creative/CR00585017091661234177?region=PK",
+    "detected_at": "2026-10-30T07:01:28.120407+00:00"
+  },
+  {
+    "id": "gads_CR01396838581451882497",
+    "brand": "Khaadi",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Khaadi — Active Google Search & Display Ad (Weaves Pakistan (SMC-Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR17919966815891488769/creative/CR01396838581451882497?region=PK",
+    "detected_at": "2026-10-30T07:01:28.120407+00:00"
+  },
+  {
+    "id": "gads_CR01404597981037985793",
+    "brand": "1st Step Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "1st Step Shoes Official Sale — UP TO 50% OFF, FLAT 25% OFF | 1st Step Shoes & Bags",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 25% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR01404597981037985793?region=PK",
+    "detected_at": "2026-10-30T07:01:28.120407+00:00"
   }
 ]
