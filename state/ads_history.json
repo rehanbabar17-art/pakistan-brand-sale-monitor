@@ -1,25 +1,5 @@
 [
   {
-    "id": "gads_CR17815786517201682433",
-    "brand": "Jazz Pakistan",
-    "category": "Telecom & Internet",
-    "platform": "google_ads",
-    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Sehrash Mumtaz)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR00105538487607885825/creative/CR17815786517201682433?region=PK",
-    "detected_at": "2026-10-27T21:01:33.476767+00:00"
-  },
-  {
-    "id": "gads_CR14095059887729934337",
-    "brand": "Jazz Pakistan",
-    "category": "Telecom & Internet",
-    "platform": "google_ads",
-    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR14095059887729934337?region=PK",
-    "detected_at": "2026-10-27T21:01:33.476767+00:00"
-  },
-  {
     "id": "gads_CR02751900660260667393",
     "brand": "Domino's Pizza Pakistan",
     "category": "Food & Dining",
@@ -5408,5 +5388,28 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR12578901256459780097?region=PK",
     "detected_at": "2026-10-30T22:39:35.914883+00:00"
+  },
+  {
+    "id": "gads_CR11409306302262804481",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Singapore) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR11409306302262804481?region=PK",
+    "detected_at": "2026-10-30T23:01:46.641365+00:00"
+  },
+  {
+    "id": "gads_CR05247930834295455745",
+    "brand": "1st Step Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "1st Step Shoes Official Sale — UP TO 50% OFF, FLAT 25% OFF | 1st Step Shoes & Bags",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 25% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR05247930834295455745?region=PK",
+    "detected_at": "2026-10-30T23:01:46.641365+00:00"
   }
 ]
