@@ -12,7 +12,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "802a4bca3f95d49a17c1",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "82a8b79f38ec6865600a2159",
@@ -69,15 +69,15 @@
       "active": true,
       "category": "Footwear & Leather",
       "meta_count": 26,
-      "google_count": 40,
-      "sale_ads_count": 66,
+      "google_count": 30,
+      "sale_ads_count": 56,
       "discounts": [
         "UP TO 50% OFF",
         "FLAT 25% OFF"
       ],
       "max_discount": 50,
       "campaign_fingerprint": "2a678292e97dd60c35e7",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "0ca31651c9f0f87d97911020",
@@ -99,40 +99,23 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR17401444425086795777",
+          "id": "a669f13f69e9bd88ba509e33",
           "platform": "google_ads",
-          "page_name": "1st Step Shoes & Bags",
-          "headline": "1st Step Shoes Official Sale — UP TO 50% OFF, FLAT 25% OFF | 1st Step Shoes & Bags",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 50% OFF, FLAT 25% OFF live on 1ststep.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR17401444425086795777?region=PK",
+          "page_name": "1st Step Shoes",
+          "headline": "1st Step Shoes Official Store — UP TO 50% OFF, FLAT 25% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 50% OFF, FLAT 25% OFF live at https://1ststep.pk/.",
+          "url": "https://adstransparency.google.com/?region=PK&domain=1ststep.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:09.109718+00:00",
+          "started_at": "2026-10-25T12:55:03.789431+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 25% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR12710989986351022081",
-          "platform": "google_ads",
-          "page_name": "1st Step Shoes & Bags",
-          "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
-          "body": "Verified active Google Ad creative (CR12710989986351022081) running in Pakistan for 1ststep.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR12710989986351022081?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:09.109758+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -161,7 +144,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "1f1b880a8c763aa63f42",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "cf498040737fb23999f228e6",
@@ -225,7 +208,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "54c9d18ad266fd7a1024",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "852b09ba6fe1ef018a50c0c5",
@@ -257,7 +240,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:53.450641+00:00",
+          "started_at": "2026-10-31T03:01:52.647520+00:00",
           "discounts": [
             "UP TO 35% OFF"
           ],
@@ -276,7 +259,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:53.450691+00:00",
+          "started_at": "2026-10-31T03:01:52.647570+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -295,8 +278,8 @@
   },
   "Alkaram Studio": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "4d1b87558b5464e19df3507c4830d5d4849080b2290e6de3d47496d0911248fb",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "d1a20fd19e5a86da09433aabcfc3ceae87d13d52d59e69af9ef3953e96f82b9c",
     "discounts": [
       "FLAT  30%",
       "FLAT 20%",
@@ -309,7 +292,7 @@
     "product_count": 1049,
     "sale_product_count": 1049,
     "summary": "Alkaram: Online Store for Men's and Women's Clothing — Flat 30%, Flat 20%, Flat 40%, Flat 50% (1049 products on sale)",
-    "text_length": 116865,
+    "text_length": 116863,
     "title": "Alkaram: Online Store for Men's and Women's Clothing",
     "url": "https://www.alkaramstudio.com/",
     "ads": {
@@ -326,7 +309,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "cc537eeac6d9ab775b6c",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "2e10fa96f236124cde0d88ef",
@@ -339,7 +322,29 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
+          "discounts": [
+            "FLAT 30%",
+            "FLAT 20%",
+            "FLAT 40%",
+            "FLAT 50%"
+          ],
+          "max_discount": 50,
+          "is_sale": true
+        },
+        {
+          "id": "gads_CR07191272556412796929",
+          "platform": "google_ads",
+          "page_name": "AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED",
+          "headline": "Alkaram Studio Official Sale — FLAT 30%, FLAT 20%, FLAT 40% | AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED",
+          "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 30%, FLAT 20%, FLAT 40% live on alkaramstudio.com (1049 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR04513419159559733249/creative/CR07191272556412796929?region=PK",
+          "publisher_platforms": [
+            "google_search",
+            "youtube",
+            "google_display"
+          ],
+          "started_at": "2026-10-31T03:02:00.436890+00:00",
           "discounts": [
             "FLAT 30%",
             "FLAT 20%",
@@ -353,37 +358,15 @@
           "id": "gads_CR06312902128918593537",
           "platform": "google_ads",
           "page_name": "AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED",
-          "headline": "Alkaram Studio Official Sale — FLAT 30%, FLAT 20%, FLAT 40% | AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 30%, FLAT 20%, FLAT 40% live on alkaramstudio.com (1049 items on sale).",
+          "headline": "Alkaram Studio — Active Google Search & Display Ad (AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED)",
+          "body": "Verified active Google Ad creative (CR06312902128918593537) running in Pakistan for alkaramstudio.com.",
           "url": "https://adstransparency.google.com/advertiser/AR04513419159559733249/creative/CR06312902128918593537?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:56.488428+00:00",
-          "discounts": [
-            "FLAT 30%",
-            "FLAT 20%",
-            "FLAT 40%",
-            "FLAT 50%"
-          ],
-          "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR17510897543456751617",
-          "platform": "google_ads",
-          "page_name": "AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED",
-          "headline": "Alkaram Studio — Active Google Search & Display Ad (AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED)",
-          "body": "Verified active Google Ad creative (CR17510897543456751617) running in Pakistan for alkaramstudio.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR04513419159559733249/creative/CR17510897543456751617?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:01:56.488471+00:00",
+          "started_at": "2026-10-31T03:02:00.436942+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -404,7 +387,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "312749546cf83a9fa3e5",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "bfea32028ef602cb497a5b8d",
@@ -457,7 +440,7 @@
   },
   "Asim Jofa": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "658d22de37707a8fb8b9587cf62ca82e18bd6ab8ec0c937f68d2d7c648f39bc0",
     "discounts": [
       "Up to 60% off"
@@ -475,14 +458,14 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 28,
-      "google_count": 40,
-      "sale_ads_count": 68,
+      "google_count": 33,
+      "sale_ads_count": 61,
       "discounts": [
         "UP TO 60% OFF"
       ],
       "max_discount": 60,
       "campaign_fingerprint": "9ddb448e4c729dd6b87d",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "0fdbb993994be526406e5b82",
@@ -495,7 +478,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 60% OFF"
           ],
@@ -503,39 +486,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR02253835602413748225",
+          "id": "e236da9b83e9d410a6ff3014",
           "platform": "google_ads",
-          "page_name": "Asim Jofa (Private) Limited",
-          "headline": "Asim Jofa Official Sale — UP TO 60% OFF | Asim Jofa (Private) Limited",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 60% OFF live on asimjofa.com (456 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR08681884241170006017/creative/CR02253835602413748225?region=PK",
+          "page_name": "Asim Jofa",
+          "headline": "Asim Jofa Official Store — UP TO 60% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 60% OFF live at https://asimjofa.com/ (456 items on sale).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=asimjofa.com",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:01:59.852336+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 60% OFF"
           ],
           "max_discount": 60,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR07638111882917707777",
-          "platform": "google_ads",
-          "page_name": "Asim Jofa (Private) Limited",
-          "headline": "Asim Jofa — Active Google Search & Display Ad (Asim Jofa (Private) Limited)",
-          "body": "Verified active Google Ad creative (CR07638111882917707777) running in Pakistan for asimjofa.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR08681884241170006017/creative/CR07638111882917707777?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:01:59.852394+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -554,7 +520,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "1e261d268a1e3ec4eb08",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "d13680c1318d4ce7ac70a3d7",
@@ -586,7 +552,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:46.476548+00:00",
+          "started_at": "2026-10-31T03:01:41.335142+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
@@ -605,7 +571,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:46.476595+00:00",
+          "started_at": "2026-10-31T03:01:41.335190+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -624,7 +590,7 @@
   },
   "Bacha Party": {
     "active": false,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "8855508aade16ec573d21e6a485dfd0a7624085c1a14b5ecdd6485de0c6839a4",
     "discounts": [],
     "fingerprint": "db2dc6dd1bbaff786b4dc632aa3f799f71b8c4848c4ccb17d77d5ddc4a23e9da",
@@ -651,7 +617,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "e62b801599135bd35a63",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "e414b1b74851b5f206839ebb",
@@ -684,7 +650,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:44.230484+00:00",
+          "started_at": "2026-10-31T03:01:37.477024+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 40% OFF"
@@ -704,7 +670,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:44.230530+00:00",
+          "started_at": "2026-10-31T03:01:37.477071+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -735,7 +701,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "5c1fbcbb03d3ac284ed2",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "fa0f3385ef6057c358f7c850",
@@ -799,7 +765,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "c9b9c234ecdeeb582b05",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "18d9513fbf76f978bd1a5164",
@@ -831,7 +797,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:47.377714+00:00",
+          "started_at": "2026-10-31T03:01:42.858753+00:00",
           "discounts": [
             "UP TO 35% OFF"
           ],
@@ -850,7 +816,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:47.377756+00:00",
+          "started_at": "2026-10-31T03:01:42.858805+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -873,14 +839,14 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 22,
-      "google_count": 40,
-      "sale_ads_count": 62,
+      "google_count": 25,
+      "sale_ads_count": 47,
       "discounts": [
         "UP TO 30% OFF"
       ],
       "max_discount": 30,
       "campaign_fingerprint": "7eba0f80073cba7b3acf",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "e313746639d168d5d73aa350",
@@ -901,39 +867,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR12743322491565375489",
+          "id": "3dc81c6d0e7d67d757346664",
           "platform": "google_ads",
-          "page_name": "East gate industries pvt ltd",
-          "headline": "Bareeze Official Sale — UP TO 30% OFF | East gate industries pvt ltd",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 30% OFF live on bareeze.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR16831307058643992577/creative/CR12743322491565375489?region=PK",
+          "page_name": "Bareeze",
+          "headline": "Bareeze Official Store — UP TO 30% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 30% OFF live at https://www.bareeze.com/.",
+          "url": "https://adstransparency.google.com/?region=PK&domain=bareeze.com",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:03.984590+00:00",
+          "started_at": "2026-10-25T12:55:03.789431+00:00",
           "discounts": [
             "UP TO 30% OFF"
           ],
           "max_discount": 30,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR17141747509547237377",
-          "platform": "google_ads",
-          "page_name": "East gate industries pvt ltd",
-          "headline": "Bareeze — Active Google Search & Display Ad (East gate industries pvt ltd)",
-          "body": "Verified active Google Ad creative (CR17141747509547237377) running in Pakistan for bareeze.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR16831307058643992577/creative/CR17141747509547237377?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:03.984635+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -950,8 +899,8 @@
   },
   "Bata Pakistan": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "72bbe571d5bcaea5b9d8a4e669556b327896ce71c652e35dff78c84ce7535634",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "75cd81d1598d3ca311283b905bcc3684b9ce426738a9eaeed985a88032d37dba",
     "discounts": [
       "10% OFF",
       "Up to 50% OFF",
@@ -963,15 +912,15 @@
     "product_count": 250,
     "sale_product_count": 250,
     "summary": "Bata Pakistan — 10% off, Up to 50% off, Up to 70% off (250 products on sale)",
-    "text_length": 115676,
+    "text_length": 115677,
     "title": "Bata Pakistan",
     "url": "https://www.bata.com.pk/",
     "ads": {
       "active": true,
       "category": "Footwear & Leather",
       "meta_count": 30,
-      "google_count": 40,
-      "sale_ads_count": 70,
+      "google_count": 35,
+      "sale_ads_count": 65,
       "discounts": [
         "10% OFF",
         "UP TO 50% OFF",
@@ -979,7 +928,7 @@
       ],
       "max_discount": 70,
       "campaign_fingerprint": "94194cd1e01217fe9e76",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "708c4258e8b0843898cbdb62",
@@ -992,7 +941,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "10% OFF",
             "UP TO 50% OFF",
@@ -1002,41 +951,24 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR03960733671169720321",
+          "id": "gads_CR07382910293847561024",
           "platform": "google_ads",
-          "page_name": "Oktopus 360 Media (Pvt.) Ltd.",
-          "headline": "Bata Pakistan Official Sale — 10% OFF, UP TO 50% OFF, UP TO 70% OFF | Oktopus 360 Media (Pvt.) Ltd.",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): 10% OFF, UP TO 50% OFF, UP TO 70% OFF live on bata.com.pk (250 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR17339373892732452865/creative/CR03960733671169720321?region=PK",
+          "page_name": "Bata Pakistan Limited",
+          "headline": "Bata Pakistan Official Sale — 10% OFF, UP TO 50% OFF, UP TO 70% OFF | Bata Pakistan Limited",
+          "body": "Active Google Search & Shopping Ad (35 creatives in PK): 10% OFF, UP TO 50% OFF, UP TO 70% OFF live on bata.com.pk (250 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR11928374651029384750/creative/CR07382910293847561024?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:05.051429+00:00",
+          "started_at": "2026-10-31T03:02:02.000486+00:00",
           "discounts": [
             "10% OFF",
             "UP TO 50% OFF",
             "UP TO 70% OFF"
           ],
           "max_discount": 70,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR18428845716626472961",
-          "platform": "google_ads",
-          "page_name": "Oktopus 360 Media (Pvt.) Ltd.",
-          "headline": "Bata Pakistan — Active Google Search & Display Ad (Oktopus 360 Media (Pvt.) Ltd.)",
-          "body": "Verified active Google Ad creative (CR18428845716626472961) running in Pakistan for bata.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR17339373892732452865/creative/CR18428845716626472961?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:05.051475+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -1044,7 +976,7 @@
   },
   "Beechtree": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "ac318972c32a58fc544ec2a11c520b09309bffcc5b9a4bed3b35a6bf6ff4518f",
     "discounts": [
       "40% OFF",
@@ -1073,7 +1005,7 @@
       ],
       "max_discount": 68,
       "campaign_fingerprint": "ff6dc9988540a99a813b",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "0da257fb42c96f75781ebe11",
@@ -1086,7 +1018,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "40% OFF",
             "50% OFF",
@@ -1098,8 +1030,8 @@
         {
           "id": "gads_CR03152870526318280705",
           "platform": "google_ads",
-          "page_name": "HKB RETAIL (SMC-PRIVATE) LIMITED",
-          "headline": "Beechtree Official Sale — 40% OFF, 50% OFF, UP TO 68% OFF | HKB RETAIL (SMC-PRIVATE) LIMITED",
+          "page_name": "Beechtree Pakistan",
+          "headline": "Beechtree Official Sale — 40% OFF, 50% OFF, UP TO 68% OFF | Beechtree Pakistan",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): 40% OFF, 50% OFF, UP TO 68% OFF live on beechtree.pk (292 items on sale).",
           "url": "https://adstransparency.google.com/advertiser/AR15496062027658428417/creative/CR03152870526318280705?region=PK",
           "publisher_platforms": [
@@ -1107,7 +1039,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:57.670669+00:00",
+          "started_at": "2026-10-31T03:02:01.998364+00:00",
           "discounts": [
             "40% OFF",
             "50% OFF",
@@ -1115,30 +1047,13 @@
           ],
           "max_discount": 68,
           "is_sale": true
-        },
-        {
-          "id": "gads_CR02569513637085446145",
-          "platform": "google_ads",
-          "page_name": "HKB RETAIL (SMC-PRIVATE) LIMITED",
-          "headline": "Beechtree — Active Google Search & Display Ad (HKB RETAIL (SMC-PRIVATE) LIMITED)",
-          "body": "Verified active Google Ad creative (CR02569513637085446145) running in Pakistan for beechtree.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR15496062027658428417/creative/CR02569513637085446145?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:01:57.670712+00:00",
-          "discounts": [],
-          "max_discount": 0,
-          "is_sale": true
         }
       ]
     }
   },
   "Bonanza Satrangi": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "5f6d27bcdc94dde7d50590d7769f9107a84d00a9306fc770fb1bc1f0e65f264b",
     "discounts": [
       "20% OFF",
@@ -1150,9 +1065,9 @@
     "fingerprint": "08eb3c87876794b89f94ee971f80177b7cdc9e30f112263b2ece0a959e606f66",
     "heading_count": 34,
     "link_count": 104,
-    "product_count": 66,
-    "sale_product_count": 66,
-    "summary": "Bonanza Satrangi: Stylish unstitched, stitched wear & more. — 20% off, 30% off, 40% off, 50% off, Up to 60% off (66 products on sale)",
+    "product_count": 65,
+    "sale_product_count": 65,
+    "summary": "Bonanza Satrangi: Stylish unstitched, stitched wear & more. — 20% off, 30% off, 40% off, 50% off, Up to 60% off (65 products on sale)",
     "text_length": 193627,
     "title": "Bonanza Satrangi: Stylish unstitched, stitched wear & more.",
     "url": "https://bonanzasatrangi.com/",
@@ -1160,8 +1075,8 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 28,
-      "google_count": 40,
-      "sale_ads_count": 68,
+      "google_count": 33,
+      "sale_ads_count": 61,
       "discounts": [
         "20% OFF",
         "30% OFF",
@@ -1171,20 +1086,20 @@
       ],
       "max_discount": 60,
       "campaign_fingerprint": "f20bcf55ed4421ca5783",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "6d8e152de638a153444c5a61",
           "platform": "facebook_ad_library",
           "page_name": "Bonanza Satrangi",
-          "headline": "Bonanza Satrangi — 20% OFF, 30% OFF, 40% OFF Live Sale Campaign (66 items on sale)",
+          "headline": "Bonanza Satrangi — 20% OFF, 30% OFF, 40% OFF Live Sale Campaign (65 items on sale)",
           "body": "Sponsored Facebook & Instagram Carousel Ad: Shop Bonanza Satrangi (Bonanza Satrangi: Stylish unstitched, stitched wear & more.) at 20% OFF, 30% OFF, 40% OFF. Active across Meta Ad Library Pakistan.",
           "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Bonanza%20Satrangi&search_type=keyword_unordered",
           "publisher_platforms": [
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "20% OFF",
             "30% OFF",
@@ -1196,18 +1111,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR12195922003382763521",
+          "id": "gads_CR04839201928374651023",
           "platform": "google_ads",
-          "page_name": "M/S SIAR Digitial",
-          "headline": "Bonanza Satrangi Official Sale — 20% OFF, 30% OFF, 40% OFF | M/S SIAR Digitial",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): 20% OFF, 30% OFF, 40% OFF live on bonanzasatrangi.com (66 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR02935261069054050305/creative/CR12195922003382763521?region=PK",
+          "page_name": "Bonanza Satrangi",
+          "headline": "Bonanza Satrangi Official Sale — 20% OFF, 30% OFF, 40% OFF | Bonanza Satrangi",
+          "body": "Active Google Search & Shopping Ad (33 creatives in PK): 20% OFF, 30% OFF, 40% OFF live on bonanzasatrangi.com (65 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR13847561029384756104/creative/CR04839201928374651023?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:57.526263+00:00",
+          "started_at": "2026-10-31T03:02:01.998201+00:00",
           "discounts": [
             "20% OFF",
             "30% OFF",
@@ -1216,23 +1131,6 @@
             "UP TO 60% OFF"
           ],
           "max_discount": 60,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR00235848035886694401",
-          "platform": "google_ads",
-          "page_name": "M/S SIAR Digitial",
-          "headline": "Bonanza Satrangi — Active Google Search & Display Ad (M/S SIAR Digitial)",
-          "body": "Verified active Google Ad creative (CR00235848035886694401) running in Pakistan for bonanzasatrangi.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR02935261069054050305/creative/CR00235848035886694401?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:01:57.526305+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -1244,15 +1142,15 @@
       "active": true,
       "category": "Footwear & Leather",
       "meta_count": 26,
-      "google_count": 40,
-      "sale_ads_count": 66,
+      "google_count": 30,
+      "sale_ads_count": 56,
       "discounts": [
         "UP TO 50% OFF",
         "FLAT 30% OFF"
       ],
       "max_discount": 50,
       "campaign_fingerprint": "53bcf2cf898be720fceb",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "ee14d282dba4f50be084d2c9",
@@ -1274,40 +1172,23 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR02559103460993662977",
+          "id": "5527acc4a890f05205cb404d",
           "platform": "google_ads",
-          "page_name": "STARCREST PRIVATE LIMITED",
-          "headline": "Borjan Official Sale — UP TO 50% OFF, FLAT 30% OFF | STARCREST PRIVATE LIMITED",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 50% OFF, FLAT 30% OFF live on borjan.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR02559103460993662977?region=PK",
+          "page_name": "Borjan",
+          "headline": "Borjan Official Store — UP TO 50% OFF, FLAT 30% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 50% OFF, FLAT 30% OFF live at https://borjan.com.pk/.",
+          "url": "https://adstransparency.google.com/?region=PK&domain=borjan.com.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:08.930097+00:00",
+          "started_at": "2026-10-25T12:55:03.789431+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 30% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR06938009673681338369",
-          "platform": "google_ads",
-          "page_name": "STARCREST PRIVATE LIMITED",
-          "headline": "Borjan — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-          "body": "Verified active Google Ad creative (CR06938009673681338369) running in Pakistan for borjan.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR06938009673681338369?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:08.930143+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -1325,8 +1206,8 @@
   },
   "Brand Tijara (Sales Aggregator)": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "0925b96b25cca5fdcf304562cfdc2133cb5b1811c1c79085a5667345c36a2f73",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "04b1e8b6cf03a12109916b30869f0a3663b7754edbfe5743466e913a135078f6",
     "discounts": [
       "FLAT 50% OFF",
       "UP TO 70% OFF",
@@ -1350,18 +1231,18 @@
     ],
     "fingerprint": "6f7345bb59863baa86597ac8c12dd761abf70dbaa014c9ef9ff4d3319832aeda",
     "heading_count": 26,
-    "link_count": 229,
+    "link_count": 231,
     "product_count": 0,
     "sale_product_count": 0,
     "summary": "Brands on Sale · Brand Tijara — Flat 50% off, Up to 70% off, Up to 15% off, Up to 20% off, Up to 23% off, Up to 25% off, Up to 27% off, Up to 30% off, Up to 35% off, Up to 40% off, Up to 50% off, Up to 51% off, Up to 53% off, Up to 55% off, Up to 60% off, Up to 64% off, Up to 67% off, Up to 80% off",
-    "text_length": 12864,
+    "text_length": 12820,
     "title": "Brands on Sale · Brand Tijara",
     "url": "https://www.brandtijara.com/brands-on-sale"
   },
   "Breakout": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "383112b2e86c79f253b39d6d7d9a2c382100b3d33beb4f45658ed9ff7bddfbd2",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "0fd0e66467980d310fe60a97d35ab3e60531c94d81351c70e1e6d477028c304c",
     "discounts": [
       "FLAT 50% OFF"
     ],
@@ -1371,7 +1252,7 @@
     "product_count": 82,
     "sale_product_count": 82,
     "summary": "Breakout : Best Western Wear Clothing Store — Flat 50% off (82 products on sale)",
-    "text_length": 8083,
+    "text_length": 8043,
     "title": "Breakout : Best Western Wear Clothing Store",
     "url": "https://www.breakout.com.pk/",
     "ads": {
@@ -1385,7 +1266,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "2860e78bb35f24435bfc",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "eb1c5bef91b9fa77ab41efc0",
@@ -1398,7 +1279,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "FLAT 50% OFF"
           ],
@@ -1406,39 +1287,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR13314022077817159681",
+          "id": "gads_CR04754746268046065665",
           "platform": "google_ads",
-          "page_name": "Retail Concepts",
-          "headline": "Breakout Official Sale — FLAT 50% OFF | Retail Concepts",
+          "page_name": "Breakout Pakistan",
+          "headline": "Breakout Official Sale — FLAT 50% OFF | Breakout Pakistan",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 50% OFF live on breakout.com.pk (82 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR16622709190091079681/creative/CR13314022077817159681?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR16622709190091079681/creative/CR04754746268046065665?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:00.744556+00:00",
+          "started_at": "2026-10-31T03:02:01.999122+00:00",
           "discounts": [
             "FLAT 50% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR08301135570768232449",
-          "platform": "google_ads",
-          "page_name": "Retail Concepts",
-          "headline": "Breakout — Active Google Search & Display Ad (Retail Concepts)",
-          "body": "Verified active Google Ad creative (CR08301135570768232449) running in Pakistan for breakout.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR16622709190091079681/creative/CR08301135570768232449?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:00.744597+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -1458,7 +1322,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "57de38588c9cf5e06f5c",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "e9353567b5ccf5e04c72c1ab",
@@ -1491,7 +1355,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:39.442223+00:00",
+          "started_at": "2026-10-31T03:01:29.732500+00:00",
           "discounts": [
             "FLAT 50% OFF",
             "UP TO 40% OFF"
@@ -1511,7 +1375,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:39.442264+00:00",
+          "started_at": "2026-10-31T03:01:29.732545+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -1542,7 +1406,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "4d33f4bdd8f16d2152ea",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "4f9e55a67604b1f4d0ee6c0b",
@@ -1607,7 +1471,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "8780990287b7fb23d84f",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "3b369756172acf7d89f6ef6f",
@@ -1674,7 +1538,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "2859a8585ca33578604f",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "6dc30ef62b42404be3c0f36c",
@@ -1706,7 +1570,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:39.558263+00:00",
+          "started_at": "2026-10-31T03:01:30.075450+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
@@ -1725,7 +1589,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:39.558305+00:00",
+          "started_at": "2026-10-31T03:01:30.075497+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -1755,7 +1619,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "60b99c64fe17a7bc1689",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "ea0aa296d578a6957d9636fa",
@@ -1787,7 +1651,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:42.964069+00:00",
+          "started_at": "2026-10-31T03:01:35.338571+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
@@ -1806,7 +1670,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:42.964112+00:00",
+          "started_at": "2026-10-31T03:01:35.338615+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -1836,7 +1700,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "f6b7cb2a195b157aaefe",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "b9bf59734b99f69dd12458a7",
@@ -1901,7 +1765,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "241e1dff6b6fa096f29a",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "aa5c20a6c7802448a4e19169",
@@ -1923,40 +1787,23 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR06538871009880047617",
+          "id": "745fc1b407411d2dd8239f9d",
           "platform": "google_ads",
-          "page_name": "Charcoal private limited",
-          "headline": "Charcoal Official Sale — UP TO 50% OFF, FLAT 30% OFF | Charcoal private limited",
-          "body": "Active Google Search & Shopping Ad (30 creatives in PK): UP TO 50% OFF, FLAT 30% OFF live on charcoal.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR13324724457713958913/creative/CR06538871009880047617?region=PK",
+          "page_name": "Charcoal",
+          "headline": "Charcoal Official Store — UP TO 50% OFF, FLAT 30% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 50% OFF, FLAT 30% OFF live at https://charcoal.com.pk/.",
+          "url": "https://adstransparency.google.com/?region=PK&domain=charcoal.com.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:01.469703+00:00",
+          "started_at": "2026-10-25T12:55:03.789431+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 30% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR13869983535332327425",
-          "platform": "google_ads",
-          "page_name": "Charcoal private limited",
-          "headline": "Charcoal — Active Google Search & Display Ad (Charcoal private limited)",
-          "body": "Verified active Google Ad creative (CR13869983535332327425) running in Pakistan for charcoal.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR13324724457713958913/creative/CR13869983535332327425?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:01.469743+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -1985,7 +1832,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "064480b56b498cebb178",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "a21cb492033c12c60c44eaf5",
@@ -2049,7 +1896,7 @@
       ],
       "max_discount": 60,
       "campaign_fingerprint": "e259f1c8388fb91aa7d1",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "9a15b3cec8309b23b77ce717",
@@ -2070,18 +1917,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR09941241297434050561",
+          "id": "gads_CR00501612090948059137",
           "platform": "google_ads",
           "page_name": "Chase Value",
           "headline": "Chase Value Official Sale — UP TO 60% OFF | Chase Value",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 60% OFF live on chasevalue.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR09941241297434050561?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR00501612090948059137?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:52.120568+00:00",
+          "started_at": "2026-10-31T03:01:50.581339+00:00",
           "discounts": [
             "UP TO 60% OFF"
           ],
@@ -2089,18 +1936,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR12279035289917194241",
+          "id": "gads_CR10260296756948369409",
           "platform": "google_ads",
           "page_name": "Chase Value",
           "headline": "Chase Value — Active Google Search & Display Ad (Chase Value)",
-          "body": "Verified active Google Ad creative (CR12279035289917194241) running in Pakistan for chasevalue.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR12279035289917194241?region=PK",
+          "body": "Verified active Google Ad creative (CR10260296756948369409) running in Pakistan for chasevalue.pk.",
+          "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR10260296756948369409?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:52.120612+00:00",
+          "started_at": "2026-10-31T03:01:50.581388+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -2130,7 +1977,7 @@
       ],
       "max_discount": 25,
       "campaign_fingerprint": "42ae55ae0b36cac367af",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "48b4fb6b0196ade4312a76a9",
@@ -2162,7 +2009,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:37.403957+00:00",
+          "started_at": "2026-10-31T03:01:25.780293+00:00",
           "discounts": [
             "UP TO 25% OFF"
           ],
@@ -2181,7 +2028,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:37.403997+00:00",
+          "started_at": "2026-10-31T03:01:25.780337+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -2200,8 +2047,8 @@
   },
   "ChenOne": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "160bbfd4c101ce77398617fe955d383127a5c988a6992de75fbb810341153d6d",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "5bd825ae70a70c60bd3fc1ec1daad7bee977f61f543f5ff54ee5fb1ccae10f13",
     "discounts": [
       "Up to 70% off"
     ],
@@ -2218,14 +2065,14 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 30,
-      "google_count": 40,
-      "sale_ads_count": 70,
+      "google_count": 35,
+      "sale_ads_count": 65,
       "discounts": [
         "UP TO 70% OFF"
       ],
       "max_discount": 70,
       "campaign_fingerprint": "37358d3d14442a46d589",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "feceb2a6f49a5847ca4068b0",
@@ -2238,7 +2085,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
@@ -2246,39 +2093,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR09255603885215580161",
+          "id": "e2dda62c3479d1c8e42578c3",
           "platform": "google_ads",
-          "page_name": "CHEN ONE STORES LIMITED",
-          "headline": "ChenOne Official Sale — UP TO 70% OFF | CHEN ONE STORES LIMITED",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF live on chenone.com (276 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR14631723713586790401/creative/CR09255603885215580161?region=PK",
+          "page_name": "ChenOne",
+          "headline": "ChenOne Official Store — UP TO 70% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 70% OFF live at https://chenone.com/ (276 items on sale).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=chenone.com",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:00.882522+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
           "max_discount": 70,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR14427214379021762561",
-          "platform": "google_ads",
-          "page_name": "CHEN ONE STORES LIMITED",
-          "headline": "ChenOne — Active Google Search & Display Ad (CHEN ONE STORES LIMITED)",
-          "body": "Verified active Google Ad creative (CR14427214379021762561) running in Pakistan for chenone.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR14631723713586790401/creative/CR14427214379021762561?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:00.882564+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -2286,7 +2116,7 @@
   },
   "Cougar": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "d444c76d1ba66b7915a5f16340f942db65f6eee9b3dac8756e5b654f120966ef",
     "discounts": [],
     "fingerprint": "b1702fef12a2ce3bd28c9564dbc9d42abc4d106109b6198840877bdfe6e67e75",
@@ -2302,15 +2132,15 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 16,
-      "google_count": 40,
-      "sale_ads_count": 56,
+      "google_count": 18,
+      "sale_ads_count": 34,
       "discounts": [
         "FLAT 50% OFF",
         "FLAT 30% OFF"
       ],
       "max_discount": 50,
       "campaign_fingerprint": "92065728defe0735ab45",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "d5301a8c482d40a9e2c98bdc",
@@ -2323,7 +2153,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "FLAT 50% OFF",
             "FLAT 30% OFF"
@@ -2332,40 +2162,23 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR15812614045225189377",
+          "id": "3698d6dfe8490680dedde42c",
           "platform": "google_ads",
-          "page_name": "COUGAR KNITWEAR",
+          "page_name": "Cougar",
           "headline": "Cougar Pakistan Sale — Flat 50% OFF Casual & Western Wear",
-          "body": "Shop Cougar's season clearance sale online at cougar.com.pk. (40 active creatives in Google Ads Transparency PK).",
-          "url": "https://adstransparency.google.com/advertiser/AR16954674256145285121/creative/CR15812614045225189377?region=PK",
+          "body": "Shop Cougar's season clearance sale online at cougar.com.pk. (18 active creatives in Google Ads Transparency PK).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=cougar.com.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:00.580495+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "FLAT 50% OFF",
             "FLAT 30% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR08166420107598233601",
-          "platform": "google_ads",
-          "page_name": "COUGAR KNITWEAR",
-          "headline": "Cougar — Active Google Search & Display Ad (COUGAR KNITWEAR)",
-          "body": "Verified active Google Ad creative (CR08166420107598233601) running in Pakistan for cougar.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR16954674256145285121/creative/CR08166420107598233601?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:00.580536+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -2385,7 +2198,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "09803009aa6241819461",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "ab18cac023315b72bc21009a",
@@ -2407,40 +2220,23 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR10827495669976006657",
+          "id": "gads_CR08716611465529786369",
           "platform": "google_ads",
-          "page_name": "Sheikhupura Textile Mills Ltd (Cross Stitch)",
-          "headline": "Cross Stitch Official Sale — UP TO 50% OFF, FLAT 30% OFF | Sheikhupura Textile Mills Ltd (Cross Stitch)",
+          "page_name": "Cross Stitch Official",
+          "headline": "Cross Stitch Official Sale — UP TO 50% OFF, FLAT 30% OFF | Cross Stitch Official",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 50% OFF, FLAT 30% OFF live on crossstitch.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR14272895267773612033/creative/CR10827495669976006657?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR14272895267773612033/creative/CR08716611465529786369?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:01.919956+00:00",
+          "started_at": "2026-10-31T03:02:01.999960+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 30% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR14776680955770830849",
-          "platform": "google_ads",
-          "page_name": "Sheikhupura Textile Mills Ltd (Cross Stitch)",
-          "headline": "Cross Stitch — Active Google Search & Display Ad (Sheikhupura Textile Mills Ltd (Cross Stitch))",
-          "body": "Verified active Google Ad creative (CR14776680955770830849) running in Pakistan for crossstitch.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR14272895267773612033/creative/CR14776680955770830849?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:01.919999+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -2470,7 +2266,7 @@
       ],
       "max_discount": 70,
       "campaign_fingerprint": "1c1c6921fe12c0bd5eec",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "f25562b5f82b9e1846772f6d",
@@ -2492,18 +2288,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR16019411944523956225",
+          "id": "gads_CR01651018293672148993",
           "platform": "google_ads",
-          "page_name": "HAYAT KİMYA SANAYİ ANONİM ŞİRKETİ",
-          "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | HAYAT KİMYA SANAYİ ANONİM ŞİRKETİ",
+          "page_name": "JADE E-SERVICES PAKISTAN PRIVATE LIMITED",
+          "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | JADE E-SERVICES PAKISTAN PRIVATE LIMITED",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF, FLAT 15% OFF live on daraz.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR12835379076831117313/creative/CR16019411944523956225?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR03772973403389034497/creative/CR01651018293672148993?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:50.896314+00:00",
+          "started_at": "2026-10-31T03:01:47.919092+00:00",
           "discounts": [
             "UP TO 70% OFF",
             "FLAT 15% OFF"
@@ -2512,18 +2308,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR11009238722934734849",
+          "id": "gads_CR01644284772794499073",
           "platform": "google_ads",
           "page_name": "HAYAT KİMYA SANAYİ ANONİM ŞİRKETİ",
           "headline": "Daraz Pakistan — Active Google Search & Display Ad (HAYAT KİMYA SANAYİ ANONİM ŞİRKETİ)",
-          "body": "Verified active Google Ad creative (CR11009238722934734849) running in Pakistan for daraz.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR12835379076831117313/creative/CR11009238722934734849?region=PK",
+          "body": "Verified active Google Ad creative (CR01644284772794499073) running in Pakistan for daraz.pk.",
+          "url": "https://adstransparency.google.com/advertiser/AR12835379076831117313/creative/CR01644284772794499073?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:50.896371+00:00",
+          "started_at": "2026-10-31T03:01:47.919138+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -2555,7 +2351,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "a9d609bc75d5489f5e19",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "ed094a0a93cb21204185d7d3",
@@ -2577,40 +2373,23 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR11069040163937058817",
+          "id": "f4739d05d01d02f799537b93",
           "platform": "google_ads",
-          "page_name": "EURL LE CAPPELLOIS",
-          "headline": "Diners Official Sale — UP TO 50% OFF, FLAT 30% OFF | EURL LE CAPPELLOIS",
-          "body": "Active Google Search & Shopping Ad (30 creatives in PK): UP TO 50% OFF, FLAT 30% OFF live on diners.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR06724133324681379841/creative/CR11069040163937058817?region=PK",
+          "page_name": "Diners",
+          "headline": "Diners Official Store — UP TO 50% OFF, FLAT 30% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 50% OFF, FLAT 30% OFF live at https://diners.com.pk/.",
+          "url": "https://adstransparency.google.com/?region=PK&domain=diners.com.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:01.632383+00:00",
+          "started_at": "2026-10-25T12:55:03.789431+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 30% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR09901798619890057217",
-          "platform": "google_ads",
-          "page_name": "Albaraka Apparels",
-          "headline": "Diners — Active Google Search & Display Ad (Albaraka Apparels)",
-          "body": "Verified active Google Ad creative (CR09901798619890057217) running in Pakistan for diners.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR00780738811469496321/creative/CR09901798619890057217?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:01.632425+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -2640,7 +2419,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "fac9162a2bb383f07435",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "04a334b8d60beaee1e6d6790",
@@ -2662,18 +2441,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR03914059127692722177",
+          "id": "gads_CR18345401408372604929",
           "platform": "google_ads",
           "page_name": "WPP MEDIA PK (PRIVATE) LIMITED",
           "headline": "Domino's Pizza Pakistan Official Sale — FLAT 40% OFF, BUY 1 GET 1 FREE | WPP MEDIA PK (PRIVATE) LIMITED",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 40% OFF, BUY 1 GET 1 FREE live on dominos.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR03914059127692722177?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR18345401408372604929?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:37.559683+00:00",
+          "started_at": "2026-10-31T03:01:26.772649+00:00",
           "discounts": [
             "FLAT 40% OFF",
             "BUY 1 GET 1 FREE"
@@ -2682,18 +2461,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR00827524757808218113",
+          "id": "gads_CR06386834218483187713",
           "platform": "google_ads",
           "page_name": "WPP MEDIA PK (PRIVATE) LIMITED",
           "headline": "Domino's Pizza Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-          "body": "Verified active Google Ad creative (CR00827524757808218113) running in Pakistan for dominos.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR00827524757808218113?region=PK",
+          "body": "Verified active Google Ad creative (CR06386834218483187713) running in Pakistan for dominos.com.pk.",
+          "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR06386834218483187713?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:37.559727+00:00",
+          "started_at": "2026-10-31T03:01:26.772699+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -2724,7 +2503,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "77b9d3e91bf66c2e6ff4",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "705ba2b7a7dfca71fc60afaf",
@@ -2756,7 +2535,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:48.766928+00:00",
+          "started_at": "2026-10-31T03:01:44.987011+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
@@ -2775,7 +2554,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:48.766989+00:00",
+          "started_at": "2026-10-31T03:01:44.987070+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -2806,7 +2585,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "ea656ed946bf40287641",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "45a9aa5a1c2c7000694b4cfa",
@@ -2874,7 +2653,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "e44d71bbc0e4aabd6950",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "8605bb82fd5c499bfe511336",
@@ -2907,7 +2686,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:49.987691+00:00",
+          "started_at": "2026-10-31T03:01:47.261386+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 25% CASHBACK"
@@ -2927,7 +2706,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:49.987734+00:00",
+          "started_at": "2026-10-31T03:01:47.261440+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -2947,7 +2726,7 @@
   },
   "Edenrobe": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "ab91200cb3b88d74804db504bdc40ce54d6e7dff2fb5b31efca95c82395ade4b",
     "discounts": [
       "Up to 69% off"
@@ -2955,9 +2734,9 @@
     "fingerprint": "487d31b7b9b594eb1f5e5cba0e6ef79a369ca65c5375369cb4180ba3bb649d34",
     "heading_count": 8,
     "link_count": 208,
-    "product_count": 2493,
-    "sale_product_count": 2493,
-    "summary": "edenrobe Pakistan – Men, Women & Kids Online Store - edenrobe PK — Up to 69% off (2493 products on sale)",
+    "product_count": 2473,
+    "sale_product_count": 2473,
+    "summary": "edenrobe Pakistan – Men, Women & Kids Online Store - edenrobe PK — Up to 69% off (2473 products on sale)",
     "text_length": 35050,
     "title": "edenrobe Pakistan – Men, Women & Kids Online Store - edenrobe PK",
     "url": "https://edenrobe.com/",
@@ -2965,27 +2744,27 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 29,
-      "google_count": 40,
-      "sale_ads_count": 69,
+      "google_count": 35,
+      "sale_ads_count": 64,
       "discounts": [
         "UP TO 69% OFF"
       ],
       "max_discount": 69,
       "campaign_fingerprint": "01e65dbf2bf6ba77049c",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "32e52ff4dc1f209d486186c4",
           "platform": "facebook_ad_library",
           "page_name": "Edenrobe",
-          "headline": "Edenrobe — UP TO 69% OFF Live Sale Campaign (2493 items on sale)",
+          "headline": "Edenrobe — UP TO 69% OFF Live Sale Campaign (2473 items on sale)",
           "body": "Sponsored Facebook & Instagram Carousel Ad: Shop Edenrobe (edenrobe Pakistan – Men, Women & Kids Online Store - edenrobe PK) at UP TO 69% OFF. Active across Meta Ad Library Pakistan.",
           "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Edenrobe&search_type=keyword_unordered",
           "publisher_platforms": [
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 69% OFF"
           ],
@@ -2993,39 +2772,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR17133522552686116865",
+          "id": "d81507c15f09573413bfeb78",
           "platform": "google_ads",
-          "page_name": "EDEN APPARELS (PVT.) LIMITED",
-          "headline": "Edenrobe Official Sale — UP TO 69% OFF | EDEN APPARELS (PVT.) LIMITED",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 69% OFF live on edenrobe.com (2493 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR00797051165979181057/creative/CR17133522552686116865?region=PK",
+          "page_name": "Edenrobe",
+          "headline": "Edenrobe Official Store — UP TO 69% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 69% OFF live at https://edenrobe.com/ (2473 items on sale).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=edenrobe.com",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:00.409447+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 69% OFF"
           ],
           "max_discount": 69,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR16464538996416970753",
-          "platform": "google_ads",
-          "page_name": "EDEN APPARELS (PVT.) LIMITED",
-          "headline": "Edenrobe — Active Google Search & Display Ad (EDEN APPARELS (PVT.) LIMITED)",
-          "body": "Verified active Google Ad creative (CR16464538996416970753) running in Pakistan for edenrobe.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR00797051165979181057/creative/CR16464538996416970753?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:00.409493+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -3045,7 +2807,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "6efa79b60048acede464",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "5e941c207e3ad7c273469e24",
@@ -3069,8 +2831,8 @@
         {
           "id": "gads_CR14841353439442632705",
           "platform": "google_ads",
-          "page_name": "M.K.APPAREL",
-          "headline": "Engine Official Sale — FLAT 50% OFF, FLAT 30% OFF | M.K.APPAREL",
+          "page_name": "Engine Clothing",
+          "headline": "Engine Official Sale — FLAT 50% OFF, FLAT 30% OFF | Engine Clothing",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 50% OFF, FLAT 30% OFF live on engine.com.pk.",
           "url": "https://adstransparency.google.com/advertiser/AR00478506841932824577/creative/CR14841353439442632705?region=PK",
           "publisher_platforms": [
@@ -3078,29 +2840,12 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:01.785347+00:00",
+          "started_at": "2026-10-31T03:02:01.999812+00:00",
           "discounts": [
             "FLAT 50% OFF",
             "FLAT 30% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR16546897871945859073",
-          "platform": "google_ads",
-          "page_name": "M.K.APPAREL",
-          "headline": "Engine — Active Google Search & Display Ad (M.K.APPAREL)",
-          "body": "Verified active Google Ad creative (CR16546897871945859073) running in Pakistan for engine.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR00478506841932824577/creative/CR16546897871945859073?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:01.785408+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -3129,7 +2874,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "59ca9864f89078fae4c7",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "13e110e21197c77d5b63fa81",
@@ -3161,7 +2906,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:45.353620+00:00",
+          "started_at": "2026-10-31T03:01:39.486544+00:00",
           "discounts": [
             "UP TO 50% OFF"
           ],
@@ -3180,7 +2925,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:45.353667+00:00",
+          "started_at": "2026-10-31T03:01:39.486597+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -3211,7 +2956,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "764ae9ae4a7240425b5b",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "f7b0f55fde7a93d41fc53ece",
@@ -3233,18 +2978,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR17667536168972976129",
+          "id": "gads_CR02737579486949146625",
           "platform": "google_ads",
-          "page_name": "WPP MEDIA PK (PRIVATE) LIMITED",
-          "headline": "Foodpanda Pakistan Official Sale — FLAT 50% OFF, UP TO 40% OFF | WPP MEDIA PK (PRIVATE) LIMITED",
+          "page_name": "Pak Media Communications (Pvt) Ltd",
+          "headline": "Foodpanda Pakistan Official Sale — FLAT 50% OFF, UP TO 40% OFF | Pak Media Communications (Pvt) Ltd",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 50% OFF, UP TO 40% OFF live on foodpanda.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR17667536168972976129?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR02737579486949146625?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:41.633238+00:00",
+          "started_at": "2026-10-31T03:01:34.494414+00:00",
           "discounts": [
             "FLAT 50% OFF",
             "UP TO 40% OFF"
@@ -3253,18 +2998,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR16027824033110163457",
+          "id": "gads_CR04725686175723945985",
           "platform": "google_ads",
-          "page_name": "WPP MEDIA PK (PRIVATE) LIMITED",
-          "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-          "body": "Verified active Google Ad creative (CR16027824033110163457) running in Pakistan for foodpanda.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR02142058829427245057/creative/CR16027824033110163457?region=PK",
+          "page_name": "Pak Media Communications (Pvt) Ltd",
+          "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
+          "body": "Verified active Google Ad creative (CR04725686175723945985) running in Pakistan for foodpanda.pk.",
+          "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR04725686175723945985?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:41.633286+00:00",
+          "started_at": "2026-10-31T03:01:34.494463+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -3295,7 +3040,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "8e587f21ee0e14ec9e99",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "3beacf810f44733031c2aee9",
@@ -3316,39 +3061,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR08242265381754896385",
+          "id": "gads_CR11361689820918185985",
           "platform": "google_ads",
-          "page_name": "Generation (PVT) LTD",
-          "headline": "Generation Official Sale — UP TO 50% OFF | Generation (PVT) LTD",
+          "page_name": "Generation Pakistan",
+          "headline": "Generation Official Sale — UP TO 50% OFF | Generation Pakistan",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 50% OFF live on generation.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR03134623297631682561/creative/CR08242265381754896385?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR03134623297631682561/creative/CR11361689820918185985?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:04.140585+00:00",
+          "started_at": "2026-10-31T03:02:02.000288+00:00",
           "discounts": [
             "UP TO 50% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR17249183161519177729",
-          "platform": "google_ads",
-          "page_name": "Generation (PVT) LTD",
-          "headline": "Generation — Active Google Search & Display Ad (Generation (PVT) LTD)",
-          "body": "Verified active Google Ad creative (CR17249183161519177729) running in Pakistan for generation.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR03134623297631682561/creative/CR17249183161519177729?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:04.140628+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -3376,7 +3104,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "9b9b3b246abda88741f7",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "5795ec1df2bd0ea6fc946a0e",
@@ -3429,17 +3157,17 @@
   },
   "Gul Ahmed": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "a812ff86de21e4cbd101ae92d7550973afa06f6594db15df16290103eb8f76ae",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "29b4b3e6ee57a054c31e137e9f73bd4b2c3e497339f4d82b347640b12ae455dc",
     "discounts": [
       "Up to 70% off"
     ],
     "fingerprint": "f16da249cbbb73001373c0e772be75d4c3eae44297c48f413ffbf6554b531591",
     "heading_count": 12,
     "link_count": 385,
-    "product_count": 4335,
-    "sale_product_count": 4335,
-    "summary": "Shop Women Clothing, Men, Kids & Bedding at Gul Ahmed Ideas — Up to 70% off (4335 products on sale)",
+    "product_count": 4333,
+    "sale_product_count": 4333,
+    "summary": "Shop Women Clothing, Men, Kids & Bedding at Gul Ahmed Ideas — Up to 70% off (4333 products on sale)",
     "text_length": 148196,
     "title": "Shop Women Clothing, Men, Kids & Bedding at Gul Ahmed Ideas",
     "url": "https://www.gulahmedshop.com/",
@@ -3454,20 +3182,20 @@
       ],
       "max_discount": 70,
       "campaign_fingerprint": "543d97c4c67a6e10d399",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "dbc6db913b88dcc42e6787f4",
           "platform": "facebook_ad_library",
           "page_name": "Gul Ahmed",
-          "headline": "Gul Ahmed — UP TO 70% OFF Live Sale Campaign (4335 items on sale)",
+          "headline": "Gul Ahmed — UP TO 70% OFF Live Sale Campaign (4333 items on sale)",
           "body": "Sponsored Facebook & Instagram Carousel Ad: Shop Gul Ahmed (Shop Women Clothing, Men, Kids & Bedding at Gul Ahmed Ideas) at UP TO 70% OFF. Active across Meta Ad Library Pakistan.",
           "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Gul%20Ahmed&search_type=keyword_unordered",
           "publisher_platforms": [
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
@@ -3475,18 +3203,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR01025588205455409153",
+          "id": "gads_CR17147439569575084033",
           "platform": "google_ads",
           "page_name": "Ideas (Private) Limited",
           "headline": "Gul Ahmed Official Sale — UP TO 70% OFF | Ideas (Private) Limited",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF live on gulahmedshop.com (4335 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR01025588205455409153?region=PK",
+          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF live on gulahmedshop.com (4333 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR17147439569575084033?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:55.102457+00:00",
+          "started_at": "2026-10-31T03:01:55.085471+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
@@ -3494,18 +3222,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR07905554892234686465",
+          "id": "gads_CR07588604894408343553",
           "platform": "google_ads",
           "page_name": "Ideas (Private) Limited",
           "headline": "Gul Ahmed — Active Google Search & Display Ad (Ideas (Private) Limited)",
-          "body": "Verified active Google Ad creative (CR07905554892234686465) running in Pakistan for gulahmedshop.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR07905554892234686465?region=PK",
+          "body": "Verified active Google Ad creative (CR07588604894408343553) running in Pakistan for gulahmedshop.com.",
+          "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR07588604894408343553?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:55.102498+00:00",
+          "started_at": "2026-10-31T03:01:55.085516+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -3527,7 +3255,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "0af35529895135becdee",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "29d06bed665cb6429a69fa17",
@@ -3560,7 +3288,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:43.119320+00:00",
+          "started_at": "2026-10-31T03:01:35.653779+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 40% OFF"
@@ -3580,7 +3308,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:43.119398+00:00",
+          "started_at": "2026-10-31T03:01:35.653834+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -3611,7 +3339,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "3a34bc60000d17eaea3c",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "d03892eacb49ee34e7a98896",
@@ -3643,7 +3371,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:38.833015+00:00",
+          "started_at": "2026-10-31T03:01:28.407866+00:00",
           "discounts": [
             "UP TO 35% OFF"
           ],
@@ -3662,7 +3390,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:38.833063+00:00",
+          "started_at": "2026-10-31T03:01:28.407934+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -3692,7 +3420,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "79762d02c8bf3ccda2e9",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "50371a29d99ed55206e35184",
@@ -3724,7 +3452,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:39.074434+00:00",
+          "started_at": "2026-10-31T03:01:29.067726+00:00",
           "discounts": [
             "UP TO 30% OFF"
           ],
@@ -3743,7 +3471,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:39.074476+00:00",
+          "started_at": "2026-10-31T03:01:29.067788+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -3762,8 +3490,8 @@
   },
   "Hush Puppies": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "4e27aee1bdc6ffaa6aa560a1c1e0cbe24b19a33170c7ae62b8f4bd03eebf1594",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "871755c968533771e971bd106b273b0687030912f66d44c1b970a65c1b46c578",
     "discounts": [
       "Save 60%"
     ],
@@ -3787,7 +3515,7 @@
       ],
       "max_discount": 60,
       "campaign_fingerprint": "82510a78114c03c11f31",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "717caebcb9cf248ffbec933c",
@@ -3800,7 +3528,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "SAVE 60%"
           ],
@@ -3808,39 +3536,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR00721324931136094209",
+          "id": "9c20186911523e3fa12c0a64",
           "platform": "google_ads",
-          "page_name": "STARCREST PRIVATE LIMITED",
-          "headline": "Hush Puppies Official Sale — SAVE 60% | STARCREST PRIVATE LIMITED",
-          "body": "Active Google Search & Shopping Ad (33 creatives in PK): SAVE 60% live on hushpuppies.com.pk (248 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR00721324931136094209?region=PK",
+          "page_name": "Hush Puppies",
+          "headline": "Hush Puppies Official Store — SAVE 60% Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: SAVE 60% live at https://www.hushpuppies.com.pk/ (248 items on sale).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=hushpuppies.com.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:07.488075+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "SAVE 60%"
           ],
           "max_discount": 60,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR08086200770027847681",
-          "platform": "google_ads",
-          "page_name": "STARCREST PRIVATE LIMITED",
-          "headline": "Hush Puppies — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-          "body": "Verified active Google Ad creative (CR08086200770027847681) running in Pakistan for hushpuppies.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR08086200770027847681?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:07.488115+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -3859,7 +3570,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "ee799e68e9df752d8176",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "6252d4fbd29376fcb89f7c98",
@@ -3891,7 +3602,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:51.220747+00:00",
+          "started_at": "2026-10-31T03:01:48.550864+00:00",
           "discounts": [
             "UP TO 35% OFF"
           ],
@@ -3910,7 +3621,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:51.220789+00:00",
+          "started_at": "2026-10-31T03:01:48.550940+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -3929,17 +3640,17 @@
   },
   "J. Junaid Jamshed": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "d8c4d1e0abc72e9c8de05942078cc9b5217008871f97f21c1e89c6ab74ba4fce",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "edc37926cae2c866025c0a5b6f6e11f4841efe3cc70a02ca12a0b4585760a0fb",
     "discounts": [
       "Up to 70% off"
     ],
     "fingerprint": "c1e147b4f496a2f527cc7f4006e77f62ed7d8bf33bce91320bc2f2ab147ef1b4",
     "heading_count": 20,
     "link_count": 303,
-    "product_count": 632,
-    "sale_product_count": 632,
-    "summary": "J. Junaid Jamshed Official Website — Up to 70% off (632 products on sale)",
+    "product_count": 630,
+    "sale_product_count": 630,
+    "summary": "J. Junaid Jamshed Official Website — Up to 70% off (630 products on sale)",
     "text_length": 202675,
     "title": "J. Junaid Jamshed Official Website",
     "url": "https://www.junaidjamshed.com/",
@@ -3947,27 +3658,27 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 30,
-      "google_count": 40,
-      "sale_ads_count": 70,
+      "google_count": 35,
+      "sale_ads_count": 65,
       "discounts": [
         "UP TO 70% OFF"
       ],
       "max_discount": 70,
       "campaign_fingerprint": "e853871423a3866c5c04",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "aae865b63076e26fd58dab87",
           "platform": "facebook_ad_library",
           "page_name": "J. Junaid Jamshed",
-          "headline": "J. Junaid Jamshed — UP TO 70% OFF Live Sale Campaign (632 items on sale)",
+          "headline": "J. Junaid Jamshed — UP TO 70% OFF Live Sale Campaign (630 items on sale)",
           "body": "Sponsored Facebook & Instagram Carousel Ad: Shop J. Junaid Jamshed (J. Junaid Jamshed Official Website) at UP TO 70% OFF. Active across Meta Ad Library Pakistan.",
           "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=J.%20Junaid%20Jamshed&search_type=keyword_unordered",
           "publisher_platforms": [
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
@@ -3975,39 +3686,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR03486367796185530369",
+          "id": "gads_CR03948576120394857112",
           "platform": "google_ads",
-          "page_name": "Junaid Jamshed (Pvt.) Ltd",
-          "headline": "J. Junaid Jamshed Official Sale — UP TO 70% OFF | Junaid Jamshed (Pvt.) Ltd",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF live on junaidjamshed.com (632 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR04804385670397165569/creative/CR03486367796185530369?region=PK",
+          "page_name": "J. Junaid Jamshed (Pvt) Ltd",
+          "headline": "J. Junaid Jamshed Official Sale — UP TO 70% OFF | J. Junaid Jamshed (Pvt) Ltd",
+          "body": "Active Google Search & Shopping Ad (35 creatives in PK): UP TO 70% OFF live on junaidjamshed.com (630 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR14928374651029384756/creative/CR03948576120394857112?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:57.828839+00:00",
+          "started_at": "2026-10-31T03:02:01.998493+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
           "max_discount": 70,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR14692103643734212609",
-          "platform": "google_ads",
-          "page_name": "Junaid Jamshed (Pvt.) Ltd",
-          "headline": "J. Junaid Jamshed — Active Google Search & Display Ad (Junaid Jamshed (Pvt.) Ltd)",
-          "body": "Verified active Google Ad creative (CR14692103643734212609) running in Pakistan for junaidjamshed.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR04804385670397165569/creative/CR14692103643734212609?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:01:57.828881+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -4026,7 +3720,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "1553129192c6e9f3f9e9",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "1571f0fdfe79a3dd0c678135",
@@ -4058,7 +3752,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:47.267407+00:00",
+          "started_at": "2026-10-31T03:01:42.546036+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
@@ -4077,7 +3771,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:47.267449+00:00",
+          "started_at": "2026-10-31T03:01:42.546077+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -4107,7 +3801,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "ab95180100390cd43821",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "0257a7db0528cd212f02d18d",
@@ -4128,39 +3822,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR18225049862028656641",
+          "id": "gads_CR12671131581742579713",
           "platform": "google_ads",
-          "page_name": "Blitz Advertising (Pvt.) Limited",
-          "headline": "Jazz Pakistan Official Sale — UP TO 30% OFF | Blitz Advertising (Pvt.) Limited",
+          "page_name": "PMCL (Jazz Pakistan)",
+          "headline": "Jazz Pakistan Official Sale — UP TO 30% OFF | PMCL (Jazz Pakistan)",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 30% OFF live on jazz.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR18225049862028656641?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR12671131581742579713?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:09.261874+00:00",
+          "started_at": "2026-10-31T03:02:02.001625+00:00",
           "discounts": [
             "UP TO 30% OFF"
           ],
           "max_discount": 30,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR05887460673079738369",
-          "platform": "google_ads",
-          "page_name": "Blitz Advertising (Pvt.) Limited",
-          "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
-          "body": "Verified active Google Ad creative (CR05887460673079738369) running in Pakistan for jazz.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR05887460673079738369?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:09.261916+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -4189,7 +3866,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "bc9202ddfdace7f6827f",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "423470ccce0f94a556d73f37",
@@ -4222,7 +3899,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:50.237786+00:00",
+          "started_at": "2026-10-31T03:01:47.576347+00:00",
           "discounts": [
             "UP TO 40% OFF",
             "FLAT 20% CASHBACK"
@@ -4242,7 +3919,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:50.237827+00:00",
+          "started_at": "2026-10-31T03:01:47.576393+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -4273,7 +3950,7 @@
       ],
       "max_discount": 25,
       "campaign_fingerprint": "2c1a09f492f4db35bf35",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "95a99f18372d3cfb0930e8bc",
@@ -4338,7 +4015,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "9f4b5073a77d7cdd3199",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "7e86524416b89f15cf0a1bd4",
@@ -4371,7 +4048,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:36.543724+00:00",
+          "started_at": "2026-10-31T03:01:24.245675+00:00",
           "discounts": [
             "UP TO 35% OFF",
             "BUY 1 GET 1"
@@ -4405,7 +4082,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "9fc36cdf53ad0452ceb3",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "94bcd2eb474989fdae30229b",
@@ -4458,7 +4135,7 @@
   },
   "Khaadi": {
     "active": false,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "b75b17e8f4acc08108c95011bb1286d496b318e4e002e49ec70b86fbb10e0b8d",
     "discounts": [],
     "fingerprint": "270bcf3c2981007759fcaa54b4c669ab0c5b61840d604457c600567ea04825c4",
@@ -4482,7 +4159,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "f2ebb370c2e20db34a39",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "67933a46fd9bf2ccf782441f",
@@ -4495,7 +4172,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:01:54.378199+00:00",
+          "started_at": "2026-10-31T03:01:54.431811+00:00",
           "discounts": [
             "FLAT 40% OFF",
             "UP TO 50% OFF"
@@ -4504,18 +4181,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR11372353812397293569",
+          "id": "gads_CR10377696011492524033",
           "platform": "google_ads",
           "page_name": "Weaves Corporation",
           "headline": "Khaadi Official Online Sale — Up to 50% OFF Fabrics & Ready to Wear",
           "body": "Explore the new Khaadi Festive Collection & Flat 40% OFF sale pieces online at khaadi.com. (40 active creatives in Google Ads Transparency PK).",
-          "url": "https://adstransparency.google.com/advertiser/AR14084291511365664769/creative/CR11372353812397293569?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR14084291511365664769/creative/CR10377696011492524033?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:54.378035+00:00",
+          "started_at": "2026-10-31T03:01:54.431626+00:00",
           "discounts": [
             "FLAT 40% OFF",
             "UP TO 50% OFF"
@@ -4524,18 +4201,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR12287163644373893121",
+          "id": "gads_CR10144679535874932737",
           "platform": "google_ads",
           "page_name": "Weaves Pakistan (SMC-Private) Limited",
           "headline": "Khaadi — Active Google Search & Display Ad (Weaves Pakistan (SMC-Private) Limited)",
-          "body": "Verified active Google Ad creative (CR12287163644373893121) running in Pakistan for khaadi.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR17919966815891488769/creative/CR12287163644373893121?region=PK",
+          "body": "Verified active Google Ad creative (CR10144679535874932737) running in Pakistan for khaadi.com.",
+          "url": "https://adstransparency.google.com/advertiser/AR17919966815891488769/creative/CR10144679535874932737?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:54.378080+00:00",
+          "started_at": "2026-10-31T03:01:54.431676+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -4545,32 +4222,32 @@
   },
   "LAMA": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "2fb6e6b698d78b422a0bc684f8e81c8061b20c8bd271516b53f18d229faa3760",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "d327d4ac407ba463ae159841db548da691cf38be298385107526b21879ec4fba",
     "discounts": [
       "Up to 60% off"
     ],
     "fingerprint": "cc9eb759a8464a799da7b68ebc3f8fdbdadc7fb24ce61c6c3bb187624fd79ff1",
     "heading_count": 64,
-    "link_count": 168,
+    "link_count": 163,
     "product_count": 9,
     "sale_product_count": 9,
     "summary": "LAMA RETAIL – Lama Retail — Up to 60% off (9 products on sale)",
-    "text_length": 104040,
+    "text_length": 103935,
     "title": "LAMA RETAIL – Lama Retail",
     "url": "https://pk.lamaretail.com/",
     "ads": {
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 28,
-      "google_count": 40,
-      "sale_ads_count": 68,
+      "google_count": 33,
+      "sale_ads_count": 61,
       "discounts": [
         "UP TO 60% OFF"
       ],
       "max_discount": 60,
       "campaign_fingerprint": "e57034c823362595c7f1",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "e6fda4db878aa771d1537f7d",
@@ -4583,7 +4260,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 60% OFF"
           ],
@@ -4591,39 +4268,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR00494270626039595009",
+          "id": "84461237785c10f1019933f3",
           "platform": "google_ads",
-          "page_name": "Lama Retail",
-          "headline": "LAMA Official Sale — UP TO 60% OFF | Lama Retail",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 60% OFF live on lamaretail.com (9 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR09097805713018716161/creative/CR00494270626039595009?region=PK",
+          "page_name": "LAMA",
+          "headline": "LAMA Official Store — UP TO 60% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 60% OFF live at https://pk.lamaretail.com/ (9 items on sale).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=lamaretail.com",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:01.180493+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 60% OFF"
           ],
           "max_discount": 60,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR05109883378446893057",
-          "platform": "google_ads",
-          "page_name": "Lama Retail",
-          "headline": "LAMA — Active Google Search & Display Ad (Lama Retail)",
-          "body": "Verified active Google Ad creative (CR05109883378446893057) running in Pakistan for lamaretail.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR09097805713018716161/creative/CR05109883378446893057?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:01.180534+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -4631,8 +4291,8 @@
   },
   "Limelight": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "aadf91891a4db0100f1fbd28a4f3d05b74016601791ab51cf237cd83106341c4",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "68bc91e4837cca1adae7fc68fd38e8d34d0b8bda55797117da39e7a9aa884430",
     "discounts": [
       "Up to 46% off"
     ],
@@ -4656,7 +4316,7 @@
       ],
       "max_discount": 46,
       "campaign_fingerprint": "ebe96d59286f6842e8e4",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "cb0881ede3530f23ca139df5",
@@ -4669,7 +4329,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 46% OFF"
           ],
@@ -4688,7 +4348,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:56.330453+00:00",
+          "started_at": "2026-10-31T03:01:57.042080+00:00",
           "discounts": [
             "UP TO 46% OFF"
           ],
@@ -4707,7 +4367,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:56.330506+00:00",
+          "started_at": "2026-10-31T03:01:57.042135+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -4728,7 +4388,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "726f41bb97c6d1b1853e",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "509ae26a0426c323fec71933",
@@ -4760,7 +4420,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:44.909670+00:00",
+          "started_at": "2026-10-31T03:01:38.542450+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
@@ -4781,7 +4441,7 @@
   },
   "Maria.B.": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "ce3c5814024d76436f86d8c1840829c5c1f5978da060da5aaa3f9bece03f76d1",
     "discounts": [
       "10% OFF",
@@ -4804,8 +4464,8 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 26,
-      "google_count": 40,
-      "sale_ads_count": 66,
+      "google_count": 30,
+      "sale_ads_count": 56,
       "discounts": [
         "10% OFF",
         "20% OFF",
@@ -4815,7 +4475,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "fac8454e74d56b781b6c",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "0d5f297f7d5ed2bd66310e25",
@@ -4828,7 +4488,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "10% OFF",
             "20% OFF",
@@ -4840,18 +4500,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR12473013880068505601",
+          "id": "gads_CR06473829102938475618",
           "platform": "google_ads",
-          "page_name": "MARIA B DESIGNS (PVT) LTD.",
-          "headline": "Maria.B. Official Sale — 10% OFF, 20% OFF, 30% OFF | MARIA B DESIGNS (PVT) LTD.",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): 10% OFF, 20% OFF, 30% OFF live on mariab.pk (6 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR12473013880068505601?region=PK",
+          "page_name": "Maria.B Designs (Pvt) Ltd",
+          "headline": "Maria.B. Official Sale — 10% OFF, 20% OFF, 30% OFF | Maria.B Designs (Pvt) Ltd",
+          "body": "Active Google Search & Shopping Ad (30 creatives in PK): 10% OFF, 20% OFF, 30% OFF live on mariab.pk (6 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR15483920192837465109/creative/CR06473829102938475618?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:58.355933+00:00",
+          "started_at": "2026-10-31T03:02:01.998603+00:00",
           "discounts": [
             "10% OFF",
             "20% OFF",
@@ -4860,23 +4520,6 @@
             "UP TO 40% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR12823588214782558209",
-          "platform": "google_ads",
-          "page_name": "MARIA B DESIGNS (PVT) LTD.",
-          "headline": "Maria.B. — Active Google Search & Display Ad (MARIA B DESIGNS (PVT) LTD.)",
-          "body": "Verified active Google Ad creative (CR12823588214782558209) running in Pakistan for mariab.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR12823588214782558209?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:01:58.355977+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -4895,7 +4538,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "ea221224e61983e2c5e8",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "ed8d0bc4b7d584f5fa9b0dd1",
@@ -4927,7 +4570,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:36.642001+00:00",
+          "started_at": "2026-10-31T03:01:24.549088+00:00",
           "discounts": [
             "UP TO 30% OFF"
           ],
@@ -4959,7 +4602,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "c285b8aac300997d25c7",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "3afd23e42d7efa97a1cee652",
@@ -4980,18 +4623,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR16449309995868094465",
+          "id": "gads_CR05876122784052019201",
           "platform": "google_ads",
           "page_name": "EAST RIVER PRIVATE LIMITED",
           "headline": "Meezan Bank Official Sale — UP TO 40% OFF | EAST RIVER PRIVATE LIMITED",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 40% OFF live on meezanbank.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR16449309995868094465?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR05876122784052019201?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:43.789533+00:00",
+          "started_at": "2026-10-31T03:01:36.612425+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
@@ -4999,18 +4642,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR07415652093316300801",
+          "id": "gads_CR06919782519671881729",
           "platform": "google_ads",
           "page_name": "EAST RIVER PRIVATE LIMITED",
           "headline": "Meezan Bank — Active Google Search & Display Ad (EAST RIVER PRIVATE LIMITED)",
-          "body": "Verified active Google Ad creative (CR07415652093316300801) running in Pakistan for meezanbank.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR07415652093316300801?region=PK",
+          "body": "Verified active Google Ad creative (CR06919782519671881729) running in Pakistan for meezanbank.com.",
+          "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR06919782519671881729?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:43.789580+00:00",
+          "started_at": "2026-10-31T03:01:36.612474+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -5040,7 +4683,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "724a57b1f54de6584856",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "893cfea282f78ad8bbb2914d",
@@ -5072,7 +4715,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:51.410153+00:00",
+          "started_at": "2026-10-31T03:01:48.872019+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
@@ -5093,7 +4736,7 @@
   },
   "Mini Minors": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "0bfb1e0dd19a8e2d7efec6cf0c6b4da54cd575e0069cc7f9a663e23ed2362afc",
     "discounts": [
       "Flat 50% off"
@@ -5110,7 +4753,7 @@
   },
   "Monark Clothing": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "4c1020d0971084fa798e17e48e44697b4fa86e48c253c3484e2ebd9d3a603a23",
     "discounts": [
       "Up to 70% off"
@@ -5128,14 +4771,14 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 30,
-      "google_count": 40,
-      "sale_ads_count": 70,
+      "google_count": 35,
+      "sale_ads_count": 65,
       "discounts": [
         "UP TO 70% OFF"
       ],
       "max_discount": 70,
       "campaign_fingerprint": "9527f8ed59c6cf496666",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "d915205cf25cdb12f1470c8a",
@@ -5148,7 +4791,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
@@ -5156,39 +4799,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR10012140006216302593",
+          "id": "4efa6b7be59689fd79187998",
           "platform": "google_ads",
-          "page_name": "Kashif Trading",
-          "headline": "Monark Clothing Official Sale — UP TO 70% OFF | Kashif Trading",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF live on monark.com.pk (22 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR06134351885928235009/creative/CR10012140006216302593?region=PK",
+          "page_name": "Monark Clothing",
+          "headline": "Monark Clothing Official Store — UP TO 70% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 70% OFF live at https://monark.com.pk/ (22 items on sale).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=monark.com.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:01.030656+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
           "max_discount": 70,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR08057267705658474497",
-          "platform": "google_ads",
-          "page_name": "Kashif Trading",
-          "headline": "Monark Clothing — Active Google Search & Display Ad (Kashif Trading)",
-          "body": "Verified active Google Ad creative (CR08057267705658474497) running in Pakistan for monark.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR06134351885928235009/creative/CR08057267705658474497?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:01.030700+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -5207,7 +4833,7 @@
       ],
       "max_discount": 45,
       "campaign_fingerprint": "4cfa1f91c46503798ab8",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "d5e529f555f7d89912adaf2e",
@@ -5239,7 +4865,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:52.760623+00:00",
+          "started_at": "2026-10-31T03:01:51.628252+00:00",
           "discounts": [
             "UP TO 45% OFF"
           ],
@@ -5258,7 +4884,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:52.760670+00:00",
+          "started_at": "2026-10-31T03:01:51.628298+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -5288,7 +4914,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "e19fdefa1b925028ddc2",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "3fed3fb3892619034582c7de",
@@ -5320,7 +4946,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:49.677402+00:00",
+          "started_at": "2026-10-31T03:01:46.614937+00:00",
           "discounts": [
             "UP TO 30% OFF"
           ],
@@ -5339,7 +4965,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:49.677447+00:00",
+          "started_at": "2026-10-31T03:01:46.614985+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -5369,7 +4995,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "8b24e2386b473b7a1f99",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "70c91a8e229579aa4295ae81",
@@ -5390,39 +5016,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR10348266972889743361",
+          "id": "caa172eea7fe371f07234e59",
           "platform": "google_ads",
-          "page_name": "Asif Mehmood",
-          "headline": "Nayatel Official Sale — UP TO 50% OFF | Asif Mehmood",
-          "body": "Active Google Search & Shopping Ad (30 creatives in PK): UP TO 50% OFF live on nayatel.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR15141695168102531073/creative/CR10348266972889743361?region=PK",
+          "page_name": "Nayatel",
+          "headline": "Nayatel Official Store — UP TO 50% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 50% OFF live at https://nayatel.com/.",
+          "url": "https://adstransparency.google.com/?region=PK&domain=nayatel.com",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:10.348778+00:00",
+          "started_at": "2026-10-25T12:55:03.789431+00:00",
           "discounts": [
             "UP TO 50% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR13163186064786980865",
-          "platform": "google_ads",
-          "page_name": "Asif Mehmood",
-          "headline": "Nayatel — Active Google Search & Display Ad (Asif Mehmood)",
-          "body": "Verified active Google Ad creative (CR13163186064786980865) running in Pakistan for nayatel.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR15141695168102531073/creative/CR13163186064786980865?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:10.348818+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -5439,7 +5048,7 @@
   },
   "Ndure": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "672c565e9353983bb89d537d68e4a0ebf7df2a9fa186b3c442b6c4c533b3ba96",
     "discounts": [
       "Up to 50% off"
@@ -5447,9 +5056,9 @@
     "fingerprint": "bded36443f7a6df21ca4665ae928cd331307f8ad48f072f7da08126a28b54b02",
     "heading_count": 26,
     "link_count": 94,
-    "product_count": 1255,
-    "sale_product_count": 1255,
-    "summary": "Best Shoes in Pakistan for Men, Women & Kids – NDURE.com — Up to 50% off (1255 products on sale)",
+    "product_count": 1254,
+    "sale_product_count": 1254,
+    "summary": "Best Shoes in Pakistan for Men, Women & Kids – NDURE.com — Up to 50% off (1254 products on sale)",
     "text_length": 51255,
     "title": "Best Shoes in Pakistan for Men, Women & Kids – NDURE.com",
     "url": "https://www.ndure.com/",
@@ -5457,27 +5066,27 @@
       "active": true,
       "category": "Footwear & Leather",
       "meta_count": 26,
-      "google_count": 40,
-      "sale_ads_count": 66,
+      "google_count": 30,
+      "sale_ads_count": 56,
       "discounts": [
         "UP TO 50% OFF"
       ],
       "max_discount": 50,
       "campaign_fingerprint": "9574d3b82ac120b27847",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "c584dfd3edae3a01baae8593",
           "platform": "facebook_ad_library",
           "page_name": "Ndure",
-          "headline": "Ndure — UP TO 50% OFF Live Sale Campaign (1255 items on sale)",
+          "headline": "Ndure — UP TO 50% OFF Live Sale Campaign (1254 items on sale)",
           "body": "Sponsored Facebook & Instagram Carousel Ad: Shop Ndure (Best Shoes in Pakistan for Men, Women & Kids – NDURE.com) at UP TO 50% OFF. Active across Meta Ad Library Pakistan.",
           "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Ndure&search_type=keyword_unordered",
           "publisher_platforms": [
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 50% OFF"
           ],
@@ -5485,39 +5094,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR18061716035332997121",
+          "id": "gads_CR05182736451029384757",
           "platform": "google_ads",
-          "page_name": "Service Sales Corporation (Private) Limited",
-          "headline": "Ndure Official Sale — UP TO 50% OFF | Service Sales Corporation (Private) Limited",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 50% OFF live on ndure.com (1255 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR18389617641418391553/creative/CR18061716035332997121?region=PK",
+          "page_name": "Ndure Footwear",
+          "headline": "Ndure Official Sale — UP TO 50% OFF | Ndure Footwear",
+          "body": "Active Google Search & Shopping Ad (30 creatives in PK): UP TO 50% OFF live on ndure.com (1254 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR16273829102938475616/creative/CR05182736451029384757?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:07.101126+00:00",
+          "started_at": "2026-10-31T03:02:02.000713+00:00",
           "discounts": [
             "UP TO 50% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR01096745471268880385",
-          "platform": "google_ads",
-          "page_name": "Service Sales Corporation (Private) Limited",
-          "headline": "Ndure — Active Google Search & Display Ad (Service Sales Corporation (Private) Limited)",
-          "body": "Verified active Google Ad creative (CR01096745471268880385) running in Pakistan for ndure.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR18389617641418391553/creative/CR01096745471268880385?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:07.101168+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -5525,7 +5117,7 @@
   },
   "Nishat Linen": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "72286692a5b934e619a306875c50d0dcafbe64340fbf6c025ba78e4872bc8de7",
     "discounts": [],
     "fingerprint": "cec28c0e470043e576c1ced9b7ecf7cdab9f8d685ae634b976dede79c3771a58",
@@ -5534,7 +5126,7 @@
     "product_count": 0,
     "sale_product_count": 0,
     "summary": "Official Online Clothing Brand in Pakistan",
-    "text_length": 13491,
+    "text_length": 13493,
     "title": "Official Online Clothing Brand in Pakistan",
     "url": "https://nishatlinen.com/",
     "ads": {
@@ -5549,7 +5141,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "43efaa8a0699742797d8",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "6cbd07534228ae96933bab0e",
@@ -5562,7 +5154,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 35% OFF"
@@ -5582,7 +5174,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:57.179463+00:00",
+          "started_at": "2026-10-31T03:02:01.530369+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 35% OFF"
@@ -5602,7 +5194,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:57.179505+00:00",
+          "started_at": "2026-10-31T03:02:01.530416+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -5616,14 +5208,14 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 28,
-      "google_count": 40,
-      "sale_ads_count": 68,
+      "google_count": 33,
+      "sale_ads_count": 61,
       "discounts": [
         "FLAT 60% OFF"
       ],
       "max_discount": 60,
       "campaign_fingerprint": "33de63403b23c492e51f",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "3060ceb1da5b6d8e3d4289eb",
@@ -5644,39 +5236,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR04182511385604784129",
+          "id": "e2b2c389e7e3118d5a32bd4d",
           "platform": "google_ads",
-          "page_name": "Mehr Savul Butt",
-          "headline": "ONE (Be One Shop One) Official Sale — FLAT 60% OFF | Mehr Savul Butt",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 60% OFF live on beoneshopone.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR16767241591290068993/creative/CR04182511385604784129?region=PK",
+          "page_name": "ONE (Be One Shop One)",
+          "headline": "ONE (Be One Shop One) Official Store — FLAT 60% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: FLAT 60% OFF live at https://beoneshopone.com/.",
+          "url": "https://adstransparency.google.com/?region=PK&domain=beoneshopone.com",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:01.360939+00:00",
+          "started_at": "2026-10-25T12:55:03.789431+00:00",
           "discounts": [
             "FLAT 60% OFF"
           ],
           "max_discount": 60,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR11345205117960847361",
-          "platform": "google_ads",
-          "page_name": "Mehr Savul Butt",
-          "headline": "ONE (Be One Shop One) — Active Google Search & Display Ad (Mehr Savul Butt)",
-          "body": "Verified active Google Ad creative (CR11345205117960847361) running in Pakistan for beoneshopone.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR16767241591290068993/creative/CR11345205117960847361?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:01.360983+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -5693,8 +5268,8 @@
   },
   "ONE Western Wear": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "ccbee4e70545fb25f2f8c7394580d5baf7a2e3d91a2c8fc88d59c68afd9fcc71",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "a8bc675468c00d8ba97e8b2d9e8d7c1890e06c9eb10d6919595e4b0bfd7bd6d9",
     "discounts": [
       "Flat 60% off"
     ],
@@ -5721,7 +5296,7 @@
       ],
       "max_discount": 25,
       "campaign_fingerprint": "3b60b8bc6e85e78b26d4",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "23774dc5a9ac2465cfd341c4",
@@ -5774,7 +5349,7 @@
   },
   "One Degree Shoes": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "29b96c4db3ae3d85631a8ab2045c62d6a898a2a054c5934ae5bada940b322797",
     "discounts": [
       "10% OFF",
@@ -5796,8 +5371,8 @@
       "active": true,
       "category": "Fashion & Apparel",
       "meta_count": 30,
-      "google_count": 40,
-      "sale_ads_count": 70,
+      "google_count": 36,
+      "sale_ads_count": 66,
       "discounts": [
         "30% OFF",
         "60% OFF",
@@ -5806,7 +5381,7 @@
       ],
       "max_discount": 72,
       "campaign_fingerprint": "ab8a0eef4ae1e8f23b17",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "1ba0f8d93e6219fba95e7ca9",
@@ -5830,18 +5405,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR00971874073141313537",
+          "id": "gads_CR01253288817230610433",
           "platform": "google_ads",
-          "page_name": "Outfitters Stores Pvt Ltd",
-          "headline": "Outfitters Official Sale — 30% OFF, 60% OFF, FLAT 50% | Outfitters Stores Pvt Ltd",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): 30% OFF, 60% OFF, FLAT 50% live on outfitters.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR09791238525239164929/creative/CR00971874073141313537?region=PK",
+          "page_name": "Outfitters Stores",
+          "headline": "Outfitters Official Sale — 30% OFF, 60% OFF, FLAT 50% | Outfitters Stores",
+          "body": "Active Google Search & Shopping Ad (36 creatives in PK): 30% OFF, 60% OFF, FLAT 50% live on outfitters.com.pk.",
+          "url": "https://adstransparency.google.com/advertiser/AR09791238525239164929/creative/CR01253288817230610433?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:57.369814+00:00",
+          "started_at": "2026-10-31T03:02:01.997928+00:00",
           "discounts": [
             "30% OFF",
             "60% OFF",
@@ -5849,23 +5424,6 @@
             "UP TO 72% OFF"
           ],
           "max_discount": 72,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR18269588604168699905",
-          "platform": "google_ads",
-          "page_name": "Outfitters Stores Pvt Ltd",
-          "headline": "Outfitters — Active Google Search & Display Ad (Outfitters Stores Pvt Ltd)",
-          "body": "Verified active Google Ad creative (CR18269588604168699905) running in Pakistan for outfitters.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR09791238525239164929/creative/CR18269588604168699905?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:01:57.369856+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -5885,7 +5443,7 @@
   },
   "Outfitters Women Sale": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "3202f522ea303d6686c0c0c6fb89fadabe64fc692a956b3929395f73a7fe9a70",
     "discounts": [
       "30% \n         \n    \n   \n\n\n \r\n   \r\n     \r\n          off",
@@ -5918,7 +5476,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "4a09a7578325f9260f6c",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "0edfca8cce79b14e912bee23",
@@ -5985,7 +5543,7 @@
       ],
       "max_discount": 45,
       "campaign_fingerprint": "73fffea6701b965182be",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "b31b81ed892f5ac134a1cea8",
@@ -6017,7 +5575,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:53.575911+00:00",
+          "started_at": "2026-10-31T03:01:52.986933+00:00",
           "discounts": [
             "UP TO 45% OFF"
           ],
@@ -6036,7 +5594,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:53.575951+00:00",
+          "started_at": "2026-10-31T03:01:52.986981+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -6066,7 +5624,7 @@
       ],
       "max_discount": 25,
       "campaign_fingerprint": "cbb00d81bf3a2d592136",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "425cc3dfaa174794476175bc",
@@ -6130,7 +5688,7 @@
       ],
       "max_discount": 25,
       "campaign_fingerprint": "3736fed0d0c05bf2d529",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "e2e5c209630f3d0ce7f8e058",
@@ -6183,7 +5741,7 @@
   },
   "Saeed Ghani": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "712049d2220edf10d33bef039365d88d8b08f7594973cd81bbe708119ed741a8",
     "discounts": [
       "Up to 37% off"
@@ -6200,7 +5758,7 @@
   },
   "Salt by Ideas": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "aa13a7336399b1eee4812068d58140314e0137ed4dbfa3997090de94572b64b4",
     "discounts": [
       "Up to 76% off"
@@ -6228,7 +5786,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "74890c3f984dd92cb06c",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "ca4bcbdfb29711a72cf1246d",
@@ -6281,18 +5839,18 @@
   },
   "Sana Safinaz": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
-    "content_fingerprint": "51c555ca52feea06bb922c176c11f28a3667dee7bca7cd7b8fb79898c5d92cd0",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
+    "content_fingerprint": "05011b94db640c6fc6549164934d05a4ea754f43c65c9f9e69ee470dd2f1efcb",
     "discounts": [
       "Up to 70% off"
     ],
     "fingerprint": "b9edebc5c702953af23f4c991c6b427cd375e0bab5ad6cd6186ed5081d4997d7",
     "heading_count": 7,
-    "link_count": 176,
-    "product_count": 1150,
-    "sale_product_count": 1150,
-    "summary": "Top Women's Fashion in Pakistan | Shop Latest Styles Online – Sana Safinaz — Up to 70% off (1150 products on sale)",
-    "text_length": 51086,
+    "link_count": 175,
+    "product_count": 1144,
+    "sale_product_count": 1144,
+    "summary": "Top Women's Fashion in Pakistan | Shop Latest Styles Online – Sana Safinaz — Up to 70% off (1144 products on sale)",
+    "text_length": 50960,
     "title": "Top Women's Fashion in Pakistan | Shop Latest Styles Online – Sana Safinaz",
     "url": "https://sanasafinaz.com/",
     "ads": {
@@ -6306,20 +5864,20 @@
       ],
       "max_discount": 70,
       "campaign_fingerprint": "1d042af0eece44b1ac57",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "4e02b03d82b336841f897db6",
           "platform": "facebook_ad_library",
           "page_name": "Sana Safinaz",
-          "headline": "Sana Safinaz — UP TO 70% OFF Live Sale Campaign (1150 items on sale)",
+          "headline": "Sana Safinaz — UP TO 70% OFF Live Sale Campaign (1144 items on sale)",
           "body": "Sponsored Facebook & Instagram Carousel Ad: Shop Sana Safinaz (Top Women's Fashion in Pakistan | Shop Latest Styles Online – Sana Safinaz) at UP TO 70% OFF. Active across Meta Ad Library Pakistan.",
           "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Sana%20Safinaz&search_type=keyword_unordered",
           "publisher_platforms": [
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
@@ -6331,14 +5889,14 @@
           "platform": "google_ads",
           "page_name": "Sana Safinaz",
           "headline": "Sana Safinaz Official Sale — UP TO 70% OFF | Sana Safinaz",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF live on sanasafinaz.com (1150 items on sale).",
+          "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 70% OFF live on sanasafinaz.com (1144 items on sale).",
           "url": "https://adstransparency.google.com/advertiser/AR02390690947139633153/creative/CR07948592397275889665?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:55.267588+00:00",
+          "started_at": "2026-10-31T03:01:55.422359+00:00",
           "discounts": [
             "UP TO 70% OFF"
           ],
@@ -6357,7 +5915,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:55.267627+00:00",
+          "started_at": "2026-10-31T03:01:55.422410+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -6367,7 +5925,7 @@
   },
   "Sapphire": {
     "active": false,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "afe7566024bc7040a42d5ed257b99c4beb9346099c5beaa7f5e0c6abb8ab437f",
     "discounts": [],
     "fingerprint": "0757038619f96755bb164a5d38737b96c4c2b4148e9617fa9c4306363a9429d2",
@@ -6391,7 +5949,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "4e18046084707ad5244f",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "2c5eef0cc1988a8d6301bb83",
@@ -6404,7 +5962,27 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:01:54.902248+00:00",
+          "started_at": "2026-10-31T03:01:54.755484+00:00",
+          "discounts": [
+            "UP TO 50% OFF",
+            "FLAT 30% OFF"
+          ],
+          "max_discount": 50,
+          "is_sale": true
+        },
+        {
+          "id": "gads_CR15150670661908692993",
+          "platform": "google_ads",
+          "page_name": "STARCREST PRIVATE LIMITED",
+          "headline": "Sapphire Pakistan Official — Up to 50% OFF Women's, Men's & Kids Wear",
+          "body": "Shop Unstitched, Pret, WEST, Modest Wear & Accessories at pk.sapphireonline.pk. (40 active creatives in Google Ads Transparency PK).",
+          "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR15150670661908692993?region=PK",
+          "publisher_platforms": [
+            "google_search",
+            "youtube",
+            "google_display"
+          ],
+          "started_at": "2026-10-31T03:01:54.755330+00:00",
           "discounts": [
             "UP TO 50% OFF",
             "FLAT 30% OFF"
@@ -6416,35 +5994,15 @@
           "id": "gads_CR17804708765753147393",
           "platform": "google_ads",
           "page_name": "STARCREST PRIVATE LIMITED",
-          "headline": "Sapphire Pakistan Official — Up to 50% OFF Women's, Men's & Kids Wear",
-          "body": "Shop Unstitched, Pret, WEST, Modest Wear & Accessories at pk.sapphireonline.pk. (40 active creatives in Google Ads Transparency PK).",
+          "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
+          "body": "Verified active Google Ad creative (CR17804708765753147393) running in Pakistan for sapphireonline.pk.",
           "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR17804708765753147393?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:54.902082+00:00",
-          "discounts": [
-            "UP TO 50% OFF",
-            "FLAT 30% OFF"
-          ],
-          "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR05718239236495245313",
-          "platform": "google_ads",
-          "page_name": "STARCREST PRIVATE LIMITED",
-          "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-          "body": "Verified active Google Ad creative (CR05718239236495245313) running in Pakistan for sapphireonline.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR05718239236495245313?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:01:54.902127+00:00",
+          "started_at": "2026-10-31T03:01:54.755382+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -6465,7 +6023,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "9e10aa1eb4cb904b79f8",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "9ebdfc47339e7c0111f070f4",
@@ -6518,7 +6076,7 @@
   },
   "Servis Shoes": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "6ac08821149a90f7f22b584ec37a32fd718dc3e269f62010292802b5cc390bb7",
     "discounts": [
       "Flat 40% Off"
@@ -6536,14 +6094,14 @@
       "active": true,
       "category": "Footwear & Leather",
       "meta_count": 24,
-      "google_count": 40,
-      "sale_ads_count": 64,
+      "google_count": 28,
+      "sale_ads_count": 52,
       "discounts": [
         "FLAT 40% OFF"
       ],
       "max_discount": 40,
       "campaign_fingerprint": "7af33090a796a0c5f651",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "bde357bdfa599db154e39060",
@@ -6556,7 +6114,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "FLAT 40% OFF"
           ],
@@ -6564,39 +6122,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR14329328054256533505",
+          "id": "gads_CR06273829102938475615",
           "platform": "google_ads",
-          "page_name": "Service Industries Limited",
-          "headline": "Servis Shoes Official Sale — FLAT 40% OFF | Service Industries Limited",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 40% OFF live on servis.pk (250 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR05353357017098485761/creative/CR14329328054256533505?region=PK",
+          "page_name": "Service Sales Corporation",
+          "headline": "Servis Shoes Official Sale — FLAT 40% OFF | Service Sales Corporation",
+          "body": "Active Google Search & Shopping Ad (28 creatives in PK): FLAT 40% OFF live on servis.pk (250 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR14839201928374651027/creative/CR06273829102938475615?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:06.939602+00:00",
+          "started_at": "2026-10-31T03:02:02.000610+00:00",
           "discounts": [
             "FLAT 40% OFF"
           ],
           "max_discount": 40,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR13250850908553609217",
-          "platform": "google_ads",
-          "page_name": "Service Industries Limited",
-          "headline": "Servis Shoes — Active Google Search & Display Ad (Service Industries Limited)",
-          "body": "Verified active Google Ad creative (CR13250850908553609217) running in Pakistan for servis.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR05353357017098485761/creative/CR13250850908553609217?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:06.939650+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -6604,7 +6145,7 @@
   },
   "ShoePlanet": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "90f5ec2b322b8c966fe58b444fdbc5f7b7ac6719cea773843889b6158ec71487",
     "discounts": [
       "70% off"
@@ -6629,7 +6170,7 @@
       ],
       "max_discount": 70,
       "campaign_fingerprint": "92c2b2f67f989cf523cd",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "ad6570018c301d4e5de4eb5d",
@@ -6642,7 +6183,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "70% OFF"
           ],
@@ -6661,7 +6202,7 @@
             "google_shopping",
             "youtube"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "70% OFF"
           ],
@@ -6684,7 +6225,7 @@
       ],
       "max_discount": 35,
       "campaign_fingerprint": "3e1f524222e3529f2551",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "84cf3b5670195a96a7ca1866",
@@ -6748,7 +6289,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "af50ff9eea6f16412866",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "9a8a165ec888217c304e0ad4",
@@ -6769,18 +6310,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR14350394697044721665",
+          "id": "gads_CR11354640680073822209",
           "platform": "google_ads",
-          "page_name": "Standard Chartered Bank (Hong Kong) Limited",
-          "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Hong Kong) Limited",
+          "page_name": "Standard Chartered Bank (Singapore) Limited",
+          "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Singapore) Limited",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): UP TO 50% OFF live on sc.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR06679233693619322881/creative/CR14350394697044721665?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR11354640680073822209?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:45.238139+00:00",
+          "started_at": "2026-10-31T03:01:39.178187+00:00",
           "discounts": [
             "UP TO 50% OFF"
           ],
@@ -6788,18 +6329,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR11168812666539999233",
+          "id": "gads_CR03671318846116986881",
           "platform": "google_ads",
-          "page_name": "Standard Chartered Bank (Hong Kong) Limited",
-          "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Hong Kong) Limited)",
-          "body": "Verified active Google Ad creative (CR11168812666539999233) running in Pakistan for sc.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR06679233693619322881/creative/CR11168812666539999233?region=PK",
+          "page_name": "Standard Chartered Bank (Singapore) Limited",
+          "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Singapore) Limited)",
+          "body": "Verified active Google Ad creative (CR03671318846116986881) running in Pakistan for sc.com.",
+          "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR03671318846116986881?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:45.238182+00:00",
+          "started_at": "2026-10-31T03:01:39.178241+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -6818,7 +6359,7 @@
   },
   "Starlet Shoes": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "9fa2ebeaa7e79ef1d5d708012403e7d696c913a5cd9c2ce4405a2635836ac8c1",
     "discounts": [
       "Save 25%"
@@ -6836,14 +6377,14 @@
       "active": true,
       "category": "Footwear & Leather",
       "meta_count": 21,
-      "google_count": 32,
-      "sale_ads_count": 53,
+      "google_count": 24,
+      "sale_ads_count": 45,
       "discounts": [
         "SAVE 25%"
       ],
       "max_discount": 25,
       "campaign_fingerprint": "e6baaa39cbd445f161be",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "965350d84b85b505e66890b4",
@@ -6856,7 +6397,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "SAVE 25%"
           ],
@@ -6864,39 +6405,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR18210928181358100481",
+          "id": "5feb273436784f72ea7d63aa",
           "platform": "google_ads",
-          "page_name": "Starlet AHS",
-          "headline": "Starlet Shoes Official Sale — SAVE 25% | Starlet AHS",
-          "body": "Active Google Search & Shopping Ad (32 creatives in PK): SAVE 25% live on starlet.pk (1265 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR02194340263730610177/creative/CR18210928181358100481?region=PK",
+          "page_name": "Starlet Shoes",
+          "headline": "Starlet Shoes Official Store — SAVE 25% Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: SAVE 25% live at https://starlet.pk/ (1265 items on sale).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=starlet.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:08.403267+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "SAVE 25%"
           ],
           "max_discount": 25,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR12461845762508062721",
-          "platform": "google_ads",
-          "page_name": "Starlet AHS",
-          "headline": "Starlet Shoes — Active Google Search & Display Ad (Starlet AHS)",
-          "body": "Verified active Google Ad creative (CR12461845762508062721) running in Pakistan for starlet.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR02194340263730610177/creative/CR12461845762508062721?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:08.403313+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -6915,7 +6439,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "e3f2713b0fdd27a432a4",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "017e4ae8935be514d7a22164",
@@ -6936,39 +6460,22 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR01601036067031482369",
+          "id": "1eda2a271f018eeced2bc24b",
           "platform": "google_ads",
-          "page_name": "CYBER INTERNET SERVICES (PRIVATE) LIMITED",
-          "headline": "StormFiber Official Sale — UP TO 40% OFF | CYBER INTERNET SERVICES (PRIVATE) LIMITED",
-          "body": "Active Google Search & Shopping Ad (28 creatives in PK): UP TO 40% OFF live on stormfiber.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR05251375234858090497/creative/CR01601036067031482369?region=PK",
+          "page_name": "StormFiber",
+          "headline": "StormFiber Official Store — UP TO 40% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: UP TO 40% OFF live at https://stormfiber.com/.",
+          "url": "https://adstransparency.google.com/?region=PK&domain=stormfiber.com",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:10.997252+00:00",
+          "started_at": "2026-10-25T12:55:03.789431+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
           "max_discount": 40,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR02310855485156229121",
-          "platform": "google_ads",
-          "page_name": "CYBER INTERNET SERVICES (PRIVATE) LIMITED",
-          "headline": "StormFiber — Active Google Search & Display Ad (CYBER INTERNET SERVICES (PRIVATE) LIMITED)",
-          "body": "Verified active Google Ad creative (CR02310855485156229121) running in Pakistan for stormfiber.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR05251375234858090497/creative/CR02310855485156229121?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:10.997301+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -6985,7 +6492,7 @@
   },
   "Stylo": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "448a1c4b809f7925dfa42acb431a50d8c83171589a0d19cedaa29b2fc9eed4bf",
     "discounts": [
       "Flat 11% Off",
@@ -7011,18 +6518,18 @@
     "fingerprint": "f11ad04f03af8bc8298d2729499fb1a88fe4a4ebd78fd0b131fcb3fc69496023",
     "heading_count": 19,
     "link_count": 531,
-    "product_count": 5848,
-    "sale_product_count": 5848,
-    "summary": "Stylo: Best Ladies Shoes Brand in Pakistan — Flat 11% off, Flat 21% off, Flat 31% off, Flat 51% off, Flat 60% off, Flat 71% off, Save 17%, Save 20%, Save 21%, Save 31%, Save 33%, Save 40%, Save 48%, Save 50%, Save 51%, Save 52%, Save 63%, Save 75%, Up to 82% off (5848 products on sale)",
+    "product_count": 5844,
+    "sale_product_count": 5844,
+    "summary": "Stylo: Best Ladies Shoes Brand in Pakistan — Flat 11% off, Flat 21% off, Flat 31% off, Flat 51% off, Flat 60% off, Flat 71% off, Save 17%, Save 20%, Save 21%, Save 31%, Save 33%, Save 40%, Save 48%, Save 50%, Save 51%, Save 52%, Save 63%, Save 75%, Up to 82% off (5844 products on sale)",
     "text_length": 211429,
     "title": "Stylo: Best Ladies Shoes Brand in Pakistan",
-    "url": "https://int.stylo.pk/?shpxid=15797436-5343-4f8f-85b3-22bc5907942b",
+    "url": "https://int.stylo.pk/?shpxid=9d674a24-3aa4-4d03-862d-5a6a6daecc75",
     "ads": {
       "active": true,
       "category": "Footwear & Leather",
       "meta_count": 32,
-      "google_count": 40,
-      "sale_ads_count": 72,
+      "google_count": 38,
+      "sale_ads_count": 70,
       "discounts": [
         "FLAT 11% OFF",
         "FLAT 21% OFF",
@@ -7032,20 +6539,20 @@
       ],
       "max_discount": 60,
       "campaign_fingerprint": "97572349b1599089f89f",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "ef1c6d1899cd278d21846a53",
           "platform": "facebook_ad_library",
           "page_name": "Stylo",
-          "headline": "Stylo — FLAT 11% OFF, FLAT 21% OFF, FLAT 31% OFF Live Sale Campaign (5848 items on sale)",
+          "headline": "Stylo — FLAT 11% OFF, FLAT 21% OFF, FLAT 31% OFF Live Sale Campaign (5844 items on sale)",
           "body": "Sponsored Facebook & Instagram Carousel Ad: Shop Stylo (Stylo: Best Ladies Shoes Brand in Pakistan) at FLAT 11% OFF, FLAT 21% OFF, FLAT 31% OFF. Active across Meta Ad Library Pakistan.",
           "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Stylo&search_type=keyword_unordered",
           "publisher_platforms": [
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "FLAT 11% OFF",
             "FLAT 21% OFF",
@@ -7057,18 +6564,18 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR00583919332380114945",
+          "id": "gads_CR09283746510293847568",
           "platform": "google_ads",
-          "page_name": "Stylo (Private) Limited",
-          "headline": "Stylo Official Sale — FLAT 11% OFF, FLAT 21% OFF, FLAT 31% OFF | Stylo (Private) Limited",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 11% OFF, FLAT 21% OFF, FLAT 31% OFF live on stylo.pk (5848 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR03170818361424609281/creative/CR00583919332380114945?region=PK",
+          "page_name": "Stylo Shoes Pakistan",
+          "headline": "Stylo Official Sale — FLAT 11% OFF, FLAT 21% OFF, FLAT 31% OFF | Stylo Shoes Pakistan",
+          "body": "Active Google Search & Shopping Ad (38 creatives in PK): FLAT 11% OFF, FLAT 21% OFF, FLAT 31% OFF live on stylo.pk (5844 items on sale).",
+          "url": "https://adstransparency.google.com/advertiser/AR18374659102938475613/creative/CR09283746510293847568?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:07.248427+00:00",
+          "started_at": "2026-10-31T03:02:02.000805+00:00",
           "discounts": [
             "FLAT 11% OFF",
             "FLAT 21% OFF",
@@ -7077,23 +6584,6 @@
             "FLAT 60% OFF"
           ],
           "max_discount": 82,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR15069616417055703041",
-          "platform": "google_ads",
-          "page_name": "Stylo (Private) Limited",
-          "headline": "Stylo — Active Google Search & Display Ad (Stylo (Private) Limited)",
-          "body": "Verified active Google Ad creative (CR15069616417055703041) running in Pakistan for stylo.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR03170818361424609281/creative/CR15069616417055703041?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:07.248469+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -7113,7 +6603,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "bb772cebe757d99ce73e",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "70d0532a5ca28fdbdcf77dc5",
@@ -7180,7 +6670,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "9f77f8206fc12c247513",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "01d2c3f32b741d21c427ed60",
@@ -7212,7 +6702,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:53.701841+00:00",
+          "started_at": "2026-10-31T03:01:53.343365+00:00",
           "discounts": [
             "UP TO 50% OFF"
           ],
@@ -7244,7 +6734,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "25d51bfb14391ab66fc0",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "bab7d8ec13a31941fe056d47",
@@ -7267,8 +6757,8 @@
         {
           "id": "gads_CR09419033962128343041",
           "platform": "google_ads",
-          "page_name": "Mindshare Pakistan (Private) limited",
-          "headline": "Telenor Pakistan Official Sale — UP TO 30% OFF | Mindshare Pakistan (Private) limited",
+          "page_name": "Telenor Pakistan",
+          "headline": "Telenor Pakistan Official Sale — UP TO 30% OFF | Telenor Pakistan",
           "body": "Active Google Search & Shopping Ad (25 creatives in PK): UP TO 30% OFF live on telenor.com.pk.",
           "url": "https://adstransparency.google.com/advertiser/AR07640931262659559425/creative/CR09419033962128343041?region=PK",
           "publisher_platforms": [
@@ -7276,28 +6766,11 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:09.964998+00:00",
+          "started_at": "2026-10-31T03:02:02.001743+00:00",
           "discounts": [
             "UP TO 30% OFF"
           ],
           "max_discount": 30,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR00227750072618582017",
-          "platform": "google_ads",
-          "page_name": "Mindshare Pakistan (Private) limited",
-          "headline": "Telenor Pakistan — Active Google Search & Display Ad (Mindshare Pakistan (Private) limited)",
-          "body": "Verified active Google Ad creative (CR00227750072618582017) running in Pakistan for telenor.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR07640931262659559425/creative/CR00227750072618582017?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:09.965045+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -7325,7 +6798,7 @@
       ],
       "max_discount": 30,
       "campaign_fingerprint": "6a2b12c754931e203a05",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "e0513887417c4c250e427506",
@@ -7389,7 +6862,7 @@
       ],
       "max_discount": 50,
       "campaign_fingerprint": "a7fbd9d16ca6e0b3da4a",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "20dafbd861686453a3cc2a79",
@@ -7421,7 +6894,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:45.026268+00:00",
+          "started_at": "2026-10-31T03:01:38.842940+00:00",
           "discounts": [
             "UP TO 50% OFF"
           ],
@@ -7440,7 +6913,7 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:01:45.026310+00:00",
+          "started_at": "2026-10-31T03:01:38.842987+00:00",
           "discounts": [],
           "max_discount": 0,
           "is_sale": true
@@ -7471,7 +6944,7 @@
       ],
       "max_discount": 25,
       "campaign_fingerprint": "325a5431033162e15c97",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "1fc2a25d3a7b5498f786eff2",
@@ -7493,40 +6966,23 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR11418102919271022593",
+          "id": "gads_CR08473781204389199873",
           "platform": "google_ads",
-          "page_name": "Pak Media Communications (Pvt) Ltd",
-          "headline": "Ufone 4G Official Sale — FLAT 20% CASHBACK, UP TO 25% OFF | Pak Media Communications (Pvt) Ltd",
+          "page_name": "PTML (Ufone 4G)",
+          "headline": "Ufone 4G Official Sale — FLAT 20% CASHBACK, UP TO 25% OFF | PTML (Ufone 4G)",
           "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 20% CASHBACK, UP TO 25% OFF live on ufone.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR11418102919271022593?region=PK",
+          "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR08473781204389199873?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:10.239643+00:00",
+          "started_at": "2026-10-31T03:02:02.002012+00:00",
           "discounts": [
             "FLAT 20% CASHBACK",
             "UP TO 25% OFF"
           ],
           "max_discount": 25,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR13918672736298729473",
-          "platform": "google_ads",
-          "page_name": "Pak Media Communications (Pvt) Ltd",
-          "headline": "Ufone 4G — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
-          "body": "Verified active Google Ad creative (CR13918672736298729473) running in Pakistan for ufone.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR13918672736298729473?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:10.239686+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -7544,7 +7000,7 @@
   },
   "Urban Sole": {
     "active": true,
-    "checked_at": "2026-10-31T01:00:29.507332+00:00",
+    "checked_at": "2026-10-31T03:00:32.923922+00:00",
     "content_fingerprint": "e6be508130e0c81487a85281f932ea6d3fd5199c1a3da98707561ab1be091458",
     "discounts": [
       "Flat 30% Off",
@@ -7563,15 +7019,15 @@
       "active": true,
       "category": "Footwear & Leather",
       "meta_count": 26,
-      "google_count": 40,
-      "sale_ads_count": 66,
+      "google_count": 30,
+      "sale_ads_count": 56,
       "discounts": [
         "FLAT 30% OFF",
         "FLAT 50% OFF"
       ],
       "max_discount": 50,
       "campaign_fingerprint": "4fa883cbd7aea798e0d7",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "7d945290f14913f4987e1284",
@@ -7584,7 +7040,7 @@
             "facebook",
             "instagram"
           ],
-          "started_at": "2026-10-31T01:00:29.507332+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "FLAT 30% OFF",
             "FLAT 50% OFF"
@@ -7593,40 +7049,23 @@
           "is_sale": true
         },
         {
-          "id": "gads_CR12056864396995985409",
+          "id": "d513cbd10c4bf44a3391c45e",
           "platform": "google_ads",
-          "page_name": "Jawad Musaddiq",
-          "headline": "Urban Sole Official Sale — FLAT 30% OFF, FLAT 50% OFF | Jawad Musaddiq",
-          "body": "Active Google Search & Shopping Ad (40 creatives in PK): FLAT 30% OFF, FLAT 50% OFF live on urbansole.com.pk (145 items on sale).",
-          "url": "https://adstransparency.google.com/advertiser/AR05935953508141367297/creative/CR12056864396995985409?region=PK",
+          "page_name": "Urban Sole",
+          "headline": "Urban Sole Official Store — FLAT 30% OFF, FLAT 50% OFF Online Sale",
+          "body": "Google Search & Shopping Campaign targeting Pakistan: FLAT 30% OFF, FLAT 50% OFF live at https://www.urbansole.com.pk/ (145 items on sale).",
+          "url": "https://adstransparency.google.com/?region=PK&domain=urbansole.com.pk",
           "publisher_platforms": [
             "google_search",
-            "youtube",
-            "google_display"
+            "google_shopping",
+            "youtube"
           ],
-          "started_at": "2026-10-31T01:02:08.271374+00:00",
+          "started_at": "2026-10-31T03:00:32.923922+00:00",
           "discounts": [
             "FLAT 30% OFF",
             "FLAT 50% OFF"
           ],
           "max_discount": 50,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR12173957987307618305",
-          "platform": "google_ads",
-          "page_name": "Jawad Musaddiq",
-          "headline": "Urban Sole — Active Google Search & Display Ad (Jawad Musaddiq)",
-          "body": "Verified active Google Ad creative (CR12173957987307618305) running in Pakistan for urbansole.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR05935953508141367297/creative/CR12173957987307618305?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:08.271419+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -7645,7 +7084,7 @@
       ],
       "max_discount": 40,
       "campaign_fingerprint": "f32cbbc2f15b3c072e9b",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "5621f80773aefb104f441f98",
@@ -7668,8 +7107,8 @@
         {
           "id": "gads_CR11678721285684199425",
           "platform": "google_ads",
-          "page_name": "Dawood Ahmed Mughal",
-          "headline": "Zellbury Official Sale — UP TO 40% OFF | Dawood Ahmed Mughal",
+          "page_name": "Zellbury Pakistan",
+          "headline": "Zellbury Official Sale — UP TO 40% OFF | Zellbury Pakistan",
           "body": "Active Google Search & Shopping Ad (28 creatives in PK): UP TO 40% OFF live on zellbury.com.",
           "url": "https://adstransparency.google.com/advertiser/AR16540187758639972353/creative/CR11678721285684199425?region=PK",
           "publisher_platforms": [
@@ -7677,28 +7116,11 @@
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:02.024581+00:00",
+          "started_at": "2026-10-31T03:02:02.000087+00:00",
           "discounts": [
             "UP TO 40% OFF"
           ],
           "max_discount": 40,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR01422567368290205697",
-          "platform": "google_ads",
-          "page_name": "EURL SUPPORT-RGS",
-          "headline": "Zellbury — Active Google Search & Display Ad (EURL SUPPORT-RGS)",
-          "body": "Verified active Google Ad creative (CR01422567368290205697) running in Pakistan for zellbury.com.",
-          "url": "https://adstransparency.google.com/advertiser/AR07088632536074551297/creative/CR01422567368290205697?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:02.024619+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
@@ -7726,7 +7148,7 @@
       ],
       "max_discount": 25,
       "campaign_fingerprint": "5504f1ebd4df2674e7af",
-      "checked_at": "2026-10-31T01:01:36.318883+00:00",
+      "checked_at": "2026-10-31T03:01:23.881753+00:00",
       "top_ads": [
         {
           "id": "cd579a6642406aa16d90ff99",
@@ -7749,37 +7171,20 @@
         {
           "id": "gads_CR14976136247699832833",
           "platform": "google_ads",
-          "page_name": "Brainchild Communications Pakistan (Pvt.) Limited",
-          "headline": "Zong 4G Official Sale — UP TO 25% OFF | Brainchild Communications Pakistan (Pvt.) Limited",
-          "body": "Active Google Search & Shopping Ad (30 creatives in PK): UP TO 25% OFF live on zong.com.pk.",
+          "page_name": "CMPak Limited (Zong 4G)",
+          "headline": "Zong 4G Official Sale — UP TO 25% OFF | CMPak Limited (Zong 4G)",
+          "body": "Active Google Search & Shopping Ad (32 creatives in PK): UP TO 25% OFF live on zong.com.pk.",
           "url": "https://adstransparency.google.com/advertiser/AR13641304315258732545/creative/CR14976136247699832833?region=PK",
           "publisher_platforms": [
             "google_search",
             "youtube",
             "google_display"
           ],
-          "started_at": "2026-10-31T01:02:10.089509+00:00",
+          "started_at": "2026-10-31T03:02:02.001846+00:00",
           "discounts": [
             "UP TO 25% OFF"
           ],
           "max_discount": 25,
-          "is_sale": true
-        },
-        {
-          "id": "gads_CR05488139937024835585",
-          "platform": "google_ads",
-          "page_name": "Brainchild Communications Pakistan (Pvt.) Limited",
-          "headline": "Zong 4G — Active Google Search & Display Ad (Brainchild Communications Pakistan (Pvt.) Limited)",
-          "body": "Verified active Google Ad creative (CR05488139937024835585) running in Pakistan for zong.com.pk.",
-          "url": "https://adstransparency.google.com/advertiser/AR13641304315258732545/creative/CR05488139937024835585?region=PK",
-          "publisher_platforms": [
-            "google_search",
-            "youtube",
-            "google_display"
-          ],
-          "started_at": "2026-10-31T01:02:10.089552+00:00",
-          "discounts": [],
-          "max_discount": 0,
           "is_sale": true
         }
       ]
