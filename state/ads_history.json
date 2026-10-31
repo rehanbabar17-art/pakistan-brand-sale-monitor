@@ -1,69 +1,5 @@
 [
   {
-    "id": "gads_CR09565120634682343425",
-    "brand": "Daraz Pakistan",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Daraz Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR09565120634682343425?region=PK",
-    "detected_at": "2026-10-28T09:01:35.950998+00:00"
-  },
-  {
-    "id": "gads_CR16513214986063970305",
-    "brand": "Chase Value",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Chase Value Official Sale — UP TO 60% OFF | Chase Value",
-    "discounts": [
-      "UP TO 60% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR16513214986063970305?region=PK",
-    "detected_at": "2026-10-28T09:01:35.950998+00:00"
-  },
-  {
-    "id": "gads_CR05928969436051537921",
-    "brand": "Chase Value",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Chase Value — Active Google Search & Display Ad (Chase Value)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR05928969436051537921?region=PK",
-    "detected_at": "2026-10-28T09:01:35.950998+00:00"
-  },
-  {
-    "id": "gads_CR02055926533071044609",
-    "brand": "Sapphire",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR02055926533071044609?region=PK",
-    "detected_at": "2026-10-28T09:01:35.950998+00:00"
-  },
-  {
-    "id": "gads_CR02170434072034148353",
-    "brand": "Gul Ahmed",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Gul Ahmed Official Sale — UP TO 70% OFF | Ideas (Private) Limited",
-    "discounts": [
-      "UP TO 70% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR02170434072034148353?region=PK",
-    "detected_at": "2026-10-28T09:01:35.950998+00:00"
-  },
-  {
-    "id": "gads_CR01230589124797267969",
-    "brand": "Maria.B.",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Maria.B. — Active Google Search & Display Ad (MARIA B DESIGNS (PVT) LTD.)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR01230589124797267969?region=PK",
-    "detected_at": "2026-10-28T09:01:35.950998+00:00"
-  },
-  {
     "id": "gads_CR06099543271938195457",
     "brand": "Maria.B.",
     "category": "Fashion & Apparel",
@@ -5410,5 +5346,73 @@
     ],
     "url": "https://adstransparency.google.com/advertiser/AR11287412647911227393/creative/CR18144954116437180417?region=PK",
     "detected_at": "2026-10-31T13:01:23.413247+00:00"
+  },
+  {
+    "id": "gads_CR16622780770016034817",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan Official Sale — FLAT 50% OFF, UP TO 40% OFF | Pak Media Communications (Pvt) Ltd",
+    "discounts": [
+      "FLAT 50% OFF",
+      "UP TO 40% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR16622780770016034817?region=PK",
+    "detected_at": "2026-10-31T13:06:39.435480+00:00"
+  },
+  {
+    "id": "gads_CR16299449584659202049",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Mindshare Pakistan (Private) limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR07640931262659559425/creative/CR16299449584659202049?region=PK",
+    "detected_at": "2026-10-31T13:06:39.435480+00:00"
+  },
+  {
+    "id": "gads_CR07006327004039479297",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Z2C Pakistan (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR08391241983183552513/creative/CR07006327004039479297?region=PK",
+    "detected_at": "2026-10-31T13:06:39.435480+00:00"
+  },
+  {
+    "id": "gads_CR01485712278123708417",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Hong Kong) Limited",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR06679233693619322881/creative/CR01485712278123708417?region=PK",
+    "detected_at": "2026-10-31T13:06:39.435480+00:00"
+  },
+  {
+    "id": "gads_CR00691621993878913025",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | Pak Media Communications (Pvt) Ltd",
+    "discounts": [
+      "UP TO 70% OFF",
+      "FLAT 15% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR00691621993878913025?region=PK",
+    "detected_at": "2026-10-31T13:06:39.435480+00:00"
+  },
+  {
+    "id": "gads_CR11821828015438954497",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR11821828015438954497?region=PK",
+    "detected_at": "2026-10-31T13:06:39.435480+00:00"
   }
 ]
