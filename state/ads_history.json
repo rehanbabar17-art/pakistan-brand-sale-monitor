@@ -1,49 +1,5 @@
 [
   {
-    "id": "gads_CR07736070947249061889",
-    "brand": "Meezan Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Meezan Bank Official Sale — UP TO 40% OFF | EAST RIVER PRIVATE LIMITED",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR07736070947249061889?region=PK",
-    "detected_at": "2026-10-29T03:01:41.776232+00:00"
-  },
-  {
-    "id": "gads_CR14671469787620573185",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Hong Kong) Ltd.",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR12265884469424029697/creative/CR14671469787620573185?region=PK",
-    "detected_at": "2026-10-29T03:01:41.776232+00:00"
-  },
-  {
-    "id": "gads_CR00273289396109705217",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Carat Media Services Hong Kong Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR17103537788264906753/creative/CR00273289396109705217?region=PK",
-    "detected_at": "2026-10-29T03:01:41.776232+00:00"
-  },
-  {
-    "id": "gads_CR10508230203740782593",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Singapore) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR10508230203740782593?region=PK",
-    "detected_at": "2026-10-29T03:01:41.776232+00:00"
-  },
-  {
     "id": "gads_CR13152213548627132417",
     "brand": "Daraz Pakistan",
     "category": "Marketplaces & Groceries",
@@ -5406,5 +5362,50 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR00797051165979181057/creative/CR16377688907946393601?region=PK",
     "detected_at": "2026-11-01T15:01:25.524216+00:00"
+  },
+  {
+    "id": "gads_CR05771823111041187841",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR05771823111041187841?region=PK",
+    "detected_at": "2026-11-01T17:01:30.077203+00:00"
+  },
+  {
+    "id": "gads_CR05088002341139906561",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Hong Kong) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR06679233693619322881/creative/CR05088002341139906561?region=PK",
+    "detected_at": "2026-11-01T17:01:30.077203+00:00"
+  },
+  {
+    "id": "gads_CR12545598689931952129",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR03445132596860682241/creative/CR12545598689931952129?region=PK",
+    "detected_at": "2026-11-01T17:01:30.077203+00:00"
+  },
+  {
+    "id": "gads_CR06312173427587284993",
+    "brand": "Outfitters",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Outfitters Official Sale — 30% OFF, 60% OFF, FLAT 50% | Outfitters Stores Pvt Ltd",
+    "discounts": [
+      "30% OFF",
+      "60% OFF",
+      "FLAT 50%",
+      "UP TO 72% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR09791238525239164929/creative/CR06312173427587284993?region=PK",
+    "detected_at": "2026-11-01T17:01:30.077203+00:00"
   }
 ]
