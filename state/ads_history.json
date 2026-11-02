@@ -1,35 +1,5 @@
 [
   {
-    "id": "gads_CR13906234158822195201",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Hong Kong) Ltd.)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR12265884469424029697/creative/CR13906234158822195201?region=PK",
-    "detected_at": "2026-10-29T13:01:36.687830+00:00"
-  },
-  {
-    "id": "gads_CR10725240444347744257",
-    "brand": "Daraz Pakistan",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Daraz Pakistan — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR10725240444347744257?region=PK",
-    "detected_at": "2026-10-29T13:01:36.687830+00:00"
-  },
-  {
-    "id": "gads_CR04287832882874941441",
-    "brand": "Daraz Pakistan",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Daraz Pakistan — Active Google Search & Display Ad (JADE E-SERVICES PAKISTAN PRIVATE LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR03772973403389034497/creative/CR04287832882874941441?region=PK",
-    "detected_at": "2026-10-29T13:01:36.687830+00:00"
-  },
-  {
     "id": "gads_CR13714148377938100225",
     "brand": "Outfitters",
     "category": "Fashion & Apparel",
@@ -5397,5 +5367,37 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR13273506070766026753?region=PK",
     "detected_at": "2026-11-02T06:53:33.009365+00:00"
+  },
+  {
+    "id": "gads_CR00273289396109705217",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Carat Media Services Hong Kong Limited",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR17103537788264906753/creative/CR00273289396109705217?region=PK",
+    "detected_at": "2026-11-02T07:01:27.732435+00:00"
+  },
+  {
+    "id": "gads_CR17066825928237121537",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Carat Media Services Hong Kong Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR17103537788264906753/creative/CR17066825928237121537?region=PK",
+    "detected_at": "2026-11-02T07:01:27.732435+00:00"
+  },
+  {
+    "id": "gads_CR00573350826613932033",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Dentsu Solutions Pte. Ltd.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR02518803224509546497/creative/CR00573350826613932033?region=PK",
+    "detected_at": "2026-11-02T07:01:27.732435+00:00"
   }
 ]
