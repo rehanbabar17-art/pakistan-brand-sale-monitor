@@ -1,28 +1,5 @@
 [
   {
-    "id": "gads_CR13897790734154596353",
-    "brand": "Daraz Pakistan",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | Pak Media Communications (Pvt) Ltd",
-    "discounts": [
-      "UP TO 70% OFF",
-      "FLAT 15% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR13897790734154596353?region=PK",
-    "detected_at": "2026-10-31T06:20:11.280489+00:00"
-  },
-  {
-    "id": "gads_CR13575378190762770433",
-    "brand": "Daraz Pakistan",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Daraz Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR13575378190762770433?region=PK",
-    "detected_at": "2026-10-31T06:20:11.280489+00:00"
-  },
-  {
     "id": "gads_CR13590318354760990721",
     "brand": "Daraz Pakistan",
     "category": "Marketplaces & Groceries",
@@ -5482,5 +5459,27 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR09097805713018716161/creative/CR07613723065746194433?region=PK",
     "detected_at": "2026-11-04T17:01:35.053088+00:00"
+  },
+  {
+    "id": "gads_CR14909445189528453121",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (IPROSPECT SINGAPORE PTE. LTD.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR17577132905598025729/creative/CR14909445189528453121?region=PK",
+    "detected_at": "2026-11-04T19:01:24.864751+00:00"
+  },
+  {
+    "id": "gads_CR09294814771964542977",
+    "brand": "Edenrobe",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Edenrobe Official Sale — UP TO 73% OFF | EDEN APPARELS (PVT.) LIMITED",
+    "discounts": [
+      "UP TO 73% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR00797051165979181057/creative/CR09294814771964542977?region=PK",
+    "detected_at": "2026-11-04T19:01:24.864751+00:00"
   }
 ]
