@@ -1,126 +1,5 @@
 [
   {
-    "id": "gads_CR02788347512216354817",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Dentsu Solutions Pte. Ltd.)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02518803224509546497/creative/CR02788347512216354817?region=PK",
-    "detected_at": "2026-11-02T17:02:03.567508+00:00"
-  },
-  {
-    "id": "gads_CR04055960208587882497",
-    "brand": "Daraz Pakistan",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Daraz Pakistan — Active Google Search & Display Ad (Muhammad Abdullah)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR13341192564917665793/creative/CR04055960208587882497?region=PK",
-    "detected_at": "2026-11-02T17:02:03.567508+00:00"
-  },
-  {
-    "id": "gads_CR15620137525396373505",
-    "brand": "Khaadi",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Khaadi Official Online Sale — Up to 50% OFF Fabrics & Ready to Wear",
-    "discounts": [
-      "FLAT 40% OFF",
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR17919966815891488769/creative/CR15620137525396373505?region=PK",
-    "detected_at": "2026-11-02T17:02:03.567508+00:00"
-  },
-  {
-    "id": "b7e50e0b15b8e0ee473f3036",
-    "brand": "Hush Puppies",
-    "category": "Footwear & Leather",
-    "platform": "facebook_ad_library",
-    "headline": "Hush Puppies — FLAT 60% OFF, SAVE 40%, SAVE 60% Live Sale Campaign (248 items on sale)",
-    "discounts": [
-      "FLAT 60% OFF",
-      "SAVE 40%",
-      "SAVE 60%"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Hush%20Puppies&search_type=keyword_unordered",
-    "detected_at": "2026-11-02T17:02:03.567508+00:00"
-  },
-  {
-    "id": "b3fccdfa3ba8fea83c2e8020",
-    "brand": "Hush Puppies",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "Hush Puppies Official Store — FLAT 60% OFF, SAVE 40%, SAVE 60% Online Sale",
-    "discounts": [
-      "FLAT 60% OFF",
-      "SAVE 40%",
-      "SAVE 60%"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=hushpuppies.com.pk",
-    "detected_at": "2026-11-02T17:02:03.567508+00:00"
-  },
-  {
-    "id": "gads_CR05221636838350913537",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | STANDARD CHARTERED BANK (SINGAPORE) LIMITED",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR08920677739858493441/creative/CR05221636838350913537?region=PK",
-    "detected_at": "2026-11-02T19:01:35.051402+00:00"
-  },
-  {
-    "id": "gads_CR01709142592895057921",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Carat Media Services Hong Kong Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR17103537788264906753/creative/CR01709142592895057921?region=PK",
-    "detected_at": "2026-11-02T19:01:35.051402+00:00"
-  },
-  {
-    "id": "3e8aa8f16e857db0506b15ea",
-    "brand": "Limelight",
-    "category": "Fashion & Apparel",
-    "platform": "facebook_ad_library",
-    "headline": "Limelight — 30% OFF, UP TO 43% OFF Live Sale Campaign (34113 items on sale)",
-    "discounts": [
-      "30% OFF",
-      "UP TO 43% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Limelight&search_type=keyword_unordered",
-    "detected_at": "2026-11-02T19:01:35.051402+00:00"
-  },
-  {
-    "id": "gads_CR10171154676360151041",
-    "brand": "Limelight",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Limelight Official Sale — 30% OFF, UP TO 43% OFF | Maypole Pvt. Ltd.",
-    "discounts": [
-      "30% OFF",
-      "UP TO 43% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR16853473384858648577/creative/CR10171154676360151041?region=PK",
-    "detected_at": "2026-11-02T19:01:35.051402+00:00"
-  },
-  {
-    "id": "gads_CR03862510346090577921",
-    "brand": "Generation",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Generation Official Sale — UP TO 50% OFF | Generation (PVT) LTD",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR03134623297631682561/creative/CR03862510346090577921?region=PK",
-    "detected_at": "2026-11-02T19:01:35.051402+00:00"
-  },
-  {
     "id": "gads_CR16006790375670808577",
     "brand": "Jazz Pakistan",
     "category": "Telecom & Internet",
@@ -5573,5 +5452,120 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR01795002150238027777?region=PK",
     "detected_at": "2026-11-07T03:01:29.861150+00:00"
+  },
+  {
+    "id": "gads_CR06364515128871747585",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Ad Dynamo International (Pty) Ltd)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR08901403636031029249/creative/CR06364515128871747585?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR05088002341139906561",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Hong Kong) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR06679233693619322881/creative/CR05088002341139906561?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR06634920222513954817",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | JADE E-SERVICES PAKISTAN PRIVATE LIMITED",
+    "discounts": [
+      "UP TO 70% OFF",
+      "FLAT 15% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR03772973403389034497/creative/CR06634920222513954817?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR06900023960713297921",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan — Active Google Search & Display Ad (JADE E-SERVICES PAKISTAN PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR03772973403389034497/creative/CR06900023960713297921?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR10453220640570736641",
+    "brand": "Limelight",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Limelight Official Sale — 30% OFF, UP TO 41% OFF | Maypole Pvt. Ltd.",
+    "discounts": [
+      "30% OFF",
+      "UP TO 41% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR16853473384858648577/creative/CR10453220640570736641?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR18042911912596865025",
+    "brand": "Monark Clothing",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Monark Clothing Official Sale — UP TO 70% OFF | Kashif Trading",
+    "discounts": [
+      "UP TO 70% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR06134351885928235009/creative/CR18042911912596865025?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR17764251685653315585",
+    "brand": "Bata Pakistan",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Bata Pakistan Official Sale — 10% OFF, UP TO 50% OFF, UP TO 70% OFF | STARCREST PRIVATE LIMITED",
+    "discounts": [
+      "10% OFF",
+      "UP TO 50% OFF",
+      "UP TO 70% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR17764251685653315585?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR05902333217112850433",
+    "brand": "1st Step Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "1st Step Shoes Official Sale — UP TO 50% OFF, FLAT 25% OFF | 1st Step Shoes & Bags",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 25% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR05902333217112850433?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR15098120706249981953",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR15098120706249981953?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
+  },
+  {
+    "id": "gads_CR14404338592929284097",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan — Active Google Search & Display Ad (IDEATION)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR04699988828046229505/creative/CR14404338592929284097?region=PK",
+    "detected_at": "2026-11-07T05:01:34.311113+00:00"
   }
 ]
