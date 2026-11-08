@@ -114,6 +114,7 @@ TIJARA_BRAND_ALIASES = {
     "saeed ghani": "saeed ghani",
     "urban sole": None,
     "starlet shoes": "starlet",
+    "unze london": "unze",
 }
 
 

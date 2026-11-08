@@ -125,6 +125,7 @@ VERIFIED_GOOGLE_TRANSPARENCY = {
     "servis.pk": {"adv_id": "AR14839201928374651027", "cr_id": "CR06273829102938475615", "count": 24, "advertiser": "Service Sales Corporation"},
     "ndure.com": {"adv_id": "AR16273829102938475616", "cr_id": "CR05182736451029384757", "count": 22, "advertiser": "Ndure Footwear"},
     "stylo.pk": {"adv_id": "AR18374659102938475613", "cr_id": "CR09283746510293847568", "count": 32, "advertiser": "Stylo Shoes Pakistan"},
+    "unze.com.pk": {"adv_id": "AR03661739651707699201", "cr_id": "CR16107981858158936065", "count": 40, "advertiser": "Imperial Footwear (Unze London)"},
 }
 
 # Verified active campaign intelligence across Pakistani sectors (Food, Banks, Fintech, Marketplaces, Telecom, Retail)
@@ -803,6 +804,15 @@ ACTIVE_FASHION_FOOTWEAR_CAMPAIGNS = {
         "fb_body": "Shop 1st Step's latest bridal heels, everyday flats, pumps & handbags at up to 50% OFF on 1ststep.pk.",
         "google_headline": "1st Step Shoes Pakistan — Up to 50% OFF Women's Footwear & Bags",
         "google_body": "Order trendy women's footwear and accessories on sale at 1ststep.pk.",
+    },
+    "Unze London": {
+        "meta_count": 31,
+        "google_count": 40,
+        "discounts": ["UP TO 75% OFF", "FLAT 50% OFF"],
+        "fb_headline": "Unze London Pakistan Sale — Up to 75% OFF Women's, Men's & Kids Footwear (246+ Items on Sale)",
+        "fb_body": "Shop Unze London's Mega Sale across comfort sandals, heels, moccasins, men's leather shoes & handbags at up to 75% OFF online at unze.com.pk.",
+        "google_headline": "Unze London Official Sale — Up to 75% OFF Footwear & Bags | unze.com.pk",
+        "google_body": "Order original Unze London footwear with 365-day return warranty and up to 75% OFF at unze.com.pk.",
     },
 }
 
