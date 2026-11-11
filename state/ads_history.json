@@ -1,25 +1,5 @@
 [
   {
-    "id": "gads_CR01557525059025764353",
-    "brand": "Foodpanda Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR01557525059025764353?region=PK",
-    "detected_at": "2026-11-09T19:02:10.939237+00:00"
-  },
-  {
-    "id": "gads_CR04879616704100958209",
-    "brand": "Foodpanda Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR04879616704100958209?region=PK",
-    "detected_at": "2026-11-09T19:02:10.939237+00:00"
-  },
-  {
     "id": "gads_CR09346705123725803521",
     "brand": "Standard Chartered Pakistan",
     "category": "Banks & Cards",
@@ -5521,5 +5501,28 @@
     ],
     "url": "https://adstransparency.google.com/advertiser/AR16767241591290068993/creative/CR05539232696179359745?region=PK",
     "detected_at": "2026-11-11T07:01:26.566009+00:00"
+  },
+  {
+    "id": "gads_CR00448752794564820993",
+    "brand": "Cross Stitch",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Cross Stitch Official Sale — UP TO 50% OFF, FLAT 30% OFF | Sheikhupura Textile Mills Ltd (Cross Stitch)",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14272895267773612033/creative/CR00448752794564820993?region=PK",
+    "detected_at": "2026-11-11T07:11:29.680200+00:00"
+  },
+  {
+    "id": "gads_CR00290709542944112641",
+    "brand": "1st Step Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR00290709542944112641?region=PK",
+    "detected_at": "2026-11-11T07:11:29.680200+00:00"
   }
 ]
