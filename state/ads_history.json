@@ -1,50 +1,5 @@
 [
   {
-    "id": "gads_CR06443784454035996673",
-    "brand": "Maria.B.",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Maria.B. — Active Google Search & Display Ad (MARIA B DESIGNS (PVT) LTD.)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR06443784454035996673?region=PK",
-    "detected_at": "2026-11-11T21:01:31.133410+00:00"
-  },
-  {
-    "id": "gads_CR09175053766443925505",
-    "brand": "Stylo",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "Stylo — Active Google Search & Display Ad (Stylo (Private) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR03170818361424609281/creative/CR09175053766443925505?region=PK",
-    "detected_at": "2026-11-11T21:01:31.133410+00:00"
-  },
-  {
-    "id": "7b68c48a1f42df266ec0f26e",
-    "brand": "Hush Puppies",
-    "category": "Footwear & Leather",
-    "platform": "facebook_ad_library",
-    "headline": "Hush Puppies — FLAT 60% OFF, SAVE 30%, SAVE 40% Live Sale Campaign (121 items on sale)",
-    "discounts": [
-      "FLAT 60% OFF",
-      "SAVE 30%",
-      "SAVE 40%",
-      "SAVE 50%"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Hush%20Puppies&search_type=keyword_unordered",
-    "detected_at": "2026-11-11T21:01:31.133410+00:00"
-  },
-  {
-    "id": "gads_CR18090971565846953985",
-    "brand": "1st Step Shoes",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR18090971565846953985?region=PK",
-    "detected_at": "2026-11-11T21:01:31.133410+00:00"
-  },
-  {
     "id": "gads_CR15423587143187955713",
     "brand": "Jazz Pakistan",
     "category": "Telecom & Internet",
@@ -5474,5 +5429,47 @@
     ],
     "url": "https://adstransparency.google.com/advertiser/AR08920677739858493441/creative/CR02813982076062138369?region=PK",
     "detected_at": "2026-11-14T23:01:25.475514+00:00"
+  },
+  {
+    "id": "gads_CR14269274928170663937",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | 英商渣打銀行股份有限公司",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14707680339065569281/creative/CR14269274928170663937?region=PK",
+    "detected_at": "2026-11-15T01:01:20.477049+00:00"
+  },
+  {
+    "id": "gads_CR13404561062158663681",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan — Active Google Search & Display Ad (JADE E-SERVICES PAKISTAN PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR03772973403389034497/creative/CR13404561062158663681?region=PK",
+    "detected_at": "2026-11-15T01:01:20.477049+00:00"
+  },
+  {
+    "id": "gads_CR02368134509045481473",
+    "brand": "Stylo",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Stylo — Active Google Search & Display Ad (Stylo (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR03170818361424609281/creative/CR02368134509045481473?region=PK",
+    "detected_at": "2026-11-15T01:01:20.477049+00:00"
+  },
+  {
+    "id": "gads_CR13854662837231681537",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR13854662837231681537?region=PK",
+    "detected_at": "2026-11-15T01:01:20.477049+00:00"
   }
 ]
