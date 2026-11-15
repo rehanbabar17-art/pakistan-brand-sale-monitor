@@ -1,41 +1,5 @@
 [
   {
-    "id": "080f73ccac69d80925924544",
-    "brand": "California Pizza",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "California Pizza — Cheesiest Pizza in Town | Up to 40% OFF Online Deals",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=California%20Pizza&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:03.789431+00:00"
-  },
-  {
-    "id": "0fd8ab2b9f34a36fef81e777",
-    "brand": "California Pizza",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "California Pizza Pakistan — Up to 40% OFF Family & Midnight Deals",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=californiapizza.com.pk",
-    "detected_at": "2026-10-25T12:55:03.789431+00:00"
-  },
-  {
-    "id": "585bd1255f64169c7569dedb",
-    "brand": "14th Street Pizza",
-    "category": "Food & Dining",
-    "platform": "facebook_ad_library",
-    "headline": "14th Street Pizza Co. — Extreme 20-Inch Slice & Up to 35% OFF Combos",
-    "discounts": [
-      "UP TO 35% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=14th%20Street%20Pizza&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:03.789431+00:00"
-  },
-  {
     "id": "b86c95351caca86ca5d0c09c",
     "brand": "14th Street Pizza",
     "category": "Food & Dining",
@@ -5904,5 +5868,40 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR05251375234858090497/creative/CR03034527650279325697?region=PK",
     "detected_at": "2026-11-15T19:01:45.927349+00:00"
+  },
+  {
+    "id": "gads_CR15309811878968950785",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Dentsu Solutions Pte. Ltd.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR02518803224509546497/creative/CR15309811878968950785?region=PK",
+    "detected_at": "2026-11-15T19:07:46.085066+00:00"
+  },
+  {
+    "id": "gads_CR00342166687124029441",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | Sinointeractive Digital Marketing Co., Ltd.",
+    "discounts": [
+      "UP TO 70% OFF",
+      "FLAT 15% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR05226884764400615425/creative/CR00342166687124029441?region=PK",
+    "detected_at": "2026-11-15T19:07:46.085066+00:00"
+  },
+  {
+    "id": "gads_CR01752133703699529729",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan Official Sale — UP TO 30% OFF | Blitz Advertising (Pvt.) Limited",
+    "discounts": [
+      "UP TO 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR01752133703699529729?region=PK",
+    "detected_at": "2026-11-15T19:07:46.085066+00:00"
   }
 ]
