@@ -115,6 +115,7 @@ TIJARA_BRAND_ALIASES = {
     "urban sole": None,
     "starlet shoes": "starlet",
     "unze london": "unze",
+    "logo pakistan": "logo",
 }
 
 
@@ -179,6 +180,17 @@ def scan_salesiren_top_deals(min_pct=SALESIREN_MIN_DEAL_PCT):
     return results
 
 
+def _matches_salesiren_card(tracked_name, card_name):
+    t_low = tracked_name.lower()
+    c_low = card_name.lower()
+    if t_low in c_low or c_low in t_low:
+        return True
+    alias = TIJARA_BRAND_ALIASES.get(t_low)
+    if alias and re.search(r"\b" + re.escape(alias) + r"\b", c_low):
+        return True
+    return False
+
+
 def scan_salesiren_upcoming(tracked_names):
     """Check which tracked brands have upcoming sales on salesiren.pk."""
     page_html, _ = fetch_page("https://salesiren.pk/")
@@ -188,7 +200,7 @@ def scan_salesiren_upcoming(tracked_names):
         if upcoming != '1':
             continue
         for tname in tracked_names:
-            if tname.lower() in name.lower() or name.lower() in tname.lower():
+            if _matches_salesiren_card(tname, name):
                 found.append(tname)
                 break
     return found
@@ -201,7 +213,7 @@ def extract_salesiren_tracked_brands(tracked_names):
     found = []
     for name in tracked_names:
         for card in all_cards:
-            if name.lower() in card.lower() or card.lower() in name.lower():
+            if _matches_salesiren_card(name, card):
                 found.append(name)
                 break
     return found

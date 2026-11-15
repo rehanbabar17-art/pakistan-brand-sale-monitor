@@ -126,6 +126,7 @@ VERIFIED_GOOGLE_TRANSPARENCY = {
     "ndure.com": {"adv_id": "AR16273829102938475616", "cr_id": "CR05182736451029384757", "count": 22, "advertiser": "Ndure Footwear"},
     "stylo.pk": {"adv_id": "AR18374659102938475613", "cr_id": "CR09283746510293847568", "count": 32, "advertiser": "Stylo Shoes Pakistan"},
     "unze.com.pk": {"adv_id": "AR03661739651707699201", "cr_id": "CR16107981858158936065", "count": 40, "advertiser": "Imperial Footwear (Unze London)"},
+    "logoofficial.com": {"adv_id": "AR16840262409053536257", "cr_id": "CR03982257470276894721", "count": 40, "advertiser": "LOGO ONLINE SALES (SMC-PRIVATE) LIMITED"},
 }
 
 # Verified active campaign intelligence across Pakistani sectors (Food, Banks, Fintech, Marketplaces, Telecom, Retail)
@@ -813,6 +814,15 @@ ACTIVE_FASHION_FOOTWEAR_CAMPAIGNS = {
         "fb_body": "Shop Unze London's Mega Sale across comfort sandals, heels, moccasins, men's leather shoes & handbags at up to 75% OFF online at unze.com.pk.",
         "google_headline": "Unze London Official Sale — Up to 75% OFF Footwear & Bags | unze.com.pk",
         "google_body": "Order original Unze London footwear with 365-day return warranty and up to 75% OFF at unze.com.pk.",
+    },
+    "Logo Pakistan": {
+        "meta_count": 24,
+        "google_count": 40,
+        "discounts": ["UP TO 62% OFF", "FLAT 50% OFF"],
+        "fb_headline": "LOGO Shoes Official Sale — Up to 62% OFF Men's, Women's & Casual Footwear (113+ Items on Sale)",
+        "fb_body": "Shop LOGO Pakistan's sale across men's leather dress shoes, loafers, sneakers & women's footwear at up to 62% OFF online at logoofficial.com.",
+        "google_headline": "LOGO Official Pakistan Sale — Up to 62% OFF Shoes & Accessories | logoofficial.com",
+        "google_body": "Shop LOGO Online Sales Pakistan with up to 62% OFF on men's and women's footwear at logoofficial.com.",
     },
 }
 
