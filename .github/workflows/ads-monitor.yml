@@ -1,13 +1,10 @@
 name: Facebook & Google Ads Sale Monitor
 
 on:
-  schedule:
-    - cron: "45 */6 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
-  actions: write
 
 concurrency:
   group: ads-sale-monitor
@@ -20,12 +17,6 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-
-      - name: Keep scheduled workflow active
-        if: github.event_name == 'schedule'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh api --method PUT "/repos/${{ github.repository }}/actions/workflows/ads-monitor.yml/enable" || true
 
       - name: Set up Python
         uses: actions/setup-python@v5
