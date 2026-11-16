@@ -1447,22 +1447,45 @@ def monitor_ads_for_brand(brand, sale_state, meta_token="", google_api_key="", g
 
 def compute_brand_campaign_fingerprint(brand_name, discounts, active_ads):
     """
-    Compute a deterministic campaign fingerprint per brand so that:
+    Compute a deterministic campaign fingerprint per brand using 10% discount tier
+    bucketing so that:
       1. Multiple creatives (Facebook + Instagram + Google) for the same brand sale
          produce a single unified fingerprint.
-      2. Minor ad-ID or text rotations for the same discount campaign never
-         trigger duplicate alerts for the same brand.
+      2. Minor ad-ID, headline, or 1%-9% discount fluctuations never trigger
+         repeated alerts for the same brand.
     """
-    norm_brand = clean_brand_name(brand_name).lower()
-    if discounts:
-        norm_discs = "|".join(sorted({re.sub(r"\s+", " ", str(d).strip().upper()) for d in discounts if d}))
-        seed = f"brand_ad_campaign::{norm_brand}::discounts::{norm_discs}"
-    elif active_ads:
-        top_hl = re.sub(r"\s+", " ", active_ads[0].get("headline", "").strip().lower())[:80]
-        seed = f"brand_ad_campaign::{norm_brand}::headline::{top_hl}"
+    norm_brand = monitor.normalize_brand_key(brand_name)
+    max_disc = extract_max_discount(discounts)
+    tier_bucket = monitor.discount_tier_bucket(max_disc)
+    if tier_bucket > 0:
+        seed = f"brand_ad_campaign::{norm_brand}::tier_{tier_bucket}"
+    elif discounts or active_ads:
+        seed = f"brand_ad_campaign::{norm_brand}::active_promo"
     else:
         seed = f"brand_ad_campaign::{norm_brand}::none"
     return hashlib.sha256(seed.encode("utf-8")).hexdigest()[:20]
+
+
+def is_significant_ad_change(prev_brand_state, current_result):
+    """
+    Return True ONLY when a brand's ad state has changed significantly enough
+    to warrant a push notification:
+      1. Brand newly started running sale/promo ads (was inactive before), OR
+      2. Brand's max ad discount jumped upward by >= 10 percentage points into a higher 10% tier.
+    Minor fluctuations, ad creative rotations, or discount drops still update the dashboard
+    silently without spamming ntfy.
+    """
+    if not current_result.get("has_sale_ads"):
+        return False
+    if not prev_brand_state or not prev_brand_state.get("has_sale_ads"):
+        return True
+    prev_max = float(prev_brand_state.get("max_discount") or 0)
+    curr_max = float(current_result.get("max_discount") or 0)
+    prev_tier = monitor.discount_tier_bucket(prev_max)
+    curr_tier = monitor.discount_tier_bucket(curr_max)
+    if curr_tier > prev_tier and (curr_max - prev_max) >= 10:
+        return True
+    return False
 
 
 def main():
@@ -1559,8 +1582,12 @@ def main():
             if ad["is_sale"] and ad["id"] not in seen_ad_ids
         ]
 
+        brand_norm_key = monitor.normalize_brand_key(name)
+        tier_bucket = monitor.discount_tier_bucket(result["max_discount"])
         campaign_fp = compute_brand_campaign_fingerprint(name, result["discounts"], result["active_ads"])
-        brand_dedup_key = f"brand_ad_campaign::{clean_brand_name(name).lower()}::{campaign_fp}"
+        brand_dedup_key = f"brand_ad_campaign::{brand_norm_key}::{campaign_fp}"
+        sig_sale_key = f"sig_sale::{brand_norm_key}::tier_{tier_bucket}"
+        sig_sale_hash = hashlib.sha256(sig_sale_key.encode("utf-8")).hexdigest()[:16]
 
         updated_seen_ids = list(dict.fromkeys(list(seen_ad_ids) + current_ad_ids))[-200:]
         ads_state[name] = {
@@ -1631,16 +1658,22 @@ def main():
                 "detected_at": checked_at,
             })
 
-        # Per-brand deduplication:
-        # - On baseline run, register the brand's campaign_fingerprint in sent_alerts so existing campaigns never spam.
-        # - On subsequent runs, emit AT MOST ONE consolidated alert per brand only when its campaign_fingerprint changes.
-        brand_norm_key = clean_brand_name(name).lower()
+        # Per-brand significant-change deduplication:
+        # - Always update dashboard state (above), but ONLY send ntfy notification if:
+        #   1. The ad campaign represents a significant change (newly active or >=10% tier jump)
+        #   2. monitor.py has not already sent a website sale alert for this brand at this discount tier
+        #   3. This brand+tier campaign hasn't been sent before in sent_alerts
         if result["has_sale_ads"]:
+            already_alerted_by_website_monitor = sig_sale_hash in sent_alerts
             if is_baseline and not arguments.force_alert:
                 monitor.is_duplicate(brand_dedup_key, sent_alerts)
             else:
-                campaign_changed = (campaign_fp != prev_campaign_fp) or (not prev_brand_state.get("has_sale_ads")) or arguments.force_alert
-                if campaign_changed and brand_norm_key not in alerted_brands_this_run:
+                sig_change = is_significant_ad_change(prev_brand_state, result) or arguments.force_alert
+                if (
+                    sig_change
+                    and not already_alerted_by_website_monitor
+                    and brand_norm_key not in alerted_brands_this_run
+                ):
                     if arguments.force_alert or not monitor.is_duplicate(brand_dedup_key, sent_alerts):
                         alerted_brands_this_run.add(brand_norm_key)
                         has_fb = result["meta_ads_count"] > 0
@@ -1662,6 +1695,9 @@ def main():
                             f"🔗 {target_url}"
                         )
                         new_alerts.append(alert_text)
+                else:
+                    # Register current tier fingerprint so non-significant changes stay suppressed
+                    monitor.is_duplicate(brand_dedup_key, sent_alerts)
 
         disc_str = f" -> {', '.join(result['discounts'][:3])}" if result["discounts"] else ""
         status_line = (

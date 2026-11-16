@@ -42,9 +42,9 @@ def is_duplicate(alert_text, sent_alerts):
     if alert_hash in sent_alerts:
         return True
     sent_alerts[alert_hash] = datetime.now(timezone.utc).isoformat()
-    # Keep only last 500 entries
-    if len(sent_alerts) > 500:
-        oldest = sorted(sent_alerts.items(), key=lambda x: x[1])[:200]
+    # Keep up to 2500 entries so active brand hashes are never evicted
+    if len(sent_alerts) > 2500:
+        oldest = sorted(sent_alerts.items(), key=lambda x: x[1])[:500]
         for k, _ in oldest:
             del sent_alerts[k]
     return False
@@ -836,6 +836,59 @@ def send_android_notifications(alerts):
     return result + (f" Errors: {'; '.join(errors)}" if errors else "")
 
 
+def normalize_brand_key(name):
+    """Canonical brand key so Brand Tijara, Sale Siren, and tracked brands share one deduplication identity."""
+    clean = re.sub(r"\(.*?\)", "", str(name or "")).strip().lower()
+    clean = re.sub(
+        r"\b(women sale|men sale|pakistan|shoes|clothing|western wear|studio|official|linen|satrangi|by ideas|london)\b",
+        "",
+        clean,
+        flags=re.I,
+    )
+    clean = re.sub(r"[^a-z0-9]+", " ", clean).strip()
+    return clean or str(name or "").strip().lower()
+
+
+def discount_tier_bucket(pct):
+    """Bucket discount percentages into 10% tiers (e.g. 73% and 74% both map to 70) to ignore minor 1-3% fluctuations."""
+    try:
+        val = float(pct or 0)
+        if val <= 0:
+            return 0
+        return int(val // 10) * 10
+    except (ValueError, TypeError):
+        return 0
+
+
+def is_significant_brand_sale_change(previous, current):
+    """
+    Return True ONLY when a brand has a significant sale event worth notifying:
+      1. Brand newly entered an active sale (was inactive before) with >=20% off or >=15 sale products.
+      2. Brand's max discount jumped upward by >=10 percentage points into a higher 10% tier.
+    Minor 1-4% fluctuations, product count changes (e.g. 771 -> 773), discount drops when a single item sells out,
+    or homepage heading edits will update the dashboard silently without triggering notifications.
+    """
+    if not current or not current.get("active"):
+        return False
+    curr_disc = max_discount_percent(current.get("discounts", []))
+    curr_count = current.get("sale_product_count") or current.get("product_count") or 0
+
+    if not previous or not isinstance(previous, dict):
+        return curr_disc >= 20 or curr_count >= 15
+
+    was_active = bool(previous.get("active"))
+    prev_disc = max_discount_percent(previous.get("discounts", []))
+
+    if not was_active:
+        return curr_disc >= 20 or curr_count >= 15
+
+    # Both previous and current are active: require a significant upward jump (>=10% and higher tier bucket)
+    if (curr_disc - prev_disc) >= 10 and discount_tier_bucket(curr_disc) > discount_tier_bucket(prev_disc):
+        return True
+
+    return False
+
+
 def run(config_path, state_path, telegram_config, force_alert=False, links_config=DEFAULT_LINKS_CONFIG):
     config = load_json(config_path)
     watched_links = load_json(links_config) if Path(links_config).expanduser().exists() else {"links": []}
@@ -845,10 +898,14 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     alerts = []
     statuses = []
     link_events = []
+    sent = load_sent_alerts()
+    alerted_brands_this_run = set()
 
-    # Brand Tijara scan: ALL brands with >=50% off; alert only on new or changed deals
+    tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
+    tracked_norm_keys = {normalize_brand_key(n) for n in tracked_names}
+
+    # Brand Tijara scan: update dashboard state every run; alert only on significant new/jumped deals for non-duplicate brands
     try:
-        tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
         top_deals = scan_tijara_top_deals(tracked_names)
         current_deals = {slug: (display, pct) for display, pct, slug in top_deals}
         previous_deals = old_state.get("tijara_top_deals", {})
@@ -856,10 +913,18 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             previous_deals = {}
         if top_deals:
             for display, pct, slug in top_deals:
+                bkey = normalize_brand_key(display)
+                # Tracked brands are checked directly below; avoid double-alerting via aggregator + direct website
+                if bkey in tracked_norm_keys and not force_alert:
+                    continue
                 prev_entry = previous_deals.get(slug)
                 prev_pct = prev_entry[1] if isinstance(prev_entry, (list, tuple)) and len(prev_entry) >= 2 else None
-                if prev_pct != pct or force_alert:
-                    alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
+                sig_jump = (prev_pct is None and pct >= 50) or (prev_pct is not None and (pct - prev_pct) >= 10)
+                if (sig_jump or force_alert) and bkey not in alerted_brands_this_run:
+                    tier_key = f"sig_sale::{bkey}::tier_{discount_tier_bucket(pct)}"
+                    if force_alert or not is_duplicate(tier_key, sent):
+                        alerted_brands_this_run.add(bkey)
+                        alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Brand Tijara)\nhttps://www.brandtijara.com/brands-on-sale")
             statuses.append(f"Brand Tijara: {len(top_deals)} brand(s) with >=50% off")
         else:
             statuses.append("Brand Tijara: no brand at >=50% off")
@@ -867,7 +932,7 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     except Exception as error:
         statuses.append(f"Brand Tijara scan: ERROR — {error}")
 
-    # Salesiren.pk scan: ALL brands with >=50% off; alert only on new or changed deals
+    # Salesiren.pk scan: update dashboard state every run; alert only on significant new/jumped deals
     try:
         salesiren_deals = scan_salesiren_top_deals()
         current_salesiren = {slug: (display, pct, upcoming) for display, pct, slug, upcoming in salesiren_deals}
@@ -876,34 +941,43 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             previous_salesiren = {}
         if salesiren_deals:
             for display, pct, slug, upcoming in salesiren_deals:
+                bkey = normalize_brand_key(display)
+                if bkey in tracked_norm_keys and not upcoming and not force_alert:
+                    continue
                 prev_entry = previous_salesiren.get(slug)
                 prev_pct = prev_entry[1] if isinstance(prev_entry, (list, tuple)) and len(prev_entry) >= 2 else None
                 prev_upcoming = bool(prev_entry[2]) if isinstance(prev_entry, (list, tuple)) and len(prev_entry) >= 3 else None
-                if prev_pct != pct or prev_upcoming != upcoming or force_alert:
-                    if upcoming:
-                        alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren - COMING SOON)\nhttps://salesiren.pk/")
-                    else:
-                        alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren)\nhttps://salesiren.pk/")
+                sig_jump = (prev_pct is None and pct >= 50) or (prev_pct is not None and (pct - prev_pct) >= 10) or (upcoming and not prev_upcoming)
+                if (sig_jump or force_alert) and bkey not in alerted_brands_this_run:
+                    tier_key = f"sig_sale::{bkey}::tier_{discount_tier_bucket(pct)}::up_{int(upcoming)}"
+                    if force_alert or not is_duplicate(tier_key, sent):
+                        alerted_brands_this_run.add(bkey)
+                        if upcoming:
+                            alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren - COMING SOON)\nhttps://salesiren.pk/")
+                        else:
+                            alerts.insert(0, f"TOP DEAL: {display} — {pct}% off (via Sale Siren)\nhttps://salesiren.pk/")
             statuses.append(f"Sale Siren: {len(salesiren_deals)} brand(s) with >=50% off")
         else:
             statuses.append("Sale Siren: no brand at >=50% off")
         new_state["salesiren_top_deals"] = current_salesiren
 
-        # Also check: which of our tracked brands appear on salesiren.pk
-        tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
         tracked_on_salesiren = extract_salesiren_tracked_brands(tracked_names)
         if tracked_on_salesiren:
             statuses.append(f"Sale Siren tracked brands: {len(tracked_on_salesiren)} — {', '.join(tracked_on_salesiren)}")
         else:
             statuses.append("Sale Siren tracked brands: none matched")
 
-        # Check upcoming sales for tracked brands on salesiren.pk (priority alert)
+        # Check upcoming sales for tracked brands on salesiren.pk
         upcoming_brands = scan_salesiren_upcoming(tracked_names)
         prev_upcoming_brands = set(old_state.get("salesiren_upcoming_brands") or [])
         if upcoming_brands:
             for ub in upcoming_brands:
-                if ub not in prev_upcoming_brands or force_alert:
-                    alerts.insert(0, f"COMING SOON: {ub} upcoming sale detected (via Sale Siren)\nhttps://salesiren.pk/")
+                bkey = normalize_brand_key(ub)
+                if (ub not in prev_upcoming_brands or force_alert) and bkey not in alerted_brands_this_run:
+                    up_key = f"sig_upcoming::{bkey}"
+                    if force_alert or not is_duplicate(up_key, sent):
+                        alerted_brands_this_run.add(bkey)
+                        alerts.insert(0, f"COMING SOON: {ub} upcoming sale detected (via Sale Siren)\nhttps://salesiren.pk/")
             statuses.append(f"Sale Siren upcoming: {len(upcoming_brands)} brand(s) — {', '.join(upcoming_brands)}")
         else:
             statuses.append("Sale Siren upcoming: no tracked brands have upcoming sales")
@@ -920,22 +994,26 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             status = "ACTIVE" if result["active"] else "inactive"
             statuses.append(f"{name}: {status} ({result['summary']})")
 
-            changed = bool(previous and result["fingerprint"] != previous.get("fingerprint"))
             if "Tijara" in name:
-                # Brand Tijara aggregator: only alert for tracked brands found on its page
-                tracked_names = [b["name"] for b in config["brands"] if "Tijara" not in b["name"]]
-                found = extract_tijara_tracked_brands(result.get("text", ""), tracked_names)
-                if found and (changed or force_alert):
-                    for tb in found:
-                        alerts.append(f"{tb} sale update (via Brand Tijara)\n{result['summary']}\n{final_url}")
-            elif result["active"] and (previous is None or changed or force_alert):
-                disc = max_discount_percent(result.get("discounts", []))
-                sale_count = result.get("sale_product_count") or result.get("product_count") or 0
-                count_info = f" ({sale_count} products on sale)" if sale_count > 0 else ""
-                if disc >= 60:
-                    alerts.insert(0, f"TOP DEAL: {name} — {disc:.0f}% off{count_info}!\n{result['summary']}\n{final_url}")
-                else:
-                    alerts.append(f"{name} has a sale update{count_info}\n{result['summary']}\n{final_url}")
+                continue
+
+            bkey = normalize_brand_key(name)
+            disc = max_discount_percent(result.get("discounts", []))
+            tier_key = f"sig_sale::{bkey}::tier_{discount_tier_bucket(disc)}"
+
+            if is_significant_brand_sale_change(previous, result) or force_alert:
+                if bkey not in alerted_brands_this_run and (force_alert or not is_duplicate(tier_key, sent)):
+                    alerted_brands_this_run.add(bkey)
+                    sale_count = result.get("sale_product_count") or result.get("product_count") or 0
+                    count_info = f" ({sale_count} products on sale)" if sale_count > 0 else ""
+                    if disc >= 60:
+                        alerts.insert(0, f"TOP DEAL: {name} — {disc:.0f}% off{count_info}!\n{result['summary']}\n{final_url}")
+                    elif disc > 0:
+                        alerts.append(f"{name} Sale: Up to {disc:.0f}% off{count_info}\n{result['summary']}\n{final_url}")
+                    else:
+                        alerts.append(f"{name} has a new sale active{count_info}\n{result['summary']}\n{final_url}")
+            elif result.get("active"):
+                is_duplicate(tier_key, sent)
         except Exception as error:
             statuses.append(f"{name}: ERROR — {error}")
     for link in watched_links.get("links", []):
@@ -985,8 +1063,7 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
     if link_events:
         save_history(DEFAULT_LINK_HISTORY, link_events)
     print(f"Pakistan sale monitor — {checked_at}\n" + "\n".join(statuses))
-    # Deduplicate: only send alerts not seen before; do not send anything if no new sale or change is detected
-    sent = load_sent_alerts()
+    # Deduplicate: only send alerts not seen before; do not send anything if no significant new sale or change is detected
     new_alerts = [a for a in alerts if not is_duplicate(a, sent)]
     if new_alerts:
         print(f"New alerts: {len(new_alerts)} (skipped {len(alerts) - len(new_alerts)} duplicates)")
@@ -1010,6 +1087,8 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             raise SystemExit("Discord delivery did not complete")
         # Only mark alerts as sent after delivery actually succeeded,
         # otherwise a transient network failure would permanently suppress them.
+        save_sent_alerts(sent)
+    else:
         save_sent_alerts(sent)
 
 
