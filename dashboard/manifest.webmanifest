@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Pakistan Brand Sale Monitor",
-  "short_name": "SaleMonitor",
-  "description": "Live sale status, discount percentages, and product counts across Pakistani brands.",
+  "name": "Pakistan Brand Sales",
+  "short_name": "Pakistan Brand Sales",
+  "description": "Live sale status, discount percentages, itemized sale products, and ad campaigns across Pakistani brands.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

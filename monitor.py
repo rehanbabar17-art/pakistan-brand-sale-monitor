@@ -475,22 +475,16 @@ def check_shopify_sale(brand_url, max_items_saved=60):
 
             handle = (product.get("handle") or "").strip()
             prod_url = f"{base_url}/products/{handle}" if handle else brand_url
-            images = product.get("images") or []
-            img_src = ""
-            if isinstance(images, list) and images and isinstance(images[0], dict):
-                img_src = str(images[0].get("src") or "").strip()
 
             display_sizes = avail_sizes[:8] if any_available else all_sizes[:6]
             sale_items.append({
                 "title": str(product.get("title") or "Sale Product").strip(),
                 "discount_pct": round(effective_pct, 1),
-                "max_variant_pct": round(max_prod_pct, 1),
                 "sale_price": int(round(effective_sale)),
                 "original_price": int(round(effective_orig)),
                 "in_stock": any_available,
                 "sizes": display_sizes,
                 "url": prod_url,
-                "image": img_src,
             })
 
     if sale_product_count > 0:

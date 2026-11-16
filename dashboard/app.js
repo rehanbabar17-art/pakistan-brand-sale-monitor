@@ -36,6 +36,10 @@ const state = {
   connected: false,
   searchQuery: "",
   brandFilter: "all",
+  activeBrandModal: null,
+  modalSearch: "",
+  modalStock: "all",
+  modalSort: "discount",
   data: {
     brand: emptySourceData(),
     price: emptySourceData(),
@@ -68,7 +72,16 @@ const elements = {
   activityCount: document.getElementById("activity-count"),
   settingsDetails: document.getElementById("settings-details"),
   disconnectButton: document.getElementById("disconnect-button"),
-  toast: document.getElementById("toast")
+  toast: document.getElementById("toast"),
+  productsModal: document.getElementById("products-modal"),
+  modalBrandTitle: document.getElementById("modal-brand-title"),
+  modalBrandSubtitle: document.getElementById("modal-brand-subtitle"),
+  modalStoreLink: document.getElementById("modal-store-link"),
+  modalCloseBtn: document.getElementById("modal-close-btn"),
+  modalProductSearch: document.getElementById("modal-product-search"),
+  modalStockFilters: document.getElementById("modal-stock-filters"),
+  modalSortFilters: document.getElementById("modal-sort-filters"),
+  modalProductsBody: document.getElementById("modal-products-body")
 };
 
 function emptySourceData() {
@@ -154,10 +167,19 @@ async function fetchJsonFile(path) {
     const query = new URLSearchParams({ ref: cfg.branch || "main", _: Date.now().toString() });
     const response = await api(`/repos/${cfg.owner}/${cfg.repo}/contents/${encodePath(path)}?${query}`);
     const payload = await response.json();
-    const value = JSON.parse(decodeBase64Unicode(payload.content || ""));
-    return { value, sha: payload.sha };
+    if (payload.content) {
+      const value = JSON.parse(decodeBase64Unicode(payload.content));
+      return { value, sha: payload.sha };
+    }
+    if (payload.download_url) {
+      const dlResp = await fetch(`${payload.download_url}?_=${Date.now()}`);
+      if (dlResp.ok) {
+        return { value: await dlResp.json(), sha: payload.sha };
+      }
+    }
+    throw new Error("Empty content payload");
   } catch (err) {
-    // Fallback to raw.githubusercontent.com for unauthenticated read
+    // Fallback to raw.githubusercontent.com for unauthenticated read or large files
     const rawUrl = `https://raw.githubusercontent.com/${cfg.owner}/${cfg.repo}/${cfg.branch || "main"}/${path}?_=${Date.now()}`;
     const rawResp = await fetch(rawUrl);
     if (!rawResp.ok) {
@@ -238,6 +260,7 @@ function getBrandItems() {
       const active = Boolean(st.active || productCount > 0 || maxDiscount > 0 || (st.ads && st.ads.active));
       const ads = st.ads || null;
       const category = b.category || st.category || "Retail";
+      const saleItems = Array.isArray(st.sale_items) ? st.sale_items : [];
       return {
         name: b.name,
         category,
@@ -246,6 +269,7 @@ function getBrandItems() {
         maxDiscount,
         discounts,
         productCount,
+        saleItems,
         summary: st.summary || (ads && ads.active ? `Active Ads: ${ads.discounts?.join(", ") || "Campaign running"}` : `${b.name} Official`),
         checked_at: st.checked_at || "",
         ads,
@@ -340,27 +364,174 @@ function renderBrandSales() {
     return;
   }
 
-  elements.brandsList.innerHTML = filtered.map(brand => `
-    <article class="monitor-card">
-      <div>
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
-          <h3 class="monitor-name">${escapeHtml(brand.name)}</h3>
-          <span style="font-size:11px;color:#94a3b8;font-weight:500;">${escapeHtml(brand.category || "")}</span>
+  elements.brandsList.innerHTML = filtered.map(brand => {
+    const saleItems = Array.isArray(brand.saleItems) ? brand.saleItems : [];
+    const inStockCount = saleItems.filter(i => i.in_stock).length;
+    const previewHtml = saleItems.length > 0 ? `
+      <div class="product-preview-box">
+        <div class="product-preview-head">
+          <span>Top Discounted Products (${inStockCount} in stock)</span>
+          <button type="button" class="mini-button open-products-btn" data-brand="${escapeAttribute(brand.name)}" style="padding:2px 8px;min-height:26px;font-size:11px;color:#38bdf8;border-color:#38bdf8;">View All (${saleItems.length})</button>
         </div>
-        <div class="monitor-meta">
-          <span class="chip ${brand.active ? "sale-on" : "sale-off"}">${brand.active ? "SALE / ADS ACTIVE" : "NO ACTIVE SALE"}</span>
-          ${brand.maxDiscount > 0 ? `<span class="chip changed">Up to ${brand.maxDiscount}% OFF</span>` : ""}
-          ${brand.productCount > 0 ? `<span class="chip">${brand.productCount.toLocaleString()} products on sale</span>` : ""}
-          ${brand.ads && brand.ads.active ? `<span class="chip" style="background:rgba(59,130,246,0.15);color:#60a5fa;border-color:rgba(59,130,246,0.3);">📢 Ads Active (${brand.ads.meta_count || 0} Meta / ${brand.ads.google_count || 0} Google)</span>` : ""}
+        ${saleItems.slice(0, 2).map(item => {
+          const sizesStr = Array.isArray(item.sizes) && item.sizes.length ? item.sizes.slice(0, 3).join(", ") : "Standard";
+          const stockLabel = item.in_stock ? `In Stock (${escapeHtml(sizesStr)})` : "Sold Out";
+          const stockColor = item.in_stock ? "#34d399" : "#fb7185";
+          return `
+            <a class="product-preview-item" href="${escapeAttribute(item.url)}" target="_blank" rel="noopener noreferrer">
+              <div style="min-width:0;flex:1;">
+                <div class="product-preview-title">${escapeHtml(item.title)}</div>
+                <div class="product-preview-sub">
+                  <strong style="color:#34d399;">Rs.${Number(item.sale_price || 0).toLocaleString()}</strong>
+                  <span style="text-decoration:line-through;margin-left:4px;">Rs.${Number(item.original_price || 0).toLocaleString()}</span>
+                  · <span style="color:${stockColor};font-weight:600;">${stockLabel}</span>
+                </div>
+              </div>
+              <strong style="color:#38bdf8;white-space:nowrap;font-size:.82rem;">-${escapeHtml(item.discount_pct)}%</strong>
+            </a>
+          `;
+        }).join("")}
+      </div>
+    ` : "";
+
+    return `
+      <article class="monitor-card">
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <h3 class="monitor-name">${escapeHtml(brand.name)}</h3>
+            <span style="font-size:11px;color:#94a3b8;font-weight:500;">${escapeHtml(brand.category || "")}</span>
+          </div>
+          <div class="monitor-meta">
+            <span class="chip ${brand.active ? "sale-on" : "sale-off"}">${brand.active ? "SALE / ADS ACTIVE" : "NO ACTIVE SALE"}</span>
+            ${brand.maxDiscount > 0 ? `<span class="chip changed">Up to ${brand.maxDiscount}% OFF</span>` : ""}
+            ${brand.productCount > 0 ? `<span class="chip">${brand.productCount.toLocaleString()} products on sale</span>` : ""}
+            ${brand.ads && brand.ads.active ? `<span class="chip" style="background:rgba(59,130,246,0.15);color:#60a5fa;border-color:rgba(59,130,246,0.3);">📢 Ads Active (${brand.ads.meta_count || 0} Meta / ${brand.ads.google_count || 0} Google)</span>` : ""}
+          </div>
+          <div class="monitor-current">${escapeHtml(brand.summary)}</div>
+          ${brand.checked_at ? `<div class="monitor-last">Checked ${formatDate(brand.checked_at)}</div>` : ""}
+          ${previewHtml}
         </div>
-        <div class="monitor-current">${escapeHtml(brand.summary)}</div>
-        ${brand.checked_at ? `<div class="monitor-last">Checked ${formatDate(brand.checked_at)}</div>` : ""}
-      </div>
-      <div class="monitor-actions">
-        <a class="mini-button" style="display:flex;align-items:center;justify-content:center;text-decoration:none;" href="${escapeAttribute(brand.url)}" target="_blank" rel="noopener noreferrer">Visit Store / Deals</a>
-      </div>
-    </article>
-  `).join("");
+        <div class="monitor-actions">
+          ${saleItems.length > 0 ? `<button type="button" class="products-button open-products-btn" data-brand="${escapeAttribute(brand.name)}">Sale Products (${saleItems.length})</button>` : ""}
+          <a class="mini-button" style="display:flex;align-items:center;justify-content:center;text-decoration:none;" href="${escapeAttribute(brand.url)}" target="_blank" rel="noopener noreferrer">Visit Store</a>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  elements.brandsList.querySelectorAll(".open-products-btn").forEach(btn => {
+    btn.addEventListener("click", () => openProductsModal(btn.dataset.brand));
+  });
+}
+
+function openProductsModal(brandName) {
+  const { tracked } = getBrandItems();
+  const brand = tracked.find(b => b.name === brandName);
+  if (!brand || !Array.isArray(brand.saleItems) || !brand.saleItems.length) return;
+  state.activeBrandModal = brand;
+  state.modalSearch = "";
+  state.modalStock = "all";
+  state.modalSort = "discount";
+  if (elements.modalProductSearch) elements.modalProductSearch.value = "";
+  elements.productsModal?.classList.remove("hidden");
+  renderProductsModal();
+}
+
+function closeProductsModal() {
+  state.activeBrandModal = null;
+  elements.productsModal?.classList.add("hidden");
+}
+
+function renderProductsModal() {
+  const brand = state.activeBrandModal;
+  if (!brand || !elements.productsModal) return;
+  const items = Array.isArray(brand.saleItems) ? brand.saleItems : [];
+  const inStockCount = items.filter(i => i.in_stock).length;
+  const soldOutCount = items.length - inStockCount;
+
+  elements.modalBrandTitle.textContent = `${brand.name} — Sale Products (Up to ${brand.maxDiscount}% OFF)`;
+  elements.modalBrandSubtitle.innerHTML = `Showing <strong>${items.length}</strong> top discounted items (<span style="color:#34d399;font-weight:700;">${inStockCount} in stock</span> · <span>${soldOutCount} sold out</span>) out of ${Number(brand.productCount || items.length).toLocaleString()} total sale products`;
+  elements.modalStoreLink.href = brand.url;
+
+  if (elements.modalStockFilters) {
+    elements.modalStockFilters.innerHTML = `
+      <button type="button" class="filter-btn ${state.modalStock === "all" ? "active" : ""}" data-stock="all">All (${items.length})</button>
+      <button type="button" class="filter-btn ${state.modalStock === "in_stock" ? "active" : ""}" data-stock="in_stock">In Stock (${inStockCount})</button>
+      <button type="button" class="filter-btn ${state.modalStock === "sold_out" ? "active" : ""}" data-stock="sold_out">Sold Out (${soldOutCount})</button>
+    `;
+    elements.modalStockFilters.querySelectorAll("button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        state.modalStock = btn.dataset.stock;
+        renderProductsModal();
+      });
+    });
+  }
+
+  if (elements.modalSortFilters) {
+    elements.modalSortFilters.querySelectorAll("button").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.sort === state.modalSort);
+    });
+  }
+
+  const q = state.modalSearch.trim().toLowerCase();
+  const filtered = items
+    .filter(item => {
+      if (state.modalStock === "in_stock" && !item.in_stock) return false;
+      if (state.modalStock === "sold_out" && item.in_stock) return false;
+      if (q) {
+        const hay = `${item.title || ""} ${(item.sizes || []).join(" ")}`.toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    })
+    .slice()
+    .sort((a, b) => {
+      if (state.modalSort === "price_asc") return (a.sale_price || 0) - (b.sale_price || 0);
+      if (state.modalSort === "savings") {
+        return ((b.original_price || 0) - (b.sale_price || 0)) - ((a.original_price || 0) - (a.sale_price || 0));
+      }
+      if (a.in_stock !== b.in_stock && state.modalStock === "all") return a.in_stock ? -1 : 1;
+      return (b.discount_pct || 0) - (a.discount_pct || 0);
+    });
+
+  if (!filtered.length) {
+    elements.modalProductsBody.innerHTML = `<div class="empty">No sale products matched your filter. Try switching to "All" or clearing the search box.</div>`;
+    return;
+  }
+
+  elements.modalProductsBody.innerHTML = `
+    <div style="overflow-x:auto;">
+      <table class="products-table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th class="num-col">% Off</th>
+            <th class="num-col">Sale Price</th>
+            <th class="num-col">Original Price</th>
+            <th>Sizes</th>
+            <th>Availability</th>
+            <th class="num-col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${filtered.map(item => {
+            const sizes = Array.isArray(item.sizes) && item.sizes.length ? item.sizes.join(" · ") : "Standard";
+            return `
+              <tr>
+                <td style="font-weight:650;max-width:260px;">${escapeHtml(item.title)}</td>
+                <td class="num-col" style="color:#38bdf8;font-weight:750;">${escapeHtml(item.discount_pct)}% OFF</td>
+                <td class="num-col" style="color:#34d399;font-weight:750;">Rs. ${Number(item.sale_price || 0).toLocaleString()}</td>
+                <td class="num-col" style="color:#94a6bf;text-decoration:line-through;">Rs. ${Number(item.original_price || 0).toLocaleString()}</td>
+                <td style="color:#cbd5e1;max-width:190px;">${escapeHtml(sizes)}</td>
+                <td>${item.in_stock ? `<span class="badge-instock">✓ In Stock</span>` : `<span class="badge-soldout">✕ Sold Out</span>`}</td>
+                <td class="num-col"><a class="mini-button" style="display:inline-flex;align-items:center;padding:4px 10px;min-height:28px;text-decoration:none;" href="${escapeAttribute(item.url)}" target="_blank" rel="noopener noreferrer">View ↗</a></td>
+              </tr>
+            `;
+          }).join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
 }
 
 function normalizeMonitor(kind, item) {
@@ -649,6 +820,21 @@ elements.installButton.addEventListener("click", async () => {
   await state.installPrompt.userChoice;
   state.installPrompt = null;
   elements.installButton.classList.add("hidden");
+});
+
+elements.modalCloseBtn?.addEventListener("click", closeProductsModal);
+elements.productsModal?.addEventListener("click", event => {
+  if (event.target === elements.productsModal) closeProductsModal();
+});
+elements.modalProductSearch?.addEventListener("input", event => {
+  state.modalSearch = event.target.value;
+  renderProductsModal();
+});
+elements.modalSortFilters?.querySelectorAll("button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    state.modalSort = btn.dataset.sort;
+    renderProductsModal();
+  });
 });
 
 if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {

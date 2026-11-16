@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b1220">
-  <meta name="description" content="Live sale status, discount percentages, and product counts across Pakistani brands.">
-  <title>Pakistan Brand Sale Monitor</title>
+  <meta name="description" content="Live sale status, discount percentages, itemized sale products, and ad campaigns across Pakistani brands.">
+  <title>Pakistan Brand Sales</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
@@ -18,8 +18,8 @@
     <div style="display:flex;align-items:center;gap:.65rem;">
       <img src="./icon.svg" alt="" width="36" height="36" style="border-radius:.55rem;flex-shrink:0;">
       <div>
-        <p class="eyebrow">SaleMonitor PK</p>
-        <h1>Brand Sale Dashboard</h1>
+        <p class="eyebrow">Live Tracker</p>
+        <h1>Pakistan Brand Sales</h1>
       </div>
     </div>
     <div class="header-actions">
@@ -113,6 +113,37 @@
       </div>
     </section>
   </main>
+
+  <div id="products-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-brand-title">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div>
+          <h2 id="modal-brand-title">Brand — Sale Products</h2>
+          <p id="modal-brand-subtitle" class="modal-subtitle"></p>
+        </div>
+        <div class="modal-header-actions">
+          <a id="modal-store-link" class="mini-button" style="display:inline-flex;align-items:center;padding:0 .75rem;text-decoration:none;" href="#" target="_blank" rel="noopener noreferrer">Full Store ↗</a>
+          <button id="modal-close-btn" class="icon-button" type="button" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="modal-controls">
+        <input id="modal-product-search" type="search" placeholder="Filter by product name or size (e.g. Kurta, Trouser, Peshawari, XS, M, 42)..." autocomplete="off">
+        <div class="modal-filter-row">
+          <div class="modal-filter-group" id="modal-stock-filters">
+            <button type="button" class="filter-btn active" data-stock="all">All</button>
+            <button type="button" class="filter-btn" data-stock="in_stock">In Stock</button>
+            <button type="button" class="filter-btn" data-stock="sold_out">Sold Out</button>
+          </div>
+          <div class="modal-filter-group" id="modal-sort-filters">
+            <button type="button" class="filter-btn active" data-sort="discount">% Off</button>
+            <button type="button" class="filter-btn" data-sort="price_asc">Lowest Price</button>
+            <button type="button" class="filter-btn" data-sort="savings">Max Rs. Saved</button>
+          </div>
+        </div>
+      </div>
+      <div id="modal-products-body" class="modal-body"></div>
+    </div>
+  </div>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="./app.js"></script>
