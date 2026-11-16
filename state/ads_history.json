@@ -1,732 +1,5 @@
 [
   {
-    "id": "3beacf810f44733031c2aee9",
-    "brand": "Generation",
-    "category": "Fashion & Apparel",
-    "platform": "facebook_ad_library",
-    "headline": "Generation — UP TO 50% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Generation&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "cf498040737fb23999f228e6",
-    "brand": "Agha Noor",
-    "category": "Fashion & Apparel",
-    "platform": "facebook_ad_library",
-    "headline": "Agha Noor — UP TO 30% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 30% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Agha%20Noor&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "0af0fe4826625b93e0b8d0aa",
-    "brand": "Agha Noor",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Agha Noor Official Store — UP TO 30% OFF Online Sale",
-    "discounts": [
-      "UP TO 30% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=aghanoorofficial.com",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "ee14d282dba4f50be084d2c9",
-    "brand": "Borjan",
-    "category": "Footwear & Leather",
-    "platform": "facebook_ad_library",
-    "headline": "Borjan — UP TO 50% OFF, FLAT 30% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 50% OFF",
-      "FLAT 30% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Borjan&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "5527acc4a890f05205cb404d",
-    "brand": "Borjan",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "Borjan Official Store — UP TO 50% OFF, FLAT 30% OFF Online Sale",
-    "discounts": [
-      "UP TO 50% OFF",
-      "FLAT 30% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=borjan.com.pk",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "0ca31651c9f0f87d97911020",
-    "brand": "1st Step Shoes",
-    "category": "Footwear & Leather",
-    "platform": "facebook_ad_library",
-    "headline": "1st Step Shoes — UP TO 50% OFF, FLAT 25% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 50% OFF",
-      "FLAT 25% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=1st%20Step&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "a669f13f69e9bd88ba509e33",
-    "brand": "1st Step Shoes",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "1st Step Shoes Official Store — UP TO 50% OFF, FLAT 25% OFF Online Sale",
-    "discounts": [
-      "UP TO 50% OFF",
-      "FLAT 25% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=1ststep.pk",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "0257a7db0528cd212f02d18d",
-    "brand": "Jazz Pakistan",
-    "category": "Telecom & Internet",
-    "platform": "facebook_ad_library",
-    "headline": "Jazz Pakistan — UP TO 30% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 30% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Jazz%20Pakistan&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "bab7d8ec13a31941fe056d47",
-    "brand": "Telenor Pakistan",
-    "category": "Telecom & Internet",
-    "platform": "facebook_ad_library",
-    "headline": "Telenor Pakistan — UP TO 30% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 30% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Telenor%20Pakistan&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "cd579a6642406aa16d90ff99",
-    "brand": "Zong 4G",
-    "category": "Telecom & Internet",
-    "platform": "facebook_ad_library",
-    "headline": "Zong 4G — UP TO 25% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 25% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Zong%204G&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "1fc2a25d3a7b5498f786eff2",
-    "brand": "Ufone 4G",
-    "category": "Telecom & Internet",
-    "platform": "facebook_ad_library",
-    "headline": "Ufone 4G — FLAT 20% CASHBACK, UP TO 25% OFF Live Sale Campaign",
-    "discounts": [
-      "FLAT 20% CASHBACK",
-      "UP TO 25% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Ufone%204G&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "70c91a8e229579aa4295ae81",
-    "brand": "Nayatel",
-    "category": "Telecom & Internet",
-    "platform": "facebook_ad_library",
-    "headline": "Nayatel — UP TO 50% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Nayatel&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "caa172eea7fe371f07234e59",
-    "brand": "Nayatel",
-    "category": "Telecom & Internet",
-    "platform": "google_ads",
-    "headline": "Nayatel Official Store — UP TO 50% OFF Online Sale",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=nayatel.com",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "017e4ae8935be514d7a22164",
-    "brand": "StormFiber",
-    "category": "Telecom & Internet",
-    "platform": "facebook_ad_library",
-    "headline": "StormFiber — UP TO 40% OFF Live Sale Campaign",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=StormFiber&search_type=keyword_unordered",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "1eda2a271f018eeced2bc24b",
-    "brand": "StormFiber",
-    "category": "Telecom & Internet",
-    "platform": "google_ads",
-    "headline": "StormFiber Official Store — UP TO 40% OFF Online Sale",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/?region=PK&domain=stormfiber.com",
-    "detected_at": "2026-10-25T12:55:53.627609+00:00"
-  },
-  {
-    "id": "58b31eec6e8d87a686c31e25",
-    "brand": "Unze London",
-    "category": "Footwear & Leather",
-    "platform": "facebook_ad_library",
-    "headline": "Unze London — UP TO 75% OFF Live Sale Campaign (246 items on sale)",
-    "discounts": [
-      "UP TO 75% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Unze%20London&search_type=keyword_unordered",
-    "detected_at": "2026-11-08T15:36:24.571269+00:00"
-  },
-  {
-    "id": "gads_CR16107981858158936065",
-    "brand": "Unze London",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "Unze London Official Sale — UP TO 75% OFF | Imperial Footwear (Unze London)",
-    "discounts": [
-      "UP TO 75% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR03661739651707699201/creative/CR16107981858158936065?region=PK",
-    "detected_at": "2026-11-08T15:36:24.571269+00:00"
-  },
-  {
-    "id": "bcf51f14db1b342d02597423",
-    "brand": "Logo Pakistan",
-    "category": "Footwear & Leather",
-    "platform": "facebook_ad_library",
-    "headline": "Logo Pakistan — SAVE 20%, SAVE 25%, SAVE 30% Live Sale Campaign (113 items on sale)",
-    "discounts": [
-      "SAVE 20%",
-      "SAVE 25%",
-      "SAVE 30%",
-      "SAVE 50%",
-      "UP TO 62% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Logo%20Pakistan&search_type=keyword_unordered",
-    "detected_at": "2026-11-15T17:20:03.220988+00:00"
-  },
-  {
-    "id": "gads_CR03982257470276894721",
-    "brand": "Logo Pakistan",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "Logo Pakistan Official Sale — SAVE 20%, SAVE 25%, SAVE 30% | LOGO ONLINE SALES (SMC-PRIVATE) LIMITED",
-    "discounts": [
-      "SAVE 20%",
-      "SAVE 25%",
-      "SAVE 30%",
-      "SAVE 50%",
-      "UP TO 62% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR16840262409053536257/creative/CR03982257470276894721?region=PK",
-    "detected_at": "2026-11-15T17:20:03.220988+00:00"
-  },
-  {
-    "id": "gads_CR01546230325829435393",
-    "brand": "Cheezious",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Cheezious Official Sale — UP TO 25% OFF | I O Digital",
-    "discounts": [
-      "UP TO 25% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR04146464094456643585/creative/CR01546230325829435393?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR01332844255936249857",
-    "brand": "Cheezious",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Cheezious — Active Google Search & Display Ad (I O Digital)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR04146464094456643585/creative/CR01332844255936249857?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR07475178003576651777",
-    "brand": "Cheezious",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Cheezious — Active Google Search & Display Ad (I O Digital)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR04146464094456643585/creative/CR07475178003576651777?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR15644657974725574657",
-    "brand": "Domino's Pizza Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Domino's Pizza Pakistan Official Sale — FLAT 40% OFF, BUY 1 GET 1 FREE | WPP MEDIA PK (PRIVATE) LIMITED",
-    "discounts": [
-      "FLAT 40% OFF",
-      "BUY 1 GET 1 FREE"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR15644657974725574657?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR05561249317013946369",
-    "brand": "Domino's Pizza Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Domino's Pizza Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR05561249317013946369?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR05684696710144589825",
-    "brand": "Domino's Pizza Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Domino's Pizza Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR05684696710144589825?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR05792595393950777345",
-    "brand": "Hardee's Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Hardee's Pakistan Official Sale — UP TO 35% OFF | Firebolt 63 (PVT), LIMITED",
-    "discounts": [
-      "UP TO 35% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR07967583952384819201/creative/CR05792595393950777345?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR02576912010310582273",
-    "brand": "Hardee's Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Hardee's Pakistan — Active Google Search & Display Ad (Firebolt 63 (PVT), LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR07967583952384819201/creative/CR02576912010310582273?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR06542894432163725313",
-    "brand": "Hardee's Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Hardee's Pakistan — Active Google Search & Display Ad (Firebolt 63 (PVT), LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR07967583952384819201/creative/CR06542894432163725313?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR02822616437795848193",
-    "brand": "Howdy",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Howdy Official Sale — UP TO 30% OFF | Ali Hassan Liaqat",
-    "discounts": [
-      "UP TO 30% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR07786473969015586817/creative/CR02822616437795848193?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR04029444798489296897",
-    "brand": "Howdy",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Howdy — Active Google Search & Display Ad (Ali Hassan Liaqat)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR07786473969015586817/creative/CR04029444798489296897?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR07140720207223324673",
-    "brand": "Howdy",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Howdy — Active Google Search & Display Ad (Ali Hassan Liaqat)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR07786473969015586817/creative/CR07140720207223324673?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR03220949812409008129",
-    "brand": "Broadway Pizza",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Broadway Pizza Official Sale — FLAT 50% OFF, UP TO 40% OFF | J & S Corporation",
-    "discounts": [
-      "FLAT 50% OFF",
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR15892543584172244993/creative/CR03220949812409008129?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR04212700289821573121",
-    "brand": "Broadway Pizza",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Broadway Pizza — Active Google Search & Display Ad (J & S Corporation)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR15892543584172244993/creative/CR04212700289821573121?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR15685280256447479809",
-    "brand": "Broadway Pizza",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Broadway Pizza — Active Google Search & Display Ad (J & S Corporation)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR15892543584172244993/creative/CR15685280256447479809?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR17795661468683730945",
-    "brand": "California Pizza",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "California Pizza Official Sale — UP TO 40% OFF | Four Sons (Private) Limited",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR10098778799475785729/creative/CR17795661468683730945?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR15117032684204851201",
-    "brand": "California Pizza",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "California Pizza — Active Google Search & Display Ad (Four Sons (Private) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR10098778799475785729/creative/CR15117032684204851201?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR08705521069697531905",
-    "brand": "Foodpanda Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Foodpanda Pakistan Official Sale — FLAT 50% OFF, UP TO 40% OFF | Pak Media Communications (Pvt) Ltd",
-    "discounts": [
-      "FLAT 50% OFF",
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR08705521069697531905?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR13943112878329430017",
-    "brand": "Foodpanda Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR13943112878329430017?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR17800670259544326145",
-    "brand": "Foodpanda Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR17800670259544326145?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR10679965261345325057",
-    "brand": "Careem Food",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Careem Food Official Sale — UP TO 40% OFF | Careem Deliveries FZ LLC",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR05494519741575856129/creative/CR10679965261345325057?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR04246445650297749505",
-    "brand": "Careem Food",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Careem Food — Active Google Search & Display Ad (Careem Deliveries FZ LLC)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR05494519741575856129/creative/CR04246445650297749505?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR13687116369173151745",
-    "brand": "Careem Food",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Careem Food — Active Google Search & Display Ad (Careem Deliveries FZ LLC)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR05494519741575856129/creative/CR13687116369173151745?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR12406138559210192897",
-    "brand": "HBL (Habib Bank Limited)",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "HBL (Habib Bank Limited) Official Sale — UP TO 50% OFF, FLAT 40% OFF | 9-3201000036541",
-    "discounts": [
-      "UP TO 50% OFF",
-      "FLAT 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR11188165059031334913/creative/CR12406138559210192897?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR07877609429825224705",
-    "brand": "HBL (Habib Bank Limited)",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "HBL (Habib Bank Limited) — Active Google Search & Display Ad (Brainchild Communications Pakistan (Pvt.) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR13641304315258732545/creative/CR07877609429825224705?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR02316465983755124737",
-    "brand": "Meezan Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Meezan Bank Official Sale — UP TO 40% OFF | EAST RIVER PRIVATE LIMITED",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR02316465983755124737?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR00775638151258439681",
-    "brand": "Meezan Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Meezan Bank — Active Google Search & Display Ad (EAST RIVER PRIVATE LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR00775638151258439681?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR07736070947249061889",
-    "brand": "Meezan Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Meezan Bank — Active Google Search & Display Ad (EAST RIVER PRIVATE LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR07736070947249061889?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR15839569122535931905",
-    "brand": "Bank Alfalah",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Bank Alfalah — Active Google Search & Display Ad (Adgroov Communications (Pvt.) Ltd.)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR16317847240280375297/creative/CR15839569122535931905?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR17934505185699168257",
-    "brand": "Bank Alfalah",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Bank Alfalah — Active Google Search & Display Ad (Adgroov Communications (Pvt.) Ltd.)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR16317847240280375297/creative/CR17934505185699168257?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR05296022888778825729",
-    "brand": "MCB Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "MCB Bank Official Sale — UP TO 40% OFF | WPP MEDIA PK (PRIVATE) LIMITED",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR05296022888778825729?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR16463400237378043905",
-    "brand": "UBL (United Bank Limited)",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "UBL (United Bank Limited) Official Sale — UP TO 50% OFF | Persona Global (PVT) LTD",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR00147122163399262209/creative/CR16463400237378043905?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR01189547654267273217",
-    "brand": "UBL (United Bank Limited)",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "UBL (United Bank Limited) — Active Google Search & Display Ad (Persona Global (PVT) LTD)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR00147122163399262209/creative/CR01189547654267273217?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR01302331158998024193",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Hong Kong) Limited",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR06679233693619322881/creative/CR01302331158998024193?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR05350245888818151425",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Singapore) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR05350245888818151425?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR10737152098056536065",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Dentsu Solutions Pte. Ltd.)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02518803224509546497/creative/CR10737152098056536065?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR00561515923970719745",
-    "brand": "Faysal Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Faysal Bank Official Sale — UP TO 50% OFF | WPP MEDIA PK (PRIVATE) LIMITED",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR00561515923970719745?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR12303156616525512705",
-    "brand": "Faysal Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Faysal Bank — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR12303156616525512705?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR10127381434831208449",
-    "brand": "Faysal Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Faysal Bank — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR10127381434831208449?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR14095556317229875201",
-    "brand": "Askari Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Askari Bank Official Sale — UP TO 40% OFF | WPP MEDIA PK (PRIVATE) LIMITED",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR14095556317229875201?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR12339152462555381761",
-    "brand": "Askari Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Askari Bank — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR12339152462555381761?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR04140349340927393793",
-    "brand": "Askari Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Askari Bank — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR04140349340927393793?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR01172713581490208769",
-    "brand": "JS Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "JS Bank Official Sale — UP TO 40% OFF | WPP MEDIA PK (PRIVATE) LIMITED",
-    "discounts": [
-      "UP TO 40% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR01172713581490208769?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR05718534455367303169",
-    "brand": "JS Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "JS Bank — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR05718534455367303169?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
-    "id": "gads_CR17041186347869536257",
-    "brand": "JS Bank",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "JS Bank — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR17041186347869536257?region=PK",
-    "detected_at": "2026-11-15T19:01:45.927349+00:00"
-  },
-  {
     "id": "gads_CR06064875395436511233",
     "brand": "BankIslami",
     "category": "Banks & Cards",
@@ -5617,5 +4890,726 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR08492793091873308673?region=PK",
     "detected_at": "2026-11-16T05:01:24.906526+00:00"
+  },
+  {
+    "id": "gads_CR06482616696468144129",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan Official Sale — FLAT 50% OFF, UP TO 40% OFF | WPP MEDIA PK (PRIVATE) LIMITED",
+    "discounts": [
+      "FLAT 50% OFF",
+      "UP TO 40% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR06482616696468144129?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR05294894867158138881",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Delivery Hero SE)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR01506468094128685057/creative/CR05294894867158138881?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR04879616704100958209",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR04879616704100958209?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR04988714370977497089",
+    "brand": "Meezan Bank",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Meezan Bank Official Sale — UP TO 40% OFF | EAST RIVER PRIVATE LIMITED",
+    "discounts": [
+      "UP TO 40% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR04988714370977497089?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR12885333214385668097",
+    "brand": "Meezan Bank",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Meezan Bank — Active Google Search & Display Ad (EAST RIVER PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR12885333214385668097?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR12773910080416382977",
+    "brand": "Meezan Bank",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Meezan Bank — Active Google Search & Display Ad (EAST RIVER PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR12773910080416382977?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR17712719508394737665",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Singapore) Limited",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR17712719508394737665?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR04611394931313868801",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Carat Media Services Hong Kong Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR17103537788264906753/creative/CR04611394931313868801?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR09048341201735909377",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Dentsu Solutions Pte. Ltd.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR02518803224509546497/creative/CR09048341201735909377?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR02431203045770526721",
+    "brand": "Easypaisa",
+    "category": "Fintech & Wallets",
+    "platform": "google_ads",
+    "headline": "Easypaisa Official Sale — UP TO 50% OFF, FLAT 25% CASHBACK | Brainchild Communications Pakistan (Pvt.) Limited",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 25% CASHBACK"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR13641304315258732545/creative/CR02431203045770526721?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR16421043201185415169",
+    "brand": "Easypaisa",
+    "category": "Fintech & Wallets",
+    "platform": "google_ads",
+    "headline": "Easypaisa — Active Google Search & Display Ad (Brainchild Communications Pakistan (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR13641304315258732545/creative/CR16421043201185415169?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR07808761035350867969",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan Official Sale — UP TO 70% OFF, FLAT 15% OFF | Pak Media Communications (Pvt) Ltd",
+    "discounts": [
+      "UP TO 70% OFF",
+      "FLAT 15% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR07808761035350867969?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR09334144302890090497",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR09334144302890090497?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR01751208430305017857",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR01751208430305017857?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR02840120765989257217",
+    "brand": "Chase Value",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Chase Value Official Sale — UP TO 60% OFF | Chase Value",
+    "discounts": [
+      "UP TO 60% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR02840120765989257217?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR02428313804090638337",
+    "brand": "Chase Value",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Chase Value — Active Google Search & Display Ad (Chase Value)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR02428313804090638337?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR04570990387254001665",
+    "brand": "Chase Value",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Chase Value — Active Google Search & Display Ad (Chase Value)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR04570990387254001665?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR13022824729667436545",
+    "brand": "Khaadi",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Khaadi Official Online Sale — Up to 50% OFF Fabrics & Ready to Wear",
+    "discounts": [
+      "FLAT 40% OFF",
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR17919966815891488769/creative/CR13022824729667436545?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR12275768915748978689",
+    "brand": "Khaadi",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Khaadi — Active Google Search & Display Ad (Weaves Pakistan (SMC-Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR17919966815891488769/creative/CR12275768915748978689?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR13431354640109142017",
+    "brand": "Sapphire",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Sapphire Pakistan Official — Up to 50% OFF Women's, Men's & Kids Wear",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR13431354640109142017?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR06179835142916276225",
+    "brand": "Sapphire",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Sapphire — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR06179835142916276225?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR08144752547345727489",
+    "brand": "Gul Ahmed",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Gul Ahmed Official Sale — UP TO 70% OFF | Ideas (Private) Limited",
+    "discounts": [
+      "UP TO 70% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR08144752547345727489?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR02381970213613600769",
+    "brand": "Gul Ahmed",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Gul Ahmed — Active Google Search & Display Ad (Ideas (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR15204788203321032705/creative/CR02381970213613600769?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR01892965165939294209",
+    "brand": "Alkaram Studio",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Alkaram Studio Official Sale — FLAT 30%, FLAT 20%, FLAT 40% | AL-KARAM TEXTILE MILLS (PRIVATE) LIMITED",
+    "discounts": [
+      "FLAT 30%",
+      "FLAT 20%",
+      "FLAT 40%",
+      "FLAT 50%"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR04513419159559733249/creative/CR01892965165939294209?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR13022374419526320129",
+    "brand": "Outfitters",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Outfitters Official Sale — 30% OFF, 60% OFF, FLAT 50% | Outfitters Stores Pvt Ltd",
+    "discounts": [
+      "30% OFF",
+      "60% OFF",
+      "FLAT 50%",
+      "UP TO 72% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR09791238525239164929/creative/CR13022374419526320129?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR09577074525099524097",
+    "brand": "Outfitters",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Outfitters — Active Google Search & Display Ad (Outfitters Stores Pvt Ltd)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR09791238525239164929/creative/CR09577074525099524097?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR12147504012421234689",
+    "brand": "Outfitters",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Outfitters — Active Google Search & Display Ad (Outfitters Stores Pvt Ltd)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR09791238525239164929/creative/CR12147504012421234689?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR16115411404256706561",
+    "brand": "J. Junaid Jamshed",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "J. Junaid Jamshed Official Sale — UP TO 70% OFF | U & I Garments (Private) Limited",
+    "discounts": [
+      "UP TO 70% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR04804385670397165569/creative/CR16115411404256706561?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR02779212365885865985",
+    "brand": "J. Junaid Jamshed",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "J. Junaid Jamshed — Active Google Search & Display Ad (U & I Garments (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR04804385670397165569/creative/CR02779212365885865985?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR10638591154188189697",
+    "brand": "J. Junaid Jamshed",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "J. Junaid Jamshed — Active Google Search & Display Ad (U & I Garments (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR04804385670397165569/creative/CR10638591154188189697?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR09035002648222236673",
+    "brand": "Maria.B.",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Maria.B. Official Sale — 10% OFF, 20% OFF, 30% OFF | MARIA B DESIGNS (PVT) LTD.",
+    "discounts": [
+      "10% OFF",
+      "20% OFF",
+      "30% OFF",
+      "40% OFF",
+      "UP TO 40% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR09035002648222236673?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR13073790022782550017",
+    "brand": "Maria.B.",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Maria.B. — Active Google Search & Display Ad (MARIA B DESIGNS (PVT) LTD.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR13073790022782550017?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR16864207135196577793",
+    "brand": "Maria.B.",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Maria.B. — Active Google Search & Display Ad (MARIA B DESIGNS (PVT) LTD.)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR07465455168281116673/creative/CR16864207135196577793?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "b52ad98ae47b332601f2988f",
+    "brand": "Asim Jofa",
+    "category": "Fashion & Apparel",
+    "platform": "facebook_ad_library",
+    "headline": "Asim Jofa — UP TO 50% OFF Live Sale Campaign (771 items on sale)",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Asim%20Jofa&search_type=keyword_unordered",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR14935695273727361025",
+    "brand": "Asim Jofa",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Asim Jofa Official Sale — UP TO 50% OFF | Asim Jofa (Private) Limited",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR08681884241170006017/creative/CR14935695273727361025?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR08446120438181920769",
+    "brand": "Asim Jofa",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Asim Jofa — Active Google Search & Display Ad (Asim Jofa (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR08681884241170006017/creative/CR08446120438181920769?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR11073682198950313985",
+    "brand": "Asim Jofa",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Asim Jofa — Active Google Search & Display Ad (Asim Jofa (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR08681884241170006017/creative/CR11073682198950313985?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR04022063330255437825",
+    "brand": "Edenrobe",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Edenrobe Official Sale — UP TO 73% OFF | EDEN APPARELS (PVT.) LIMITED",
+    "discounts": [
+      "UP TO 73% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR00797051165979181057/creative/CR04022063330255437825?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR16377688907946393601",
+    "brand": "Edenrobe",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Edenrobe — Active Google Search & Display Ad (EDEN APPARELS (PVT.) LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR00797051165979181057/creative/CR16377688907946393601?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR04880737931083382785",
+    "brand": "Edenrobe",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Edenrobe — Active Google Search & Display Ad (EDEN APPARELS (PVT.) LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR00797051165979181057/creative/CR04880737931083382785?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR10844788617058975745",
+    "brand": "Charcoal",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Charcoal Official Sale — UP TO 50% OFF, FLAT 30% OFF | Charcoal private limited",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR13324724457713958913/creative/CR10844788617058975745?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR04380211925695332353",
+    "brand": "Cross Stitch",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Cross Stitch Official Sale — UP TO 50% OFF, FLAT 30% OFF | Sheikhupura Textile Mills Ltd (Cross Stitch)",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14272895267773612033/creative/CR04380211925695332353?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR15765409365344911361",
+    "brand": "Cross Stitch",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Cross Stitch — Active Google Search & Display Ad (Sheikhupura Textile Mills Ltd (Cross Stitch))",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR14272895267773612033/creative/CR15765409365344911361?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR14411713635892068353",
+    "brand": "Cross Stitch",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Cross Stitch — Active Google Search & Display Ad (Sheikhupura Textile Mills Ltd (Cross Stitch))",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR14272895267773612033/creative/CR14411713635892068353?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR15235538769001054209",
+    "brand": "Generation",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Generation Official Sale — UP TO 50% OFF | Generation (PVT) LTD",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR03134623297631682561/creative/CR15235538769001054209?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR13384236993446150145",
+    "brand": "Generation",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Generation — Active Google Search & Display Ad (Generation (PVT) LTD)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR03134623297631682561/creative/CR13384236993446150145?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR09911922270123589633",
+    "brand": "Generation",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Generation — Active Google Search & Display Ad (Generation (PVT) LTD)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR03134623297631682561/creative/CR09911922270123589633?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR01112990308892672001",
+    "brand": "Bata Pakistan",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Bata Pakistan — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR01112990308892672001?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR03699223910064062465",
+    "brand": "Servis Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Servis Shoes Official Sale — FLAT 40% OFF | Service Industries Limited",
+    "discounts": [
+      "FLAT 40% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR05353357017098485761/creative/CR03699223910064062465?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR14805743736742477825",
+    "brand": "Servis Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Servis Shoes — Active Google Search & Display Ad (Service Industries Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR05353357017098485761/creative/CR14805743736742477825?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR00962685909734522881",
+    "brand": "Servis Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Servis Shoes — Active Google Search & Display Ad (Service Industries Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR05353357017098485761/creative/CR00962685909734522881?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR06215644278127853569",
+    "brand": "Ndure",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Ndure Official Sale — 45% OFF, UP TO 50% OFF | Service Sales Corporation (Private) Limited",
+    "discounts": [
+      "45% OFF",
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR18389617641418391553/creative/CR06215644278127853569?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR07365302329144246273",
+    "brand": "Ndure",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Ndure — Active Google Search & Display Ad (Service Sales Corporation (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR18389617641418391553/creative/CR07365302329144246273?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR17615103757979222017",
+    "brand": "Ndure",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Ndure — Active Google Search & Display Ad (Service Sales Corporation (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR18389617641418391553/creative/CR17615103757979222017?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR08877708275689193473",
+    "brand": "Stylo",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Stylo Official Sale — 51% OFF, FLAT 11% OFF, FLAT 21% | Stylo (Private) Limited",
+    "discounts": [
+      "51% OFF",
+      "FLAT 11% OFF",
+      "FLAT 21%",
+      "FLAT 21% OFF",
+      "FLAT 31% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR03170818361424609281/creative/CR08877708275689193473?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "84a2a118fd8f69521d434f67",
+    "brand": "Hush Puppies",
+    "category": "Footwear & Leather",
+    "platform": "facebook_ad_library",
+    "headline": "Hush Puppies — SAVE 30%, SAVE 40%, SAVE 50% Live Sale Campaign (121 items on sale)",
+    "discounts": [
+      "SAVE 30%",
+      "SAVE 40%",
+      "SAVE 50%"
+    ],
+    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Hush%20Puppies&search_type=keyword_unordered",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR16869214285379665921",
+    "brand": "Starlet Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Starlet Shoes Official Sale — 25% OFF, 35% OFF, SAVE 25% | Starlet AHS",
+    "discounts": [
+      "25% OFF",
+      "35% OFF",
+      "SAVE 25%"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR02194340263730610177/creative/CR16869214285379665921?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR10492743685542772737",
+    "brand": "1st Step Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "1st Step Shoes Official Sale — UP TO 50% OFF, FLAT 25% OFF | 1st Step Shoes & Bags",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 25% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR10492743685542772737?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR07212282574352154625",
+    "brand": "1st Step Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR07212282574352154625?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR01003285436719693825",
+    "brand": "1st Step Shoes",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR01003285436719693825?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR07989092487178223617",
+    "brand": "Unze London",
+    "category": "Footwear & Leather",
+    "platform": "google_ads",
+    "headline": "Unze London Official Sale — UP TO 82% OFF | IMPERIAL FOOTWEAR (PVT.) LIMITED",
+    "discounts": [
+      "UP TO 82% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR03661739651707699201/creative/CR07989092487178223617?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR14404338592929284097",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan Official Sale — UP TO 30% OFF | IDEATION",
+    "discounts": [
+      "UP TO 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR04699988828046229505/creative/CR14404338592929284097?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR17072307577817137153",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR17072307577817137153?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
+  },
+  {
+    "id": "gads_CR01035116195264593921",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR01035116195264593921?region=PK",
+    "detected_at": "2026-11-16T07:01:29.666989+00:00"
   }
 ]
