@@ -356,11 +356,31 @@ def fetch_json_url(url, timeout=12):
         return json.loads(response.read().decode(charset, errors="replace"))
 
 
-def check_shopify_sale(brand_url):
-    """Check Shopify JSON endpoints and return (sale_product_count, discount_labels, collection_title)."""
+def _clean_variant_size(raw_title):
+    """Normalize Shopify variant title (e.g. 'XS / Blue / JJLT-S-24-447 FB/ESSENTIAL') into a clean size label."""
+    if not raw_title:
+        return ""
+    title = str(raw_title).strip()
+    if title.lower() in ("default title", "default", "title"):
+        return "Standard"
+    parts = [p.strip() for p in title.split("/") if p.strip()]
+    if len(parts) >= 2:
+        # Keep first 1-2 meaningful segments (size / color) and drop long SKU codes
+        cleaned_parts = []
+        for part in parts[:2]:
+            if len(part) <= 18 and not re.search(r"[A-Z]{2,}-\d{2,}", part):
+                cleaned_parts.append(part)
+        if cleaned_parts:
+            return " / ".join(cleaned_parts)
+        return parts[0][:20]
+    return title[:24]
+
+
+def check_shopify_sale(brand_url, max_items_saved=60):
+    """Check Shopify JSON endpoints and return (sale_product_count, discount_labels, collection_title, sale_items)."""
     parts = urlsplit(brand_url)
     if not parts.scheme or not parts.netloc or "brandtijara" in parts.netloc.lower():
-        return 0, [], ""
+        return 0, [], "", []
     base_url = f"{parts.scheme}://{parts.netloc}"
 
     collection_title = ""
@@ -373,58 +393,143 @@ def check_shopify_sale(brand_url):
     except Exception:
         pass
 
-    for endpoint in ("/collections/sale/products.json?limit=250", "/products.json?limit=250"):
+    seen_handles = set()
+    all_raw_products = []
+    used_sale_collection = False
+
+    for endpoint in (
+        "/collections/sale/products.json?limit=250&page=1",
+        "/collections/sale/products.json?limit=250&page=2",
+        "/products.json?limit=250&page=1",
+        "/products.json?limit=250&page=2",
+    ):
         try:
             data = fetch_json_url(f"{base_url}{endpoint}", timeout=12)
             products = data.get("products")
             if not isinstance(products, list) or not products:
                 continue
-
-            sale_product_count = 0
-            product_discounts = []
-            for product in products:
-                max_prod_pct = 0
-                for variant in product.get("variants") or []:
-                    try:
-                        price = float(variant.get("price") or 0)
-                        compare_at = float(variant.get("compare_at_price") or 0)
-                        if compare_at > price > 0:
-                            pct = round((compare_at - price) / compare_at * 100)
-                            if 0 < pct <= 95 and pct > max_prod_pct:
-                                max_prod_pct = pct
-                    except (ValueError, TypeError):
-                        continue
-                if max_prod_pct > 0:
-                    sale_product_count += 1
-                    product_discounts.append(max_prod_pct)
-
-            if sale_product_count > 0:
-                total_sale_products = sale_product_count
-                if (
-                    endpoint.startswith("/collections/sale/")
-                    and collection_total > sale_product_count
-                    and sale_product_count >= len(products) * 0.5
-                ):
-                    total_sale_products = collection_total
-
-                max_pct = max(product_discounts)
-                min_pct = min(product_discounts)
-                if min_pct == max_pct:
-                    disc_label = f"Flat {max_pct}% off"
-                else:
-                    disc_label = f"Up to {max_pct}% off"
-                return total_sale_products, [disc_label], collection_title
+            if endpoint.startswith("/collections/sale/"):
+                used_sale_collection = True
+            for p in products:
+                handle = p.get("handle") or str(p.get("id") or "")
+                if handle and handle not in seen_handles:
+                    seen_handles.add(handle)
+                    all_raw_products.append(p)
+            # If we already found a substantial sale collection, don't over-fetch general catalog pages
+            if used_sale_collection and len(all_raw_products) >= 250 and endpoint.endswith("page=2"):
+                break
         except Exception:
             continue
 
-    return 0, [], ""
+    if not all_raw_products:
+        return 0, [], "", []
+
+    sale_product_count = 0
+    product_discounts = []
+    sale_items = []
+
+    for product in all_raw_products:
+        max_prod_pct = 0.0
+        best_in_stock_pct = 0.0
+        best_sale_price = 0.0
+        best_compare_at = 0.0
+        in_stock_sale_price = 0.0
+        in_stock_compare_at = 0.0
+        avail_sizes = []
+        all_sizes = []
+        any_available = False
+
+        for variant in product.get("variants") or []:
+            try:
+                price = float(variant.get("price") or 0)
+                compare_at = float(variant.get("compare_at_price") or 0)
+                is_avail = bool(variant.get("available", True))
+                size_label = _clean_variant_size(variant.get("title"))
+
+                if compare_at > price > 0:
+                    pct = round((compare_at - price) / compare_at * 100, 1)
+                    if 0 < pct <= 95:
+                        if size_label and size_label not in all_sizes:
+                            all_sizes.append(size_label)
+                        if pct > max_prod_pct:
+                            max_prod_pct = pct
+                            best_sale_price = price
+                            best_compare_at = compare_at
+                        if is_avail:
+                            any_available = True
+                            if size_label and size_label not in avail_sizes:
+                                avail_sizes.append(size_label)
+                            if pct > best_in_stock_pct:
+                                best_in_stock_pct = pct
+                                in_stock_sale_price = price
+                                in_stock_compare_at = compare_at
+            except (ValueError, TypeError):
+                continue
+
+        if max_prod_pct > 0:
+            sale_product_count += 1
+            effective_pct = best_in_stock_pct if any_available and best_in_stock_pct > 0 else max_prod_pct
+            effective_sale = in_stock_sale_price if any_available and in_stock_sale_price > 0 else best_sale_price
+            effective_orig = in_stock_compare_at if any_available and in_stock_compare_at > 0 else best_compare_at
+            product_discounts.append(round(max_prod_pct))
+
+            handle = (product.get("handle") or "").strip()
+            prod_url = f"{base_url}/products/{handle}" if handle else brand_url
+            images = product.get("images") or []
+            img_src = ""
+            if isinstance(images, list) and images and isinstance(images[0], dict):
+                img_src = str(images[0].get("src") or "").strip()
+
+            display_sizes = avail_sizes[:8] if any_available else all_sizes[:6]
+            sale_items.append({
+                "title": str(product.get("title") or "Sale Product").strip(),
+                "discount_pct": round(effective_pct, 1),
+                "max_variant_pct": round(max_prod_pct, 1),
+                "sale_price": int(round(effective_sale)),
+                "original_price": int(round(effective_orig)),
+                "in_stock": any_available,
+                "sizes": display_sizes,
+                "url": prod_url,
+                "image": img_src,
+            })
+
+    if sale_product_count > 0:
+        total_sale_products = sale_product_count
+        if (
+            used_sale_collection
+            and collection_total > sale_product_count
+            and sale_product_count >= 50
+        ):
+            total_sale_products = collection_total
+
+        # Keep top in-stock items first, plus top sold-out items so users can inspect both
+        in_stock_items = [i for i in sale_items if i["in_stock"]]
+        sold_out_items = [i for i in sale_items if not i["in_stock"]]
+        in_stock_items.sort(key=lambda item: (-item["discount_pct"], -(item["original_price"] - item["sale_price"])))
+        sold_out_items.sort(key=lambda item: (-item["discount_pct"], -(item["original_price"] - item["sale_price"])))
+
+        if sold_out_items:
+            in_stock_quota = max(1, max_items_saved - min(12, len(sold_out_items)))
+            combined_items = in_stock_items[:in_stock_quota] + sold_out_items[: max_items_saved - len(in_stock_items[:in_stock_quota])]
+        else:
+            combined_items = in_stock_items[:max_items_saved]
+
+        max_pct = max(product_discounts)
+        min_pct = min(product_discounts)
+        if min_pct == max_pct:
+            disc_label = f"Flat {max_pct}% off"
+        else:
+            disc_label = f"Up to {max_pct}% off"
+        return total_sale_products, [disc_label], collection_title, combined_items
+
+    return 0, [], "", []
 
 
 def check_brand(brand_url):
     page_html, final_url = fetch_page(brand_url)
 
     title, headings, products, discounts, lower_text, links = extract_page(page_html, brand_url)
-    shopify_count, shopify_discounts, shopify_col_title = check_shopify_sale(final_url)
+    shopify_count, shopify_discounts, shopify_col_title, shopify_items = check_shopify_sale(final_url)
 
     if shopify_discounts:
         existing_max = max_discount_percent(discounts)
@@ -455,6 +560,7 @@ def check_brand(brand_url):
         "summary": summary[:600],
         "product_count": sale_product_count if shopify_count > 0 else len(products),
         "sale_product_count": sale_product_count,
+        "sale_items": shopify_items,
         "link_count": len(links),
         "heading_count": len(headings),
         "text_length": len(lower_text),
@@ -879,6 +985,9 @@ def run(config_path, state_path, telegram_config, force_alert=False, links_confi
             statuses.append(f"{name} link: ERROR — {error}")
 
     save_state(new_state, state_path)
+    public_sale_state = BASE_DIR / "public" / "sale_state.json"
+    if public_sale_state.parent.exists():
+        save_state(new_state, public_sale_state)
     if link_events:
         save_history(DEFAULT_LINK_HISTORY, link_events)
     print(f"Pakistan sale monitor — {checked_at}\n" + "\n".join(statuses))

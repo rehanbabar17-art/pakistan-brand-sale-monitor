@@ -14,9 +14,9 @@ export default defineConfig(() => {
         includeAssets: ['icon.svg', 'apple-touch-icon.png', 'pwa-192x192.png', 'pwa-512x512.png', 'pwa-maskable-512x512.png'],
         manifest: {
           id: '/',
-          name: 'Pakistan Brand Sale Monitor',
-          short_name: 'SaleMonitor',
-          description: 'Live sale status, discount percentages, and product counts across Pakistani clothing & footwear brands.',
+          name: 'Pakistan Brand Sales',
+          short_name: 'PK Brand Sales',
+          description: 'Live sale status, discount percentages, itemized sale products, and ad campaigns across Pakistani brands.',
           theme_color: '#0b1220',
           background_color: '#0b1220',
           display: 'standalone',

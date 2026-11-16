@@ -80,6 +80,18 @@ interface BrandAdState {
   top_ads?: AdCampaignDetail[];
 }
 
+interface SaleProductItem {
+  title: string;
+  discount_pct: number;
+  max_variant_pct?: number;
+  sale_price: number;
+  original_price: number;
+  in_stock: boolean;
+  sizes: string[];
+  url: string;
+  image?: string;
+}
+
 interface BrandSaleState {
   active: boolean;
   checked_at?: string;
@@ -87,6 +99,7 @@ interface BrandSaleState {
   fingerprint?: string;
   product_count?: number;
   sale_product_count?: number;
+  sale_items?: SaleProductItem[];
   summary?: string;
   title?: string;
   url?: string;
@@ -110,6 +123,7 @@ interface EnrichedBrand {
   maxDiscount: number;
   discounts: string[];
   saleProductsCount: number;
+  saleItems: SaleProductItem[];
   summary: string;
   checkedAt: string;
   source: 'tracked' | 'aggregator' | 'ad_only';
@@ -235,6 +249,13 @@ export default function App() {
   const [addingBrand, setAddingBrand] = useState(false);
   const [triggeringScan, setTriggeringScan] = useState(false);
   const [triggeringAdsScan, setTriggeringAdsScan] = useState(false);
+
+  // Sale Products Modal state
+  const [selectedBrandForProducts, setSelectedBrandForProducts] = useState<EnrichedBrand | null>(null);
+  const [productSearchQuery, setProductSearchQuery] = useState('');
+  const [productStockFilter, setProductStockFilter] = useState<'all' | 'in_stock' | 'sold_out'>('all');
+  const [productSizeFilter, setProductSizeFilter] = useState<string>('all');
+  const [productSortBy, setProductSortBy] = useState<'discount' | 'price_asc' | 'savings'>('discount');
 
   const showToast = useCallback((text: string, type: 'info' | 'error' = 'info') => {
     setFeedbackMessage({ text, type });
@@ -549,6 +570,7 @@ export default function App() {
         maxDiscount,
         discounts,
         saleProductsCount,
+        saleItems: Array.isArray(websiteData?.sale_items) ? websiteData.sale_items : [],
         summary: websiteData?.summary || (hasActiveAds ? `Active Ads: ${adData?.discounts?.join(' · ') || 'Campaign live'}` : `${name} Official Store`),
         checkedAt: brandChecked,
         source: 'tracked',
@@ -598,6 +620,7 @@ export default function App() {
           maxDiscount,
           discounts,
           saleProductsCount,
+          saleItems: Array.isArray(websiteData?.sale_items) ? websiteData.sale_items : [],
           summary: websiteData?.summary || item.name,
           checkedAt: brandChecked,
           source: 'tracked',
@@ -626,6 +649,7 @@ export default function App() {
           maxDiscount: pct,
           discounts: [`Up to ${pct}% off`],
           saleProductsCount: 0,
+          saleItems: [],
           summary: `${displayName} — Up to ${pct}% off (via Brand Tijara)`,
           checkedAt: latestTimestamp,
           source: 'aggregator',
@@ -650,6 +674,7 @@ export default function App() {
             maxDiscount: pct,
             discounts: [`Up to ${pct}% off`],
             saleProductsCount: 0,
+            saleItems: [],
             summary: `${displayName} — Up to ${pct}% off (via Sale Siren${upcoming ? ' · Upcoming' : ''})`,
             checkedAt: latestTimestamp,
             source: 'aggregator',
@@ -760,10 +785,9 @@ export default function App() {
             setActiveSection('brands');
             setSelectedCategory('all');
           }}
-          className="flex items-center gap-2.5 text-base md:text-lg font-bold tracking-tight text-white whitespace-nowrap shrink-0 font-display"
+          className="text-base md:text-lg font-bold tracking-tight text-white whitespace-nowrap shrink-0 font-display"
         >
-          <img src="/icon.svg" alt="" className="w-7 h-7 rounded-lg shrink-0" />
-          <span>SaleMonitor PK</span>
+          Pakistan Brand Sales
         </a>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-400">
@@ -779,17 +803,11 @@ export default function App() {
           <button
             type="button"
             onClick={() => setActiveSection('ads')}
-            className={`hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 flex items-center gap-1.5 ${
+            className={`hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 ${
               activeSection === 'ads' ? 'text-white underline underline-offset-8 decoration-sky-400 decoration-2' : ''
             }`}
           >
-            <Radio className="w-3.5 h-3.5 text-blue-400" />
-            <span>FB &amp; Google Ads</span>
-            {activeAdsCount > 0 && (
-              <span className="text-[10px] bg-blue-500/20 text-blue-300 px-1.5 py-0.5 rounded-full font-mono">
-                {activeAdsCount}
-              </span>
-            )}
+            FB &amp; Google Ads {activeAdsCount > 0 ? `(${activeAdsCount})` : ''}
           </button>
           <button
             type="button"
@@ -858,10 +876,10 @@ export default function App() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div className="space-y-1">
               <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight">
-                Pakistan Brand Sale &amp; Ad Campaign Monitor
+                Pakistan Brand Sales
               </h1>
               <p className="text-xs text-slate-400">
-                Tracking all major Pakistani brands: Food &amp; Dining, Banks &amp; Card Discounts, Fintech, Supermarkets, Fashion, Footwear, and Telecom on Facebook, Google, and Web.
+                Live brand sales, itemized discounted products (with % off, sale price, original price, sizes &amp; stock status), and Facebook/Google ad campaigns across Pakistan.
               </p>
               <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400 pt-1">
                 <span>
@@ -1212,9 +1230,66 @@ export default function App() {
                     {/* Summary / Notes */}
                     <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{brand.summary}</p>
 
+                    {/* Top Discounted Sale Products Preview */}
+                    {brand.saleItems && brand.saleItems.length > 0 && (
+                      <div className="pt-2 border-t border-slate-800/80 space-y-2">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="text-emerald-400 font-medium">
+                            Top Discounted Products ({brand.saleItems.filter(i => i.in_stock).length} in stock)
+                          </span>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setSelectedBrandForProducts(brand);
+                              setProductSearchQuery('');
+                              setProductStockFilter('all');
+                              setProductSizeFilter('all');
+                              setProductSortBy('discount');
+                            }}
+                            className="text-sky-400 hover:text-sky-300 font-semibold underline underline-offset-4 whitespace-nowrap shrink-0"
+                          >
+                            View All ({brand.saleItems.length})
+                          </button>
+                        </div>
+
+                        <div className="space-y-1.5">
+                          {brand.saleItems.slice(0, 2).map((item, idx) => (
+                            <a
+                              key={`${item.url}-${idx}`}
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between gap-2 text-xs py-1 px-2 rounded-lg bg-[#0b1220]/60 hover:bg-[#0b1220] transition-colors group"
+                            >
+                              <div className="min-w-0 flex-1">
+                                <div className="text-slate-200 group-hover:text-sky-300 truncate font-medium">
+                                  {item.title}
+                                </div>
+                                <div className="text-[11px] text-slate-400 font-mono-tabular flex items-center gap-1.5">
+                                  <span className="text-emerald-400 font-semibold">Rs.{item.sale_price.toLocaleString()}</span>
+                                  <span className="line-through text-slate-500">Rs.{item.original_price.toLocaleString()}</span>
+                                  <span aria-hidden="true">·</span>
+                                  <span className={item.in_stock ? 'text-emerald-300' : 'text-rose-400'}>
+                                    {item.in_stock
+                                      ? item.sizes.length > 0
+                                        ? `In Stock (${item.sizes.slice(0, 3).join(', ')})`
+                                        : 'In Stock'
+                                      : 'Sold Out'}
+                                  </span>
+                                </div>
+                              </div>
+                              <span className="text-xs font-bold font-mono-tabular text-sky-400 shrink-0">
+                                -{item.discount_pct}%
+                              </span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     {/* Facebook & Google Ads Status Block */}
                     {brand.ads && (
-                      <div className="p-2.5 rounded-xl bg-[#0b1220]/70 border border-slate-800 space-y-1.5">
+                      <div className="pt-2 border-t border-slate-800/80 space-y-1">
                         <div className="flex items-center justify-between text-xs">
                           <span className="text-blue-400 font-medium flex items-center gap-1">
                             <Radio className="w-3 h-3" />
@@ -1230,7 +1305,7 @@ export default function App() {
                           </div>
                         )}
                         {brand.ads.top_ads && brand.ads.top_ads.length > 0 && (
-                          <div className="pt-1 text-[11px] text-slate-400 line-clamp-1 border-t border-slate-800">
+                          <div className="text-[11px] text-slate-400 line-clamp-1">
                             Latest: &ldquo;{brand.ads.top_ads[0].headline}&rdquo;
                           </div>
                         )}
@@ -1240,16 +1315,33 @@ export default function App() {
 
                   {/* Card Footer Action */}
                   <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
-                    <span className="text-xs text-slate-400 truncate max-w-[190px]">
-                      {brand.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
-                    </span>
+                    {brand.saleItems && brand.saleItems.length > 0 ? (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedBrandForProducts(brand);
+                          setProductSearchQuery('');
+                          setProductStockFilter('all');
+                          setProductSizeFilter('all');
+                          setProductSortBy('discount');
+                        }}
+                        className="min-h-[40px] px-3.5 py-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-xs font-semibold text-emerald-300 transition-colors flex items-center gap-1.5 whitespace-nowrap shrink-0"
+                      >
+                        <ShoppingBag className="w-3.5 h-3.5" />
+                        <span>Sale Products ({brand.saleItems.length})</span>
+                      </button>
+                    ) : (
+                      <span className="text-xs text-slate-400 truncate max-w-[180px]">
+                        {brand.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
+                      </span>
+                    )}
                     <a
                       href={brand.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="min-h-[40px] px-3.5 py-2 rounded-xl bg-[#17243c] hover:bg-sky-400 hover:text-slate-950 text-xs font-semibold text-slate-200 transition-colors flex items-center gap-1.5 whitespace-nowrap shrink-0"
                     >
-                      <span>Visit Brand / Offer</span>
+                      <span>Visit Store</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -1600,6 +1692,281 @@ export default function App() {
           }`}
         >
           {feedbackMessage.text}
+        </div>
+      )}
+
+      {/* Sale Products Modal / Drawer */}
+      {selectedBrandForProducts && (
+        <div
+          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/75 backdrop-blur-sm p-0 sm:p-4"
+          onClick={() => setSelectedBrandForProducts(null)}
+        >
+          <div
+            className="w-full max-w-5xl max-h-[90vh] rounded-t-2xl sm:rounded-2xl bg-[#111c31] border border-slate-700 flex flex-col overflow-hidden"
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="p-4 sm:p-6 border-b border-slate-800 flex items-start justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex flex-wrap items-center gap-2">
+                  <h2 className="text-lg sm:text-xl font-bold text-white">
+                    {selectedBrandForProducts.name} — Sale Products
+                  </h2>
+                  <span className="text-xs text-sky-400 font-mono-tabular font-semibold">
+                    Up to {selectedBrandForProducts.maxDiscount}% OFF
+                  </span>
+                </div>
+                <p className="text-xs text-slate-400 font-mono-tabular">
+                  Showing {selectedBrandForProducts.saleItems.length} top discounted products (
+                  <span className="text-emerald-400 font-semibold">
+                    {selectedBrandForProducts.saleItems.filter(i => i.in_stock).length} in stock
+                  </span>
+                  {' · '}
+                  <span>
+                    {selectedBrandForProducts.saleItems.filter(i => !i.in_stock).length} sold out
+                  </span>
+                  ) out of {selectedBrandForProducts.saleProductsCount.toLocaleString()} total sale items
+                </p>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <a
+                  href={selectedBrandForProducts.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-h-[40px] px-3.5 py-2 rounded-xl bg-[#17243c] hover:bg-sky-400 hover:text-slate-950 text-xs font-semibold text-slate-200 transition-colors flex items-center gap-1.5 whitespace-nowrap shrink-0"
+                >
+                  <span>Full Store</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setSelectedBrandForProducts(null)}
+                  aria-label="Close modal"
+                  className="min-h-[40px] min-w-[40px] rounded-xl bg-[#0b1220] hover:bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Modal Filters & Search Bar */}
+            <div className="p-4 bg-[#0b1220]/70 border-b border-slate-800 space-y-3">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                {/* Product Search */}
+                <div className="relative flex-1">
+                  <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                  <input
+                    type="search"
+                    value={productSearchQuery}
+                    onChange={e => setProductSearchQuery(e.target.value)}
+                    placeholder="Filter by product name or size (e.g. Kurta, Trouser, Peshawari, XS, M, 42)..."
+                    className="w-full min-h-[40px] pl-10 pr-8 py-2 bg-[#111c31] border border-slate-700 focus:border-sky-400 focus:outline-none rounded-xl text-xs sm:text-sm text-white placeholder:text-slate-500"
+                  />
+                  {productSearchQuery && (
+                    <button
+                      type="button"
+                      onClick={() => setProductSearchQuery('')}
+                      className="min-h-[36px] min-w-[36px] absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center text-slate-400 hover:text-white"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+                </div>
+
+                {/* Availability Filter */}
+                <div className="flex items-center gap-1 p-1 bg-[#111c31] border border-slate-800 rounded-xl overflow-x-auto">
+                  <button
+                    type="button"
+                    onClick={() => setProductStockFilter('all')}
+                    className={`min-h-[34px] px-3 py-1 text-xs rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                      productStockFilter === 'all'
+                        ? 'bg-sky-400 text-slate-950 font-semibold'
+                        : 'text-slate-300 hover:text-white'
+                    }`}
+                  >
+                    All ({selectedBrandForProducts.saleItems.length})
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setProductStockFilter('in_stock')}
+                    className={`min-h-[34px] px-3 py-1 text-xs rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                      productStockFilter === 'in_stock'
+                        ? 'bg-emerald-400 text-slate-950 font-semibold'
+                        : 'text-slate-300 hover:text-white'
+                    }`}
+                  >
+                    In Stock ({selectedBrandForProducts.saleItems.filter(i => i.in_stock).length})
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setProductStockFilter('sold_out')}
+                    className={`min-h-[34px] px-3 py-1 text-xs rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                      productStockFilter === 'sold_out'
+                        ? 'bg-rose-400 text-slate-950 font-semibold'
+                        : 'text-slate-300 hover:text-white'
+                    }`}
+                  >
+                    Sold Out ({selectedBrandForProducts.saleItems.filter(i => !i.in_stock).length})
+                  </button>
+                </div>
+
+                {/* Sort Order */}
+                <div className="flex items-center gap-1 p-1 bg-[#111c31] border border-slate-800 rounded-xl overflow-x-auto">
+                  <button
+                    type="button"
+                    onClick={() => setProductSortBy('discount')}
+                    className={`min-h-[34px] px-2.5 py-1 text-xs rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                      productSortBy === 'discount'
+                        ? 'bg-[#17243c] text-sky-400 font-semibold'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    % Off
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setProductSortBy('price_asc')}
+                    className={`min-h-[34px] px-2.5 py-1 text-xs rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                      productSortBy === 'price_asc'
+                        ? 'bg-[#17243c] text-sky-400 font-semibold'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Lowest Price
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setProductSortBy('savings')}
+                    className={`min-h-[34px] px-2.5 py-1 text-xs rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                      productSortBy === 'savings'
+                        ? 'bg-[#17243c] text-sky-400 font-semibold'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Max Rs. Saved
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Table Body */}
+            <div className="flex-1 overflow-y-auto p-4 sm:p-6">
+              {(() => {
+                const q = productSearchQuery.trim().toLowerCase();
+                const filtered = selectedBrandForProducts.saleItems
+                  .filter(item => {
+                    if (productStockFilter === 'in_stock' && !item.in_stock) return false;
+                    if (productStockFilter === 'sold_out' && item.in_stock) return false;
+                    if (productSizeFilter !== 'all' && !item.sizes.includes(productSizeFilter)) return false;
+                    if (q) {
+                      const hay = `${item.title} ${item.sizes.join(' ')}`.toLowerCase();
+                      if (!hay.includes(q)) return false;
+                    }
+                    return true;
+                  })
+                  .sort((a, b) => {
+                    if (productSortBy === 'price_asc') return a.sale_price - b.sale_price;
+                    if (productSortBy === 'savings') {
+                      return b.original_price - b.sale_price - (a.original_price - a.sale_price);
+                    }
+                    if (a.in_stock !== b.in_stock && productStockFilter === 'all') {
+                      return a.in_stock ? -1 : 1;
+                    }
+                    return b.discount_pct - a.discount_pct;
+                  });
+
+                if (filtered.length === 0) {
+                  return (
+                    <div className="py-12 text-center text-sm text-slate-400">
+                      No sale products matched your filter. Try switching availability to &ldquo;All&rdquo; or clearing the search box.
+                    </div>
+                  );
+                }
+
+                return (
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="border-b border-slate-800 text-[11px] font-semibold text-slate-400">
+                          <th className="py-2.5 pr-4">Product Name</th>
+                          <th className="py-2.5 px-3 text-right whitespace-nowrap">% Off</th>
+                          <th className="py-2.5 px-3 text-right whitespace-nowrap">Sale Price</th>
+                          <th className="py-2.5 px-3 text-right whitespace-nowrap">Original Price</th>
+                          <th className="py-2.5 px-3">Sizes</th>
+                          <th className="py-2.5 px-3 whitespace-nowrap">Availability</th>
+                          <th className="py-2.5 pl-3 text-right whitespace-nowrap">Link</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-800/70 text-xs">
+                        {filtered.map((item, idx) => (
+                          <tr key={`${item.url}-${idx}`} className="hover:bg-[#17243c]/50 transition-colors">
+                            <td className="py-3 pr-4">
+                              <div className="flex items-center gap-3">
+                                {item.image ? (
+                                  <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    referrerPolicy="no-referrer"
+                                    onError={e => {
+                                      (e.currentTarget as HTMLImageElement).style.display = 'none';
+                                    }}
+                                    className="w-10 h-10 rounded-lg object-cover bg-slate-800 shrink-0"
+                                  />
+                                ) : (
+                                  <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center shrink-0">
+                                    <ShoppingBag className="w-4 h-4 text-slate-400" />
+                                  </div>
+                                )}
+                                <div className="font-medium text-white line-clamp-2 max-w-xs">
+                                  {item.title}
+                                </div>
+                              </div>
+                            </td>
+                            <td className="py-3 px-3 text-right font-mono-tabular font-bold text-sky-400 whitespace-nowrap">
+                              {item.discount_pct}% OFF
+                            </td>
+                            <td className="py-3 px-3 text-right font-mono-tabular font-bold text-emerald-400 whitespace-nowrap">
+                              Rs. {item.sale_price.toLocaleString()}
+                            </td>
+                            <td className="py-3 px-3 text-right font-mono-tabular text-slate-400 line-through whitespace-nowrap">
+                              Rs. {item.original_price.toLocaleString()}
+                            </td>
+                            <td className="py-3 px-3 text-slate-300 font-mono-tabular max-w-[200px]">
+                              {item.sizes && item.sizes.length > 0 ? item.sizes.join(' · ') : 'Standard'}
+                            </td>
+                            <td className="py-3 px-3 whitespace-nowrap">
+                              {item.in_stock ? (
+                                <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold">
+                                  <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                                  <span>In Stock</span>
+                                </span>
+                              ) : (
+                                <span className="inline-flex items-center gap-1 text-rose-400 font-medium">
+                                  <XCircle className="w-3.5 h-3.5 shrink-0" />
+                                  <span>Sold Out</span>
+                                </span>
+                              )}
+                            </td>
+                            <td className="py-3 pl-3 text-right whitespace-nowrap">
+                              <a
+                                href={item.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#17243c] hover:bg-sky-400 hover:text-slate-950 text-slate-200 font-semibold transition-colors"
+                              >
+                                <span>View</span>
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                );
+              })()}
+            </div>
+          </div>
         </div>
       )}
     </div>
