@@ -1,47 +1,5 @@
 [
   {
-    "id": "gads_CR13791478130231214081",
-    "brand": "Daraz Pakistan",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Daraz Pakistan — Active Google Search & Display Ad (STARCREST PRIVATE LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR13791478130231214081?region=PK",
-    "detected_at": "2026-11-17T17:02:08.095046+00:00"
-  },
-  {
-    "id": "gads_CR11813744234152853505",
-    "brand": "Daraz Pakistan",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Daraz Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR11813744234152853505?region=PK",
-    "detected_at": "2026-11-17T17:02:08.095046+00:00"
-  },
-  {
-    "id": "gads_CR02493828204431671297",
-    "brand": "Chase Value",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Chase Value Official Sale — UP TO 60% OFF | Chase Value",
-    "discounts": [
-      "UP TO 60% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR02493828204431671297?region=PK",
-    "detected_at": "2026-11-17T17:02:08.095046+00:00"
-  },
-  {
-    "id": "gads_CR08090644755509149697",
-    "brand": "Chase Value",
-    "category": "Marketplaces & Groceries",
-    "platform": "google_ads",
-    "headline": "Chase Value — Active Google Search & Display Ad (Chase Value)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR08090644755509149697?region=PK",
-    "detected_at": "2026-11-17T17:02:08.095046+00:00"
-  },
-  {
     "id": "gads_CR12585897440357384193",
     "brand": "Chase Value",
     "category": "Marketplaces & Groceries",
@@ -5478,5 +5436,53 @@
     ],
     "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR14233591618320990209?region=PK",
     "detected_at": "2026-11-20T11:01:35.505139+00:00"
+  },
+  {
+    "id": "gads_CR07042265400586797057",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Dentsu Solutions Pte. Ltd.",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR02518803224509546497/creative/CR07042265400586797057?region=PK",
+    "detected_at": "2026-11-20T13:01:48.897199+00:00"
+  },
+  {
+    "id": "gads_CR06742539733445902337",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (STANDARD CHARTERED BANK (SINGAPORE) LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR08920677739858493441/creative/CR06742539733445902337?region=PK",
+    "detected_at": "2026-11-20T13:01:48.897199+00:00"
+  },
+  {
+    "id": "gads_CR16660524702095114241",
+    "brand": "Sapphire",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Sapphire Pakistan Official — Up to 50% OFF Women's, Men's & Kids Wear",
+    "discounts": [
+      "UP TO 50% OFF",
+      "FLAT 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR13264381283896655873/creative/CR16660524702095114241?region=PK",
+    "detected_at": "2026-11-20T13:01:48.897199+00:00"
+  },
+  {
+    "id": "3e8aa8f16e857db0506b15ea",
+    "brand": "Limelight",
+    "category": "Fashion & Apparel",
+    "platform": "facebook_ad_library",
+    "headline": "Limelight — 30% OFF, UP TO 43% OFF Live Sale Campaign (2581 items on sale)",
+    "discounts": [
+      "30% OFF",
+      "UP TO 43% OFF"
+    ],
+    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Limelight&search_type=keyword_unordered",
+    "detected_at": "2026-11-20T13:01:48.897199+00:00"
   }
 ]
