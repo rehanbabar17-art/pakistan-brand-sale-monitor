@@ -1,108 +1,5 @@
 [
   {
-    "id": "f143dd719ae4b4b83e9bedd3",
-    "brand": "Nishat Linen",
-    "category": "Fashion & Apparel",
-    "platform": "facebook_ad_library",
-    "headline": "Nishat Linen — FLAT 20% OFF, FLAT 25% OFF, FLAT 30% OFF Live Sale Campaign (23 items on sale)",
-    "discounts": [
-      "FLAT 20% OFF",
-      "FLAT 25% OFF",
-      "FLAT 30% OFF",
-      "FLAT 35% OFF",
-      "UPTO 20% OFF"
-    ],
-    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=Nishat%20Linen&search_type=keyword_unordered",
-    "detected_at": "2026-11-20T05:01:54.426689+00:00"
-  },
-  {
-    "id": "gads_CR15608898832933322753",
-    "brand": "1st Step Shoes",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR15608898832933322753?region=PK",
-    "detected_at": "2026-11-20T05:01:54.426689+00:00"
-  },
-  {
-    "id": "gads_CR01510156998589546497",
-    "brand": "Foodpanda Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Delivery Hero SE)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR01506468094128685057/creative/CR01510156998589546497?region=PK",
-    "detected_at": "2026-11-20T07:01:39.171619+00:00"
-  },
-  {
-    "id": "gads_CR05220272894176657409",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Singapore) Limited",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR05220272894176657409?region=PK",
-    "detected_at": "2026-11-20T07:01:39.171619+00:00"
-  },
-  {
-    "id": "gads_CR12703753816860786689",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Ad Dynamo International (Pty) Ltd)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR08901403636031029249/creative/CR12703753816860786689?region=PK",
-    "detected_at": "2026-11-20T07:01:39.171619+00:00"
-  },
-  {
-    "id": "gads_CR02606981935343337473",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Singapore) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR02606981935343337473?region=PK",
-    "detected_at": "2026-11-20T07:01:39.171619+00:00"
-  },
-  {
-    "id": "gads_CR08472427078510182401",
-    "brand": "Outfitters",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Outfitters Official Sale — 30% OFF, 60% OFF, FLAT 50% | Outfitters Stores Pvt Ltd",
-    "discounts": [
-      "30% OFF",
-      "60% OFF",
-      "FLAT 50%",
-      "UP TO 72% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR09791238525239164929/creative/CR08472427078510182401?region=PK",
-    "detected_at": "2026-11-20T07:01:39.171619+00:00"
-  },
-  {
-    "id": "gads_CR07283622599614005249",
-    "brand": "Monark Clothing",
-    "category": "Fashion & Apparel",
-    "platform": "google_ads",
-    "headline": "Monark Clothing — Active Google Search & Display Ad (Kashif Trading)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR06134351885928235009/creative/CR07283622599614005249?region=PK",
-    "detected_at": "2026-11-20T07:01:39.171619+00:00"
-  },
-  {
-    "id": "gads_CR05230059106009612289",
-    "brand": "1st Step Shoes",
-    "category": "Footwear & Leather",
-    "platform": "google_ads",
-    "headline": "1st Step Shoes — Active Google Search & Display Ad (1st Step Shoes & Bags)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR14619643095864573953/creative/CR05230059106009612289?region=PK",
-    "detected_at": "2026-11-20T07:01:39.171619+00:00"
-  },
-  {
     "id": "gads_CR13794179733379874817",
     "brand": "Domino's Pizza Pakistan",
     "category": "Food & Dining",
@@ -5561,5 +5458,100 @@
     "discounts": [],
     "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR08821398325270937601?region=PK",
     "detected_at": "2026-11-24T19:02:00.394317+00:00"
+  },
+  {
+    "id": "gads_CR00612998941033627649",
+    "brand": "Meezan Bank",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Meezan Bank — Active Google Search & Display Ad (EAST RIVER PRIVATE LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR02417469209236733953/creative/CR00612998941033627649?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
+  },
+  {
+    "id": "gads_CR01225073321637314561",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (STANDARD CHARTERED BANK (SINGAPORE) LIMITED)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR08920677739858493441/creative/CR01225073321637314561?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
+  },
+  {
+    "id": "gads_CR02678975792066592769",
+    "brand": "Daraz Pakistan",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Daraz Pakistan — Active Google Search & Display Ad (HAYAT KİMYA SANAYİ ANONİM ŞİRKETİ)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR12835379076831117313/creative/CR02678975792066592769?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
+  },
+  {
+    "id": "gads_CR00641847377367400449",
+    "brand": "Asim Jofa",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "Asim Jofa — Active Google Search & Display Ad (Asim Jofa (Private) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR08681884241170006017/creative/CR00641847377367400449?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
+  },
+  {
+    "id": "gads_CR03742863105663696897",
+    "brand": "LAMA",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "LAMA Official Sale — 30% OFF, UP TO 60% OFF | Lama Retail",
+    "discounts": [
+      "30% OFF",
+      "UP TO 60% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR09097805713018716161/creative/CR03742863105663696897?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
+  },
+  {
+    "id": "gads_CR12566822150566051841",
+    "brand": "LAMA",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "LAMA — Active Google Search & Display Ad (Lama Retail)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR09097805713018716161/creative/CR12566822150566051841?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
+  },
+  {
+    "id": "gads_CR02763330186710614017",
+    "brand": "LAMA",
+    "category": "Fashion & Apparel",
+    "platform": "google_ads",
+    "headline": "LAMA — Active Google Search & Display Ad (Lama Retail)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR09097805713018716161/creative/CR02763330186710614017?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
+  },
+  {
+    "id": "gads_CR12702101525762146305",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan Official Sale — UP TO 30% OFF | Blitz Advertising (Pvt.) Limited",
+    "discounts": [
+      "UP TO 30% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR12702101525762146305?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
+  },
+  {
+    "id": "gads_CR12373702313355771905",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR12373702313355771905?region=PK",
+    "detected_at": "2026-11-24T21:01:33.349645+00:00"
   }
 ]
