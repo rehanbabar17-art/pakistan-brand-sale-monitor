@@ -1,60 +1,5 @@
 [
   {
-    "id": "gads_CR05379574536855355393",
-    "brand": "Jazz Pakistan",
-    "category": "Telecom & Internet",
-    "platform": "google_ads",
-    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Avaroz Software House)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR09754355476404895745/creative/CR05379574536855355393?region=PK",
-    "detected_at": "2026-11-20T15:01:43.442983+00:00"
-  },
-  {
-    "id": "gads_CR09719047589646565377",
-    "brand": "Foodpanda Pakistan",
-    "category": "Food & Dining",
-    "platform": "google_ads",
-    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (WPP MEDIA PK (PRIVATE) LIMITED)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR02222157117639360513/creative/CR09719047589646565377?region=PK",
-    "detected_at": "2026-11-20T17:01:56.203407+00:00"
-  },
-  {
-    "id": "gads_CR07734254004284162049",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Dentsu Solutions Pte. Ltd.",
-    "discounts": [
-      "UP TO 50% OFF"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR02518803224509546497/creative/CR07734254004284162049?region=PK",
-    "detected_at": "2026-11-20T17:01:56.203407+00:00"
-  },
-  {
-    "id": "gads_CR17145734613587460097",
-    "brand": "Standard Chartered Pakistan",
-    "category": "Banks & Cards",
-    "platform": "google_ads",
-    "headline": "Standard Chartered Pakistan — Active Google Search & Display Ad (Standard Chartered Bank (Singapore) Limited)",
-    "discounts": [],
-    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR17145734613587460097?region=PK",
-    "detected_at": "2026-11-20T17:01:56.203407+00:00"
-  },
-  {
-    "id": "gads_CR08283468798321754113",
-    "brand": "Easypaisa",
-    "category": "Fintech & Wallets",
-    "platform": "google_ads",
-    "headline": "Easypaisa Official Sale — UP TO 50% OFF, FLAT 25% CASHBACK | Brainchild Communications Pakistan (Pvt.) Limited",
-    "discounts": [
-      "UP TO 50% OFF",
-      "FLAT 25% CASHBACK"
-    ],
-    "url": "https://adstransparency.google.com/advertiser/AR13641304315258732545/creative/CR08283468798321754113?region=PK",
-    "detected_at": "2026-11-20T17:01:56.203407+00:00"
-  },
-  {
     "id": "gads_CR12625652387793600513",
     "brand": "Daraz Pakistan",
     "category": "Marketplaces & Groceries",
@@ -5543,5 +5488,60 @@
     ],
     "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR15745428902606012417?region=PK",
     "detected_at": "2026-11-25T03:01:42.978161+00:00"
+  },
+  {
+    "id": "gads_CR08693406650582695937",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan Official Sale — FLAT 50% OFF, UP TO 40% OFF | Pak Media Communications (Pvt) Ltd",
+    "discounts": [
+      "FLAT 50% OFF",
+      "UP TO 40% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR08693406650582695937?region=PK",
+    "detected_at": "2026-11-25T05:01:28.599022+00:00"
+  },
+  {
+    "id": "gads_CR03045892717860093953",
+    "brand": "Foodpanda Pakistan",
+    "category": "Food & Dining",
+    "platform": "google_ads",
+    "headline": "Foodpanda Pakistan — Active Google Search & Display Ad (Pak Media Communications (Pvt) Ltd)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR12330318805749202945/creative/CR03045892717860093953?region=PK",
+    "detected_at": "2026-11-25T05:01:28.599022+00:00"
+  },
+  {
+    "id": "gads_CR13321581529495764993",
+    "brand": "Standard Chartered Pakistan",
+    "category": "Banks & Cards",
+    "platform": "google_ads",
+    "headline": "Standard Chartered Pakistan Official Sale — UP TO 50% OFF | Standard Chartered Bank (Singapore) Limited",
+    "discounts": [
+      "UP TO 50% OFF"
+    ],
+    "url": "https://adstransparency.google.com/advertiser/AR09008163818496327681/creative/CR13321581529495764993?region=PK",
+    "detected_at": "2026-11-25T05:01:28.599022+00:00"
+  },
+  {
+    "id": "gads_CR17742350513539645441",
+    "brand": "Chase Value",
+    "category": "Marketplaces & Groceries",
+    "platform": "google_ads",
+    "headline": "Chase Value — Active Google Search & Display Ad (Chase Value)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR17482489487299706881/creative/CR17742350513539645441?region=PK",
+    "detected_at": "2026-11-25T05:01:28.599022+00:00"
+  },
+  {
+    "id": "gads_CR03117957183845695489",
+    "brand": "Jazz Pakistan",
+    "category": "Telecom & Internet",
+    "platform": "google_ads",
+    "headline": "Jazz Pakistan — Active Google Search & Display Ad (Blitz Advertising (Pvt.) Limited)",
+    "discounts": [],
+    "url": "https://adstransparency.google.com/advertiser/AR01570411704670486529/creative/CR03117957183845695489?region=PK",
+    "detected_at": "2026-11-25T05:01:28.599022+00:00"
   }
 ]
