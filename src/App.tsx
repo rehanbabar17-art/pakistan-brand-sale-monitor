@@ -189,6 +189,33 @@ function extractSaleProductCount(state?: BrandSaleState | null): number {
   return typeof state.product_count === 'number' ? state.product_count : 0;
 }
 
+function normalizeSearchText(text?: string): string {
+  return String(text || '')
+    .toLowerCase()
+    .replace(/['’`]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function matchesSearchQuery(brand: EnrichedBrand, rawQuery: string): boolean {
+  const normQuery = normalizeSearchText(rawQuery);
+  if (!normQuery) return true;
+  const compactQuery = normQuery.replace(/\s+/g, '');
+  const tokens = normQuery.split(/\s+/).filter(Boolean);
+
+  const productTitles = Array.isArray(brand.saleItems)
+    ? brand.saleItems.slice(0, 30).map(p => p.title || '').join(' ')
+    : '';
+  const rawHay = `${brand.name} ${brand.url} ${brand.category} ${brand.summary} ${brand.discounts.join(' ')} ${productTitles}`;
+  const normHay = normalizeSearchText(rawHay);
+  const compactHay = normHay.replace(/\s+/g, '');
+
+  if (normHay.includes(normQuery) || compactHay.includes(compactQuery)) {
+    return true;
+  }
+  return tokens.every(token => normHay.includes(token) || compactHay.includes(token));
+}
+
 function formatRelativeTime(iso?: string): string {
   if (!iso) return 'Not checked yet';
   const date = new Date(iso);
@@ -278,10 +305,22 @@ export default function App() {
       throw new Error(`GitHub API ${res.status}`);
     }
     const payload = await res.json();
-    return {
-      data: JSON.parse(decodeBase64Unicode(payload.content || '')),
-      sha: payload.sha as string,
-    };
+    if (payload.content) {
+      return {
+        data: JSON.parse(decodeBase64Unicode(payload.content)),
+        sha: payload.sha as string,
+      };
+    }
+    if (payload.download_url) {
+      const dlRes = await fetch(`${payload.download_url}?_=${Date.now()}`);
+      if (dlRes.ok) {
+        return {
+          data: await dlRes.json(),
+          sha: payload.sha as string,
+        };
+      }
+    }
+    throw new Error('Empty GitHub content payload');
   };
 
   const loadSaleState = useCallback(
@@ -289,43 +328,49 @@ export default function App() {
       const activeCfg = customConfig || config;
       setLoading(true);
 
-      // Helper to fetch either via GitHub contents or raw or local
       let loadedBrands: BrandConfigItem[] = [];
       let loadedBrandsAds: BrandAdsItem[] = [];
       let loadedSaleState: Record<string, any> = {};
       let loadedAdsState: Record<string, BrandAdState> = {};
       let source: 'github-pat' | 'github-public' | 'local-cache' = 'local-cache';
 
-      try {
-        // 1. Try authenticated or public GitHub REST API
-        const [brandsRes, adsConfigRes, stateRes, adsStateRes] = await Promise.allSettled([
-          fetchFromGitHubContents('brands.json', activeCfg),
-          fetchFromGitHubContents('brands_ads.json', activeCfg),
-          fetchFromGitHubContents('state/sale_state.json', activeCfg),
-          fetchFromGitHubContents('state/ads_state.json', activeCfg),
-        ]);
+      // 1. If authenticated with PAT, try GitHub REST API first
+      if (activeCfg.token.trim()) {
+        try {
+          const [brandsRes, adsConfigRes, stateRes, adsStateRes] = await Promise.allSettled([
+            fetchFromGitHubContents('brands.json', activeCfg),
+            fetchFromGitHubContents('brands_ads.json', activeCfg),
+            fetchFromGitHubContents('state/sale_state.json', activeCfg),
+            fetchFromGitHubContents('state/ads_state.json', activeCfg),
+          ]);
 
-        if (brandsRes.status === 'fulfilled') loadedBrands = brandsRes.value.data?.brands || [];
-        if (adsConfigRes.status === 'fulfilled') loadedBrandsAds = adsConfigRes.value.data?.brands || [];
-        if (stateRes.status === 'fulfilled') loadedSaleState = stateRes.value.data || {};
-        if (adsStateRes.status === 'fulfilled') loadedAdsState = adsStateRes.value.data || {};
+          if (brandsRes.status === 'fulfilled') loadedBrands = brandsRes.value.data?.brands || [];
+          if (adsConfigRes.status === 'fulfilled') loadedBrandsAds = adsConfigRes.value.data?.brands || [];
+          if (stateRes.status === 'fulfilled') loadedSaleState = stateRes.value.data || {};
+          if (adsStateRes.status === 'fulfilled') loadedAdsState = adsStateRes.value.data || {};
 
-        if (loadedBrands.length || loadedBrandsAds.length) {
-          source = activeCfg.token.trim() ? 'github-pat' : 'github-public';
+          if (loadedBrands.length || loadedBrandsAds.length) {
+            source = 'github-pat';
+          }
+        } catch {
+          // Continue to raw fallback
         }
-      } catch {
-        // Continue to raw fallback
       }
 
-      // 2. Try raw fallback if needed
-      if (!loadedBrandsAds.length && !loadedBrands.length) {
+      // 2. Fetch any missing files from raw.githubusercontent.com (no 1 MB or 60 req/hr limit)
+      const needsBrands = !loadedBrands.length;
+      const needsBrandsAds = !loadedBrandsAds.length;
+      const needsSaleState = !Object.keys(loadedSaleState).length;
+      const needsAdsState = !Object.keys(loadedAdsState).length;
+
+      if (needsBrands || needsBrandsAds || needsSaleState || needsAdsState) {
         try {
           const baseRaw = `https://raw.githubusercontent.com/${activeCfg.owner}/${activeCfg.repo}/${activeCfg.branch}`;
           const [bResp, baResp, sResp, aResp] = await Promise.all([
-            fetch(`${baseRaw}/brands.json?_=${Date.now()}`).catch(() => null),
-            fetch(`${baseRaw}/brands_ads.json?_=${Date.now()}`).catch(() => null),
-            fetch(`${baseRaw}/state/sale_state.json?_=${Date.now()}`).catch(() => null),
-            fetch(`${baseRaw}/state/ads_state.json?_=${Date.now()}`).catch(() => null),
+            needsBrands ? fetch(`${baseRaw}/brands.json?_=${Date.now()}`).catch(() => null) : Promise.resolve(null),
+            needsBrandsAds ? fetch(`${baseRaw}/brands_ads.json?_=${Date.now()}`).catch(() => null) : Promise.resolve(null),
+            needsSaleState ? fetch(`${baseRaw}/state/sale_state.json?_=${Date.now()}`).catch(() => null) : Promise.resolve(null),
+            needsAdsState ? fetch(`${baseRaw}/state/ads_state.json?_=${Date.now()}`).catch(() => null) : Promise.resolve(null),
           ]);
 
           if (bResp?.ok) loadedBrands = (await bResp.json())?.brands || [];
@@ -333,7 +378,7 @@ export default function App() {
           if (sResp?.ok) loadedSaleState = await sResp.json();
           if (aResp?.ok) loadedAdsState = await aResp.json();
 
-          if (loadedBrands.length || loadedBrandsAds.length) {
+          if ((loadedBrands.length || loadedBrandsAds.length) && source !== 'github-pat') {
             source = 'github-public';
           }
         } catch {
@@ -697,58 +742,70 @@ export default function App() {
 
   // Filtered and sorted brands
   const filteredBrands = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase();
-    return allBrands
-      .filter(b => {
-        // Sector / Category filter
+    const q = searchQuery.trim();
+    const matchesQuery = (b: EnrichedBrand) => (!q ? true : matchesSearchQuery(b, q));
+
+    const applyStatusAndSection = (list: EnrichedBrand[]) =>
+      list.filter(b => {
         if (selectedCategory !== 'all' && b.category !== selectedCategory) {
           return false;
         }
-
-        // Query filter
-        if (q) {
-          const hay = `${b.name} ${b.category} ${b.summary} ${b.discounts.join(' ')}`.toLowerCase();
-          if (!hay.includes(q)) return false;
-        }
-
-        // Active tab filters
         if (activeSection === 'ads') {
-          return b.ads && b.ads.active;
+          return Boolean(b.ads && b.ads.active);
         }
         if (activeSection === 'top-deals') {
           return b.active && b.maxDiscount >= 50;
         }
-
         if (statusFilter === 'active') return b.active;
-        if (statusFilter === 'ads_only') return b.ads && b.ads.active;
+        if (statusFilter === 'ads_only') return Boolean(b.ads && b.ads.active);
         if (statusFilter === 'top50') return b.active && b.maxDiscount >= 50;
         if (statusFilter === 'top60') return b.active && b.maxDiscount >= 60;
         if (statusFilter === 'inactive') return !b.active;
         return true;
-      })
-      .sort((a, b) => {
-        if (a.active !== b.active) return a.active ? -1 : 1;
-        if (sortBy === 'products') {
-          if (b.saleProductsCount !== a.saleProductsCount) {
-            return b.saleProductsCount - a.saleProductsCount;
-          }
-          return b.maxDiscount - a.maxDiscount;
-        }
-        if (sortBy === 'discount') {
-          if (b.maxDiscount !== a.maxDiscount) {
-            return b.maxDiscount - a.maxDiscount;
-          }
+      });
+
+    const queryMatched = allBrands.filter(matchesQuery);
+    let results = applyStatusAndSection(queryMatched);
+
+    // If user typed a brand search and an active category/status filter hid all matches,
+    // automatically expand to show the matching brands across all sectors.
+    if (q && results.length === 0 && queryMatched.length > 0) {
+      results = queryMatched;
+    }
+
+    const nq = normalizeSearchText(q);
+    const cq = nq.replace(/\s+/g, '');
+
+    return results.slice().sort((a, b) => {
+      if (nq) {
+        const aName = normalizeSearchText(a.name);
+        const bName = normalizeSearchText(b.name);
+        const aExact = aName.includes(nq) || aName.replace(/\s+/g, '').includes(cq);
+        const bExact = bName.includes(nq) || bName.replace(/\s+/g, '').includes(cq);
+        if (aExact !== bExact) return aExact ? -1 : 1;
+      }
+      if (a.active !== b.active) return a.active ? -1 : 1;
+      if (sortBy === 'products') {
+        if (b.saleProductsCount !== a.saleProductsCount) {
           return b.saleProductsCount - a.saleProductsCount;
         }
-        return a.name.localeCompare(b.name);
-      });
+        return b.maxDiscount - a.maxDiscount;
+      }
+      if (sortBy === 'discount') {
+        if (b.maxDiscount !== a.maxDiscount) {
+          return b.maxDiscount - a.maxDiscount;
+        }
+        return b.saleProductsCount - a.saleProductsCount;
+      }
+      return a.name.localeCompare(b.name);
+    });
   }, [allBrands, selectedCategory, searchQuery, statusFilter, sortBy, activeSection]);
 
   // Matching aggregator deals when searching
   const matchingAggregatorDeals = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase();
+    const q = searchQuery.trim();
     if (!q && activeSection !== 'aggregators') return [];
-    return aggregatorBrands.filter(b => !q || b.name.toLowerCase().includes(q));
+    return aggregatorBrands.filter(b => !q || matchesSearchQuery(b, q));
   }, [aggregatorBrands, searchQuery, activeSection]);
 
   const activeSaleCount = useMemo(() => allBrands.filter(b => b.active).length, [allBrands]);
@@ -936,8 +993,14 @@ export default function App() {
             <input
               type="search"
               value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search any brand or deal (e.g. KFC, HBL, Bank Alfalah, Cheezious, Daraz, Sapphire, Bata)..."
+              onChange={e => {
+                const nextVal = e.target.value;
+                setSearchQuery(nextVal);
+                if (nextVal.trim() && (activeSection === 'sync' || activeSection === 'aggregators')) {
+                  setActiveSection('brands');
+                }
+              }}
+              placeholder="Search any brand or product (e.g. Ethnic, Khaadi, Maria B, Gul Ahmed, Logo, KFC, HBL)..."
               aria-label="Search brand name"
               className="w-full min-h-[48px] pl-12 pr-12 py-3 bg-[#0b1220] border border-slate-700/80 focus:border-sky-400 focus:outline-none rounded-xl text-sm md:text-base text-white placeholder:text-slate-500 transition-colors"
             />

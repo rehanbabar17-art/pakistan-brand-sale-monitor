@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=3">
 </head>
 <body>
   <header class="app-header">
@@ -42,7 +42,10 @@
           <h2>Search Brand Sale Status</h2>
           <span id="sale-summary-badge" class="status-pill connected">Loading…</span>
         </div>
-        <input id="brand-search" type="search" placeholder="Search brand name (e.g. Starlet, Gul Ahmed, Stylo, Khaadi, Baroque)..." autocomplete="off">
+        <div class="search-box">
+          <input id="brand-search" type="search" placeholder="Search brand or product (e.g. Ethnic, Khaadi, Gul Ahmed, Maria B, Logo, KFC, HBL)..." autocomplete="off" spellcheck="false">
+          <button id="brand-search-clear" class="search-clear-btn hidden" type="button" aria-label="Clear search">✕</button>
+        </div>
         <div class="filter-bar">
           <button class="filter-btn active" data-filter="all" type="button">All Brands</button>
           <button class="filter-btn" data-filter="active" type="button">On Sale Now</button>
@@ -146,6 +149,6 @@
   </div>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./app.js"></script>
+  <script src="./app.js?v=3"></script>
 </body>
 </html>

@@ -170,6 +170,34 @@ button:disabled { opacity: .55; cursor: wait; }
   color: #062032;
   background: var(--primary);
 }
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-box input {
+  padding-right: 2.6rem;
+}
+.search-clear-btn {
+  position: absolute;
+  right: .4rem;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: .4rem;
+  font-size: .9rem;
+}
+.search-clear-btn:hover {
+  color: var(--text);
+  background: var(--surface-alt);
+}
 .filter-bar {
   display: flex;
   flex-wrap: wrap;

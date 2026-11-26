@@ -52,6 +52,7 @@ const elements = {
   refreshButton: document.getElementById("refresh-button"),
   installButton: document.getElementById("install-button"),
   brandSearch: document.getElementById("brand-search"),
+  brandSearchClear: document.getElementById("brand-search-clear"),
   saleSummaryBadge: document.getElementById("sale-summary-badge"),
   searchFeedback: document.getElementById("search-feedback"),
   brandsList: document.getElementById("brands-list"),
@@ -161,10 +162,26 @@ async function api(path, options = {}) {
   return response;
 }
 
-async function fetchJsonFile(path) {
+async function fetchJsonFile(path, { preferApi = false } = {}) {
   const cfg = state.config || { owner: DEFAULT_OWNER, repo: DEFAULT_REPO, branch: "main", token: "" };
+  const branch = cfg.branch || "main";
+  const rawUrl = `https://raw.githubusercontent.com/${cfg.owner}/${cfg.repo}/${branch}/${path}?_=${Date.now()}`;
+
+  // For public read-only requests without a PAT, raw.githubusercontent.com avoids GitHub API
+  // 60 req/hr rate limits and the 1 MB /contents/ blob limit.
+  if (!cfg.token && !preferApi) {
+    try {
+      const rawResp = await fetch(rawUrl);
+      if (rawResp.ok) {
+        return { value: await rawResp.json(), sha: null };
+      }
+    } catch (_) {
+      // Fall through to GitHub API
+    }
+  }
+
   try {
-    const query = new URLSearchParams({ ref: cfg.branch || "main", _: Date.now().toString() });
+    const query = new URLSearchParams({ ref: branch, _: Date.now().toString() });
     const response = await api(`/repos/${cfg.owner}/${cfg.repo}/contents/${encodePath(path)}?${query}`);
     const payload = await response.json();
     if (payload.content) {
@@ -179,8 +196,6 @@ async function fetchJsonFile(path) {
     }
     throw new Error("Empty content payload");
   } catch (err) {
-    // Fallback to raw.githubusercontent.com for unauthenticated read or large files
-    const rawUrl = `https://raw.githubusercontent.com/${cfg.owner}/${cfg.repo}/${cfg.branch || "main"}/${path}?_=${Date.now()}`;
     const rawResp = await fetch(rawUrl);
     if (!rawResp.ok) {
       const error = new Error(`Could not load ${path}`);
@@ -195,7 +210,7 @@ async function writeJsonFile(path, value, message) {
   if (!state.config?.token) throw new Error("Add your GitHub PAT in the GitHub PAT tab first");
   let sha = null;
   try {
-    const existing = await fetchJsonFile(path);
+    const existing = await fetchJsonFile(path, { preferApi: true });
     sha = existing.sha;
   } catch (error) {
     if (error.status !== 404) throw error;
@@ -316,44 +331,105 @@ function getBrandItems() {
   return { tracked, agg };
 }
 
+function normalizeSearchText(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/['’`]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function matchesBrandSearch(item, rawQuery) {
+  const normQuery = normalizeSearchText(rawQuery);
+  if (!normQuery) return true;
+  const compactQuery = normQuery.replace(/\s+/g, "");
+  const tokens = normQuery.split(/\s+/).filter(Boolean);
+
+  const productTitles = Array.isArray(item.saleItems)
+    ? item.saleItems.slice(0, 30).map(p => p.title || "").join(" ")
+    : "";
+  const rawHay = `${item.name || ""} ${item.url || ""} ${item.category || ""} ${item.summary || ""} ${(item.discounts || []).join(" ")} ${productTitles}`;
+  const normHay = normalizeSearchText(rawHay);
+  const compactHay = normHay.replace(/\s+/g, "");
+
+  if (normHay.includes(normQuery) || compactHay.includes(compactQuery)) {
+    return true;
+  }
+  return tokens.every(token => normHay.includes(token) || compactHay.includes(token));
+}
+
+function setActiveFilterButton(filterValue) {
+  state.brandFilter = filterValue || "all";
+  document.querySelectorAll(".filter-bar .filter-btn").forEach(b => {
+    b.classList.toggle("active", b.dataset.filter === state.brandFilter);
+  });
+}
+
 function renderBrandSales() {
   const { tracked, agg } = getBrandItems();
   const activeCount = tracked.filter(b => b.active).length;
   const adsCount = tracked.filter(b => b.ads && b.ads.active).length;
-  elements.saleSummaryBadge.textContent = `${activeCount}/${tracked.length} On Sale · ${adsCount} with FB/Google Ads`;
+  if (elements.saleSummaryBadge) {
+    elements.saleSummaryBadge.textContent = `${activeCount}/${tracked.length} On Sale · ${adsCount} with FB/Google Ads`;
+  }
 
-  const q = state.searchQuery.trim().toLowerCase();
+  const q = state.searchQuery.trim();
+  if (elements.brandSearchClear) {
+    elements.brandSearchClear.classList.toggle("hidden", !q);
+  }
+
   let pool = state.brandFilter === "aggregators" ? agg : tracked;
   if (q && state.brandFilter !== "aggregators") {
     pool = [...tracked, ...agg];
   }
 
-  const filtered = pool
-    .filter(item => {
-      if (q) {
-        const hay = `${item.name} ${item.category || ""} ${item.summary} ${item.discounts.join(" ")}`.toLowerCase();
-        if (!hay.includes(q)) return false;
-      }
-      if (state.brandFilter === "active") return item.active;
-      if (state.brandFilter === "ads") return item.ads && item.ads.active;
-      if (state.brandFilter === "food") return item.category === "Food & Dining";
-      if (state.brandFilter === "banks") return item.category === "Banks & Cards";
-      if (state.brandFilter === "top50") return item.active && item.maxDiscount >= 50;
-      if (state.brandFilter === "top60") return item.active && item.maxDiscount >= 60;
-      if (state.brandFilter === "inactive") return !item.active;
-      return true;
-    })
-    .sort((a, b) => {
-      if (a.active !== b.active) return a.active ? -1 : 1;
-      if (b.productCount !== a.productCount) return b.productCount - a.productCount;
-      return b.maxDiscount - a.maxDiscount;
-    });
+  const applyFilter = (items, filter) => items.filter(item => {
+    if (filter === "active") return item.active;
+    if (filter === "ads") return item.ads && item.ads.active;
+    if (filter === "food") return item.category === "Food & Dining";
+    if (filter === "banks") return item.category === "Banks & Cards";
+    if (filter === "top50") return item.active && item.maxDiscount >= 50;
+    if (filter === "top60") return item.active && item.maxDiscount >= 60;
+    if (filter === "inactive") return !item.active;
+    return true;
+  });
+
+  const searchMatches = q ? pool.filter(item => matchesBrandSearch(item, q)) : pool;
+  let filtered = applyFilter(searchMatches, state.brandFilter);
+  let expandedAcrossAll = false;
+
+  // If the user searched for a brand that exists outside their currently selected filter chip,
+  // show matches across all brands instead of showing a confusing empty result.
+  if (q && !filtered.length && state.brandFilter !== "all") {
+    const allPool = [...tracked, ...agg];
+    const allMatches = allPool.filter(item => matchesBrandSearch(item, q));
+    if (allMatches.length) {
+      filtered = allMatches;
+      expandedAcrossAll = true;
+    }
+  }
+
+  filtered = filtered.slice().sort((a, b) => {
+    if (q) {
+      const aName = normalizeSearchText(a.name);
+      const bName = normalizeSearchText(b.name);
+      const nq = normalizeSearchText(q);
+      const aExact = aName.includes(nq) || aName.replace(/\s+/g, "").includes(nq.replace(/\s+/g, ""));
+      const bExact = bName.includes(nq) || bName.replace(/\s+/g, "").includes(nq.replace(/\s+/g, ""));
+      if (aExact !== bExact) return aExact ? -1 : 1;
+      if (a.isAggregator !== b.isAggregator) return a.isAggregator ? 1 : -1;
+    }
+    if (a.active !== b.active) return a.active ? -1 : 1;
+    if (b.productCount !== a.productCount) return b.productCount - a.productCount;
+    return b.maxDiscount - a.maxDiscount;
+  });
 
   if (q) {
     elements.searchFeedback.classList.remove("hidden");
     const onSaleMatches = filtered.filter(i => i.active).length;
+    const scopeNote = expandedAcrossAll ? ` (expanded across all brands)` : "";
     elements.searchFeedback.innerHTML = filtered.length
-      ? `<strong>${filtered.length}</strong> match(es) for "${escapeHtml(state.searchQuery)}" — <strong>${onSaleMatches}</strong> currently on sale / running ads.`
+      ? `<strong>${filtered.length}</strong> match(es) for "${escapeHtml(state.searchQuery)}"${scopeNote} — <strong>${onSaleMatches}</strong> currently on sale / running ads.`
       : `No brand matched "${escapeHtml(state.searchQuery)}".`;
   } else {
     elements.searchFeedback.classList.add("hidden");
@@ -717,14 +793,27 @@ function setLoading(loading) {
   elements.refreshButton.textContent = loading ? "…" : "↻";
 }
 
-elements.brandSearch.addEventListener("input", event => {
-  state.searchQuery = event.target.value;
+function handleBrandSearchInput(value) {
+  state.searchQuery = String(value ?? "");
   renderBrandSales();
+}
+
+["input", "search", "change", "keyup"].forEach(evtName => {
+  elements.brandSearch?.addEventListener(evtName, event => {
+    handleBrandSearchInput(event.target.value);
+  });
 });
 
-document.querySelectorAll(".filter-btn").forEach(btn => btn.addEventListener("click", () => {
-  document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b === btn));
-  state.brandFilter = btn.dataset.filter;
+elements.brandSearchClear?.addEventListener("click", () => {
+  if (elements.brandSearch) {
+    elements.brandSearch.value = "";
+    elements.brandSearch.focus();
+  }
+  handleBrandSearchInput("");
+});
+
+document.querySelectorAll(".filter-bar .filter-btn").forEach(btn => btn.addEventListener("click", () => {
+  setActiveFilterButton(btn.dataset.filter || "all");
   renderBrandSales();
 }));
 
@@ -850,5 +939,8 @@ if ("serviceWorker" in navigator && (location.protocol === "https:" || location.
   elements.tokenInput.value = state.config.token || "";
   elements.connectionStatus.className = `status-pill ${state.config.token ? "connected" : "pending"}`;
   elements.connectionStatus.textContent = state.config.token ? "Connected via PAT" : "Public read mode";
+  if (elements.brandSearch?.value) {
+    state.searchQuery = elements.brandSearch.value;
+  }
   await refreshAll();
 })();
